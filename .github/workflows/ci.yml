@@ -1,4 +1,4 @@
-name: Tests and smoke reproduction
+name: Tests, smoke reproduction, and evidence audit
 on:
   push:
   pull_request:
@@ -8,6 +8,7 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     strategy:
       fail-fast: false
       matrix:
@@ -22,7 +23,7 @@ jobs:
       - run: python -m pip install -r requirements-evidence.txt
       - run: python -m pip install -e . --no-deps
       - name: Mathematical, transition, oracle, and regression tests
-        run: python -m pytest -q
+        run: python -m pytest -q --junitxml=test-results/pytest.xml
       - name: Run seeded smoke protocol
         run: python -m moead.experiments --config experiments/smoke.json --out results-local/smoke --engine numba
       - name: Render smoke report
@@ -30,4 +31,24 @@ jobs:
       - name: Verify freshly generated smoke evidence
         run: python -m moead.verify --input results-local/smoke --check-source
       - name: Verify committed evidence and generating source hashes
-        run: python -m moead.verify --input evidence/neighborhoods --check-source
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m moead.verify --input evidence/neighborhoods --check-source | tee test-results/evidence-verification.json
+      - name: Record the tested revision and installed environment
+        shell: bash
+        run: |
+          mkdir -p test-results
+          git rev-parse HEAD > test-results/source-commit.txt
+          python -m pip freeze > test-results/environment.txt
+      - name: Archive the tested repository, including committed evidence
+        if: matrix.python == '3.13'
+        run: git archive --format=zip HEAD -o test-results/repository.zip
+      - name: Retain verification receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-python-${{ matrix.python }}
+          path: test-results/
+          if-no-files-found: error
+          retention-days: 30
