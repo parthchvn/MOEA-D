@@ -21,7 +21,13 @@ jobs:
           cache-dependency-path: requirements-evidence.txt
       - run: python -m pip install -r requirements-evidence.txt
       - run: python -m pip install -e . --no-deps
-      - run: python -m pytest -q
-      - run: python -m moead.experiments --config experiments/smoke.json --out results-local/smoke --engine numba
-      - run: python -m moead.report --input results-local/smoke
-      - run: python -m moead.verify --input results-local/smoke --check-source
+      - name: Mathematical, transition, oracle, and regression tests
+        run: python -m pytest -q
+      - name: Run seeded smoke protocol
+        run: python -m moead.experiments --config experiments/smoke.json --out results-local/smoke --engine numba
+      - name: Render smoke report
+        run: python -m moead.report --input results-local/smoke
+      - name: Verify freshly generated smoke evidence
+        run: python -m moead.verify --input results-local/smoke --check-source
+      - name: Verify committed evidence and generating source hashes
+        run: python -m moead.verify --input evidence/neighborhoods --check-source
