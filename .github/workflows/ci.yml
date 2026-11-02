@@ -35,6 +35,14 @@ jobs:
         run: |
           set -euo pipefail
           python -m moead.verify --input evidence/neighborhoods --check-source | tee test-results/evidence-verification.json
+      - name: Recompute committed summaries from raw trials
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -R evidence/neighborhoods results-local/report-check
+          python -m moead.report --input results-local/report-check
+          diff -u evidence/neighborhoods/summary.csv results-local/report-check/summary.csv
+          diff -u evidence/neighborhoods/README.md results-local/report-check/README.md
       - name: Record the tested revision and installed environment
         shell: bash
         run: |
