@@ -39,6 +39,8 @@ The same report contains per-acceptance versus per-sweep endpoint-jump histogram
 
 The expanded grid studies alpha in `{0, 0.1, 0.5, 1, 2, 4, 8}` for p=alpha/n at n=32,...,512. A separate fixed-p family uses n=32,64,128,256 and probabilities from 0 to 1. It uses fresh controls and a smaller administrative cap than the original neighborhood protocol. The grid was selected after exploratory pilots, not preregistered as a confirmatory study.
 
+**[What the experiments suggest](docs/noise-findings.md):** the neighborhood benefit persists in the tested scaled-noise regimes, while fixed-p success deteriorates with increasing size. At n=256 and p=0.05, logarithmic-radius and global neighborhoods each complete 32/32 runs, versus 1/32 without exchange. At n=256 and p=0.1, all 32 global-neighborhood runs reach their stored scalar optima, but only one reaches true exact assignment before the 1,461,816-evaluation cap. This identifies simultaneous true correctness as an important observed bottleneck; it does not prove a noise threshold or an exponential runtime.
+
 ![Scaled-noise response](evidence/noise-grid/figures/scaled_runtime.svg)
 
 ![Fixed-noise completion by the cap](evidence/noise-grid/figures/fixed_completion.svg)
@@ -47,7 +49,7 @@ The reported runtime statistic is **the mean of min(runtime, evaluation cap)**. 
 
 The [full report](evidence/noise-grid/README.md) also separates stored-optimum hits from true exact assignment, plots censored-run terminal errors, and shows size dependence. Those measurements do not establish a polynomial/exponential noise threshold or a stationary distribution. A separate elementary [p=1 obstruction](docs/noise-analysis.md) is proved for this exact model; it is not generalized to p<1.
 
-[Raw noise trials](evidence/noise-grid/runs.csv) · [Summaries](evidence/noise-grid/summary.csv) · [Provenance](evidence/noise-grid/manifest.json) · [Interpretation](docs/noise-analysis.md)
+[Raw noise trials](evidence/noise-grid/runs.csv) · [Summaries](evidence/noise-grid/summary.csv) · [Provenance](evidence/noise-grid/manifest.json) · [Empirical findings](docs/noise-findings.md) · [Interpretation and p=1 proof](docs/noise-analysis.md)
 
 ## Install, test, and reproduce
 
@@ -127,7 +129,7 @@ src/moead/                 simulation, experiments, statistics, and reporting
   verify.py                neighborhood-artifact integrity verification
 experiments/               machine-readable full, noise, and smoke protocols
 tests/                     identities, independent oracles, replay and regression tests
-docs/                      model, proof audit, noise/frontier notes, validation, migration
+docs/                      model, proof audit, noise findings, validation, migration
 evidence/neighborhoods/    2,144 raw trials, diagnostics, summaries, and eight SVGs
 evidence/noise-grid/       8,704 raw trials, summaries, and eight SVGs
 legacy/                    original scripts and notebook, preserved but not endorsed
