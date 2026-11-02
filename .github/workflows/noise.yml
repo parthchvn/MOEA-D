@@ -1,0 +1,66 @@
+name: Expanded noise experiment and evidence
+on:
+  push:
+    branches: ['research/reproducible-neighborhoods-20261102']
+    paths:
+      - 'src/moead/noise.py'
+      - 'src/moead/noise_report.py'
+      - 'experiments/noise-grid.json'
+      - 'tests/test_noise.py'
+      - '.github/workflows/noise.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: expanded-noise-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  reproduce:
+    if: startsWith(github.ref, 'refs/heads/research/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements-evidence.txt
+      - run: python -m pip install -r requirements-evidence.txt
+      - run: python -m pip install -e . --no-deps
+      - run: python -m pytest -q --junitxml=test-results/noise-tests.xml
+      - name: Run all scaled and fixed noise cells
+        run: python -m moead.noise --config experiments/noise-grid.json --out results-local/noise --workers 2
+      - name: Render and verify noise evidence
+        run: |
+          python -m moead.noise_report --input results-local/noise
+          python -m moead.noise --out results-local/noise --verify --check-source
+      - name: Retain results and tested source
+        if: always()
+        run: git archive --format=zip HEAD -o test-results/repository.zip
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: expanded-noise-evidence
+          path: |
+            results-local/noise/
+            test-results/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit only the new evidence directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'MOEA/D evidence workflow'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin "$GITHUB_REF_NAME"
+          git rebase "origin/$GITHUB_REF_NAME"
+          mkdir -p evidence/noise-grid
+          cp -R results-local/noise/. evidence/noise-grid/
+          git add evidence/noise-grid
+          if ! git diff --cached --quiet; then
+            git commit -m 'Commit expanded scaled and fixed noise trials, summaries, and plots [skip ci]'
+            git push origin "HEAD:$GITHUB_REF_NAME"
+          fi
