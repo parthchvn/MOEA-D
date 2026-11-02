@@ -1,52 +1,64 @@
 # Validation record
 
-This records completed checks, not a guarantee that the software is bug-free or that an asymptotic runtime conjecture is true. Validation receipts are tied to specific source revisions, not to an unspecified future version of the repository.
+These are completed, revision-specific checks, not a guarantee that the software is bug-free or that an asymptotic runtime conjecture is true. Each evidence manifest identifies its own generating source and environment.
 
-## Reproduced neighborhood revision
+## Completed experiment protocols
 
-The corrected neighborhood experiment was generated from source revision [`ea3ce28`](https://github.com/parthchvn/MOEA-D/commit/ea3ce28fe25fa957d63e3c99dd21b2c4b4852375). Its regenerated evidence was committed in [`31ec66e`](https://github.com/parthchvn/MOEA-D/commit/31ec66eee87ffe115d1a1ef7919cfad1e8ce32b0). The [manifest](../evidence/neighborhoods/manifest.json) records a clean generating source tree, source-file hashes, data hashes, Python/dependency versions, RNG, and seed derivation. Later documentation-only changes do not alter those generating-source hashes. The manifest in each evidence directory identifies its own experiment; this record does not claim that all additional modules or future protocols were part of this run.
+| Protocol | Generating source | Trials | Completed | Budget-censored | Figures | Execution record |
+|---|---|---:|---:|---:|---:|---|
+| Corrected neighborhood/scheduling experiment | `ea3ce28fe25fa957d63e3c99dd21b2c4b4852375` | 2,144 | 2,144 | 0 | 8 | [Full reproduction](https://github.com/parthchvn/MOEA-D/actions/runs/41464295294) |
+| Expanded scaled/fixed one-bit noise | `5f1f346973dacf08f7e3502d81076363dc4f9bcc` | 8,704 | 6,535 | 2,169 | 8 | [Full reproduction](https://github.com/parthchvn/MOEA-D/actions/runs/41465033304) |
 
-## Checks completed on 2 November 2026
+Both workflows completed simulation, reporting, source/data verification, and the evidence commit. The protocols have different administrative caps and independently seeded controls. Their runtime observations are not pooled into a single mean. Both retain every trial, including all capped observations.
 
-| Check | Observed result | Record |
+The [neighborhood manifest](../evidence/neighborhoods/manifest.json) and [noise manifest](../evidence/noise-grid/manifest.json) record clean generating source trees, source-file and data hashes, Python/dependency versions, RNG, and seed derivation. Neighborhood evidence was regenerated after the frontier correction described below. Later documentation-only commits do not change those source fingerprints.
+
+## Automated validation completed on 2 November 2026
+
+| Check | Observed result | Receipt |
 |---|---|---|
-| Corrected automated suite, Python 3.13 | **154 passed**; no failures or skips reported | [Reproduction job](https://github.com/parthchvn/MOEA-D/actions/runs/41464295294/job/125340997198) |
-| Full neighborhood protocol, report generation, source/hash verification, and artifact commit | Every workflow step passed | [Reproduction workflow](https://github.com/parthchvn/MOEA-D/actions/runs/41464295294) |
-| Recorded neighborhood trials | **2,144 completed; 0 reached their evaluation cap** | [Evidence report](../evidence/neighborhoods/README.md) |
-| Generated neighborhood figures | **8 SVG figures**, with raw CSV/JSONL inputs retained | [Figures](../evidence/neighborhoods/figures) |
-| Artifact integrity and generating-source consistency | 14 artifact files verified; source hashes matched | [Reproduction job](https://github.com/parthchvn/MOEA-D/actions/runs/41464295294/job/125340997198) |
-| Eligible noiseless endpoint-certificate checks | **468,983 checks; 0 violations** | [Raw records](../evidence/neighborhoods/runs.csv) |
+| Corrected neighborhood suite | 154 tests passed on Python 3.13 | [Reproduction job](https://github.com/parthchvn/MOEA-D/actions/runs/41464295294/job/125340997198) |
+| Expanded suite including noise-protocol regressions | **176 tests passed**, zero failures/skips, in the retained Python 3.13 receipt | [CI run](https://github.com/parthchvn/MOEA-D/actions/runs/41465039333) |
+| Python version matrix at revision `5f1f346` | Python 3.11 and 3.13 jobs passed | [CI run](https://github.com/parthchvn/MOEA-D/actions/runs/41465039333) |
+| Fresh smoke simulation, report, source/hash verification | Passed on both Python versions | Same CI run |
+| Committed neighborhood summaries and README reconstructed from raw records | Exact agreement in CI | Same CI run |
+| Full noise grid, report, source/hash verification | Passed; all 8,704 protocol entries retained | [Noise reproduction](https://github.com/parthchvn/MOEA-D/actions/runs/41465033304) |
+| Eligible noiseless certificate observations in the neighborhood experiment | **468,983 checks, zero violations** | [Raw records](../evidence/neighborhoods/runs.csv) |
 
-The certificate checks occur at eligible completed-sweep boundaries, after an actual endpoint acceptance. They are not 468,983 independent statistical trials. The deterministic certification argument and its precondition are given in [the theory-status document](theory-status.md).
+The Python 3.13 CI artifact includes JUnit XML, environment information, integrity-verification output, and an archive of the tested revision. Pull-request workflows may test GitHub's synthetic merge commit; the receipt's `source-commit.txt` identifies that exact checkout rather than silently equating it with the branch head. The quoted test counts apply to these receipts, not every future revision.
 
-The CI matrix separately runs Python 3.11 and 3.13, fresh smoke simulations, source/hash checks on both fresh and committed evidence, and reconstruction of committed summary tables and the evidence README from raw trials. Revision-specific results and retained test/environment receipts are available in [pull request #1's checks](https://github.com/parthchvn/MOEA-D/pull/1/checks). A source-changing commit can intentionally fail the committed-evidence check until its corresponding regenerated evidence is committed; that check must not be disabled to conceal stale results.
+The current CI additionally verifies the expanded noise dataset when present and independently regenerates its summary and README from raw trials. The completed full-noise workflow verifies that dataset itself; the older CI receipt above must not be described as testing an evidence directory that had not yet been committed. Latest revision-specific results are available under [pull request #1's checks](https://github.com/parthchvn/MOEA-D/pull/1/checks).
+
+Certificate observations are taken at eligible completed-sweep boundaries after an actual endpoint acceptance. They are correlated within runs, not 468,983 independent statistical trials. The deterministic proof and its precondition are in [the theory-status document](theory-status.md).
 
 ## Review-found correction: frontier singleton initialization
 
-The original 131-test suite did not detect a shared-parent initialization error in the separate frontier baseline. When L=R=w, either scheduler label mutates the same parent, so the first mutation can expand either side. Tracking only the selected side did not always track the actual solved interval. The fix updates both boundaries from the post-replacement state.
+The original 131-test suite did not detect an initialization error in the separate frontier baseline. When L=R=w, both scheduler labels select the same parent; either mutation direction can expand the actual solved interval. Advancing only the selected boundary sometimes failed to recognize an already solved adjacent slot. The fix updates both boundaries from the actual post-replacement state.
 
-The exact conditional expectation, including the one shared initial evaluation, is
+Including the one shared initial evaluation, the corrected exact conditional expectation is
 
 `1 + n H_w + n H_(n-w) - 1{0<w<n}`.
 
-The formula without the indicator was not the exact expectation for this broadcast algorithm. The corrected proof is in [frontier.md](frontier.md). Twenty-three new regression tests cover exact-rational Bellman equations for every interval at n=1,...,12, an independent literal-bitstring implementation that recomputes the entire solved set, and censoring. The full 154-test suite and full evidence generation were rerun after this fix. The cyclic larger-neighborhood simulator was unchanged by this correction.
+The formula without the indicator was not the exact expectation for this broadcast algorithm. For n=2,w=1 the expectation is 4, not 5. The corrected argument is in [frontier.md](frontier.md). Twenty-three added regression tests include exact-rational Bellman equations for every interval at n=1,...,12, an independent literal-bitstring implementation that recomputes the entire solved set, and censoring. The 154-test corrected suite and all neighborhood evidence were rerun. The expanded noise-protocol tests bring the later suite to 176. The cyclic neighborhood simulator itself was unchanged by the frontier fix.
 
-## What the tests cover
+## Scope of the tests
 
-The suite contains independently written literal-bitstring oracles, exact rational enumeration of small mutation/noise laws, small-state certification checks, Python/Numba execution agreement, deterministic replay, evaluation-accounting and censoring checks, and end-to-end experiment/report integrity checks. It checks that one noisy offspring observation is shared across replacements and that noise does not overwrite the true genotype.
+Tests include independent literal-bitstring oracles, exact rational enumeration of small mutation/noise laws, small-state certification checks, Python/Numba agreement, deterministic replay, evaluation accounting, censored-run handling, configuration/seed completeness, and end-to-end report-integrity checks. They check that the same noisy offspring observation is shared across replacements and that evaluation noise does not overwrite the genotype.
 
-These tests check specified cases and implementation properties. They do not establish the proposed full-population runtime law, a matching lower bound, a noise threshold, or an n-uniform bound on endpoint jumps. Those distinctions remain explicit in [the claim audit](theory-status.md). A passing test suite is not a replacement for a complete proof.
+Passing these tests does not establish the cyclic full-population runtime law, a matching lower bound, a general noise threshold, or an n-uniform endpoint-jump bound. The [claim audit](theory-status.md) separates those unresolved statements from supplied proofs. The special p=1 obstruction in [noise-analysis.md](noise-analysis.md) has its own argument and is not extrapolated to p<1.
 
 ## Recheck a checkout
 
-From the repository root after installing the dependencies:
+After installing the pinned dependencies:
 
 ```bash
 python -m pytest -q
 python -m moead.verify --input evidence/neighborhoods --check-source
+python -m moead.noise --out evidence/noise-grid --verify --check-source
+
 python -m moead.experiments --config experiments/smoke.json --out results-local/validation-smoke --engine numba
 python -m moead.report --input results-local/validation-smoke
 python -m moead.verify --input results-local/validation-smoke --check-source
 ```
 
-Use a new output directory for each reproduction, or explicitly request `--overwrite`. Full experiment commands and statistical caveats are in the [README](../README.md) and [methodology](methodology.md).
+Use a new output directory for each reproduction. The neighborhood runner supports explicit `--overwrite`; the expanded-noise runner requires a new or empty directory. Full commands and statistical qualifications are in the [README](../README.md) and [methodology](methodology.md). A source-changing commit can fail the committed-evidence check until the corresponding evidence is regenerated; do not disable that check to conceal stale results.
