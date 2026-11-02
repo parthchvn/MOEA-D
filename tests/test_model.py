@@ -96,6 +96,7 @@ def test_frontier_exact_assignment_and_formula(n, seed):
     w = result['initial_weight']
     expected = 1 + n * sum(1 / s for s in range(1, w + 1))
     expected += n * sum(1 / s for s in range(1, n - w + 1))
+    expected -= int(0 < w < n)  # Shared initial parent: either mutation extends.
     assert result['conditional_expected_evaluations'] == pytest.approx(expected)
 
 
@@ -105,12 +106,13 @@ def test_frontier_rejects_noise_and_disconnected_neighborhood():
             simulate_frontier(config)
 
 
-def test_frontier_harmonic_formula_satisfies_all_bellman_equations():
-    # Exact dynamic-programming identity, not a Monte Carlo assertion.
+def test_frontier_harmonic_formula_for_distinct_boundaries():
+    # Singleton states have a different equation; test_frontier_regression.py
+    # covers those as well, using exact rational arithmetic and a bitstring oracle.
     for n in range(1, 12):
         h = [0.0] + [sum(1 / i for i in range(1, k + 1)) for k in range(1, n + 1)]
         for left in range(n + 1):
-            for right in range(left, n + 1):
+            for right in range(left + 1, n + 1):
                 value = n * (h[left] + h[n - right])
                 choices = int(left > 0) + int(right < n)
                 if not choices:

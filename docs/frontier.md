@@ -1,25 +1,39 @@
 # A separate noiseless frontier-scheduling baseline
 
-This variant is included to test evaluation-efficient scheduling, not to change the definition of the main cyclic experiment. It uses one-bit mutation, p=0, fixed ideal reference, radius r>=1, and a **single evaluated initial solution** copied into all slots. It has no claimed novelty priority.
+This variant tests evaluation-efficient scheduling without changing the main cyclic experiment. It uses one-bit mutation, p=0, a fixed ideal reference, radius r>=1, and a **single evaluated initial solution** copied into all slots. It has no claimed novelty priority.
 
-Let that initial solution have weight W=w. Slot w is already optimal. Keep the contiguous interval [L,R] of certified solved indices, initially [w,w]. At each evaluation choose one unfinished boundary (uniformly if both are unfinished), mutate that boundary's incumbent, and perform the same scalar-cost neighborhood replacement. A downward mutation from L extends the interval to L-1; an upward mutation from R extends it to R+1. A boundary already at 0 or n is not selected again.
+Let the initial solution have weight W=w. Slot w is optimal. Keep the actual contiguous interval [L,R] of solved indices, initially [w,w]. Choose one unfinished boundary uniformly when both are unfinished, mutate its incumbent, and perform the usual neighborhood replacement. After replacement update **both** interval boundaries if their adjacent slots have become optimal. A solved slot cannot lose its optimum. One-bit mutation cannot skip a target index, and r>=1 delivers any extension to the adjacent target.
 
-## Exact conditional expected number of evaluations
+**The singleton matters:** initially L=R, so both scheduler labels refer to the same parent. An upward mutation expands the right side even when the scheduler nominally chose the left side. The implementation tracks the actual solved interval instead of ignoring this opposite-side extension.
 
-At p=0, a solved slot cannot lose its optimum. Since r>=1, each successful boundary mutation reaches the adjacent target slot and solves it. One-bit mutation cannot skip a target index.
+## Exact conditional expectation
 
-When the left boundary is s>0, a left-directed extension succeeds with probability s/n per evaluation **assigned to that boundary**. It requires expected n/s assigned evaluations. Summing over s=w,w-1,...,1 gives n H_w. The right side similarly requires n H_(n-w). Every evaluation after initialization belongs to exactly one unfinished boundary, so the expected total is exactly
+Let H_0=0 and H_k=sum(1/s, s=1,...,k). For a non-singleton interval L<R, the expected number of additional evaluations is
 
-`E[evaluations | W=w] = 1 + n H_w + n H_(n-w)`, with `H_0=0`.
+`V(L,R) = n (H_L + H_(n-R))`.
 
-The initial 1 is one evaluation of the shared initial solution. There is no extra factor two from choosing between boundaries: the proof sums their assigned evaluation counts, not elapsed iterations separately. Independent fresh mutation draws yield the geometric waiting-time expectations. The code tests the formula against every small-state Bellman equation as well as checking exact assignment in completed runs.
+Indeed, a trial assigned to the left boundary at s>0 extends it with probability s/n. The expected number of assigned trials until that extension is n/s. Summing across the left levels gives n H_L; the right side contributes n H_(n-R). Failed inward mutations remain within the already solved interval when L<R. Every trial is assigned to one unfinished boundary, so summing assigned trials introduces no factor two. All states have a positive progress probability, and only finitely many extensions are needed, so the expectations are finite.
 
-For uniform initialization, W is Bin(n,1/2). The formula is O(n log n) uniformly in w and at least n H_n for every w (H_w+H_(n-w)>=H_n), so its unconditional order is Theta(n log n). This is a theorem for this particular variant, not a universal optimality or novelty claim.
+For the interior singleton L=R=w with 0<w<n, the first mutation always extends one side. Conditioning on its direction gives
+
+`V(w,w) = 1 + (w/n) V(w-1,w) + ((n-w)/n) V(w,w+1)`
+
+`         = n (H_w + H_(n-w)) - 1`.
+
+At a singleton endpoint, w=0 or w=n, there is just one unfinished direction and V(w,w)=n H_n. Including the shared initial evaluation, the exact formula is therefore
+
+`E[evaluations | W=w] = 1 + n H_w + n H_(n-w) - 1{0<w<n}`.
+
+For example, n=2 and w=1 give 4 evaluations in expectation, not 5: one initial evaluation, one mutation that necessarily expands the singleton, and a mean of two further mutations to find the other endpoint.
+
+The earlier independent-boundary formula without the indicator was an upper bound but not the exact mean for this broadcast algorithm. The singleton correction and the implementation fix are covered by exact-rational Bellman equations for every interval for n=1,...,12, plus a separate literal-bitstring oracle that recomputes the entire solved set after each mutation. This is not just a test that repeats the formula in production code.
+
+Since H_w+H_(n-w)>=H_n, the conditional expectation is at least n H_n and at most 1+2n H_n. Consequently its order is Theta(n log n), also under uniform initialization W~Bin(n,1/2). This theorem is for the specified variant, not a universal optimality, novelty, or noisy-runtime claim.
 
 ## Evaluation cost is not total computation
 
-Copying/storing n+1 incumbents and comparing against neighborhoods has a cost not counted in objective evaluations. The count-space simulator does not store n-bit genomes explicitly. A literal implementation may incur additional memory and copying costs. This is why the report retains scalar-comparison counts and does not assert wall-clock optimality.
+Copying/storing n+1 incumbents and comparing against neighborhoods has a cost not counted in objective evaluations. The count-space simulator does not store n-bit genomes explicitly. A literal implementation may incur additional memory and copying costs. The report retains scalar-comparison counts and makes no wall-clock optimality claim.
 
 ## Why the noisy extension is not implemented
 
-At positive prior noise, observing the stored target does not certify the true target. Freezing a slot or advancing a “certified” interval on that evidence can be incorrect. The baseline rejects p>0 rather than silently treating noisy fitness as ground truth. A noisy scheduler requires a separately specified repair/exploration mechanism and its own analysis.
+At positive prior noise, observing the stored target does not certify the true target. Freezing a slot or advancing a certified interval on that evidence can be incorrect. The baseline rejects p>0 rather than silently treating noisy fitness as ground truth. A noisy scheduler requires a separately specified repair/exploration mechanism and its own analysis.

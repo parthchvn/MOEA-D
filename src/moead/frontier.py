@@ -29,12 +29,19 @@ def simulate_frontier(config: Config) -> dict:
         result = transition(n, config.radius, k, 0.0, rng.random(), 1.0, 0.0,
                             weights, observed, counts, first_hit, evaluations)
         comparisons += result[-1]
-        if choose_left and weights[left - 1] == left - 1:
+        # Initially L=R, so BOTH scheduling choices mutate the SAME parent.
+        # Even a nominally left-assigned trial can solve R+1 (and vice versa).
+        # Track the actual certified interval, not the scheduled direction.
+        if left > 0 and weights[left - 1] == left - 1:
             left -= 1
-        elif not choose_left and weights[right + 1] == right + 1:
+        if right < n and weights[right + 1] == right + 1:
             right += 1
     expected = 1.0 + n * (sum(1 / s for s in range(1, initial + 1))
                           + sum(1 / s for s in range(1, n - initial + 1)))
+    # The first mutation of an interior singleton ALWAYS expands one side.
+    # Its Bellman equation saves one evaluation relative to two independent
+    # assigned-boundary coupon-collector sums. See docs/frontier.md.
+    expected -= int(0 < initial < n)
     return dict(evaluations=evaluations, completed=left == 0 and right == n,
                 comparisons=comparisons, initial_weight=initial,
                 conditional_expected_evaluations=expected, weights=weights)

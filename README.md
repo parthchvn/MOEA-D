@@ -46,7 +46,7 @@ python -m moead.report --input results-local/full
 python -m moead.verify --input results-local/full --check-source
 
 # Check the committed evidence without rerunning simulations.
-python -m moead.verify --input evidence/neighborhoods
+python -m moead.verify --input evidence/neighborhoods --check-source
 ```
 
 Use `--engine python` for the unaccelerated reference path. Numba is optional for the package, but recommended for the full experiment grid. The tests compare both paths against each other and against a separate literal-bitstring oracle. An existing nonempty output directory is refused unless `--overwrite` is explicitly supplied.
@@ -71,11 +71,11 @@ The stopping instrument checks `w[j]=j` for every `j` after every offspring. It 
 | Exact reduction from bit strings to the `(true weight, stored observation)` state | Proof in the model notes; exhaustive small transition-law tests and coupled oracle tests |
 | Noiseless endpoint certification and invariant (J) after an actual endpoint acceptance | Short deterministic proof; instrumented checks use precisely this precondition |
 | Noiseless endpoint upper bound | Proof supplied; **does not** establish the simultaneous full-population bound |
-| Frontier variant, noiseless, single-solution initialization | Exact conditional mean `1+n(H_w+H_(n-w))`; proof and Bellman-identity tests |
+| Frontier variant, noiseless, single-solution initialization | Exact conditional mean `1+n(H_w+H_(n-w))-1{0<w<n}`; proof and independent Bellman/oracle tests |
 | Larger-neighborhood cyclic full-population Theta-law | **Open in the available proof material**; experiments are evidence only |
 | Constant jump bound, matching lower bound, general noise threshold, novelty priority | **Not claimed** |
 
-The [frontier baseline](docs/frontier.md) uses different scheduling **and initialization** from cyclic MOEA/D. Its plot must not be interpreted as a neighborhood-only comparison or a noisy-runtime theorem.
+The [frontier baseline](docs/frontier.md) uses different scheduling **and initialization** from cyclic MOEA/D. Its plot must not be interpreted as a neighborhood-only comparison or a noisy-runtime theorem. The singleton correction in its exact expectation is explained and regression-tested in the linked proof.
 
 ## Repository map
 
