@@ -43,6 +43,16 @@ jobs:
           python -m moead.report --input results-local/report-check
           diff -u evidence/neighborhoods/summary.csv results-local/report-check/summary.csv
           diff -u evidence/neighborhoods/README.md results-local/report-check/README.md
+      - name: Audit expanded noise evidence when present
+        if: hashFiles('evidence/noise-grid/manifest.json') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m moead.noise --out evidence/noise-grid --verify --check-source | tee test-results/noise-verification.json
+          cp -R evidence/noise-grid results-local/noise-report-check
+          python -m moead.noise_report --input results-local/noise-report-check
+          diff -u evidence/noise-grid/summary.csv results-local/noise-report-check/summary.csv
+          diff -u evidence/noise-grid/README.md results-local/noise-report-check/README.md
       - name: Record the tested revision and installed environment
         shell: bash
         run: |
