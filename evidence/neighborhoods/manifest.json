@@ -1,11 +1,11 @@
 {
   "censored": 0,
   "completed": 2144,
-  "created_utc": "2026-11-02T14:32:54.185868+00:00",
+  "created_utc": "2026-11-02T14:42:22.695614+00:00",
   "data_sha256": {
     "config.json": "56f7ec9fba34435aa4a9028818dc9a6ba8b04455613a8ebd5287ff0e89f1e702",
     "diagnostics.jsonl": "eb5990de737876564dd27b5812f4b7b42d18f86200b6b34d83eeac3a9f11bcc8",
-    "runs.csv": "4c302c6c115f197ab156a68f3dd64823bdca25d5538d7f60d187779c6c8222d3"
+    "runs.csv": "1f1e49a4edebc094ddb9c2e0f6dad9d85a9f57a34909c1002656f15c5aba5e00"
   },
   "dependencies": {
     "matplotlib": "3.10.8",
@@ -13,26 +13,27 @@
     "numpy": "2.3.5",
     "pytest": "9.0.2"
   },
-  "elapsed_seconds": 36.914741124,
+  "elapsed_seconds": 43.97999619500001,
   "platform": "Linux-7.0.0-1017-azure-x86_64-with-glibc2.43",
   "python": "3.13.17",
   "rng": "numpy.PCG64",
   "schema_version": 1,
   "seed_derivation": "first 8 SHA256 bytes of master|config_id|repetition, big-endian",
-  "source_commit": "73ff50e1b7c55dafeef1532dfac5366eb0ee0b6b",
+  "source_commit": "ea3ce28fe25fa957d63e3c99dd21b2c4b4852375",
   "source_sha256": {
     "pyproject.toml": "d354f88301e15aa7081796076d55a3ecbbb92e0fbd3ecb6fe865780f0ba5ddb1",
     "requirements-evidence.txt": "a1840a157dec53608aec13902e7f08da0ed9954e07deb10c2614a8fe63aef9ab",
     "src/moead/__init__.py": "920ea6647121082ecf5582d97d68bf369bffea0f28a9ec5f1b6d019d073a4acc",
     "src/moead/experiments.py": "c678b858589e1354772efddccdf4d4728623814e7e5114ebbc1d03e664107661",
-    "src/moead/frontier.py": "70bf74d6bba6d90a1d01e91b8a2c574aaf37ec753b5e13e61b12f5635cd0057b",
+    "src/moead/frontier.py": "9d690552eff6501812914b524af28cedfc2c4c91920ccefd527673676aa50c69",
     "src/moead/kernel.py": "b9a8f3bc63fc02da733fedcc0fe1650919619b5e7590bb631db5963a9ba498d0",
     "src/moead/model.py": "7812c17a7597eb7c6dbba55af58cba4a98ff484ee3a192616ac07734ca1f0f24",
     "src/moead/report.py": "b5fc0c562b65e8626f217359ed66010ef5312407caa044134bef194a9ddda5a6",
     "src/moead/statistics.py": "a379742de4d569d9bc0b8960d2974c7b34ebe89827201bf6bf3fe909e9bacbd9",
     "src/moead/verify.py": "b5535deefc7510f5762e2dff5bcd1c9a6af19f315439fbf773bf432217c5e693",
     "tests/test_experiments.py": "7de15916ffc391286a0fb21045c523eb9908b30b235345d5951041f65c1c7a21",
-    "tests/test_model.py": "78552251bd4d3b6fa86a23875317aac875c8373202908f77313bdcc7e16ab41e",
+    "tests/test_frontier_regression.py": "02f8e68f82b0296a0f0295e414a580f984e96a46c32f6ed740e4416ca1ffcae8",
+    "tests/test_model.py": "ef0788e57f5993c223debdf4902894c0a855a4ced0fc235509d787767e7a4885",
     "tests/test_oracle.py": "4a890a3e9b8b4afa8ae8cc220523627cc16886a0c259fc80ed8d5926b77e6152"
   },
   "source_tree_dirty": false,
