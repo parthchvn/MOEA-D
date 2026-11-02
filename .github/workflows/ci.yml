@@ -1,0 +1,72 @@
+name: Tests, smoke reproduction, and evidence audit
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+          cache-dependency-path: requirements-evidence.txt
+      - run: python -m pip install -r requirements-evidence.txt
+      - run: python -m pip install -e . --no-deps
+      - name: Mathematical, transition, oracle, and regression tests
+        run: python -m pytest -q --junitxml=test-results/pytest.xml
+      - name: Run seeded smoke protocol
+        run: python -m moead.experiments --config experiments/smoke.json --out results-local/smoke --engine numba
+      - name: Render smoke report
+        run: python -m moead.report --input results-local/smoke
+      - name: Verify freshly generated smoke evidence
+        run: python -m moead.verify --input results-local/smoke --check-source
+      - name: Verify committed evidence and generating source hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m moead.verify --input evidence/neighborhoods --check-source | tee test-results/evidence-verification.json
+      - name: Recompute committed summaries from raw trials
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp -R evidence/neighborhoods results-local/report-check
+          python -m moead.report --input results-local/report-check
+          diff -u evidence/neighborhoods/summary.csv results-local/report-check/summary.csv
+          diff -u evidence/neighborhoods/README.md results-local/report-check/README.md
+      - name: Audit expanded noise evidence when present
+        if: hashFiles('evidence/noise-grid/manifest.json') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m moead.noise --out evidence/noise-grid --verify --check-source | tee test-results/noise-verification.json
+          cp -R evidence/noise-grid results-local/noise-report-check
+          python -m moead.noise_report --input results-local/noise-report-check
+          diff -u evidence/noise-grid/summary.csv results-local/noise-report-check/summary.csv
+          diff -u evidence/noise-grid/README.md results-local/noise-report-check/README.md
+      - name: Record the tested revision and installed environment
+        shell: bash
+        run: |
+          mkdir -p test-results
+          git rev-parse HEAD > test-results/source-commit.txt
+          python -m pip freeze > test-results/environment.txt
+      - name: Archive the tested repository, including committed evidence
+        if: matrix.python == '3.13'
+        run: git archive --format=zip HEAD -o test-results/repository.zip
+      - name: Retain verification receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-python-${{ matrix.python }}
+          path: test-results/
+          if-no-files-found: error
+          retention-days: 30

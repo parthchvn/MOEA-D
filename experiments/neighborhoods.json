@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "master_seed": 20261102,
+  "n_values": [32, 64, 128, 256, 512],
+  "replicates": 32,
+  "alpha_values": [0.0, 0.1],
+  "radius_rules": ["self", "local", "log", "sqrt", "global"],
+  "extra_radius_sweep": {"n": 256, "radii": [2, 4, 8, 32, 64, 128]},
+  "diagnostic_cases": [[256, 0], [256, 1], [256, 8], [256, 32], [256, 256]],
+  "frontier_baseline": true,
+  "budget_sweep_factor": 20
+}

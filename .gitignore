@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.ipynb_checkpoints/
+results-local/

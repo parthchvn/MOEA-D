@@ -1,0 +1,58 @@
+{
+  "alpha_values": [
+    0.0,
+    0.1
+  ],
+  "budget_sweep_factor": 20,
+  "diagnostic_cases": [
+    [
+      256,
+      0
+    ],
+    [
+      256,
+      1
+    ],
+    [
+      256,
+      8
+    ],
+    [
+      256,
+      32
+    ],
+    [
+      256,
+      256
+    ]
+  ],
+  "extra_radius_sweep": {
+    "n": 256,
+    "radii": [
+      2,
+      4,
+      8,
+      32,
+      64,
+      128
+    ]
+  },
+  "frontier_baseline": true,
+  "master_seed": 20261102,
+  "n_values": [
+    32,
+    64,
+    128,
+    256,
+    512
+  ],
+  "radius_rules": [
+    "self",
+    "local",
+    "log",
+    "sqrt",
+    "global"
+  ],
+  "replicates": 32,
+  "schema_version": 1
+}

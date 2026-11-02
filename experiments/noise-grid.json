@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "master_seed": 2026110301,
+  "replicates": 32,
+  "budget_sweep_factor": 4,
+  "families": [
+    {"kind": "scaled", "n_values": [32, 64, 128, 256, 512],
+     "noise_values": [0, 0.1, 0.5, 1, 2, 4, 8], "radius_rules": ["self", "local", "log", "global"]},
+    {"kind": "fixed", "n_values": [32, 64, 128, 256],
+     "noise_values": [0, 0.01, 0.025, 0.05, 0.075, 0.1, 0.2, 0.5, 0.8, 0.9, 1],
+     "radius_rules": ["self", "log", "global"]}
+  ]
+}
