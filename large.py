@@ -1,9 +1,14 @@
 """
 MOEA/D on OneMinMax — NOISELESS (p = 0), one-bit mutation, large neighbourhoods.
 
-Reproduces the law     sweeps = Theta( n + (n/T)·log(1 + n/T) )
-                        evals = Theta( n² + (n²/T)·log(1 + n/T) )
-i.e. Theta(n² log n) for T = O(1), and Theta(n²) for T = Omega(log n).
+Explores the conjectured scaling
+
+    sweeps ~ n + (n/T)·log(1 + n/T),
+    evals  ~ n² + (n²/T)·log(1 + n/T).
+
+This relationship is an empirical research hypothesis, not a theorem established
+by this repository. Here ``T = 2r+1`` is only the nominal, unclipped interior
+cardinality; actual boundary neighborhoods have size ``r+1``.
 
 Model
 -----
@@ -22,7 +27,9 @@ Model
   p = 0  =>  evaluations are exact  =>  stored value == true value always
          =>  the ENTIRE state is the weight vector w[0..n].  This is exact,
              not an approximation: mutation and selection see x only through
-             |x|_1.  It is also why there is no Phase II at p=0.
+             |x|_1.  With n+1 uniquely targeted subproblems, exact alignment
+             itself covers all n+1 front weights; no extra archive phase is
+             modeled here.
 
   Runtime in SWEEPS (one sweep = n+1 evaluations).
 
@@ -50,32 +57,59 @@ def cost_table(n):
 def neighbourhoods(n, r):                      # B(k) = {j : |j-k| <= r}
     return [(max(0, k - r), min(n + 1, k + r + 1)) for k in range(n + 1)]
 
-def run(n, r, seed, track=False, max_sweeps=None):
-    rng  = np.random.default_rng(seed)
-    idx  = np.arange(n + 1)
+def run(n, r, seed, track=False, max_sweeps=None, deadline=None):
+    level_time = Counter()
+    solve = np.full(n + 1, -1, dtype=np.int64)
+    J_checks = J_viol = 0
+
+    def result(sweeps, censored, censor_reason):
+        return dict(sweeps=sweeps, level_time=level_time, solve=solve,
+                    J_checks=J_checks, J_viol=J_viol, censored=censored,
+                    censor_reason=censor_reason)
+
+    def deadline_reached():
+        return deadline is not None and time.monotonic() >= deadline
+
+    # The deadline covers setup as well as evolutionary updates. Checks after
+    # vectorised operations prevent a trial that crosses its deadline during
+    # its last operation from being reported as an uncensored success.
+    if deadline_reached():
+        return result(-1, True, "wall_time")
+    rng = np.random.default_rng(seed)
+    idx = np.arange(n + 1)
     cost = cost_table(n)
-    iv   = neighbourhoods(n, r)
+    if deadline_reached():
+        return result(-1, True, "wall_time")
+    iv = neighbourhoods(n, r)
     if max_sweeps is None:
         max_sweeps = int(80 * n * math.log(n + 2)) + 1000
 
     w = rng.binomial(n, 0.5, size=n + 1).astype(np.int64)   # state = weights
+    if deadline_reached():
+        return result(-1, True, "wall_time")
+    solve[w == idx] = 0
 
-    solve = np.full(n + 1, -1, dtype=np.int64); solve[w == idx] = 0
-    level_time = Counter(); J_checks = J_viol = 0
+    if np.array_equal(w, idx):
+        if deadline_reached():
+            return result(-1, True, "wall_time")
+        return result(0, False, None)
 
     for sweep in range(1, max_sweeps + 1):
-        if np.array_equal(w, idx):
-            return dict(sweeps=sweep - 1, level_time=level_time, solve=solve,
-                        J_checks=J_checks, J_viol=J_viol, censored=False)
+        if deadline_reached():
+            return result(-1, True, "wall_time")
         if track:
             S = int(w[0]); level_time[S] += 1
-            if sweep >= 3:                                  # invariant (J)
+            if sweep >= 3:                     # candidate post-burn-in property (J)
                 core = np.arange(0, min(r, n) + 1)
                 bad  = core[(core >= S) & (w[core] < S)]    # (J) forbids this
                 J_checks += 1; J_viol += int(bad.size > 0)
 
         rmut = rng.random(n + 1)
+        if deadline_reached():
+            return result(-1, True, "wall_time")
         for k in range(n + 1):                              # sweep: k = 0..n
+            if deadline_reached():
+                return result(-1, True, "wall_time")
             pw = int(w[k])
             ow = pw + 1 if rmut[k] < (n - pw) / n else pw - 1     # one-bit mutation
             a, b = iv[k]
@@ -85,12 +119,21 @@ def run(n, r, seed, track=False, max_sweeps=None):
                 w[pos] = ow
                 new = pos[(w[pos] == pos) & (solve[pos] < 0)]
                 solve[new] = sweep
+            if deadline_reached():
+                return result(-1, True, "wall_time")
 
-    return dict(sweeps=-1, level_time=level_time, solve=solve,
-                J_checks=J_checks, J_viol=J_viol, censored=True)
+        if np.array_equal(w, idx):
+            if deadline_reached():
+                return result(-1, True, "wall_time")
+            return result(sweep, False, None)
+
+    return result(-1, True, "max_sweeps")
 
 def mean_sweeps(n, r, reps, seed0=0):
-    v = [run(n, r, seed0 + i)["sweeps"] for i in range(reps)]
+    results = [run(n, r, seed0 + i) for i in range(reps)]
+    if any(result["censored"] for result in results):
+        raise RuntimeError("mean_sweeps cannot average censored trials")
+    v = [result["sweeps"] for result in results]
     return float(np.mean(v)), float(np.std(v))
 
 
@@ -109,11 +152,11 @@ def exp_scaling():
     for lab, ys in res.items():
         ax[0].plot(ns, [y / n for y, n in zip(ys, ns)], "o-", label=lab)
         ax[1].plot(ns, [y / (n * math.log(n)) for y, n in zip(ys, ns)], "o-", label=lab)
-    ax[0].set_ylabel("sweeps / n");        ax[0].set_title(r"flat $\Rightarrow\ \Theta(n)$")
-    ax[1].set_ylabel("sweeps / (n ln n)"); ax[1].set_title(r"flat $\Rightarrow\ \Theta(n\log n)$")
+    ax[0].set_ylabel("sweeps / n");        ax[0].set_title(r"flat is consistent with linear sweeps")
+    ax[1].set_ylabel("sweeps / (n ln n)"); ax[1].set_title(r"flat is consistent with $n\log n$ sweeps")
     for a in ax:
         a.set_xlabel("n"); a.set_xscale("log"); a.grid(alpha=.3); a.legend(fontsize=8)
-    fig.suptitle("Noiseless MOEA/D: T=1 is Θ(n log n); large T is Θ(n)")
+    fig.suptitle("Noiseless MOEA/D: exploratory scaling diagnostics")
     fig.tight_layout(); fig.savefig("fig1_scaling.png", dpi=160); plt.close(fig)
 
 
@@ -124,10 +167,12 @@ def exp_T(n=400, reps=6):
     for r in rs:
         m, s = mean_sweeps(n, r, reps, 5000 + 17 * r)
         meas.append(m); err.append(s / math.sqrt(reps))
-        print(f"  T={2*r+1:>4}: {m:8.1f}   ({m/n:5.2f} n)", flush=True)
+        sizes = [b - a for a, b in neighbourhoods(n, r)]
+        print(f"  r={r:>4}, |B|={min(sizes):>3}..{max(sizes):<3}: "
+              f"{m:8.1f}   ({m/n:5.2f} n)", flush=True)
     meas = np.array(meas)
 
-    Ts   = np.array([2 * r + 1 for r in rs], float)
+    Ts   = np.array([min(n + 1, 2 * r + 1) for r in rs], float)
     X    = np.column_stack([np.full_like(Ts, n), (n / Ts) * np.log1p(n / Ts)])
     coef, *_ = np.linalg.lstsq(X, meas, rcond=None)          # a·n + b·(n/T)log(1+n/T)
     print(f"  fit: sweeps = {coef[0]:.2f}*n + {coef[1]:.2f}*(n/T)*log(1+n/T)")
@@ -136,15 +181,16 @@ def exp_T(n=400, reps=6):
     ax.errorbar(Ts, meas, yerr=err, fmt="o", ms=6, capsize=3, label="measured")
     ax.plot(Ts, X @ coef, "-", lw=2,
             label=rf"${coef[0]:.2f}n + {coef[1]:.2f}\frac{{n}}{{T}}\log(1+\frac{{n}}{{T}})$")
-    ax.axhline(coef[0] * n, ls="--", c="gray", label=r"$\Theta(n)$ floor")
-    ax.axvline(math.log(n), ls=":", c="red",  label=r"$T=\log n$ (saturation)")
+    ax.axhline(coef[0] * n, ls="--", c="gray", label="fitted linear term")
+    ax.axvline(math.log(n), ls=":", c="red",  label=r"conjectured $T=\log n$ threshold")
     ax.set_xscale("log"); ax.set_yscale("log")
-    ax.set_xlabel("neighbourhood size T"); ax.set_ylabel("sweeps"); ax.set_title(f"n={n}, p=0")
+    ax.set_xlabel("nominal interior cardinality min(n+1, 2r+1)")
+    ax.set_ylabel("sweeps"); ax.set_title(f"n={n}, p=0; diagnostic fit, not a theorem")
     ax.grid(alpha=.3, which="both"); ax.legend(fontsize=8)
     fig.tight_layout(); fig.savefig("fig2_T_dependence.png", dpi=160); plt.close(fig)
 
 
-# --------------------------------- 3. endpoint level profile vs. theory
+# -------------------------- 3. endpoint level profile vs. a heuristic
 def exp_levels(n=400, rs=(1, 8, 64), reps=4):
     fig, ax = plt.subplots(figsize=(7.6, 4.8))
     for c, r in enumerate(rs):
@@ -153,21 +199,20 @@ def exp_levels(n=400, rs=(1, 8, 64), reps=4):
             agg.update(run(n, r, 9000 + 31 * r + i, track=True)["level_time"])
         S  = np.array(sorted(s for s in agg if 1 <= s <= n // 3))
         ts = np.array([agg[s] / reps for s in S])
-        pred = np.array([max(1.0, n / ((min(r, s) + 1) * s)) for s in S])   # theory
-        ax.plot(S, ts,  ".", ms=3, alpha=.45, color=f"C{c}", label=f"measured, T={2*r+1}")
-        ax.plot(S, pred, "-", lw=2, color=f"C{c}",
-                label=rf"$\max\{{1,\ n/(\min(r,S)S)\}}$, T={2*r+1}")
+        heuristic = np.array([max(1.0, n / ((min(r, s) + 1) * s)) for s in S])
+        ax.plot(S, ts,  ".", ms=3, alpha=.45, color=f"C{c}", label=f"measured, r={r}")
+        ax.plot(S, heuristic, "-", lw=2, color=f"C{c}",
+                label=rf"heuristic $\max\{{1,\ n/((\min(r,S)+1)S)\}}$, r={r}")
     ax.set_xscale("log"); ax.set_yscale("log")
     ax.set_xlabel("endpoint level  S = w[0]"); ax.set_ylabel("sweeps spent at level S")
-    ax.set_title(f"n={n}: time at each endpoint level vs. theory\n"
-                 "the Ω(n) term lives at S=O(1); the log term at S > r")
+    ax.set_title(f"n={n}: endpoint level time versus a conjectured heuristic")
     ax.grid(alpha=.3, which="both"); ax.legend(fontsize=7, ncol=2)
     fig.tight_layout(); fig.savefig("fig3_levels.png", dpi=160); plt.close(fig)
 
 
-# ----------------------------- 4. invariant (J), and where the time goes
+# ---------------- 4. candidate post-burn-in property (J) and first-hit profile
 def exp_invariant_and_profile(n=200, rs=(1, 4, 25), reps=4):
-    print("  invariant (J):   l <= r  and  l >= S   ==>   w[l] >= S")
+    print("  candidate post-burn-in property (J): l <= r and l >= S ==> w[l] >= S")
     fig, ax = plt.subplots(figsize=(7.6, 4.6))
     for r in rs:
         chk = vio = 0; prof = np.zeros(n + 1)
@@ -175,11 +220,10 @@ def exp_invariant_and_profile(n=200, rs=(1, 4, 25), reps=4):
             R = run(n, r, 13000 + 7 * r + i, track=True)
             chk += R["J_checks"]; vio += R["J_viol"]; prof += R["solve"]
         prof /= reps
-        print(f"    T={2*r+1:>3}:  {chk:6d} checks,  {vio} violations")
-        ax.plot(np.arange(n + 1), prof, lw=1.4, label=f"T={2*r+1}")
+        print(f"    r={r:>3}:  {chk:6d} checks,  {vio} violations")
+        ax.plot(np.arange(n + 1), prof, lw=1.4, label=f"r={r}")
     ax.set_xlabel("subproblem k"); ax.set_ylabel("first sweep with w[k] = k")
-    ax.set_title(f"n={n}: where the time goes — the interior is instant, "
-                 "the runtime is the two endpoints")
+    ax.set_title(f"n={n}: exploratory first-hit profile by subproblem")
     ax.grid(alpha=.3); ax.legend()
     fig.tight_layout(); fig.savefig("fig4_solve_profile.png", dpi=160); plt.close(fig)
 
@@ -189,5 +233,5 @@ if __name__ == "__main__":
     print("=== 1. scaling in n ===");                  exp_scaling()
     print("=== 2. T-dependence, n=400 ===");           exp_T(400)
     print("=== 3. endpoint level profile, n=400 ==="); exp_levels(400)
-    print("=== 4. invariant (J) + profile, n=200 ==="); exp_invariant_and_profile(200)
+    print("=== 4. candidate property (J) + profile, n=200 ==="); exp_invariant_and_profile(200)
     print(f"\ndone in {time.time()-t0:.0f}s -> fig1..fig4 .png")

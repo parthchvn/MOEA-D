@@ -70,62 +70,106 @@ def simulate_moead(
     stop_rule: str,            # "front" or "aligned"
     max_gens: int | None = None,
     rng: np.random.Generator | None = None,
+    deadline: float | None = None,
 ):
+    if n < 1:
+        raise ValueError("n must be positive")
+    if not 0.0 <= p <= 1.0:
+        raise ValueError("p must be in [0, 1]")
+    if stop_rule not in {"front", "aligned"}:
+        raise ValueError("stop_rule must be 'front' or 'aligned'")
     if rng is None:
         rng = np.random.default_rng()
 
+    total_evals = 0
+
+    def deadline_reached() -> bool:
+        return deadline is not None and time.monotonic() >= deadline
+
+    def timed_out(total_gens: int):
+        return {"converged": False, "total_gens": total_gens,
+                "total_evals": total_evals, "censor_reason": "wall_time"}
+
+    # Deadline checks cover initialization and are repeated after potentially
+    # expensive operations so a late final evaluation cannot be called a
+    # successful, uncensored trial.
+    if deadline_reached():
+        return timed_out(0)
+
     N = n
     B = build_neighborhoods(N, T)
+    if deadline_reached():
+        return timed_out(0)
 
     if max_gens is None:
         max_gens = int(50 * n * n * np.log(n + 2)) + 1
 
-    pop = [rng.integers(0, 2, size=n, dtype=np.int8) for _ in range(N + 1)]
+    pop = []
+    for _ in range(N + 1):
+        if deadline_reached():
+            return timed_out(0)
+        pop.append(rng.integers(0, 2, size=n, dtype=np.int8))
+    if deadline_reached():
+        return timed_out(0)
 
     # store last accepted noisy scalar value per subproblem
     stored_g = np.empty(N + 1, dtype=int)
-    total_evals = 0
 
     # initial evaluation: each subproblem evaluates its own incumbent once
     for i in range(N + 1):
+        if deadline_reached():
+            return timed_out(0)
         kN = noisy_k(pop[i], p, rng)
         stored_g[i] = g_from_k(kN, i)
         total_evals += 1
+        if deadline_reached():
+            return timed_out(0)
 
     # initial stop check
-    if stop_rule == "front" and front_covered(pop):
-        return {"converged": True, "total_gens": 0, "total_evals": total_evals}
-    if stop_rule == "aligned" and aligned_optima(pop):
-        return {"converged": True, "total_gens": 0, "total_evals": total_evals}
+    initially_complete = (
+        front_covered(pop) if stop_rule == "front" else aligned_optima(pop)
+    )
+    if deadline_reached():
+        return timed_out(0)
+    if initially_complete:
+        return {"converged": True, "total_gens": 0, "total_evals": total_evals,
+                "censor_reason": None}
 
     for gen in range(1, max_gens + 1):
         for i in range(N + 1):
+            if deadline_reached():
+                return timed_out(gen - 1)
             # mating selection in neighborhood
             parent_idx = rng.choice(B[i])
             y = pop[parent_idx].copy()
             y[rng.integers(n)] ^= 1  # 1-bit mutation
+            if deadline_reached():
+                return timed_out(gen - 1)
 
             # evaluate ONCE (one noisy k), then reuse for all neighborhood comparisons
             kN = noisy_k(y, p, rng)
             total_evals += 1
+            if deadline_reached():
+                return timed_out(gen - 1)
 
             # neighborhood replacement
             for ell in B[i]:
+                if deadline_reached():
+                    return timed_out(gen - 1)
                 gy = g_from_k(kN, ell)
                 if gy <= stored_g[ell]:
                     pop[ell] = y.copy()   # avoid aliasing across subproblems
                     stored_g[ell] = gy
 
-        if stop_rule == "front":
-            if front_covered(pop):
-                return {"converged": True, "total_gens": gen, "total_evals": total_evals}
-        elif stop_rule == "aligned":
-            if aligned_optima(pop):
-                return {"converged": True, "total_gens": gen, "total_evals": total_evals}
-        else:
-            raise ValueError("stop_rule must be 'front' or 'aligned'")
+        complete = front_covered(pop) if stop_rule == "front" else aligned_optima(pop)
+        if deadline_reached():
+            return timed_out(gen)
+        if complete:
+            return {"converged": True, "total_gens": gen,
+                    "total_evals": total_evals, "censor_reason": None}
 
-    return {"converged": False, "total_gens": max_gens, "total_evals": total_evals}
+    return {"converged": False, "total_gens": max_gens,
+            "total_evals": total_evals, "censor_reason": "max_gens"}
 
 
 # ---------- Run experiments for T=1 and T=2 ----------
