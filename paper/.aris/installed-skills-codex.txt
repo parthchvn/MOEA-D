@@ -1,0 +1,15 @@
+version	1
+repo_root	/Users/parth/aris_repo
+project_root	/Users/parth/MOEA-D/paper
+generated	2026-11-03T04:40:29Z
+packages	skills-codex
+kind	name	source_rel	target_rel	mode
+skill	auto-paper-improvement-loop	skills/skills-codex/auto-paper-improvement-loop	.agents/skills/auto-paper-improvement-loop	symlink
+skill	auto-review-loop	skills/skills-codex/auto-review-loop	.agents/skills/auto-review-loop	symlink
+skill	kill-argument	skills/skills-codex/kill-argument	.agents/skills/kill-argument	symlink
+skill	paper-claim-audit	skills/skills-codex/paper-claim-audit	.agents/skills/paper-claim-audit	symlink
+skill	proof-checker	skills/skills-codex/proof-checker	.agents/skills/proof-checker	symlink
+skill	render-html	skills/skills-codex/render-html	.agents/skills/render-html	symlink
+skill	result-to-claim	skills/skills-codex/result-to-claim	.agents/skills/result-to-claim	symlink
+support	shared-references	skills/skills-codex/shared-references	.agents/skills/shared-references	symlink
+skill	training-check	skills/skills-codex/training-check	.agents/skills/training-check	symlink
