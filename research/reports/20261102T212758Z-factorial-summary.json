@@ -1,0 +1,4306 @@
+{
+  "analysis_seed": 2611029000,
+  "bootstrap_draws": 10000,
+  "cells": {
+    "n=128,r=0,mutation=exact": {
+      "elapsed_seconds": 6.367376833688468,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 188470,
+            "mean": 90042.70833333333,
+            "median": 81334.0,
+            "min": 68243,
+            "q25": 77852.0,
+            "q75": 95783.5,
+            "q90": 104916.4,
+            "q95": 113874.89999999998,
+            "std": 24236.745224661354
+          },
+          "mean_ci95": [
+            82136.32916666666,
+            100921.91562500001
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 141902,
+            "mean": 77303.70833333333,
+            "median": 71466.5,
+            "min": 55340,
+            "q25": 67305.75,
+            "q75": 80174.0,
+            "q90": 100917.29999999999,
+            "q95": 110326.39999999998,
+            "std": 19476.03176365909
+          },
+          "mean_ci95": [
+            70434.325,
+            85603.48958333331
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 188470,
+        "mean": 90042.70833333333,
+        "median": 81334.0,
+        "min": 68243,
+        "q25": 77852.0,
+        "q75": 95783.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 188470,
+        "mean": 90042.70833333333,
+        "median": 81334.0,
+        "min": 68243,
+        "q25": 77852.0,
+        "q75": 95783.5
+      },
+      "paired_gap_mean_ci95": [
+        8777.504166666668,
+        17291.311458333334
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 46568,
+        "mean": 12739.0,
+        "median": 9738.5,
+        "min": 0,
+        "q25": 5581.0,
+        "q75": 18609.5,
+        "zero_gap_count": 2
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 13,
+        "mean": 7.708333333333333,
+        "median": 7.0,
+        "min": 4,
+        "q25": 6.0,
+        "q75": 9.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 184237,
+        "mean": 85706.41666666667,
+        "median": 76992.5,
+        "min": 63859,
+        "q25": 73592.25,
+        "q75": 91527.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=128,r=0,mutation=lazy": {
+      "elapsed_seconds": 15.71518920827657,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 242521,
+            "mean": 178042.04166666666,
+            "median": 174731.0,
+            "min": 125904,
+            "q25": 150447.0,
+            "q75": 201078.25,
+            "q90": 220693.9,
+            "q95": 229162.19999999998,
+            "std": 30795.838499888778
+          },
+          "mean_ci95": [
+            166195.11875,
+            190356.24583333335
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 200081,
+            "mean": 146114.5,
+            "median": 148093.0,
+            "min": 99071,
+            "q25": 130612.75,
+            "q75": 159123.25,
+            "q90": 170137.8,
+            "q95": 190714.44999999995,
+            "std": 24872.371597207315
+          },
+          "mean_ci95": [
+            136256.69270833334,
+            156230.66666666666
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 242521,
+        "mean": 178042.04166666666,
+        "median": 174731.0,
+        "min": 125904,
+        "q25": 150447.0,
+        "q75": 201078.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 242521,
+        "mean": 178042.04166666666,
+        "median": 174731.0,
+        "min": 125904,
+        "q25": 150447.0,
+        "q75": 201078.25
+      },
+      "paired_gap_mean_ci95": [
+        20661.61666666667,
+        43897.503125
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 93397,
+        "mean": 31927.541666666668,
+        "median": 29863.5,
+        "min": 0,
+        "q25": 5805.5,
+        "q75": 53533.5,
+        "zero_gap_count": 4
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 13,
+        "mean": 8.333333333333334,
+        "median": 8.0,
+        "min": 6,
+        "q25": 7.0,
+        "q75": 10.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 116809,
+        "mean": 84782.95833333333,
+        "median": 83056.0,
+        "min": 58646,
+        "q25": 71147.75,
+        "q75": 95923.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 121422,
+        "mean": 88940.16666666667,
+        "median": 87341.0,
+        "min": 62847,
+        "q25": 74996.75,
+        "q75": 100765.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=128,r=1,mutation=exact": {
+      "elapsed_seconds": 2.488830538932234,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 43861,
+            "mean": 31697.25,
+            "median": 31349.0,
+            "min": 17672,
+            "q25": 28413.5,
+            "q75": 37605.5,
+            "q90": 39255.799999999996,
+            "q95": 43220.899999999994,
+            "std": 7033.318087935946
+          },
+          "mean_ci95": [
+            28983.25,
+            34449.31041666666
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 43861,
+            "mean": 31697.25,
+            "median": 31349.0,
+            "min": 17672,
+            "q25": 28413.5,
+            "q75": 37605.5,
+            "q90": 39255.799999999996,
+            "q95": 43220.899999999994,
+            "std": 7033.318087935946
+          },
+          "mean_ci95": [
+            28983.25,
+            34449.31041666666
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 43861,
+        "mean": 31697.25,
+        "median": 31349.0,
+        "min": 17672,
+        "q25": 28413.5,
+        "q75": 37605.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 43861,
+        "mean": 31697.25,
+        "median": 31349.0,
+        "min": 17672,
+        "q25": 28413.5,
+        "q75": 37605.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 3,
+        "mean": 0.7083333333333334,
+        "median": 1.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 1.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 2042,
+        "mean": 1615.75,
+        "median": 1627.5,
+        "min": 1274,
+        "q25": 1495.0,
+        "q75": 1706.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=128,r=1,mutation=lazy": {
+      "elapsed_seconds": 5.073532835114747,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 94429,
+            "mean": 56244.708333333336,
+            "median": 50827.0,
+            "min": 28121,
+            "q25": 42894.5,
+            "q75": 69853.5,
+            "q90": 87049.9,
+            "q95": 88249.05,
+            "std": 20115.33651217867
+          },
+          "mean_ci95": [
+            48515.558333333334,
+            64484.72395833333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 94429,
+            "mean": 56244.708333333336,
+            "median": 50827.0,
+            "min": 28121,
+            "q25": 42894.5,
+            "q75": 69853.5,
+            "q90": 87049.9,
+            "q95": 88249.05,
+            "std": 20115.33651217867
+          },
+          "mean_ci95": [
+            48515.558333333334,
+            64484.72395833333
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 94429,
+        "mean": 56244.708333333336,
+        "median": 50827.0,
+        "min": 28121,
+        "q25": 42894.5,
+        "q75": 69853.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 94429,
+        "mean": 56244.708333333336,
+        "median": 50827.0,
+        "min": 28121,
+        "q25": 42894.5,
+        "q75": 69853.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 3,
+        "mean": 0.625,
+        "median": 0.5,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 1.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 1623,
+        "mean": 1365.9166666666667,
+        "median": 1344.0,
+        "min": 1093,
+        "q25": 1223.5,
+        "q75": 1514.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 47334,
+        "mean": 28069.041666666668,
+        "median": 25287.5,
+        "min": 13827,
+        "q25": 21354.0,
+        "q75": 34739.5
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 922,
+        "mean": 850.5416666666666,
+        "median": 848.0,
+        "min": 798,
+        "q25": 832.0,
+        "q75": 863.5
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 37,
+        "mean": 28.291666666666668,
+        "median": 27.0,
+        "min": 15,
+        "q25": 24.75,
+        "q75": 32.0
+      },
+      "trajectories": 24
+    },
+    "n=128,r=7,mutation=exact": {
+      "elapsed_seconds": 1.5845424626022577,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 39989,
+            "mean": 19726.333333333332,
+            "median": 19349.5,
+            "min": 7354,
+            "q25": 13061.75,
+            "q75": 23285.0,
+            "q90": 31360.999999999996,
+            "q95": 35321.34999999999,
+            "std": 8698.88164059619
+          },
+          "mean_ci95": [
+            16404.621875,
+            23279.17916666667
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 39989,
+            "mean": 19726.333333333332,
+            "median": 19349.5,
+            "min": 7354,
+            "q25": 13061.75,
+            "q75": 23285.0,
+            "q90": 31360.999999999996,
+            "q95": 35321.34999999999,
+            "std": 8698.88164059619
+          },
+          "mean_ci95": [
+            16404.621875,
+            23279.17916666667
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 39989,
+        "mean": 19726.333333333332,
+        "median": 19349.5,
+        "min": 7354,
+        "q25": 13061.75,
+        "q75": 23285.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 39989,
+        "mean": 19726.333333333332,
+        "median": 19349.5,
+        "min": 7354,
+        "q25": 13061.75,
+        "q75": 23285.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 300,
+        "mean": 223.95833333333334,
+        "median": 222.5,
+        "min": 176,
+        "q25": 203.75,
+        "q75": 240.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=128,r=7,mutation=lazy": {
+      "elapsed_seconds": 3.757943748496473,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 84623,
+            "mean": 40490.625,
+            "median": 38572.5,
+            "min": 17027,
+            "q25": 28091.75,
+            "q75": 47825.75,
+            "q90": 54891.2,
+            "q95": 78942.69999999994,
+            "std": 17021.537208496105
+          },
+          "mean_ci95": [
+            34223.14895833333,
+            47564.37708333333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 84623,
+            "mean": 40490.625,
+            "median": 38572.5,
+            "min": 17027,
+            "q25": 28091.75,
+            "q75": 47825.75,
+            "q90": 54891.2,
+            "q95": 78942.69999999994,
+            "std": 17021.537208496105
+          },
+          "mean_ci95": [
+            34223.14895833333,
+            47564.37708333333
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 84623,
+        "mean": 40490.625,
+        "median": 38572.5,
+        "min": 17027,
+        "q25": 28091.75,
+        "q75": 47825.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 84623,
+        "mean": 40490.625,
+        "median": 38572.5,
+        "min": 17027,
+        "q25": 28091.75,
+        "q75": 47825.75
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 325,
+        "mean": 269.75,
+        "median": 268.5,
+        "min": 203,
+        "q25": 248.25,
+        "q75": 296.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 42169,
+        "mean": 20181.458333333332,
+        "median": 19196.0,
+        "min": 8454,
+        "q25": 13937.75,
+        "q75": 23891.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 660,
+        "mean": 517.8333333333334,
+        "median": 521.5,
+        "min": 418,
+        "q25": 480.5,
+        "q75": 546.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 31,
+        "mean": 22.875,
+        "median": 23.0,
+        "min": 16,
+        "q25": 21.0,
+        "q75": 25.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=0,mutation=exact": {
+      "elapsed_seconds": 30.454441125504673,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 653808,
+            "mean": 416404.75,
+            "median": 380874.5,
+            "min": 314053,
+            "q25": 361085.75,
+            "q75": 454698.25,
+            "q90": 519655.0,
+            "q95": 601175.3999999998,
+            "std": 87642.44223486303
+          },
+          "mean_ci95": [
+            384878.6583333333,
+            452117.22812499997
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 438958,
+            "mean": 345901.5833333333,
+            "median": 339498.5,
+            "min": 253660,
+            "q25": 331981.0,
+            "q75": 368346.75,
+            "q90": 389895.7,
+            "q95": 399546.89999999997,
+            "std": 41123.98747998087
+          },
+          "mean_ci95": [
+            329935.36666666664,
+            361461.91770833335
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 653808,
+        "mean": 416404.75,
+        "median": 380874.5,
+        "min": 314053,
+        "q25": 361085.75,
+        "q75": 454698.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 653808,
+        "mean": 416404.75,
+        "median": 380874.5,
+        "min": 314053,
+        "q25": 361085.75,
+        "q75": 454698.25
+      },
+      "paired_gap_mean_ci95": [
+        38442.73333333333,
+        108667.43125000001
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 334872,
+        "mean": 70503.16666666667,
+        "median": 39321.0,
+        "min": 0,
+        "q25": 4946.25,
+        "q75": 93417.75,
+        "zero_gap_count": 5
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 16,
+        "mean": 11.5,
+        "median": 11.5,
+        "min": 7,
+        "q25": 9.0,
+        "q75": 14.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 637015,
+        "mean": 399567.0,
+        "median": 364057.0,
+        "min": 297186,
+        "q25": 344479.75,
+        "q75": 437800.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=0,mutation=lazy": {
+      "elapsed_seconds": 72.44907279126346,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1376749,
+            "mean": 814936.7083333334,
+            "median": 757120.0,
+            "min": 616030,
+            "q25": 731357.0,
+            "q75": 834993.75,
+            "q90": 1054034.0999999999,
+            "q95": 1126624.5999999999,
+            "std": 174653.85776953452
+          },
+          "mean_ci95": [
+            754765.1135416667,
+            887380.5552083333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 737590,
+            "mean": 635893.25,
+            "median": 623096.5,
+            "min": 542783,
+            "q25": 591677.75,
+            "q75": 685355.25,
+            "q90": 704206.8,
+            "q95": 731975.7,
+            "std": 58749.10207657942
+          },
+          "mean_ci95": [
+            613287.7104166667,
+            658938.4197916667
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 1376749,
+        "mean": 814936.7083333334,
+        "median": 757120.0,
+        "min": 616030,
+        "q25": 731357.0,
+        "q75": 834993.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 1376749,
+        "mean": 814936.7083333334,
+        "median": 757120.0,
+        "min": 616030,
+        "q25": 731357.0,
+        "q75": 834993.75
+      },
+      "paired_gap_mean_ci95": [
+        111494.02187499999,
+        257804.70104166665
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 762263,
+        "mean": 179043.45833333334,
+        "median": 136982.5,
+        "min": 0,
+        "q25": 57440.0,
+        "q75": 205408.25,
+        "zero_gap_count": 4
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 18,
+        "mean": 11.5,
+        "median": 10.5,
+        "min": 5,
+        "q25": 8.75,
+        "q75": 14.25
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 671204,
+        "mean": 390564.0833333333,
+        "median": 361861.0,
+        "min": 290110,
+        "q25": 348202.5,
+        "q75": 399861.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 688669,
+        "mean": 407461.5,
+        "median": 378294.0,
+        "min": 309145,
+        "q25": 366177.5,
+        "q75": 418144.25
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=1,mutation=exact": {
+      "elapsed_seconds": 11.115498001221567,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 242352,
+            "mean": 141500.41666666666,
+            "median": 128885.5,
+            "min": 90722,
+            "q25": 115585.0,
+            "q75": 155998.5,
+            "q90": 217318.19999999998,
+            "q95": 233188.8,
+            "std": 43452.00437155687
+          },
+          "mean_ci95": [
+            125437.76979166667,
+            159490.36875
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 242352,
+            "mean": 141500.41666666666,
+            "median": 128885.5,
+            "min": 90722,
+            "q25": 115585.0,
+            "q75": 155998.5,
+            "q90": 217318.19999999998,
+            "q95": 233188.8,
+            "std": 43452.00437155687
+          },
+          "mean_ci95": [
+            125437.76979166667,
+            159490.36875
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 242352,
+        "mean": 141500.41666666666,
+        "median": 128885.5,
+        "min": 90722,
+        "q25": 115585.0,
+        "q75": 155998.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 242352,
+        "mean": 141500.41666666666,
+        "median": 128885.5,
+        "min": 90722,
+        "q25": 115585.0,
+        "q75": 155998.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 4,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 1.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 6505,
+        "mean": 5590.0,
+        "median": 5495.5,
+        "min": 4964,
+        "q25": 5339.25,
+        "q75": 5840.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=1,mutation=lazy": {
+      "elapsed_seconds": 19.48624449921772,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 429706,
+            "mean": 216062.54166666666,
+            "median": 202773.0,
+            "min": 118219,
+            "q25": 154520.25,
+            "q75": 266893.5,
+            "q90": 321354.1,
+            "q95": 353736.64999999997,
+            "std": 80437.48029747627
+          },
+          "mean_ci95": [
+            186034.21250000002,
+            249012.7864583333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 429706,
+            "mean": 216062.54166666666,
+            "median": 202773.0,
+            "min": 118219,
+            "q25": 154520.25,
+            "q75": 266893.5,
+            "q90": 321354.1,
+            "q95": 353736.64999999997,
+            "std": 80437.48029747627
+          },
+          "mean_ci95": [
+            186034.21250000002,
+            249012.7864583333
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 429706,
+        "mean": 216062.54166666666,
+        "median": 202773.0,
+        "min": 118219,
+        "q25": 154520.25,
+        "q75": 266893.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 429706,
+        "mean": 216062.54166666666,
+        "median": 202773.0,
+        "min": 118219,
+        "q25": 154520.25,
+        "q75": 266893.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 4,
+        "mean": 1.2083333333333333,
+        "median": 1.0,
+        "min": 0,
+        "q25": 0.75,
+        "q75": 2.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 5493,
+        "mean": 4633.583333333333,
+        "median": 4565.5,
+        "min": 4266,
+        "q25": 4462.5,
+        "q75": 4756.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 214836,
+        "mean": 107844.08333333333,
+        "median": 101240.0,
+        "min": 58864,
+        "q25": 77001.75,
+        "q75": 133196.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 3559,
+        "mean": 3362.0416666666665,
+        "median": 3392.5,
+        "min": 3199,
+        "q25": 3298.0,
+        "q75": 3433.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 78,
+        "mean": 63.0,
+        "median": 62.5,
+        "min": 55,
+        "q25": 59.0,
+        "q75": 66.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=8,mutation=exact": {
+      "elapsed_seconds": 7.266097833402455,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 169620,
+            "mean": 89436.66666666667,
+            "median": 85839.0,
+            "min": 44205,
+            "q25": 54613.0,
+            "q75": 103700.0,
+            "q90": 133101.6,
+            "q95": 146761.69999999998,
+            "std": 33514.988572495335
+          },
+          "mean_ci95": [
+            76415.26979166667,
+            102737.13124999998
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 169620,
+            "mean": 89436.66666666667,
+            "median": 85839.0,
+            "min": 44205,
+            "q25": 54613.0,
+            "q75": 103700.0,
+            "q90": 133101.6,
+            "q95": 146761.69999999998,
+            "std": 33514.988572495335
+          },
+          "mean_ci95": [
+            76415.26979166667,
+            102737.13124999998
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 169620,
+        "mean": 89436.66666666667,
+        "median": 85839.0,
+        "min": 44205,
+        "q25": 54613.0,
+        "q75": 103700.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 169620,
+        "mean": 89436.66666666667,
+        "median": 85839.0,
+        "min": 44205,
+        "q25": 54613.0,
+        "q75": 103700.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 1071,
+        "mean": 924.5,
+        "median": 917.0,
+        "min": 818,
+        "q25": 897.5,
+        "q75": 944.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=256,r=8,mutation=lazy": {
+      "elapsed_seconds": 17.126075583975762,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 282187,
+            "mean": 186004.375,
+            "median": 181571.5,
+            "min": 85838,
+            "q25": 159662.5,
+            "q75": 213503.0,
+            "q90": 244433.69999999998,
+            "q95": 270866.14999999997,
+            "std": 45961.3570454785
+          },
+          "mean_ci95": [
+            168056.89479166665,
+            204016.3375
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 282187,
+            "mean": 186004.375,
+            "median": 181571.5,
+            "min": 85838,
+            "q25": 159662.5,
+            "q75": 213503.0,
+            "q90": 244433.69999999998,
+            "q95": 270866.14999999997,
+            "std": 45961.3570454785
+          },
+          "mean_ci95": [
+            168056.89479166665,
+            204016.3375
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 282187,
+        "mean": 186004.375,
+        "median": 181571.5,
+        "min": 85838,
+        "q25": 159662.5,
+        "q75": 213503.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 282187,
+        "mean": 186004.375,
+        "median": 181571.5,
+        "min": 85838,
+        "q25": 159662.5,
+        "q75": 213503.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 1279,
+        "mean": 1038.625,
+        "median": 1038.0,
+        "min": 868,
+        "q25": 943.25,
+        "q75": 1094.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 141182,
+        "mean": 92837.41666666667,
+        "median": 90510.5,
+        "min": 42995,
+        "q25": 79686.0,
+        "q75": 106850.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 2449,
+        "mean": 2126.0,
+        "median": 2102.5,
+        "min": 1860,
+        "q25": 2006.75,
+        "q75": 2254.75
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 71,
+        "mean": 53.958333333333336,
+        "median": 52.5,
+        "min": 40,
+        "q25": 46.75,
+        "q75": 59.25
+      },
+      "trajectories": 24
+    },
+    "n=32,r=0,mutation=exact": {
+      "elapsed_seconds": 0.2952898386865854,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 6370,
+            "mean": 4105.083333333333,
+            "median": 4126.0,
+            "min": 2311,
+            "q25": 3539.75,
+            "q75": 4604.5,
+            "q90": 5039.099999999999,
+            "q95": 5989.499999999998,
+            "std": 971.1861379224653
+          },
+          "mean_ci95": [
+            3739.4281250000004,
+            4491.128125
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 5183,
+            "mean": 3234.25,
+            "median": 3135.5,
+            "min": 1915,
+            "q25": 2532.75,
+            "q75": 3697.25,
+            "q90": 4183.4,
+            "q95": 4548.099999999999,
+            "std": 795.7815545793303
+          },
+          "mean_ci95": [
+            2941.0166666666664,
+            3561.5916666666667
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 6370,
+        "mean": 4105.083333333333,
+        "median": 4126.0,
+        "min": 2311,
+        "q25": 3539.75,
+        "q75": 4604.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 6370,
+        "mean": 4105.083333333333,
+        "median": 4126.0,
+        "min": 2311,
+        "q25": 3539.75,
+        "q75": 4604.5
+      },
+      "paired_gap_mean_ci95": [
+        637.040625,
+        1104.4166666666667
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 1816,
+        "mean": 870.8333333333334,
+        "median": 973.5,
+        "min": 0,
+        "q25": 315.5,
+        "q75": 1244.25,
+        "zero_gap_count": 4
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 8,
+        "mean": 4.958333333333333,
+        "median": 5.5,
+        "min": 1,
+        "q25": 3.0,
+        "q75": 7.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 6063,
+        "mean": 3794.25,
+        "median": 3820.0,
+        "min": 2009,
+        "q25": 3235.75,
+        "q75": 4291.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=32,r=0,mutation=lazy": {
+      "elapsed_seconds": 0.7352217878215015,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 12442,
+            "mean": 8527.083333333334,
+            "median": 8251.0,
+            "min": 4980,
+            "q25": 7186.5,
+            "q75": 9678.25,
+            "q90": 11408.8,
+            "q95": 11658.25,
+            "std": 1984.8395601937566
+          },
+          "mean_ci95": [
+            7763.955208333333,
+            9320.65625
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 8613,
+            "mean": 6672.541666666667,
+            "median": 6716.5,
+            "min": 3929,
+            "q25": 5826.0,
+            "q75": 7657.25,
+            "q90": 8297.5,
+            "q95": 8399.449999999999,
+            "std": 1291.2068159929559
+          },
+          "mean_ci95": [
+            6163.788541666667,
+            7164.501041666666
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 12442,
+        "mean": 8527.083333333334,
+        "median": 8251.0,
+        "min": 4980,
+        "q25": 7186.5,
+        "q75": 9678.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 12442,
+        "mean": 8527.083333333334,
+        "median": 8251.0,
+        "min": 4980,
+        "q25": 7186.5,
+        "q75": 9678.25
+      },
+      "paired_gap_mean_ci95": [
+        1169.1916666666666,
+        2614.546875
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 5347,
+        "mean": 1854.5416666666667,
+        "median": 1154.0,
+        "min": 0,
+        "q25": 221.75,
+        "q75": 3103.25,
+        "zero_gap_count": 4
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 9,
+        "mean": 4.958333333333333,
+        "median": 5.0,
+        "min": 1,
+        "q25": 3.75,
+        "q75": 6.25
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 5852,
+        "mean": 3954.7083333333335,
+        "median": 3783.0,
+        "min": 2193,
+        "q25": 3343.0,
+        "q75": 4505.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 6287,
+        "mean": 4256.5,
+        "median": 4135.5,
+        "min": 2490,
+        "q25": 3521.75,
+        "q75": 4832.5
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=32,r=1,mutation=exact": {
+      "elapsed_seconds": 0.12395104207098484,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 3069,
+            "mean": 1568.5416666666667,
+            "median": 1420.5,
+            "min": 926,
+            "q25": 1148.5,
+            "q75": 1742.75,
+            "q90": 2475.3999999999996,
+            "q95": 2730.95,
+            "std": 578.4655849495409
+          },
+          "mean_ci95": [
+            1355.5822916666666,
+            1810.54375
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 3069,
+            "mean": 1568.5416666666667,
+            "median": 1420.5,
+            "min": 926,
+            "q25": 1148.5,
+            "q75": 1742.75,
+            "q90": 2475.3999999999996,
+            "q95": 2730.95,
+            "std": 578.4655849495409
+          },
+          "mean_ci95": [
+            1355.5822916666666,
+            1810.54375
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 3069,
+        "mean": 1568.5416666666667,
+        "median": 1420.5,
+        "min": 926,
+        "q25": 1148.5,
+        "q75": 1742.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 3069,
+        "mean": 1568.5416666666667,
+        "median": 1420.5,
+        "min": 926,
+        "q25": 1148.5,
+        "q75": 1742.75
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 1,
+        "mean": 0.16666666666666666,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 198,
+        "mean": 148.625,
+        "median": 147.0,
+        "min": 96,
+        "q25": 118.5,
+        "q75": 179.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=32,r=1,mutation=lazy": {
+      "elapsed_seconds": 0.25793987652286887,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4555,
+            "mean": 2866.125,
+            "median": 2706.5,
+            "min": 760,
+            "q25": 2351.75,
+            "q75": 3184.75,
+            "q90": 4237.099999999999,
+            "q95": 4454.0,
+            "std": 857.6100924383842
+          },
+          "mean_ci95": [
+            2537.6666666666665,
+            3201.4625
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4555,
+            "mean": 2866.125,
+            "median": 2706.5,
+            "min": 760,
+            "q25": 2351.75,
+            "q75": 3184.75,
+            "q90": 4237.099999999999,
+            "q95": 4454.0,
+            "std": 857.6100924383842
+          },
+          "mean_ci95": [
+            2537.6666666666665,
+            3201.4625
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 4555,
+        "mean": 2866.125,
+        "median": 2706.5,
+        "min": 760,
+        "q25": 2351.75,
+        "q75": 3184.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 4555,
+        "mean": 2866.125,
+        "median": 2706.5,
+        "min": 760,
+        "q25": 2351.75,
+        "q75": 3184.75
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 1,
+        "mean": 0.20833333333333334,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 169,
+        "mean": 130.91666666666666,
+        "median": 134.0,
+        "min": 60,
+        "q25": 124.5,
+        "q75": 144.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 2248,
+        "mean": 1407.2916666666667,
+        "median": 1356.0,
+        "min": 346,
+        "q25": 1136.5,
+        "q75": 1568.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 84,
+        "mean": 57.583333333333336,
+        "median": 57.5,
+        "min": 42,
+        "q25": 51.25,
+        "q75": 63.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 11,
+        "mean": 5.833333333333333,
+        "median": 6.0,
+        "min": 1,
+        "q25": 4.75,
+        "q75": 7.25
+      },
+      "trajectories": 24
+    },
+    "n=32,r=5,mutation=exact": {
+      "elapsed_seconds": 0.10493549983948469,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4191,
+            "mean": 1306.6666666666667,
+            "median": 973.5,
+            "min": 594,
+            "q25": 818.75,
+            "q75": 1493.75,
+            "q90": 2125.2,
+            "q95": 2470.0999999999995,
+            "std": 791.2386363861062
+          },
+          "mean_ci95": [
+            1039.4083333333333,
+            1648.003125
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4191,
+            "mean": 1306.6666666666667,
+            "median": 973.5,
+            "min": 594,
+            "q25": 818.75,
+            "q75": 1493.75,
+            "q90": 2125.2,
+            "q95": 2470.0999999999995,
+            "std": 791.2386363861062
+          },
+          "mean_ci95": [
+            1039.4083333333333,
+            1648.003125
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 4191,
+        "mean": 1306.6666666666667,
+        "median": 973.5,
+        "min": 594,
+        "q25": 818.75,
+        "q75": 1493.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 4191,
+        "mean": 1306.6666666666667,
+        "median": 973.5,
+        "min": 594,
+        "q25": 818.75,
+        "q75": 1493.75
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 23,
+        "mean": 13.833333333333334,
+        "median": 13.0,
+        "min": 6,
+        "q25": 10.75,
+        "q75": 18.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=32,r=5,mutation=lazy": {
+      "elapsed_seconds": 0.24198629055172205,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4655,
+            "mean": 2643.5833333333335,
+            "median": 2460.0,
+            "min": 1090,
+            "q25": 1725.75,
+            "q75": 3103.0,
+            "q90": 4428.5,
+            "q95": 4515.9,
+            "std": 1144.2500835146084
+          },
+          "mean_ci95": [
+            2212.3625,
+            3105.8770833333333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4655,
+            "mean": 2643.5833333333335,
+            "median": 2460.0,
+            "min": 1090,
+            "q25": 1725.75,
+            "q75": 3103.0,
+            "q90": 4428.5,
+            "q95": 4515.9,
+            "std": 1144.2500835146084
+          },
+          "mean_ci95": [
+            2212.3625,
+            3105.8770833333333
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 4655,
+        "mean": 2643.5833333333335,
+        "median": 2460.0,
+        "min": 1090,
+        "q25": 1725.75,
+        "q75": 3103.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 4655,
+        "mean": 2643.5833333333335,
+        "median": 2460.0,
+        "min": 1090,
+        "q25": 1725.75,
+        "q75": 3103.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 29,
+        "mean": 17.916666666666668,
+        "median": 16.5,
+        "min": 10,
+        "q25": 14.75,
+        "q75": 20.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 2310,
+        "mean": 1303.375,
+        "median": 1234.5,
+        "min": 521,
+        "q25": 859.25,
+        "q75": 1534.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 51,
+        "mean": 33.583333333333336,
+        "median": 34.0,
+        "min": 22,
+        "q25": 28.0,
+        "q75": 38.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 6,
+        "mean": 3.5416666666666665,
+        "median": 4.0,
+        "min": 0,
+        "q25": 3.0,
+        "q75": 4.25
+      },
+      "trajectories": 24
+    },
+    "n=512,r=0,mutation=exact": {
+      "elapsed_seconds": 136.8792029148899,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 2960011,
+            "mean": 1857616.25,
+            "median": 1799861.0,
+            "min": 1239407,
+            "q25": 1688539.75,
+            "q75": 1961712.0,
+            "q90": 2233499.4,
+            "q95": 2396582.9499999997,
+            "std": 348575.82889065094
+          },
+          "mean_ci95": [
+            1730412.8447916668,
+            1999098.7729166667
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1873477,
+            "mean": 1593272.375,
+            "median": 1647501.5,
+            "min": 1161433,
+            "q25": 1498218.5,
+            "q75": 1703416.75,
+            "q90": 1822790.6,
+            "q95": 1842030.65,
+            "std": 183365.98664581278
+          },
+          "mean_ci95": [
+            1521534.6697916666,
+            1663746.7687499998
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 2960011,
+        "mean": 1857616.25,
+        "median": 1799861.0,
+        "min": 1239407,
+        "q25": 1688539.75,
+        "q75": 1961712.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 2960011,
+        "mean": 1857616.25,
+        "median": 1799861.0,
+        "min": 1239407,
+        "q25": 1688539.75,
+        "q75": 1961712.0
+      },
+      "paired_gap_mean_ci95": [
+        150626.98958333334,
+        398328.1260416666
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 1301993,
+        "mean": 264343.875,
+        "median": 133893.0,
+        "min": 0,
+        "q25": 31165.5,
+        "q75": 420658.75,
+        "zero_gap_count": 6
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 18,
+        "mean": 11.916666666666666,
+        "median": 12.0,
+        "min": 7,
+        "q25": 9.75,
+        "q75": 13.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 2893298,
+        "mean": 1791173.5416666667,
+        "median": 1733626.5,
+        "min": 1172833,
+        "q25": 1622250.0,
+        "q75": 1895262.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=512,r=0,mutation=lazy": {
+      "elapsed_seconds": 334.0404449561611,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 4913514,
+            "mean": 3630544.375,
+            "median": 3486349.0,
+            "min": 2802007,
+            "q25": 3121992.0,
+            "q75": 4114901.25,
+            "q90": 4408620.399999999,
+            "q95": 4746148.749999999,
+            "std": 623153.1309478198
+          },
+          "mean_ci95": [
+            3391335.472916667,
+            3882093.220833333
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 3751058,
+            "mean": 3012015.5416666665,
+            "median": 2931794.5,
+            "min": 2332097,
+            "q25": 2839839.75,
+            "q75": 3252548.75,
+            "q90": 3364356.5,
+            "q95": 3589129.0999999996,
+            "std": 329036.69095498585
+          },
+          "mean_ci95": [
+            2883930.3364583333,
+            3144498.8166666664
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 4913514,
+        "mean": 3630544.375,
+        "median": 3486349.0,
+        "min": 2802007,
+        "q25": 3121992.0,
+        "q75": 4114901.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 4913514,
+        "mean": 3630544.375,
+        "median": 3486349.0,
+        "min": 2802007,
+        "q25": 3121992.0,
+        "q75": 4114901.25
+      },
+      "paired_gap_mean_ci95": [
+        382266.8416666667,
+        887217.2729166666
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 2211542,
+        "mean": 618528.8333333334,
+        "median": 416042.0,
+        "min": 0,
+        "q25": 148641.5,
+        "q75": 758983.0,
+        "zero_gap_count": 2
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 19,
+        "mean": 12.666666666666666,
+        "median": 12.5,
+        "min": 5,
+        "q25": 10.75,
+        "q75": 14.25
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 2389076,
+        "mean": 1748862.5833333333,
+        "median": 1677591.0,
+        "min": 1335415,
+        "q25": 1495201.5,
+        "q75": 1990150.75
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 2457818,
+        "mean": 1815304.5,
+        "median": 1742374.5,
+        "min": 1399305,
+        "q25": 1560759.25,
+        "q75": 2058336.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=512,r=1,mutation=exact": {
+      "elapsed_seconds": 51.680802958551794,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1194265,
+            "mean": 633855.375,
+            "median": 591746.0,
+            "min": 400141,
+            "q25": 516079.25,
+            "q75": 699090.5,
+            "q90": 851940.7999999999,
+            "q95": 994324.2499999997,
+            "std": 197616.58846863967
+          },
+          "mean_ci95": [
+            560880.4322916666,
+            716600.41875
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1194265,
+            "mean": 633855.375,
+            "median": 591746.0,
+            "min": 400141,
+            "q25": 516079.25,
+            "q75": 699090.5,
+            "q90": 851940.7999999999,
+            "q95": 994324.2499999997,
+            "std": 197616.58846863967
+          },
+          "mean_ci95": [
+            560880.4322916666,
+            716600.41875
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 1194265,
+        "mean": 633855.375,
+        "median": 591746.0,
+        "min": 400141,
+        "q25": 516079.25,
+        "q75": 699090.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 1194265,
+        "mean": 633855.375,
+        "median": 591746.0,
+        "min": 400141,
+        "q25": 516079.25,
+        "q75": 699090.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 5,
+        "mean": 2.0416666666666665,
+        "median": 2.0,
+        "min": 0,
+        "q25": 1.0,
+        "q75": 3.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 22822,
+        "mean": 20287.375,
+        "median": 20225.5,
+        "min": 18529,
+        "q25": 19625.75,
+        "q75": 20810.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=512,r=1,mutation=lazy": {
+      "elapsed_seconds": 76.20310183428228,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1244026,
+            "mean": 804170.625,
+            "median": 766166.5,
+            "min": 382700,
+            "q25": 594695.0,
+            "q75": 1009326.5,
+            "q90": 1123317.8,
+            "q95": 1135319.75,
+            "std": 243679.62746496056
+          },
+          "mean_ci95": [
+            708942.7083333334,
+            902754.86875
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1244026,
+            "mean": 804170.625,
+            "median": 766166.5,
+            "min": 382700,
+            "q25": 594695.0,
+            "q75": 1009326.5,
+            "q90": 1123317.8,
+            "q95": 1135319.75,
+            "std": 243679.62746496056
+          },
+          "mean_ci95": [
+            708942.7083333334,
+            902754.86875
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 1244026,
+        "mean": 804170.625,
+        "median": 766166.5,
+        "min": 382700,
+        "q25": 594695.0,
+        "q75": 1009326.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 1244026,
+        "mean": 804170.625,
+        "median": 766166.5,
+        "min": 382700,
+        "q25": 594695.0,
+        "q75": 1009326.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 5,
+        "mean": 2.5833333333333335,
+        "median": 2.5,
+        "min": 1,
+        "q25": 1.75,
+        "q75": 3.25
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 17053,
+        "mean": 16021.625,
+        "median": 16170.5,
+        "min": 14481,
+        "q25": 15418.75,
+        "q75": 16617.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 621670,
+        "mean": 401926.4166666667,
+        "median": 382743.5,
+        "min": 190973,
+        "q25": 296879.75,
+        "q75": 504054.25
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 13844,
+        "mean": 13276.458333333334,
+        "median": 13283.5,
+        "min": 12829,
+        "q25": 13094.5,
+        "q75": 13412.75
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 147,
+        "mean": 125.58333333333333,
+        "median": 125.5,
+        "min": 102,
+        "q25": 117.0,
+        "q75": 133.25
+      },
+      "trajectories": 24
+    },
+    "n=512,r=9,mutation=exact": {
+      "elapsed_seconds": 31.91629491560161,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 731537,
+            "mean": 378145.5,
+            "median": 304978.0,
+            "min": 180576,
+            "q25": 268043.75,
+            "q75": 471832.0,
+            "q90": 616369.7999999999,
+            "q95": 667412.1499999999,
+            "std": 157695.9464834285
+          },
+          "mean_ci95": [
+            318338.36875,
+            442913.3875
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 731537,
+            "mean": 378145.5,
+            "median": 304978.0,
+            "min": 180576,
+            "q25": 268043.75,
+            "q75": 471832.0,
+            "q90": 616369.7999999999,
+            "q95": 667412.1499999999,
+            "std": 157695.9464834285
+          },
+          "mean_ci95": [
+            318338.36875,
+            442913.3875
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 731537,
+        "mean": 378145.5,
+        "median": 304978.0,
+        "min": 180576,
+        "q25": 268043.75,
+        "q75": 471832.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 731537,
+        "mean": 378145.5,
+        "median": 304978.0,
+        "min": 180576,
+        "q25": 268043.75,
+        "q75": 471832.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 3860,
+        "mean": 3374.9166666666665,
+        "median": 3354.0,
+        "min": 3008,
+        "q25": 3229.0,
+        "q75": 3496.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=512,r=9,mutation=lazy": {
+      "elapsed_seconds": 64.25999891804531,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1579526,
+            "mean": 656618.9166666666,
+            "median": 577895.5,
+            "min": 332426,
+            "q25": 436563.0,
+            "q75": 770012.5,
+            "q90": 957003.2,
+            "q95": 1193059.5999999994,
+            "std": 302362.11858428194
+          },
+          "mean_ci95": [
+            545851.903125,
+            779612.9625
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 1579526,
+            "mean": 656618.9166666666,
+            "median": 577895.5,
+            "min": 332426,
+            "q25": 436563.0,
+            "q75": 770012.5,
+            "q90": 957003.2,
+            "q95": 1193059.5999999994,
+            "std": 302362.11858428194
+          },
+          "mean_ci95": [
+            545851.903125,
+            779612.9625
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 1579526,
+        "mean": 656618.9166666666,
+        "median": 577895.5,
+        "min": 332426,
+        "q25": 436563.0,
+        "q75": 770012.5
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 1579526,
+        "mean": 656618.9166666666,
+        "median": 577895.5,
+        "min": 332426,
+        "q25": 436563.0,
+        "q75": 770012.5
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 4445,
+        "mean": 4046.25,
+        "median": 4090.0,
+        "min": 3546,
+        "q25": 3941.75,
+        "q75": 4123.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 789254,
+        "mean": 327962.1666666667,
+        "median": 288742.0,
+        "min": 165769,
+        "q25": 217914.5,
+        "q75": 384626.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 9553,
+        "mean": 9029.083333333334,
+        "median": 9109.5,
+        "min": 8072,
+        "q25": 8926.25,
+        "q75": 9259.75
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 137,
+        "mean": 121.70833333333333,
+        "median": 121.5,
+        "min": 99,
+        "q25": 116.5,
+        "q75": 129.5
+      },
+      "trajectories": 24
+    },
+    "n=64,r=0,mutation=exact": {
+      "elapsed_seconds": 1.5264124562963843,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 35035,
+            "mean": 20981.916666666668,
+            "median": 19370.5,
+            "min": 15013,
+            "q25": 17226.75,
+            "q75": 23401.25,
+            "q90": 27807.699999999997,
+            "q95": 31516.249999999993,
+            "std": 5202.396311706556
+          },
+          "mean_ci95": [
+            19083.579166666666,
+            23105.134375
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 21190,
+            "mean": 15779.375,
+            "median": 15568.5,
+            "min": 12415,
+            "q25": 13861.0,
+            "q75": 17665.5,
+            "q90": 18836.7,
+            "q95": 19026.35,
+            "std": 2281.434042010305
+          },
+          "mean_ci95": [
+            14912.952083333334,
+            16713.879166666666
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 35035,
+        "mean": 20981.916666666668,
+        "median": 19370.5,
+        "min": 15013,
+        "q25": 17226.75,
+        "q75": 23401.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 35035,
+        "mean": 20981.916666666668,
+        "median": 19370.5,
+        "min": 15013,
+        "q25": 17226.75,
+        "q75": 23401.25
+      },
+      "paired_gap_mean_ci95": [
+        3341.4156249999996,
+        7296.606249999999
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 18591,
+        "mean": 5202.541666666667,
+        "median": 3315.0,
+        "min": 0,
+        "q25": 1347.25,
+        "q75": 6727.0,
+        "zero_gap_count": 2
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 13,
+        "mean": 6.958333333333333,
+        "median": 6.5,
+        "min": 3,
+        "q25": 5.0,
+        "q75": 9.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 33853,
+        "mean": 19858.791666666668,
+        "median": 18213.5,
+        "min": 13851,
+        "q25": 16089.75,
+        "q75": 22309.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=64,r=0,mutation=lazy": {
+      "elapsed_seconds": 3.273950543720275,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 64416,
+            "mean": 37028.875,
+            "median": 34743.5,
+            "min": 28079,
+            "q25": 32420.25,
+            "q75": 38529.75,
+            "q90": 47626.2,
+            "q95": 48871.25,
+            "std": 8243.915987550006
+          },
+          "mean_ci95": [
+            34071.06875,
+            40560.69375
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 48816,
+            "mean": 30198.416666666668,
+            "median": 28959.0,
+            "min": 20735,
+            "q25": 26618.75,
+            "q75": 33394.5,
+            "q90": 36107.5,
+            "q95": 42977.14999999999,
+            "std": 6447.632878187471
+          },
+          "mean_ci95": [
+            27841.990625000002,
+            32817.215625000004
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 64416,
+        "mean": 37028.875,
+        "median": 34743.5,
+        "min": 28079,
+        "q25": 32420.25,
+        "q75": 38529.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 64416,
+        "mean": 37028.875,
+        "median": 34743.5,
+        "min": 28079,
+        "q25": 32420.25,
+        "q75": 38529.75
+      },
+      "paired_gap_mean_ci95": [
+        3910.641666666667,
+        10603.317708333332
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 36986,
+        "mean": 6830.458333333333,
+        "median": 3801.5,
+        "min": 0,
+        "q25": 1072.0,
+        "q75": 8744.0,
+        "zero_gap_count": 5
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 12,
+        "mean": 6.125,
+        "median": 6.0,
+        "min": 3,
+        "q25": 5.0,
+        "q75": 8.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 31340,
+        "mean": 17415.166666666668,
+        "median": 16223.0,
+        "min": 12973,
+        "q25": 14975.5,
+        "q75": 18097.5
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 31890,
+        "mean": 18476.416666666668,
+        "median": 17341.0,
+        "min": 14038,
+        "q25": 16311.25,
+        "q75": 19315.25
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=64,r=1,mutation=exact": {
+      "elapsed_seconds": 0.5910751200281084,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 15017,
+            "mean": 7486.583333333333,
+            "median": 7020.5,
+            "min": 3381,
+            "q25": 5118.0,
+            "q75": 9183.25,
+            "q90": 11780.0,
+            "q95": 12061.9,
+            "std": 3129.7461477371235
+          },
+          "mean_ci95": [
+            6335.307291666667,
+            8754.479166666664
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 15017,
+            "mean": 7486.583333333333,
+            "median": 7020.5,
+            "min": 3381,
+            "q25": 5118.0,
+            "q75": 9183.25,
+            "q90": 11780.0,
+            "q95": 12061.9,
+            "std": 3129.7461477371235
+          },
+          "mean_ci95": [
+            6335.307291666667,
+            8754.479166666664
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 15017,
+        "mean": 7486.583333333333,
+        "median": 7020.5,
+        "min": 3381,
+        "q25": 5118.0,
+        "q75": 9183.25
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 15017,
+        "mean": 7486.583333333333,
+        "median": 7020.5,
+        "min": 3381,
+        "q25": 5118.0,
+        "q75": 9183.25
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 2,
+        "mean": 0.5833333333333334,
+        "median": 0.5,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 1.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 661,
+        "mean": 474.9583333333333,
+        "median": 472.0,
+        "min": 280,
+        "q25": 422.5,
+        "q75": 519.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=64,r=1,mutation=lazy": {
+      "elapsed_seconds": 1.120245914440602,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 22620,
+            "mean": 12358.583333333334,
+            "median": 11570.0,
+            "min": 6891,
+            "q25": 9068.5,
+            "q75": 13747.0,
+            "q90": 17984.8,
+            "q95": 21321.549999999992,
+            "std": 4359.846486294899
+          },
+          "mean_ci95": [
+            10747.125,
+            14146.130208333334
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 22620,
+            "mean": 12358.583333333334,
+            "median": 11570.0,
+            "min": 6891,
+            "q25": 9068.5,
+            "q75": 13747.0,
+            "q90": 17984.8,
+            "q95": 21321.549999999992,
+            "std": 4359.846486294899
+          },
+          "mean_ci95": [
+            10747.125,
+            14146.130208333334
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 22620,
+        "mean": 12358.583333333334,
+        "median": 11570.0,
+        "min": 6891,
+        "q25": 9068.5,
+        "q75": 13747.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 22620,
+        "mean": 12358.583333333334,
+        "median": 11570.0,
+        "min": 6891,
+        "q25": 9068.5,
+        "q75": 13747.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 2,
+        "mean": 0.4166666666666667,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 1.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 594,
+        "mean": 412.6666666666667,
+        "median": 407.0,
+        "min": 308,
+        "q25": 371.0,
+        "q75": 434.25
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 11217,
+        "mean": 6147.833333333333,
+        "median": 5720.0,
+        "min": 3410,
+        "q25": 4482.0,
+        "q75": 6894.75
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 267,
+        "mean": 220.125,
+        "median": 223.0,
+        "min": 170,
+        "q25": 206.25,
+        "q75": 236.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 19,
+        "mean": 13.458333333333334,
+        "median": 13.0,
+        "min": 8,
+        "q25": 12.0,
+        "q75": 14.25
+      },
+      "trajectories": 24
+    },
+    "n=64,r=6,mutation=exact": {
+      "elapsed_seconds": 0.4471821244806051,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 10789,
+            "mean": 5598.75,
+            "median": 4843.0,
+            "min": 2341,
+            "q25": 4257.0,
+            "q75": 6712.0,
+            "q90": 8112.699999999999,
+            "q95": 9931.299999999996,
+            "std": 2133.1625276957257
+          },
+          "mean_ci95": [
+            4783.320833333333,
+            6462.523958333332
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 10789,
+            "mean": 5598.75,
+            "median": 4843.0,
+            "min": 2341,
+            "q25": 4257.0,
+            "q75": 6712.0,
+            "q90": 8112.699999999999,
+            "q95": 9931.299999999996,
+            "std": 2133.1625276957257
+          },
+          "mean_ci95": [
+            4783.320833333333,
+            6462.523958333332
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 10789,
+        "mean": 5598.75,
+        "median": 4843.0,
+        "min": 2341,
+        "q25": 4257.0,
+        "q75": 6712.0
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 10789,
+        "mean": 5598.75,
+        "median": 4843.0,
+        "min": 2341,
+        "q25": 4257.0,
+        "q75": 6712.0
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 89,
+        "mean": 54.791666666666664,
+        "median": 55.5,
+        "min": 37,
+        "q25": 43.25,
+        "q75": 63.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "trajectories": 24
+    },
+    "n=64,r=6,mutation=lazy": {
+      "elapsed_seconds": 1.1245930851437151,
+      "events": {
+        "alignment": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 30874,
+            "mean": 11862.875,
+            "median": 10336.0,
+            "min": 5266,
+            "q25": 8742.5,
+            "q75": 13844.75,
+            "q90": 16563.399999999998,
+            "q95": 19818.799999999992,
+            "std": 5556.705055215021
+          },
+          "mean_ci95": [
+            9894.201041666667,
+            14216.206249999997
+          ]
+        },
+        "archive": {
+          "censored": 0,
+          "evaluations_uncensored_only": {
+            "count": 24,
+            "max": 30874,
+            "mean": 11862.875,
+            "median": 10336.0,
+            "min": 5266,
+            "q25": 8742.5,
+            "q75": 13844.75,
+            "q90": 16563.399999999998,
+            "q95": 19818.799999999992,
+            "std": 5556.705055215021
+          },
+          "mean_ci95": [
+            9894.201041666667,
+            14216.206249999997
+          ]
+        }
+      },
+      "executed_evaluations": {
+        "count": 24,
+        "max": 30874,
+        "mean": 11862.875,
+        "median": 10336.0,
+        "min": 5266,
+        "q25": 8742.5,
+        "q75": 13844.75
+      },
+      "observation_evaluations": {
+        "count": 24,
+        "max": 30874,
+        "mean": 11862.875,
+        "median": 10336.0,
+        "min": 5266,
+        "q25": 8742.5,
+        "q75": 13844.75
+      },
+      "paired_gap_mean_ci95": [
+        0.0,
+        0.0
+      ],
+      "paired_gap_uncensored_only": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0,
+        "zero_gap_count": 24
+      },
+      "rejected_new_archive_weights": {
+        "count": 24,
+        "max": 0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0,
+        "q25": 0.0,
+        "q75": 0.0
+      },
+      "rejected_offspring": {
+        "count": 24,
+        "max": 80,
+        "mean": 64.16666666666667,
+        "median": 63.0,
+        "min": 48,
+        "q25": 59.5,
+        "q75": 71.0
+      },
+      "self_loop_offspring": {
+        "count": 24,
+        "max": 15344,
+        "mean": 5901.333333333333,
+        "median": 5111.0,
+        "min": 2631,
+        "q25": 4411.75,
+        "q75": 6876.5
+      },
+      "self_loop_recipient_changes": {
+        "count": 24,
+        "max": 186,
+        "mean": 129.45833333333334,
+        "median": 132.5,
+        "min": 69,
+        "q25": 115.5,
+        "q75": 143.25
+      },
+      "self_loop_target_acquisitions": {
+        "count": 24,
+        "max": 14,
+        "mean": 8.666666666666666,
+        "median": 9.0,
+        "min": 3,
+        "q25": 7.0,
+        "q75": 9.0
+      },
+      "trajectories": 24
+    }
+  },
+  "contrasts": {
+    "128": {
+      "D": {
+        "exact_alignment": {
+          "ci95": [
+            0.28500169421838034,
+            0.6825374636684478
+          ],
+          "estimate": 0.4742754657708771
+        },
+        "exact_archive": {
+          "ci95": [
+            0.28500169421838034,
+            0.6825374636684478
+          ],
+          "estimate": 0.4742754657708771
+        },
+        "lazy_alignment": {
+          "ci95": [
+            0.10988483120717288,
+            0.546158030588515
+          ],
+          "estimate": 0.32864149675017373
+        },
+        "lazy_archive": {
+          "ci95": [
+            0.10988483120717288,
+            0.546158030588515
+          ],
+          "estimate": 0.32864149675017373
+        }
+      },
+      "R": {
+        "exact_alignment": {
+          "ci95": [
+            1.329764281172141,
+            1.9788927353558994
+          ],
+          "estimate": 1.6068495581202793
+        },
+        "exact_archive": {
+          "ci95": [
+            1.329764281172141,
+            1.9788927353558994
+          ],
+          "estimate": 1.6068495581202793
+        },
+        "lazy_alignment": {
+          "ci95": [
+            1.1161495174963858,
+            1.7266066885279758
+          ],
+          "estimate": 1.3890797766972809
+        },
+        "lazy_archive": {
+          "ci95": [
+            1.1161495174963858,
+            1.7266066885279758
+          ],
+          "estimate": 1.3890797766972809
+        }
+      },
+      "contrasts": {
+        "M_alignment": {
+          "ci95": [
+            -0.14220604825141775,
+            0.437748797954192
+          ],
+          "estimate": 0.14563396902070336
+        },
+        "M_archive": {
+          "ci95": [
+            -0.14220604825141775,
+            0.437748797954192
+          ],
+          "estimate": 0.14563396902070336
+        },
+        "M_average": {
+          "ci95": [
+            -0.14220604825141775,
+            0.437748797954192
+          ],
+          "estimate": 0.14563396902070336
+        },
+        "S_average": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_lazy": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "interaction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "mutation_dominance": {
+          "ci95": [
+            -0.14220604825141775,
+            0.437748797954192
+          ],
+          "estimate": 0.14563396902070336
+        },
+        "stopping_dominance": {
+          "ci95": [
+            -0.4377487979541922,
+            -0.007919450757242078
+          ],
+          "estimate": -0.14563396902070336
+        }
+      },
+      "decision": "ambiguous under preregistered decision rule",
+      "radius_log": 7,
+      "status": "empirically supported finite-size estimates"
+    },
+    "256": {
+      "D": {
+        "exact_alignment": {
+          "ci95": [
+            0.2745778660205873,
+            0.655040215327452
+          ],
+          "estimate": 0.4587719219400432
+        },
+        "exact_archive": {
+          "ci95": [
+            0.2745778660205873,
+            0.655040215327452
+          ],
+          "estimate": 0.4587719219400432
+        },
+        "lazy_alignment": {
+          "ci95": [
+            -0.030327299395070142,
+            0.3228731409076599
+          ],
+          "estimate": 0.14979771558530772
+        },
+        "lazy_archive": {
+          "ci95": [
+            -0.030327299395070142,
+            0.3228731409076599
+          ],
+          "estimate": 0.14979771558530772
+        }
+      },
+      "R": {
+        "exact_alignment": {
+          "ci95": [
+            1.3159750398195205,
+            1.9252199403325827
+          ],
+          "estimate": 1.5821298125302818
+        },
+        "exact_archive": {
+          "ci95": [
+            1.3159750398195205,
+            1.9252199403325827
+          ],
+          "estimate": 1.5821298125302818
+        },
+        "lazy_alignment": {
+          "ci95": [
+            0.9701279594351909,
+            1.381090136028197
+          ],
+          "estimate": 1.1615992455374593
+        },
+        "lazy_archive": {
+          "ci95": [
+            0.9701279594351909,
+            1.381090136028197
+          ],
+          "estimate": 1.1615992455374593
+        }
+      },
+      "contrasts": {
+        "M_alignment": {
+          "ci95": [
+            0.05745716450821775,
+            0.5735997196715065
+          ],
+          "estimate": 0.3089742063547355
+        },
+        "M_archive": {
+          "ci95": [
+            0.05745716450821775,
+            0.5735997196715065
+          ],
+          "estimate": 0.3089742063547355
+        },
+        "M_average": {
+          "ci95": [
+            0.05745716450821775,
+            0.5735997196715065
+          ],
+          "estimate": 0.3089742063547355
+        },
+        "S_average": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_lazy": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "interaction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "mutation_dominance": {
+          "ci95": [
+            0.05745716450821775,
+            0.5735997196715065
+          ],
+          "estimate": 0.3089742063547355
+        },
+        "stopping_dominance": {
+          "ci95": [
+            -0.5735997196715066,
+            -0.06270529676490322
+          ],
+          "estimate": -0.3089742063547355
+        }
+      },
+      "decision": "same-weight mechanism favored",
+      "radius_log": 8,
+      "status": "empirically supported finite-size estimates"
+    },
+    "32": {
+      "D": {
+        "exact_alignment": {
+          "ci95": [
+            -0.08626950744992812,
+            0.45968911445244853
+          ],
+          "estimate": 0.18266694781987847
+        },
+        "exact_archive": {
+          "ci95": [
+            -0.08626950744992812,
+            0.45968911445244853
+          ],
+          "estimate": 0.18266694781987847
+        },
+        "lazy_alignment": {
+          "ci95": [
+            -0.11913485324861182,
+            0.2902594916658396
+          ],
+          "estimate": 0.08082562318895474
+        },
+        "lazy_archive": {
+          "ci95": [
+            -0.11913485324861182,
+            0.2902594916658396
+          ],
+          "estimate": 0.08082562318895474
+        }
+      },
+      "R": {
+        "exact_alignment": {
+          "ci95": [
+            0.9173469660918463,
+            1.5835815961164783
+          ],
+          "estimate": 1.2004145408163265
+        },
+        "exact_archive": {
+          "ci95": [
+            0.9173469660918463,
+            1.5835815961164783
+          ],
+          "estimate": 1.2004145408163265
+        },
+        "lazy_alignment": {
+          "ci95": [
+            0.8876880850717082,
+            1.336774325086552
+          ],
+          "estimate": 1.084181823913249
+        },
+        "lazy_archive": {
+          "ci95": [
+            0.8876880850717082,
+            1.336774325086552
+          ],
+          "estimate": 1.084181823913249
+        }
+      },
+      "contrasts": {
+        "M_alignment": {
+          "ci95": [
+            -0.23935501167400983,
+            0.44709766720668337
+          ],
+          "estimate": 0.10184132463092373
+        },
+        "M_archive": {
+          "ci95": [
+            -0.23935501167400983,
+            0.44709766720668337
+          ],
+          "estimate": 0.10184132463092373
+        },
+        "M_average": {
+          "ci95": [
+            -0.23935501167400983,
+            0.44709766720668337
+          ],
+          "estimate": 0.10184132463092373
+        },
+        "S_average": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_lazy": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "interaction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "mutation_dominance": {
+          "ci95": [
+            -0.23935501167400983,
+            0.44709766720668337
+          ],
+          "estimate": 0.10184132463092373
+        },
+        "stopping_dominance": {
+          "ci95": [
+            -0.4480721984435708,
+            -0.006637305197219972
+          ],
+          "estimate": -0.10184132463092373
+        }
+      },
+      "decision": "ambiguous under preregistered decision rule",
+      "radius_log": 5,
+      "status": "empirically supported finite-size estimates"
+    },
+    "512": {
+      "D": {
+        "exact_alignment": {
+          "ci95": [
+            0.3167596642565216,
+            0.728544051377424
+          ],
+          "estimate": 0.5165417710814879
+        },
+        "exact_archive": {
+          "ci95": [
+            0.3167596642565216,
+            0.728544051377424
+          ],
+          "estimate": 0.5165417710814879
+        },
+        "lazy_alignment": {
+          "ci95": [
+            -0.012283111356952816,
+            0.42030701013309546
+          ],
+          "estimate": 0.20270765212874314
+        },
+        "lazy_archive": {
+          "ci95": [
+            -0.012283111356952816,
+            0.42030701013309546
+          ],
+          "estimate": 0.20270765212874314
+        }
+      },
+      "R": {
+        "exact_alignment": {
+          "ci95": [
+            1.372672630125867,
+            2.0720615952185257
+          ],
+          "estimate": 1.676220859431092
+        },
+        "exact_archive": {
+          "ci95": [
+            1.372672630125867,
+            2.0720615952185257
+          ],
+          "estimate": 1.676220859431092
+        },
+        "lazy_alignment": {
+          "ci95": [
+            0.9877920181960576,
+            1.5224288886000992
+          ],
+          "estimate": 1.2247143732659749
+        },
+        "lazy_archive": {
+          "ci95": [
+            0.9877920181960576,
+            1.5224288886000992
+          ],
+          "estimate": 1.2247143732659749
+        }
+      },
+      "contrasts": {
+        "M_alignment": {
+          "ci95": [
+            0.025914469023704857,
+            0.609550952087716
+          ],
+          "estimate": 0.31383411895274477
+        },
+        "M_archive": {
+          "ci95": [
+            0.025914469023704857,
+            0.609550952087716
+          ],
+          "estimate": 0.31383411895274477
+        },
+        "M_average": {
+          "ci95": [
+            0.025914469023704857,
+            0.609550952087716
+          ],
+          "estimate": 0.31383411895274477
+        },
+        "S_average": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_lazy": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "interaction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "mutation_dominance": {
+          "ci95": [
+            0.025914469023704857,
+            0.609550952087716
+          ],
+          "estimate": 0.31383411895274477
+        },
+        "stopping_dominance": {
+          "ci95": [
+            -0.609550952087716,
+            -0.04143653624791868
+          ],
+          "estimate": -0.31383411895274477
+        }
+      },
+      "decision": "same-weight mechanism favored",
+      "radius_log": 9,
+      "status": "empirically supported finite-size estimates"
+    },
+    "64": {
+      "D": {
+        "exact_alignment": {
+          "ci95": [
+            0.06813542836255433,
+            0.515639992294533
+          ],
+          "estimate": 0.29056917114148895
+        },
+        "exact_archive": {
+          "ci95": [
+            0.06813542836255433,
+            0.515639992294533
+          ],
+          "estimate": 0.29056917114148895
+        },
+        "lazy_alignment": {
+          "ci95": [
+            -0.18231998609332611,
+            0.26868400063946135
+          ],
+          "estimate": 0.040937052756497234
+        },
+        "lazy_archive": {
+          "ci95": [
+            -0.18231998609332611,
+            0.26868400063946135
+          ],
+          "estimate": 0.040937052756497234
+        }
+      },
+      "R": {
+        "exact_alignment": {
+          "ci95": [
+            1.0705102774840958,
+            1.6747099663707452
+          ],
+          "estimate": 1.3371883604971346
+        },
+        "exact_archive": {
+          "ci95": [
+            1.0705102774840958,
+            1.6747099663707452
+          ],
+          "estimate": 1.3371883604971346
+        },
+        "lazy_alignment": {
+          "ci95": [
+            0.8333346437392603,
+            1.3082416722453396
+          ],
+          "estimate": 1.0417865258913488
+        },
+        "lazy_archive": {
+          "ci95": [
+            0.8333346437392603,
+            1.3082416722453396
+          ],
+          "estimate": 1.0417865258913488
+        }
+      },
+      "contrasts": {
+        "M_alignment": {
+          "ci95": [
+            -0.07214873423800232,
+            0.5683506304371536
+          ],
+          "estimate": 0.24963211838499172
+        },
+        "M_archive": {
+          "ci95": [
+            -0.07214873423800232,
+            0.5683506304371536
+          ],
+          "estimate": 0.24963211838499172
+        },
+        "M_average": {
+          "ci95": [
+            -0.07214873423800232,
+            0.5683506304371536
+          ],
+          "estimate": 0.24963211838499172
+        },
+        "S_average": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_exact": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "S_lazy": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "interaction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "estimate": 0.0
+        },
+        "mutation_dominance": {
+          "ci95": [
+            -0.07214873423800232,
+            0.5683506304371536
+          ],
+          "estimate": 0.24963211838499172
+        },
+        "stopping_dominance": {
+          "ci95": [
+            -0.5683506304371537,
+            -0.014891945480555604
+          ],
+          "estimate": -0.24963211838499172
+        }
+      },
+      "decision": "ambiguous under preregistered decision rule",
+      "radius_log": 6,
+      "status": "empirically supported finite-size estimates"
+    }
+  },
+  "interval_scope": "pointwise percentile 95%, not simultaneous",
+  "method": "independent cell bootstrap; paired endpoints resampled together",
+  "schema_version": 1,
+  "sources": [
+    {
+      "complete": true,
+      "directory": "research/runs/20261102T213520Z-factorial-grid-factorial-main",
+      "manifest_sha256": "98f0e64c60f2013ad5318fd304b9b9ef1810a59be14f7f04bb69268253f3777a",
+      "results_sha256": "81c4a716cc8b615cb337f60f0cc049b7319110511777800a7fc99efac1c3193b"
+    },
+    {
+      "complete": true,
+      "directory": "research/runs/20261102T213945Z-factorial-grid-factorial-validation512",
+      "manifest_sha256": "1a88568c60fc065b2fa7dd33b1d47262ece47868512247063219d1b9fab0cc23",
+      "results_sha256": "13ce219edbaee2dbab3912f5c8cea04ca0c7729878113b554f0cd713fa14ed03"
+    }
+  ],
+  "trajectory_count": 720
+}

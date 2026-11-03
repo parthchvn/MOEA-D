@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.metadata
 import json
 import os
 import platform
@@ -31,7 +32,7 @@ if str(ROOT) not in sys.path:
 import large  # noqa: E402
 import sim  # noqa: E402
 
-SOURCE_SUFFIXES = {".md", ".py", ".toml", ".txt"}
+SOURCE_SUFFIXES = {".md", ".py", ".toml", ".txt", ".sh"}
 SOURCE_EXCLUDED_PARTS = {".cache", ".git", ".venv", "__pycache__", "runs"}
 
 
@@ -79,7 +80,7 @@ def snapshot_sources(destination: Path) -> dict[str, str]:
         target = snapshot / relative
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source, target)
-        hashes[str(relative)] = sha256(source)
+        hashes[str(relative)] = sha256(target)
 
     try:
         patch = subprocess.check_output(
@@ -139,10 +140,17 @@ def base_manifest(
         "output_directory": str(destination.relative_to(ROOT)),
         "git_commit": git_value("rev-parse", "HEAD"),
         "git_dirty": bool(dirty) if dirty is not None else None,
+        "git_status_porcelain": dirty,
         "python": sys.version,
+        "python_executable": sys.executable,
         "numpy": np.__version__,
         "matplotlib": matplotlib.__version__,
         "platform": platform.platform(),
+        "installed_distributions": dict(sorted(
+            (distribution.metadata["Name"], distribution.version)
+            for distribution in importlib.metadata.distributions()
+            if distribution.metadata["Name"]
+        )),
         "wall_time_budget_seconds": args.max_seconds,
         "seed_base": args.seed,
         "complete": False,
@@ -151,7 +159,173 @@ def base_manifest(
         "source_snapshot_directory": "source_snapshot",
         "working_tree_patch": "working_tree.patch",
         "parameters": vars(args),
+        "model_conventions": ({
+            "scalarization": "max(j*(n-w), (n-j)*w), minimized, ties accepted",
+            "paper_conjugacy": "complement genotype; paper zeros=w and paper k=j",
+            "breeders": "cyclic ascending 0..n, own incumbent, sequential updates",
+            "neighborhoods": "clipped symmetric intervals |j-breeder|<=r, not a ring",
+            "initialization": "independent Bin(n,1/2), n+1 evaluations counted",
+            "mutation": "exact one-bit or lazy one-bit with weight self-loop probability 1/2",
+            "replacement": "offspring offered independently to every neighbor; <= acceptance",
+            "archive": "passive, every initialized/generated weight including rejected offspring",
+            "endpoints": "paired first archive coverage and exact alignment; checked per offspring",
+            "random_streams": "SeedSequence(seed).spawn(3): initialization, gate, direction PCG64; both uniform arrays drawn each sweep in both arms",
+            "seed_policy": "seed_base+trajectory_index; independent across n/radius/mutation; endpoints paired on one trajectory",
+            "scheduling": "round-robin complete configuration list for each repetition",
+        } if args.mode in ("factorial-grid", "broadcast-grid") else None),
     }
+
+
+def broadcast_plan(args):
+    """Freeze all blocks, seeds and counterbalanced arm order before any work."""
+    configurations = []
+    for n in args.n:
+        if n < 2:
+            raise ValueError("broadcast-grid requires n>=2")
+        radii = {1, int(np.ceil(np.log2(n)))}
+        if args.include_zero:
+            radii.add(0)
+        configurations.extend((n, radius) for radius in sorted(radii))
+    plan = []
+    for repetition in range(args.blocks):
+        for n, radius in configurations:
+            plan.append({
+                "block_index": len(plan),
+                "block_id": f"n={n},r={radius},rep={repetition}",
+                "n": n, "radius": radius, "repetition": repetition,
+                "seed": args.seed + len(plan),
+                # Global parity would lock arm order within each radius when
+                # there are two radius configurations. Balance within each cell.
+                "arm_order": ["on", "off"] if repetition % 2 == 0 else ["off", "on"],
+            })
+    return plan
+
+
+def summarize_broadcast(rows, plan):
+    seen = {}
+    for row in rows:
+        seen.setdefault(row["block_id"], set()).add(row["arm"])
+    cells = {}
+    for n, radius in sorted({(block["n"], block["radius"]) for block in plan}):
+        for arm in ("on", "off"):
+            group = [row for row in rows if (row["n"], row["radius"], row["arm"]) == (n, radius, arm)]
+            cell = {"trajectories": len(group)}
+            for event in ("archive", "alignment"):
+                cell[event] = {
+                    "censored": sum(row[f"{event}_censored"] for row in group),
+                    "evaluations_uncensored_only": describe([
+                        row[f"{event}_evaluations"] for row in group if not row[f"{event}_censored"]]),
+                }
+            cells[f"n={n},r={radius},arm={arm}"] = cell
+    return {
+        "requested_blocks": len(plan), "started_blocks": len(seen),
+        "complete_blocks": sum(arms == {"on", "off"} for arms in seen.values()),
+        "unstarted_blocks": [block["block_id"] for block in plan if block["block_id"] not in seen],
+        "incomplete_started_blocks": [key for key, arms in seen.items() if arms != {"on", "off"}],
+        "cells": cells,
+    }
+
+
+def broadcast_grid(args, deadline, checkpoint):
+    rows, exhausted = [], False
+    plan = broadcast_plan(args)
+    for block in plan:
+        for position, arm in enumerate(block["arm_order"]):
+            if time.monotonic() >= deadline:
+                exhausted = True
+                break
+            trial_started = time.monotonic()
+            trial_limit = trial_started + args.max_trial_seconds
+            scope = "total" if deadline <= trial_limit else "trial"
+            result = large.run_controlled(
+                block["n"], block["radius"], block["seed"], mutation="lazy",
+                max_evaluations=args.max_evaluations, deadline=min(deadline, trial_limit),
+                self_loop_broadcast=arm == "on", track_phases=True,
+            )
+            rows.append({
+                **block, "run_id": args.run_id, "arm": arm,
+                "execution_position": position, "mutation": "lazy",
+                "weight_self_loop_probability": 0.5,
+                "self_loop_neighbor_broadcast": arm == "on",
+                "minimum_actual_neighborhood_size": block["radius"] + 1,
+                "maximum_actual_neighborhood_size": min(block["n"] + 1, 2 * block["radius"] + 1),
+                "elapsed_seconds": time.monotonic() - trial_started,
+                "deadline_scope": scope if result["censor_reason"] == "wall_time" else None,
+                **result,
+            })
+            checkpoint(rows, summarize_broadcast(rows, plan))
+            if result["censor_reason"] == "wall_time" and scope == "total":
+                exhausted = True
+                break
+        if exhausted:
+            break
+    return rows, summarize_broadcast(rows, plan), exhausted
+
+
+def factorial_configurations(args: argparse.Namespace) -> list[tuple[int, int, str]]:
+    configurations = []
+    for n in args.n:
+        if n < 2:
+            raise ValueError("factorial-grid requires n>=2")
+        for radius in sorted({0, 1, int(np.ceil(np.log2(n)))}):
+            for mutation in ("exact", "lazy"):
+                configurations.append((n, radius, mutation))
+    return configurations
+
+
+def summarize_factorial(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    summary = {}
+    for key in sorted({(row["n"], row["radius"], row["mutation"]) for row in rows}):
+        group = [row for row in rows
+                 if (row["n"], row["radius"], row["mutation"]) == key]
+        cell = {"trajectories": len(group), "paired_endpoints": True}
+        for event in ("archive", "alignment"):
+            values = [float(row[f"{event}_evaluations"]) for row in group
+                      if not row[f"{event}_censored"]]
+            cell[event] = {
+                "censored": sum(row[f"{event}_censored"] for row in group),
+                "evaluations_uncensored_only": describe(values),
+            }
+        summary[f"n={key[0]},r={key[1]},mutation={key[2]}"] = cell
+    return summary
+
+
+def factorial_grid(args, deadline, checkpoint):
+    """Each checkpoint contains one completed trajectory and its paired events."""
+    rows = []
+    configurations = factorial_configurations(args)
+    exhausted = False
+    for repetition in range(args.reps):
+        for n, radius, mutation in configurations:
+            if time.monotonic() >= deadline:
+                exhausted = True
+                break
+            seed = args.seed + len(rows)
+            trial_started = time.monotonic()
+            trial_limit = trial_started + args.max_trial_seconds
+            scope = "total" if deadline <= trial_limit else "trial"
+            result = large.run_controlled(
+                n=n, r=radius, seed=seed, mutation=mutation,
+                max_evaluations=args.max_evaluations,
+                deadline=min(deadline, trial_limit),
+            )
+            rows.append({
+                "trajectory_index": len(rows), "n": n, "radius": radius,
+                "mutation": mutation, "weight_self_loop_probability": 0.5 if mutation == "lazy" else 0.0,
+                "repetition": repetition, "seed": seed,
+                "minimum_actual_neighborhood_size": radius + 1,
+                "maximum_actual_neighborhood_size": min(n + 1, 2 * radius + 1),
+                "elapsed_seconds": time.monotonic() - trial_started,
+                "deadline_scope": scope if result["censor_reason"] == "wall_time" else None,
+                **result,
+            })
+            checkpoint(rows, summarize_factorial(rows))
+            if result["censor_reason"] == "wall_time" and scope == "total":
+                exhausted = True
+                break
+        if exhausted:
+            break
+    return rows, summarize_factorial(rows), exhausted
 
 
 def summarize_large(
@@ -347,6 +521,7 @@ def parser() -> argparse.ArgumentParser:
     common.add_argument("--max-seconds", type=float, default=5 * 60 * 60)
     common.add_argument("--max-trial-seconds", type=float, default=10 * 60)
     common.add_argument("--label")
+    common.add_argument("--not-after-utc", help="Hard total wall deadline in ISO-8601 UTC")
 
     root = argparse.ArgumentParser(description=__doc__)
     subparsers = root.add_subparsers(dest="mode", required=True)
@@ -365,6 +540,17 @@ def parser() -> argparse.ArgumentParser:
     noisy.add_argument("--trials", type=int, default=20)
     noisy.add_argument("--stop-rule", choices=("front", "aligned"), default="aligned")
     noisy.add_argument("--max-gens", type=int, default=None)
+
+    factorial = subparsers.add_parser("factorial-grid", parents=[common])
+    factorial.add_argument("--n", type=int, nargs="+", required=True)
+    factorial.add_argument("--reps", type=int, default=20)
+    factorial.add_argument("--max-evaluations", type=int, default=20_000_000)
+
+    broadcast = subparsers.add_parser("broadcast-grid", parents=[common])
+    broadcast.add_argument("--n", type=int, nargs="+", required=True)
+    broadcast.add_argument("--blocks", type=int, default=48)
+    broadcast.add_argument("--include-zero", action="store_true")
+    broadcast.add_argument("--max-evaluations", type=int, default=20_000_000)
     return root
 
 
@@ -375,30 +561,59 @@ def main() -> int:
     if args.max_trial_seconds <= 0:
         raise ValueError("--max-trial-seconds must be positive")
     destination = run_directory(args.mode, args.label)
+    if args.mode == "broadcast-grid":
+        if args.blocks < 1:
+            raise ValueError("--blocks must be positive")
+        args.run_id = destination.name
     started = time.monotonic()
     deadline = started + args.max_seconds
+    if args.not_after_utc:
+        absolute = datetime.fromisoformat(args.not_after_utc.replace("Z", "+00:00"))
+        if absolute.tzinfo is None:
+            raise ValueError("--not-after-utc must include a timezone")
+        deadline = min(deadline, started + (absolute - datetime.now(timezone.utc)).total_seconds())
     source_hashes = snapshot_sources(destination)
     manifest = base_manifest(args, destination, source_hashes)
+    if args.mode == "broadcast-grid":
+        manifest["schema_version"] = 3
+        manifest["planned_blocks"] = broadcast_plan(args)
+        manifest["requested_blocks"] = len(manifest["planned_blocks"])
+        manifest["requested_trials"] = 2 * manifest["requested_blocks"]
+        manifest["model_conventions"].update(
+            mutation="lazy one-bit with probability 1/2 of parent weight",
+            intervention="OFF suppresses only j!=breeder replacement on offspring==parent; moving offers unchanged",
+            seed_policy="one seed per planned n/r/repetition block shared by separate arm generators; independent blocks",
+            scheduling="round-robin blocks; arm order counterbalanced by repetition parity within each n/r",
+            phases="confirmed-prefix target first hits, last endpoint hit, interior completion, residual alignment time",
+        )
     atomic_json(destination / "manifest.json", manifest)
 
     def checkpoint(rows: list[dict[str, Any]], summary: dict[str, Any]) -> None:
         atomic_json(
             destination / "results.json",
-            {"schema_version": 2, "trials": rows, "summary": summary},
+            {"schema_version": 3 if args.mode == "broadcast-grid" else 2,
+             "trials": rows, "summary": summary},
         )
         manifest["updated_at_utc"] = datetime.now(timezone.utc).isoformat()
         manifest["elapsed_seconds"] = time.monotonic() - started
         manifest["trials_recorded"] = len(rows)
         atomic_json(destination / "manifest.json", manifest)
 
-    checkpoint([], {})
+    checkpoint([], summarize_broadcast([], manifest["planned_blocks"])
+               if args.mode == "broadcast-grid" else {})
     try:
         if args.mode == "large-grid":
             rows, summary, budget_exhausted = large_grid(args, deadline, checkpoint)
             requested_trials = len(args.n) * len(args.r) * args.reps
-        else:
+        elif args.mode == "noise-grid":
             rows, summary, budget_exhausted = noise_grid(args, deadline, checkpoint)
             requested_trials = len(args.n) * len(args.T) * args.trials
+        elif args.mode == "factorial-grid":
+            rows, summary, budget_exhausted = factorial_grid(args, deadline, checkpoint)
+            requested_trials = len(factorial_configurations(args)) * args.reps
+        else:
+            rows, summary, budget_exhausted = broadcast_grid(args, deadline, checkpoint)
+            requested_trials = 2 * len(manifest["planned_blocks"])
         checkpoint(rows, summary)
         manifest["complete"] = not budget_exhausted and len(rows) == requested_trials
         manifest["budget_exhausted"] = budget_exhausted

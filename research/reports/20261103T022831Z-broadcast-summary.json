@@ -1,0 +1,1648 @@
+{
+  "bootstrap_draws": 20000,
+  "cells": {
+    "n=256,r=1": {
+      "arms": {
+        "off": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 507834,
+                "mean": 285233.0208333333,
+                "median": 278715.5,
+                "min": 170134,
+                "q25": 239139.75,
+                "q75": 320285.25,
+                "q90": 371931.80000000005,
+                "q95": 407306.5,
+                "std": 70262.62816897986
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 285233.0208333333,
+                "interval": [
+                  266188.23854166665,
+                  305290.46406249993
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 507834,
+                "mean": 285233.0208333333,
+                "median": 278715.5,
+                "min": 170134,
+                "q25": 239139.75,
+                "q75": 320285.25,
+                "q90": 371931.80000000005,
+                "q95": 407306.5,
+                "std": 70262.62816897986
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 285233.0208333333,
+                "interval": [
+                  266188.23854166665,
+                  305290.46406249993
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 48,
+            "max": 507834,
+            "mean": 285233.0208333333,
+            "median": 278715.5,
+            "min": 170134,
+            "q25": 239139.75,
+            "q75": 320285.25,
+            "q90": 371931.80000000005,
+            "q95": 407306.5,
+            "std": 70262.62816897986
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 48
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 260086,
+                "mean": 185249.5,
+                "median": 175918.5,
+                "min": 128756,
+                "q25": 161075.5,
+                "q75": 195962.0,
+                "q90": 236955.30000000005,
+                "q95": 247621.5,
+                "std": 33347.94435273622
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 507834,
+                "mean": 285233.0208333333,
+                "median": 278715.5,
+                "min": 170134,
+                "q25": 239139.75,
+                "q75": 320285.25,
+                "q90": 371931.80000000005,
+                "q95": 407306.5,
+                "std": 70262.62816897986
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 48,
+            "max": 253973,
+            "mean": 142530.79166666666,
+            "median": 139471.0,
+            "min": 84842,
+            "q25": 119284.25,
+            "q75": 159591.25,
+            "q90": 186090.7,
+            "q95": 203503.05,
+            "std": 35144.90130082933
+          },
+          "self_loop_recipient_changes": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "self_loop_target_acquisitions": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "trajectories": 48
+        },
+        "on": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 364940,
+                "mean": 199427.29166666666,
+                "median": 176560.5,
+                "min": 97917,
+                "q25": 151245.25,
+                "q75": 249033.5,
+                "q90": 302078.8000000001,
+                "q95": 343801.75,
+                "std": 70954.02753655215
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 199427.29166666666,
+                "interval": [
+                  180018.534375,
+                  220084.39791666658
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 364940,
+                "mean": 199427.29166666666,
+                "median": 176560.5,
+                "min": 97917,
+                "q25": 151245.25,
+                "q75": 249033.5,
+                "q90": 302078.8000000001,
+                "q95": 343801.75,
+                "std": 70954.02753655215
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 199427.29166666666,
+                "interval": [
+                  180018.534375,
+                  220084.39791666658
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 48,
+            "max": 364940,
+            "mean": 199427.29166666666,
+            "median": 176560.5,
+            "min": 97917,
+            "q25": 151245.25,
+            "q75": 249033.5,
+            "q90": 302078.8000000001,
+            "q95": 343801.75,
+            "std": 70954.02753655215
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 48
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 245951,
+                "mean": 121203.35416666667,
+                "median": 113468.5,
+                "min": 79670,
+                "q25": 99781.0,
+                "q75": 128178.5,
+                "q90": 165018.0000000001,
+                "q95": 190910.44999999998,
+                "std": 34573.12343886079
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 364940,
+                "mean": 199427.29166666666,
+                "median": 176560.5,
+                "min": 97917,
+                "q25": 151245.25,
+                "q75": 249033.5,
+                "q90": 302078.8000000001,
+                "q95": 343801.75,
+                "std": 70954.02753655215
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 48,
+            "max": 182459,
+            "mean": 99597.64583333333,
+            "median": 88087.5,
+            "min": 48956,
+            "q25": 75573.5,
+            "q75": 124522.75,
+            "q90": 150701.20000000004,
+            "q95": 171848.19999999998,
+            "std": 35459.42605617862
+          },
+          "self_loop_recipient_changes": {
+            "count": 48,
+            "max": 3730,
+            "mean": 3351.75,
+            "median": 3349.0,
+            "min": 3098,
+            "q25": 3277.75,
+            "q75": 3423.5,
+            "q90": 3482.9,
+            "q95": 3539.65,
+            "std": 126.57274420059038
+          },
+          "self_loop_target_acquisitions": {
+            "count": 48,
+            "max": 72,
+            "mean": 59.854166666666664,
+            "median": 61.0,
+            "min": 41,
+            "q25": 54.0,
+            "q75": 66.0,
+            "q90": 68.0,
+            "q95": 70.3,
+            "std": 7.6741888013564825
+          },
+          "trajectories": 48
+        }
+      },
+      "complete_blocks": 48,
+      "missing_blocks_or_arms": [],
+      "paired_phase_differences": {
+        "alignment_after_endpoints_evaluations": {
+          "coverage": 0.95,
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "interior_completion_evaluations": {
+          "coverage": 0.95,
+          "estimate": 64046.145833333336,
+          "interval": [
+            54798.867187500015,
+            73512.5125
+          ]
+        },
+        "last_endpoint_evaluations": {
+          "coverage": 0.95,
+          "estimate": 85805.72916666667,
+          "interval": [
+            64678.052083333336,
+            107587.06354166663
+          ]
+        }
+      },
+      "planned_blocks": 48
+    },
+    "n=256,r=8": {
+      "arms": {
+        "off": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175408.10416666666,
+                "median": 161911.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70762.17708010811
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 175408.10416666666,
+                "interval": [
+                  156448.95677083332,
+                  195813.27291666667
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175408.10416666666,
+                "median": 161911.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70762.17708010811
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 175408.10416666666,
+                "interval": [
+                  156448.95677083332,
+                  195813.27291666667
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 48,
+            "max": 384986,
+            "mean": 175408.10416666666,
+            "median": 161911.0,
+            "min": 76585,
+            "q25": 127473.5,
+            "q75": 210741.0,
+            "q90": 266792.3,
+            "q95": 313990.69999999995,
+            "std": 70762.17708010811
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 48
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 180670,
+                "mean": 85351.1875,
+                "median": 78386.5,
+                "min": 51657,
+                "q25": 68490.25,
+                "q75": 90655.75,
+                "q90": 115213.00000000001,
+                "q95": 143932.5,
+                "std": 26310.001875070695
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175408.10416666666,
+                "median": 161911.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70762.17708010811
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 48,
+            "max": 192043,
+            "mean": 87512.0,
+            "median": 80721.5,
+            "min": 38064,
+            "q25": 63431.75,
+            "q75": 105265.75,
+            "q90": 133211.3,
+            "q95": 157073.9,
+            "std": 35339.16797657517
+          },
+          "self_loop_recipient_changes": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "self_loop_target_acquisitions": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "trajectories": 48
+        },
+        "on": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175220.66666666666,
+                "median": 160754.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70791.82491368569
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 175220.66666666666,
+                "interval": [
+                  156218.43541666667,
+                  195582.72916666666
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175220.66666666666,
+                "median": 160754.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70791.82491368569
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 175220.66666666666,
+                "interval": [
+                  156218.43541666667,
+                  195582.72916666666
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 48,
+            "max": 384986,
+            "mean": 175220.66666666666,
+            "median": 160754.0,
+            "min": 76585,
+            "q25": 127473.5,
+            "q75": 210741.0,
+            "q90": 266792.3,
+            "q95": 313990.69999999995,
+            "std": 70791.82491368569
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 48,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 48
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 180670,
+                "mean": 85174.41666666667,
+                "median": 78386.5,
+                "min": 51657,
+                "q25": 68107.0,
+                "q75": 90655.75,
+                "q90": 115213.00000000001,
+                "q95": 143932.5,
+                "std": 26449.40789413545
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 48,
+                "max": 384986,
+                "mean": 175220.66666666666,
+                "median": 160754.0,
+                "min": 76585,
+                "q25": 127473.5,
+                "q75": 210741.0,
+                "q90": 266792.3,
+                "q95": 313990.69999999995,
+                "std": 70791.82491368569
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 48,
+            "max": 192043,
+            "mean": 87417.35416666667,
+            "median": 79938.5,
+            "min": 38064,
+            "q25": 63431.75,
+            "q75": 105265.75,
+            "q90": 133211.3,
+            "q95": 157073.9,
+            "std": 35355.261428840895
+          },
+          "self_loop_recipient_changes": {
+            "count": 48,
+            "max": 2448,
+            "mean": 2170.6458333333335,
+            "median": 2192.0,
+            "min": 1937,
+            "q25": 2106.0,
+            "q75": 2240.25,
+            "q90": 2298.1,
+            "q95": 2306.95,
+            "std": 111.00919831225283
+          },
+          "self_loop_target_acquisitions": {
+            "count": 48,
+            "max": 73,
+            "mean": 52.958333333333336,
+            "median": 53.0,
+            "min": 35,
+            "q25": 49.0,
+            "q75": 57.0,
+            "q90": 61.0,
+            "q95": 62.3,
+            "std": 6.847761968090831
+          },
+          "trajectories": 48
+        }
+      },
+      "complete_blocks": 48,
+      "missing_blocks_or_arms": [],
+      "paired_phase_differences": {
+        "alignment_after_endpoints_evaluations": {
+          "coverage": 0.95,
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "interior_completion_evaluations": {
+          "coverage": 0.95,
+          "estimate": 176.77083333333334,
+          "interval": [
+            0.0,
+            530.3125
+          ]
+        },
+        "last_endpoint_evaluations": {
+          "coverage": 0.95,
+          "estimate": 187.4375,
+          "interval": [
+            0.0,
+            562.3125
+          ]
+        }
+      },
+      "planned_blocks": 48
+    },
+    "n=512,r=1": {
+      "arms": {
+        "off": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 1047803.2916666666,
+                "median": 1011893.5,
+                "min": 661259,
+                "q25": 848374.5,
+                "q75": 1227096.75,
+                "q90": 1415675.8,
+                "q95": 1445455.45,
+                "std": 243775.77513620805
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 1047803.2916666666,
+                "interval": [
+                  954030.7614583333,
+                  1143948.7791666666
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 1047803.2916666666,
+                "median": 1011893.5,
+                "min": 661259,
+                "q25": 848374.5,
+                "q75": 1227096.75,
+                "q90": 1415675.8,
+                "q95": 1445455.45,
+                "std": 243775.77513620805
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 1047803.2916666666,
+                "interval": [
+                  954030.7614583333,
+                  1143948.7791666666
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 24,
+            "max": 1470770,
+            "mean": 1047803.2916666666,
+            "median": 1011893.5,
+            "min": 661259,
+            "q25": 848374.5,
+            "q75": 1227096.75,
+            "q90": 1415675.8,
+            "q95": 1445455.45,
+            "std": 243775.77513620805
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 24
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 1134758,
+                "mean": 756183.3333333334,
+                "median": 739747.0,
+                "min": 570455,
+                "q25": 683190.5,
+                "q75": 784632.25,
+                "q90": 922066.6,
+                "q95": 1009838.9499999998,
+                "std": 130252.76764502321
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 1047803.2916666666,
+                "median": 1011893.5,
+                "min": 661259,
+                "q25": 848374.5,
+                "q75": 1227096.75,
+                "q90": 1415675.8,
+                "q95": 1445455.45,
+                "std": 243775.77513620805
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 24,
+            "max": 734878,
+            "mean": 523665.375,
+            "median": 505310.0,
+            "min": 330021,
+            "q25": 423841.25,
+            "q75": 613341.5,
+            "q90": 707547.5,
+            "q95": 722532.25,
+            "std": 121970.57025358082
+          },
+          "self_loop_recipient_changes": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "self_loop_target_acquisitions": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "trajectories": 24
+        },
+        "on": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 859938.0416666666,
+                "median": 783609.0,
+                "min": 443231,
+                "q25": 736797.75,
+                "q75": 981113.0,
+                "q90": 1275318.4,
+                "q95": 1432527.8499999999,
+                "std": 271578.5929481443
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 859938.0416666666,
+                "interval": [
+                  759197.0187499999,
+                  971729.86875
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 859938.0416666666,
+                "median": 783609.0,
+                "min": 443231,
+                "q25": 736797.75,
+                "q75": 981113.0,
+                "q90": 1275318.4,
+                "q95": 1432527.8499999999,
+                "std": 271578.5929481443
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 859938.0416666666,
+                "interval": [
+                  759197.0187499999,
+                  971729.86875
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 24,
+            "max": 1470770,
+            "mean": 859938.0416666666,
+            "median": 783609.0,
+            "min": 443231,
+            "q25": 736797.75,
+            "q75": 981113.0,
+            "q90": 1275318.4,
+            "q95": 1432527.8499999999,
+            "std": 271578.5929481443
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 24
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 596621,
+                "mean": 464543.625,
+                "median": 442207.0,
+                "min": 358076,
+                "q25": 422710.25,
+                "q75": 506073.5,
+                "q90": 567224.2,
+                "q95": 591259.15,
+                "std": 66509.78615329934
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 1470770,
+                "mean": 859938.0416666666,
+                "median": 783609.0,
+                "min": 443231,
+                "q25": 736797.75,
+                "q75": 981113.0,
+                "q90": 1275318.4,
+                "q95": 1432527.8499999999,
+                "std": 271578.5929481443
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 24,
+            "max": 734878,
+            "mean": 429713.8333333333,
+            "median": 391867.0,
+            "min": 221549,
+            "q25": 367884.0,
+            "q75": 490174.0,
+            "q90": 637542.4999999999,
+            "q95": 716112.9999999999,
+            "std": 135795.2647527717
+          },
+          "self_loop_recipient_changes": {
+            "count": 24,
+            "max": 13931,
+            "mean": 13261.416666666666,
+            "median": 13295.0,
+            "min": 12735,
+            "q25": 13039.5,
+            "q75": 13448.25,
+            "q90": 13605.1,
+            "q95": 13718.35,
+            "std": 308.6686582400457
+          },
+          "self_loop_target_acquisitions": {
+            "count": 24,
+            "max": 143,
+            "mean": 125.41666666666667,
+            "median": 125.0,
+            "min": 113,
+            "q25": 116.0,
+            "q75": 132.0,
+            "q90": 137.7,
+            "q95": 138.85,
+            "std": 9.045376751673206
+          },
+          "trajectories": 24
+        }
+      },
+      "complete_blocks": 24,
+      "missing_blocks_or_arms": [],
+      "paired_phase_differences": {
+        "alignment_after_endpoints_evaluations": {
+          "coverage": 0.95,
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "interior_completion_evaluations": {
+          "coverage": 0.95,
+          "estimate": 291639.7083333333,
+          "interval": [
+            237346.73020833335,
+            352152.17291666666
+          ]
+        },
+        "last_endpoint_evaluations": {
+          "coverage": 0.95,
+          "estimate": 187865.25,
+          "interval": [
+            105806.33229166667,
+            276615.15833333327
+          ]
+        }
+      },
+      "planned_blocks": 24
+    },
+    "n=512,r=9": {
+      "arms": {
+        "off": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 679939.375,
+                "interval": [
+                  579668.3875,
+                  785425.9822916666
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 679939.375,
+                "interval": [
+                  579668.3875,
+                  785425.9822916666
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 24,
+            "max": 1234278,
+            "mean": 679939.375,
+            "median": 660743.5,
+            "min": 288819,
+            "q25": 466575.0,
+            "q75": 801562.5,
+            "q90": 1073350.5,
+            "q95": 1184157.9,
+            "std": 265736.7911574898
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 24
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 603802,
+                "mean": 368975.5,
+                "median": 356790.0,
+                "min": 250343,
+                "q25": 278048.25,
+                "q75": 430537.0,
+                "q90": 494019.0,
+                "q95": 537853.1499999999,
+                "std": 99986.75186895685
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 24,
+            "max": 616719,
+            "mean": 339774.3333333333,
+            "median": 330211.0,
+            "min": 144414,
+            "q25": 233017.0,
+            "q75": 400921.25,
+            "q90": 536182.6,
+            "q95": 592635.2499999999,
+            "std": 132974.4049692554
+          },
+          "self_loop_recipient_changes": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "self_loop_target_acquisitions": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0
+          },
+          "trajectories": 24
+        },
+        "on": {
+          "events": {
+            "alignment": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 679939.375,
+                "interval": [
+                  579668.3875,
+                  785425.9822916666
+                ]
+              }
+            },
+            "archive": {
+              "censored": 0,
+              "evaluations_uncensored_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "mean_ci95": {
+                "coverage": 0.95,
+                "estimate": 679939.375,
+                "interval": [
+                  579668.3875,
+                  785425.9822916666
+                ]
+              }
+            }
+          },
+          "observation_evaluations": {
+            "count": 24,
+            "max": 1234278,
+            "mean": 679939.375,
+            "median": 660743.5,
+            "min": 288819,
+            "q25": 466575.0,
+            "q75": 801562.5,
+            "q90": 1073350.5,
+            "q95": 1184157.9,
+            "std": 265736.7911574898
+          },
+          "paired_endpoint_gap_uncensored_only": {
+            "count": 24,
+            "max": 0,
+            "mean": 0.0,
+            "median": 0.0,
+            "min": 0,
+            "q25": 0.0,
+            "q75": 0.0,
+            "q90": 0.0,
+            "q95": 0.0,
+            "std": 0.0,
+            "zero_gap_count": 24
+          },
+          "phases": {
+            "alignment_after_endpoints_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 0,
+                "mean": 0.0,
+                "median": 0.0,
+                "min": 0,
+                "q25": 0.0,
+                "q75": 0.0,
+                "q90": 0.0,
+                "q95": 0.0,
+                "std": 0.0
+              },
+              "unobserved": 0
+            },
+            "interior_completion_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 603802,
+                "mean": 366859.2083333333,
+                "median": 356790.0,
+                "min": 235981,
+                "q25": 278048.25,
+                "q75": 430537.0,
+                "q90": 494019.0,
+                "q95": 537853.1499999999,
+                "std": 99468.0885182602
+              },
+              "unobserved": 0
+            },
+            "last_endpoint_evaluations": {
+              "confirmed_values_only": {
+                "count": 24,
+                "max": 1234278,
+                "mean": 679939.375,
+                "median": 660743.5,
+                "min": 288819,
+                "q25": 466575.0,
+                "q75": 801562.5,
+                "q90": 1073350.5,
+                "q95": 1184157.9,
+                "std": 265736.7911574898
+              },
+              "unobserved": 0
+            }
+          },
+          "self_loop_offspring": {
+            "count": 24,
+            "max": 616719,
+            "mean": 339774.3333333333,
+            "median": 330211.0,
+            "min": 144414,
+            "q25": 233017.0,
+            "q75": 400921.25,
+            "q90": 536182.6,
+            "q95": 592635.2499999999,
+            "std": 132974.4049692554
+          },
+          "self_loop_recipient_changes": {
+            "count": 24,
+            "max": 9646,
+            "mean": 8871.25,
+            "median": 8925.5,
+            "min": 8009,
+            "q25": 8543.75,
+            "q75": 9134.25,
+            "q90": 9386.0,
+            "q95": 9510.55,
+            "std": 435.45920290114935
+          },
+          "self_loop_target_acquisitions": {
+            "count": 24,
+            "max": 134,
+            "mean": 120.70833333333333,
+            "median": 122.5,
+            "min": 97,
+            "q25": 112.75,
+            "q75": 127.25,
+            "q90": 128.7,
+            "q95": 130.7,
+            "std": 9.18637538714934
+          },
+          "trajectories": 24
+        }
+      },
+      "complete_blocks": 24,
+      "missing_blocks_or_arms": [],
+      "paired_phase_differences": {
+        "alignment_after_endpoints_evaluations": {
+          "coverage": 0.95,
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        },
+        "interior_completion_evaluations": {
+          "coverage": 0.95,
+          "estimate": 2116.2916666666665,
+          "interval": [
+            0.0,
+            5643.5
+          ]
+        },
+        "last_endpoint_evaluations": {
+          "coverage": 0.95,
+          "estimate": 0.0,
+          "interval": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "planned_blocks": 24
+    }
+  },
+  "contrasts": {
+    "256": {
+      "events": {
+        "alignment": {
+          "A1": {
+            "coverage": 0.95,
+            "estimate": 0.357856746058856,
+            "interval": [
+              0.2651521150125045,
+              0.45544508193688216
+            ]
+          },
+          "Alog": {
+            "coverage": 0.95,
+            "estimate": 0.0010691508138892401,
+            "interval": [
+              0.0,
+              0.003478580905320304
+            ]
+          },
+          "Delta": {
+            "coverage": 0.95,
+            "estimate": 0.3567875952449667,
+            "interval": [
+              0.26385701017109947,
+              0.45421332502505285
+            ]
+          },
+          "R_off": {
+            "coverage": 0.95,
+            "estimate": 1.6261108469783976,
+            "interval": [
+              1.428432010170994,
+              1.8592838979732358
+            ]
+          },
+          "R_on": {
+            "coverage": 0.95,
+            "estimate": 1.138149371649463,
+            "interval": [
+              0.9787436213025426,
+              1.3252356766906326
+            ]
+          }
+        },
+        "archive": {
+          "A1": {
+            "coverage": 0.95,
+            "estimate": 0.357856746058856,
+            "interval": [
+              0.2651521150125045,
+              0.45544508193688216
+            ]
+          },
+          "Alog": {
+            "coverage": 0.95,
+            "estimate": 0.0010691508138892401,
+            "interval": [
+              0.0,
+              0.003478580905320304
+            ]
+          },
+          "Delta": {
+            "coverage": 0.95,
+            "estimate": 0.3567875952449667,
+            "interval": [
+              0.26385701017109947,
+              0.45421332502505285
+            ]
+          },
+          "R_off": {
+            "coverage": 0.95,
+            "estimate": 1.6261108469783976,
+            "interval": [
+              1.428432010170994,
+              1.8592838979732358
+            ]
+          },
+          "R_on": {
+            "coverage": 0.95,
+            "estimate": 1.138149371649463,
+            "interval": [
+              0.9787436213025426,
+              1.3252356766906326
+            ]
+          }
+        }
+      },
+      "primary": {
+        "A1": {
+          "coverage": 0.975,
+          "estimate": 0.357856746058856,
+          "interval": [
+            0.25287540110035994,
+            0.4682489867295321
+          ]
+        },
+        "Delta": {
+          "coverage": 0.975,
+          "estimate": 0.3567875952449667,
+          "interval": [
+            0.2518483610111519,
+            0.467294648073977
+          ]
+        }
+      },
+      "primary_decision": "broadcast helps at r=1 and contributes to attenuation",
+      "rlog": 8,
+      "status": "empirical finite-size estimates"
+    },
+    "512": {
+      "events": {
+        "alignment": {
+          "A1": {
+            "coverage": 0.95,
+            "estimate": 0.19759080639344107,
+            "interval": [
+              0.10874139425953658,
+              0.2990415508301195
+            ]
+          },
+          "Alog": {
+            "coverage": 0.95,
+            "estimate": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "Delta": {
+            "coverage": 0.95,
+            "estimate": 0.19759080639344107,
+            "interval": [
+              0.10874139425953658,
+              0.2990415508301195
+            ]
+          },
+          "R_off": {
+            "coverage": 0.95,
+            "estimate": 1.5410245827676425,
+            "interval": [
+              1.2999533629029667,
+              1.8525985619530305
+            ]
+          },
+          "R_on": {
+            "coverage": 0.95,
+            "estimate": 1.2647275231952357,
+            "interval": [
+              1.0461329493208997,
+              1.5499980607485782
+            ]
+          }
+        },
+        "archive": {
+          "A1": {
+            "coverage": 0.95,
+            "estimate": 0.19759080639344107,
+            "interval": [
+              0.10874139425953658,
+              0.2990415508301195
+            ]
+          },
+          "Alog": {
+            "coverage": 0.95,
+            "estimate": 0.0,
+            "interval": [
+              0.0,
+              0.0
+            ]
+          },
+          "Delta": {
+            "coverage": 0.95,
+            "estimate": 0.19759080639344107,
+            "interval": [
+              0.10874139425953658,
+              0.2990415508301195
+            ]
+          },
+          "R_off": {
+            "coverage": 0.95,
+            "estimate": 1.5410245827676425,
+            "interval": [
+              1.2999533629029667,
+              1.8525985619530305
+            ]
+          },
+          "R_on": {
+            "coverage": 0.95,
+            "estimate": 1.2647275231952357,
+            "interval": [
+              1.0461329493208997,
+              1.5499980607485782
+            ]
+          }
+        }
+      },
+      "primary": {
+        "A1": {
+          "coverage": 0.975,
+          "estimate": 0.19759080639344107,
+          "interval": [
+            0.09791024158299037,
+            0.3148482412942006
+          ]
+        },
+        "Delta": {
+          "coverage": 0.975,
+          "estimate": 0.19759080639344107,
+          "interval": [
+            0.09791024158299037,
+            0.3148482412942006
+          ]
+        }
+      },
+      "primary_decision": "broadcast helps at r=1 and contributes to attenuation",
+      "rlog": 9,
+      "status": "empirical finite-size estimates"
+    }
+  },
+  "method": "whole ON/OFF x archive/alignment blocks, independent radius cells",
+  "planned_blocks": 144,
+  "primary_interval_policy": "97.5% two-sided percentile per A1/Delta; nominal Bonferroni95 within n, approximate bootstrap",
+  "recorded_trajectories": 288,
+  "schema_version": 1,
+  "secondary_interval_policy": "95% pointwise, descriptive",
+  "seed": 2611039000,
+  "sources": [
+    {
+      "directory": "research/runs/20261103T024310Z-broadcast-grid-broadcast-main",
+      "manifest_sha256": "710b8497d16d9b2f544419a064bc6e0be6ec45d70602edf164fe261ecbcb9460",
+      "results_sha256": "e0dd0e64f05b3b2b4bb32cbba6c99db5c4de17bc7d28d9f3d980b4a3463ae0f9"
+    },
+    {
+      "directory": "research/runs/20261103T024933Z-broadcast-grid-broadcast-validation512",
+      "manifest_sha256": "306e272d389d0b56ba0d099da74793200a4bea9329d599a8de40cab8f1a601c6",
+      "results_sha256": "239fe245e5969e190577937ebb48dba48f190de8a03b5babb9a612e2535e9eb9"
+    }
+  ]
+}

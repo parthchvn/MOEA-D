@@ -2,12 +2,13 @@
 
 This repository studies how MOEA/D behaves on the bi-objective OneMinMax benchmark under one-bit mutation, with particular attention to neighborhood sharing and one-bit prior noise without reevaluation.
 
-The project currently contains two related, but not identical, models:
+The project contains legacy models and a controlled noiseless variant:
 
 - `sim.py` simulates full bit strings under one-bit prior noise. Its neighborhood parameter `T` is the requested number of subproblems in each neighborhood.
 - `large.py` uses an exact Hamming-weight state reduction for the noiseless model. Its parameter `r` is a symmetric neighborhood radius, so an unclipped interior neighborhood has size `2r + 1`; boundary neighborhoods are smaller.
+- `large.run_controlled` supports exact/lazy one-bit mutation, paired archive/alignment stopping observations, and the reviewed lazy same-weight broadcast ON/OFF intervention with passive target-hit phases.
 
-Do not compare their `T` values or stopping times without first reconciling these conventions. The main noiseless runtime law in `large.py` is presently a research claim with empirical support, not a completed proof in this repository.
+Do not compare their `T` values or stopping times without first reconciling these conventions. The main noiseless runtime law in `large.py` remains conjectured; the finite studies below do not establish it.
 
 ## Quick start
 
@@ -56,9 +57,29 @@ Each command writes a timestamped, machine-readable run under `research/runs/`. 
 
 The PDFs in the repository are source material. They should be cited and audited, not modified in place.
 
-## Current research priorities
+## Completed controlled studies and next proposal
 
-1. Compare the implemented process line by line with Doerr, Elmoutassim, Krejca, and Kibulu's October 2026 communication-radius preprint, which proves a quadratic runtime for every nonzero radius in a closely related model.
-2. Fix a canonical MOEA/D definition and reconcile archive versus simultaneous coverage, mutation, update order, target orientation, ideal-point notation, and neighborhood size across the literature, draft, notebook, and scripts.
-3. Audit the noisy `T=1` proof, particularly conditioning on accepted noisy values, tail bounds for the maximum over subproblems, and simultaneous versus historical Pareto-front coverage.
-4. Establish what, if anything, remains novel about the noiseless runtime conjecture before extending it to noisy neighborhoods.
+**Empirically supported:** the exact-to-lazy mutation change better explained
+finite communication-radius sensitivity than archive/alignment stopping at
+n=256/512. The subsequent fixed-lazy broadcast ablation found that suppressing
+same-weight neighbor communication increased r=1 mean evaluations by about
+43% and 22%, respectively, and increased the radius contrast. These findings
+support finite broadcast contribution, not exclusive mediation or asymptotics.
+Universal archive/alignment and endpoint/completion identities have explicit
+counterexamples despite equality in the reported positive-radius samples.
+
+- [Canonical model and source comparison](research/PAPER_COMPARISON.md).
+- [Exact/lazy factorial report](research/reports/20261102T212758Z-radius-factorial.md)
+  and [frozen protocol](research/FACTORIAL_PREREG.md).
+- [Lazy broadcast report](research/reports/20261103T022831Z-broadcast-ablation.md)
+  and [frozen protocol](research/BROADCAST_PREREG.md).
+- [Published evidence packs and recomputation instructions](research/evidence/README.md)
+  preserve raw records, seeds, manifests, exact executed source and dependency versions.
+- [Next standard-bit ON/OFF proposal](research/STANDARD_BIT_PROPOSAL.md) is reviewed
+  but not preregistered, implemented or launched. Archive coverage is its prospective
+  primary endpoint; a validated fixed-consumption standard-bit kernel is required.
+
+The noisy stored-fitness proof, exact-one-bit asymptotics, exclusive mediation,
+and rare event gaps remain separate open questions in the
+[claim ledger](research/CLAIMS.md). No new experiments are authorized by these
+proposals or by publishing this repository.

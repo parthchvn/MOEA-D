@@ -57,6 +57,174 @@ def cost_table(n):
 def neighbourhoods(n, r):                      # B(k) = {j : |j-k| <= r}
     return [(max(0, k - r), min(n + 1, k + r + 1)) for k in range(n + 1)]
 
+
+def controlled_streams(seed):
+    """Independent initialization, lazy-gate, and direction PCG64 streams."""
+    return tuple(np.random.default_rng(child)
+                 for child in np.random.SeedSequence(seed).spawn(3))
+
+
+def controlled_offspring(n, weight, mutation, gate, direction):
+    """One-bit direction is drawn even when the lazy gate makes a weight copy."""
+    if mutation == "lazy" and gate < 0.5:
+        return weight
+    return weight + 1 if direction < (n - weight) / n else weight - 1
+
+
+def run_controlled(n, r, seed, mutation="exact", max_evaluations=None,
+                   deadline=None, *, self_loop_broadcast=True, track_phases=False):
+    """Canonical cyclic model; observe paired archive and alignment times.
+
+    The archive is passive and contains every initialized/generated weight,
+    including rejected offspring. Both first-passage times count initialization
+    and are checked after each offspring. Continue past archive completion until
+    alignment or censoring. Thus endpoints are paired, not independent trials.
+
+    Paper correspondence: complement its genotype, retain subproblem index j,
+    and let its number of zeros equal our number of ones. This preserves the
+    ascending cyclic breeder order. Neighborhoods are clipped, not periodic.
+    See research/PAPER_COMPARISON.md for the source's apparent min/max typo.
+    ``self_loop_broadcast=False`` suppresses only other-recipient replacement
+    when the offspring equals the breeder's parent weight. Optional phase
+    observers record confirmed-prefix times without drawing randomness. Both
+    defaults preserve the original controlled API and seeded return fields.
+    """
+    if not isinstance(n, (int, np.integer)) or n < 1:
+        raise ValueError("n must be a positive integer")
+    if not isinstance(r, (int, np.integer)) or not 0 <= r <= n:
+        raise ValueError("r must be an integer in [0,n]")
+    if mutation not in ("exact", "lazy"):
+        raise ValueError("mutation must be exact or lazy")
+    if max_evaluations is not None and max_evaluations < n + 1:
+        raise ValueError("max_evaluations must include n+1 initialization evaluations")
+
+    evaluations = observation_evaluations = 0
+    archive_time = alignment_time = None
+    first_hits = [None] * (n + 1) if track_phases else None
+    archived = aligned = 0
+    self_loops = self_loop_changes = self_loop_targets = 0
+    rejected = rejected_new_archive = 0
+
+    def expired():
+        return deadline is not None and time.monotonic() >= deadline
+
+    def result(reason):
+        payload = dict(
+            evaluations=evaluations,
+            observation_evaluations=observation_evaluations,
+            initialization_evaluations=min(evaluations, n + 1),
+            offspring_evaluations=max(0, evaluations - n - 1),
+            archive_evaluations=archive_time,
+            alignment_evaluations=alignment_time,
+            archive_censored=archive_time is None,
+            alignment_censored=alignment_time is None,
+            censor_reason=reason,
+            archive_count=archived,
+            aligned_count=aligned,
+            self_loop_offspring=self_loops,
+            self_loop_recipient_changes=self_loop_changes,
+            self_loop_target_acquisitions=self_loop_targets,
+            rejected_offspring=rejected,
+            rejected_new_archive_weights=rejected_new_archive,
+        )
+        if track_phases:
+            endpoint_time = (max(first_hits[0], first_hits[n])
+                             if first_hits[0] is not None and first_hits[n] is not None
+                             else None)
+            interior = first_hits[1:n]
+            interior_time = (max(interior, default=n + 1)
+                             if observation_evaluations >= n + 1
+                             and all(value is not None for value in interior) else None)
+            payload.update(
+                target_first_hit_evaluations=list(first_hits),
+                last_endpoint_evaluations=endpoint_time,
+                interior_completion_evaluations=interior_time,
+                alignment_after_endpoints_evaluations=(alignment_time - endpoint_time
+                    if alignment_time is not None and endpoint_time is not None else None),
+            )
+        return payload
+
+    if expired():
+        return result("wall_time")
+    init_rng, gate_rng, direction_rng = controlled_streams(seed)
+    idx = np.arange(n + 1)
+    cost = cost_table(n)
+    intervals = neighbourhoods(n, r)
+    if expired():
+        return result("wall_time")
+    weights = init_rng.binomial(n, 0.5, size=n + 1).astype(np.int64)
+    evaluations = n + 1
+    archive = np.zeros(n + 1, dtype=bool)
+    archive[weights] = True
+    archived = int(archive.sum())
+    aligned = int(np.count_nonzero(weights == idx))
+    if expired():
+        return result("wall_time")
+    observation_evaluations = evaluations
+    if track_phases:
+        for target in np.flatnonzero(weights == idx):
+            first_hits[int(target)] = evaluations
+    if archived == n + 1:
+        archive_time = evaluations
+    if aligned == n + 1:
+        alignment_time = evaluations
+        return result(None)
+
+    while True:
+        # Both arrays are consumed for both mutation arms, including lazy copies.
+        # Batching by a sweep only prefetches independent uniforms; each offspring
+        # still mutates the current (possibly just replaced) incumbent.
+        if expired():
+            return result("wall_time")
+        gates = gate_rng.random(n + 1)
+        directions = direction_rng.random(n + 1)
+        for breeder in range(n + 1):
+            if expired():
+                return result("wall_time")
+            if max_evaluations is not None and evaluations >= max_evaluations:
+                return result("max_evaluations")
+            parent = int(weights[breeder])
+            offspring = controlled_offspring(
+                n, parent, mutation, gates[breeder], directions[breeder])
+            evaluations += 1
+            new_archive_weight = not archive[offspring]
+            if new_archive_weight:
+                archive[offspring] = True
+                archived += 1
+            a, b = intervals[breeder]
+            accepted = cost[a:b, offspring] <= cost[idx[a:b], weights[a:b]]
+            if offspring == parent and not self_loop_broadcast:
+                # Preserve the breeder's comparison, evaluation, archive and
+                # cyclic visit; only same-weight offers to other slots stop.
+                accepted &= idx[a:b] == breeder
+            positions = np.flatnonzero(accepted) + a
+            new_target = None
+            if offspring == parent:
+                self_loops += 1
+                self_loop_changes += int(np.count_nonzero(weights[positions] != offspring))
+            if positions.size:
+                # A weight can newly solve only its own uniquely targeted index.
+                if a <= offspring < b and accepted[offspring - a] and weights[offspring] != offspring:
+                    aligned += 1
+                    new_target = offspring
+                    self_loop_targets += int(offspring == parent)
+                weights[positions] = offspring
+            else:
+                rejected += 1
+                rejected_new_archive += int(new_archive_weight)
+            # A crossing caused by work after the wall deadline remains censored.
+            # Earlier observed archive success is retained if alignment censors.
+            if expired():
+                return result("wall_time")
+            observation_evaluations = evaluations
+            if track_phases and new_target is not None:
+                first_hits[new_target] = evaluations
+            if archive_time is None and archived == n + 1:
+                archive_time = evaluations
+            if aligned == n + 1:
+                alignment_time = evaluations
+                return result(None)
+
 def run(n, r, seed, track=False, max_sweeps=None, deadline=None):
     level_time = Counter()
     solve = np.full(n + 1, -1, dtype=np.int64)
