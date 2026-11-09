@@ -1,0 +1,33 @@
+# Mathematical context for larger T
+
+## Baseline to carry forward
+
+**Established in the project manuscript (cyclic own-parent, observed Tchebycheff, T=1).** An endpoint is checked at a sweep boundary. The first true exact time can be strictly earlier than the first exact boundary after all stored labels have reached target. For p ≤ 1/[16e(n+1)], both one-bit and standard bit mutation with one-bit observation noise have O(n² log n) expected evaluations to true exact assignment. With standard bit mutation and activated bitwise noise the moving-reference estimate is O(n² log n [1+n p log(e/p)]) for p>0. It is O(n² log² n) across this range and O(n² log n) at p=O(1/[n log n]) or with the ideal reference supplied initially. One-bit mutation with activated bitwise noise has an Ω(n^(5/2)) exact-assignment lower bound at p=n^(-4) for sufficiently large multiples of 256. None of these is a uniform upper bound on arbitrary T>1. The fixed-c corollary in the revised appendix also treats p=c/n with c-dependent constants; f=1 is outside the original explicit small-constant theorem. The pilot is a model check, not a test that an asymptotic theorem holds at small n.
+
+U is the first ideal-reference boundary; S also requires all stored labels to equal their slot indices. Under T=1, a pinned slot k accepts a true-weight transition i→j (i≠j) with probability D(i,j)N(j,k), where D is mutation and N is observation. Its repair potential h_k(i) is the mean number of local turns needed to reach k. The invariant law is N(k,·). A wrong coordinate loses one unit of h in conditional expectation on its own turn. Under sharing the other breeders can also replace it, so the post-S population no longer has that product kernel. In the bitwise case a fixed target observation k contributes at most p/(1−2p) expected local repair potential per proposed evaluation for p<1/2. Large T changes the possible number and origins of those updates. Conditioning on an accepted or still-retained observation also changes its law.
+
+**Established in the project manuscript, conditional example.** Under standard bit mutation, p=c/n at fixed c>0 and T=3, supplying the ideal reference, b_k=k and all true weights at k except w_0=2 gives Θ_c(n²) expected attempts to simultaneous true correctness at a boundary. With T=1 the first repair of that endpoint alone costs Θ_c(n³) attempts. This does not determine how often such states are encountered from uniform initialization. The manuscript and exact assumptions are available from the project owner. Older statements C6/C7 in CLAIMS.md refer to legacy definitions; keep their original history. Compare the distinct noiseless radius literature in [PAPER_COMPARISON.md](PAPER_COMPARISON.md) before citing a theorem about sharing or asserting novelty.
+
+## Proved calibration for every cardinality at zero noise
+
+Supply the same pinned state, take p=0 and standard bit mutation. Write D_T={i : 0∈B_T(i)} for the eligible donors. Put w_0=2 and w_i=i for i≥1, and define
+`a(w) = (1/n)^w (1−1/n)^(n−w)`.
+Then the exact per-sweep probability of repairing slot 0 is
+`q_T = 1 − ∏_{i∈D_T}(1−a(w_i))`.
+The boundary hitting time in sweeps has survival (1−q_T)^s after s sweeps and mean 1/q_T. Its cost in attempts has mean (n+1)/q_T. With censoring at H sweeps, its restricted mean equals [1−(1−q_T)^H]/q_T.
+
+**Proof.** Under p=0 a pinned recipient k can only accept true weight k. Before the first generated zero reaching slot 0, all other slots retain their true weights and slot 0 retains weight two. For each eligible donor, becoming a zero string requires every one and no zero to flip. This event has probability a(w_i) independent of genotype identity. Conditional failure probabilities therefore multiply over the sweep and the identical calculation applies in every later unsolved sweep.
+
+**Consequences.** For n≥3, the parity convention gives D_2=D_3={0,1}. Donor 1 prefers its left neighbor on the first tie. Thus the two corner laws are exactly equal at p=0. For every T≥2, donor 1 contributes a(1)~1/(en). All other contributions together are O(1/n²), uniformly in T, since there are at most two slots at a given weight ≥2. The mean attempts divided by n² tends to e uniformly over 2≤T≤n+1. At T=1 the corresponding normalization is n³. This is a testable theorem for a supplied state, not a claim about ordinary uniform initialization. Check the finite formula against termination distributions in independent corner seeds; a small set of individual hitting times has large geometric variance.
+
+## A counterexample that narrows the conjectures
+
+**Checked by direct construction.** n=2, p=0, ascending breeders and initial bit strings (00,00,01). Use the same three mutation masks (01,01,10) for both cardinalities and update the reference before selection. At T=1 the weights after the three attempts are (0,0,1), (0,1,1), (0,1,2). At full T=3 they are (0,1,1), (0,0,1), (0,2,2). Exact alignment occurs by sweep one only in the T=1 trajectory. Every prescribed mask has positive probability for each mutation rule. Extra recipients can change the next parent. This disproves pathwise non-worsening under this common-mask coupling. An ordering of expectations is a separate question.
+
+## Conjecture and theorem lanes for the agent
+
+1. **Predeclared finite conjecture.** Test the T=1 versus sqrt(n) first-exact comparison and its independent holdout as specified in the preregistration. An opposite direction, overlap, unresolved heavy tails and blocked validation are all reportable outcomes.
+2. **Mechanism conjecture.** Does growth beyond T=3 help primarily before S, or shorten post-S repair via an external endpoint donor? Use phase-specific durations and donor counts. Account for trials whose S or post endpoint was censored. Keep factor=0, 1/64 and 1 distinct. Avoid extrapolating the special noiseless corner law.
+3. **Proof target, open here.** At p=c/n from the single supplied corner, is the expected simultaneous cost Θ_{c,T}(n²) for every fixed T≥2? Attempt to extend the T=3 donor argument with an O(T)-sized set of recipients. Later breeders can reinfect slot 0 after donor 1 repairs it; bound the repair work reinjected before the boundary. Check the definition of the eligible donor set for even T. A bound with T-dependent constants would still leave T growing with n open.
+
+For new claims record hypotheses, strongest known counterexample, constants and units, supporting cells with denominators, an exact proof or remaining gap, and an independent check. Finite comparisons can suggest a proof target; they establish neither a general monotonicity law nor an asymptotic exponent.
