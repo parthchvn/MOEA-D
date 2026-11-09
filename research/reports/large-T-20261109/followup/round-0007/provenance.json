@@ -1,0 +1,6 @@
+{
+  "task": "Independently audit the candidate \\(A_n=-(n/2)\\log n+O(n)\\) proof, especially its exceptional-site bounds and uniform edge estimates, because these steps now carry the large-n explanation of the exact sign reversal.",
+  "started_from": "147d5bab80c6895bd5873cf810735540c8ab5177",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T22:43:58+00:00"
+}

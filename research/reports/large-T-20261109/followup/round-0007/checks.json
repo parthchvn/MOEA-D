@@ -1,0 +1,160 @@
+{
+  "checkpoint_utc": "2026-11-09T22:42:59.287101+00:00",
+  "elapsed_seconds": 814.287101,
+  "execution": {
+    "commit_created": false,
+    "cpu_concurrency": 1,
+    "native_thread_limits": 1,
+    "network_used": false,
+    "new_scientific_seeds": [],
+    "new_scientific_trajectories": 0,
+    "paid_resources": false,
+    "push_performed": false
+  },
+  "failures_and_qualifications": [
+    "No failed exact mathematical inequality or dependency repair.",
+    "The parent-zero extension of the recipient-1 injection bound is explicitly contradicted; it is outside the actual insertion histories.",
+    "Exact full-population comparison is finite n=3 (published replay) and n=4 (new extension), not an all-n enumeration.",
+    "Uniformity follows from the analytic argument, not the finite maxima.",
+    "The new theorem has no uniform Taylor remainder, fixed-positive-c ordering, or ordinary-initialization implication.",
+    "Published private per-trial chronology is unavailable; inherited receipt limitation is preserved."
+  ],
+  "mathematical_checks": {
+    "edge_site_cases": 128,
+    "exact_recipient_matches": 120,
+    "exceptional_contribution_cases": 95,
+    "kernel_entries": 492,
+    "neighborhood_cases": 4410
+  },
+  "output_sha256": {
+    "README.md": "c4880d7135a365bc434b0b51db99121989157d24628c929aac8c914f34cbb5ed",
+    "audit.md": "77323bb17c21df48c232e87fba189864f11b464a77f447c458ab760d5e48cfe3",
+    "audit.py": "118d97dbf9b8c1c81ddcde066d9eb5bc7844e4ba9ae204904d7f80f4a6a90993",
+    "dependency.json": "64f20c24816ad07aba16cdcc3139f61e8e7e773e618a5c6ea7cca1ecee3fdf3f",
+    "edges.csv": "4151852983b9d677441f50fbeea9dc8c63315ca036b35b183729da94decacb53",
+    "exceptions.csv": "852dd78752c5f5b9c2de9c799b73a5aef0ec4a6c3ca2c6d8a083f3e41085a9f9",
+    "memory.md": "f10fcd4993ee0be17e720e9c328c83a8d2d1b267ba3b72ad58b70bd97e534bbf",
+    "reproduce.py": "ad9935dfddd04bc26101d648a5e1fb424a16562b7fdafe37850ba2cd2829e75f",
+    "test_audit.py": "8f794900155e6bf964d955a5d413695773d0c0b46429931ce3c9343af8019dc9",
+    "verification.json": "2b24acfd2cf66f9710779cbf96bbf81bf0c848314f315ec5f93d5708d42b988e"
+  },
+  "preservation": {
+    "head_unchanged": true,
+    "intentional_memory_updates": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "method": "Compare every tracked file against the initial SHA-256 snapshot; only STATUS.md and CLAIMS.md may change. Starting Git commit permits reconstruction.",
+    "original_blocked_holdout_unchanged": true,
+    "original_preregistration_unchanged": true,
+    "prior_published_evidence_unchanged": true,
+    "source_pdfs_unchanged": true,
+    "status": "pass",
+    "tracked_input_files": 271,
+    "unchanged_protected_files": 269
+  },
+  "reproduction": {
+    "byte_identical": {
+      "dependency.json": true,
+      "edges.csv": true,
+      "exceptions.csv": true,
+      "verification.json": true
+    },
+    "command": "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python deliverables/reproduce.py --repo . --out /tmp/round7-replay",
+    "scientific_trajectories": 0,
+    "status": "pass"
+  },
+  "source_memory_sha256": {
+    "research/CLAIMS.md": "06699235fae458753d59f1633812d358e646f064d12f08bd83f742339111424f",
+    "research/STATUS.md": "ae8844c350a482422523da013a23531a59528043a4432848ae09c734c57ef73f"
+  },
+  "started_utc": "2026-11-09T22:29:25+00:00",
+  "starting_commit": "147d5bab80c6895bd5873cf810735540c8ab5177",
+  "starting_dirty_state": "",
+  "status": "pass",
+  "tests": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "count": 95,
+      "exit_code": 0,
+      "name": "repository",
+      "raw_log_sha256": "b9b5cee882dfb4a14bdd618b0d41f3172897d37e73604a312e33020eb8da2d4c",
+      "reported_suite_seconds": 9.694,
+      "seconds": 11.438475249975454,
+      "status": "pass"
+    },
+    {
+      "command": [
+        "python",
+        "-S",
+        "deliverables/test_audit.py"
+      ],
+      "count": 15,
+      "exit_code": 0,
+      "name": "new audit",
+      "raw_log_sha256": "b72384c03f246c022a4629a6bf38005330d1cfcf79edb64249238dd147d913b3",
+      "reported_suite_seconds": 0.14,
+      "seconds": 0.36707145799300633,
+      "status": "pass"
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0006/test_coefficient.py"
+      ],
+      "count": 12,
+      "exit_code": 0,
+      "name": "prior coefficient",
+      "raw_log_sha256": "9f9537b56f1963e7d1f5abe1dea52eb691c190cf3e45850fea0c9c115ba5c12c",
+      "reported_suite_seconds": 0.601,
+      "seconds": 0.8368065419781487,
+      "status": "pass"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/audit.py",
+        "deliverables/reproduce.py",
+        "deliverables/test_audit.py"
+      ],
+      "exit_code": 0,
+      "name": "compilation",
+      "raw_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.14308154201717116,
+      "status": "pass"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "name": "whitespace",
+      "raw_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "seconds": 0.07745816698297858,
+      "status": "pass"
+    }
+  ],
+  "toolchain": {
+    "interpreter": "/Users/parth/miniforge3/bin/python",
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.3",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]"
+  },
+  "turn_ceiling_seconds": 13732
+}
