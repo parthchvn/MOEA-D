@@ -1,0 +1,17 @@
+{
+  "files": {
+    "analysis.py": "4742a9b5183b5807cbd75e078d33e654ce9988e194f69b7b34abc338acd8fcfe",
+    "audit.json": "c9d5cc38bd373e7c1d9f386a4c637bbf64559cadd2569e6656c991f0a16d2bcb",
+    "audit.py": "4357f67996132b98212923d0e8fe586555542605c97f8fd09fb81d14567223d7",
+    "checks.json": "03fe9f17a9c73ad1cce07de0805279efc77e56712d2adc24908905e2c440ee30",
+    "plan.json": "79bc45393803eeb1d34dafa3f3a2fd0877f5af00f83cabbb30240877e1e308a5",
+    "plan.py": "f61790e9d578a2b2cb6e53dc846d1858ec6b66ce812600befb9bb6ba35680914",
+    "preregistration.md": "0dbec1260fec5b762b70f8f524e611eb16e91d5c8e77af67214d2254c7c85587",
+    "seeds.csv": "178346352128c61529150ec5899208a087eb2715cd320b125380bc0c7bc61465",
+    "test_plan.py": "1b2437a0be09d72fab482bd180fb05d54b3a33f464fd2683180e249733f3a93b"
+  },
+  "format": 1,
+  "hash_algorithm": "sha256 of file bytes",
+  "publication_required_before_sampling": true,
+  "study": "large-T-512-low-noise-prospective-20261109-r1-v1"
+}

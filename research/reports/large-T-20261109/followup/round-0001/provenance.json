@@ -1,0 +1,6 @@
+{
+  "task": "Preregister a separate prospective n=512 low-noise comparison of T=1 and T=23. Use fresh deterministic seeds and fixed arms, cap, replication count, CI and stopping rule. Specify a restricted-mean analysis for censored outcomes and U, S-U, post-S diagnostics. Publish the exact implementable plan before drawing any new outcome.",
+  "started_from": "4f0d9533e1e6fa30e2da9eae14cb75956762f2b5",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T21:26:18+00:00"
+}
