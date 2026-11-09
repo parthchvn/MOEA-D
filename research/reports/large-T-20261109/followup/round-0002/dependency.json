@@ -1,0 +1,126 @@
+{
+  "all_published_unique_trial_seeds": 2420,
+  "base_commit": "4f0d9533e1e6fa30e2da9eae14cb75956762f2b5",
+  "cardinality_unique_planned_seeds": 1484,
+  "new_planned_seeds": 68,
+  "old_primary": {
+    "arms": {
+      "1": {
+        "S_minus_U_mean": 773.7083333333334,
+        "U_mean": 3761.0833333333335,
+        "count": 24,
+        "external_endpoint_repairs": 0,
+        "mean_evaluations": 1165698.4583333333,
+        "own_endpoint_repairs": 0,
+        "post_minus_S_mean": 0.0,
+        "sum_evaluations": 27976763
+      },
+      "16": {
+        "S_minus_U_mean": 5.583333333333333,
+        "U_mean": 1942.0833333333333,
+        "count": 24,
+        "external_endpoint_repairs": 0,
+        "mean_evaluations": 500807.3333333333,
+        "own_endpoint_repairs": 0,
+        "post_minus_S_mean": 0.0,
+        "sum_evaluations": 12019376
+      }
+    },
+    "nominal_95_ci": [
+      2.0501481748098818,
+      2.674641996509441
+    ],
+    "ratio": 2.3276385562777966
+  },
+  "original_blocking_receipt": {
+    "S": null,
+    "T": 1,
+    "U": 469,
+    "exact_sweep": null,
+    "factor": 1,
+    "id": "67178d8d2471ba15457b",
+    "max_sweeps": 3206,
+    "n": 64,
+    "rep": 20,
+    "seed": 10112010688641361696
+  },
+  "original_decision": "inconclusive; blocked holdout preserved",
+  "packet_index_sha256": {
+    "campaign": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+    "pilot": "a0e082f4b5cda1bc6b4f28dc2099d190034092262e1695a537d9ba9db5c8de56"
+  },
+  "prerequisite_repair_needed": false,
+  "prior_followup_checkpoints": [],
+  "prospective_plan_sha256": "f64686335a457d16eb0f26a94eef9a8bd94e75e76aec3eeb6524f50d1e48441f",
+  "scientific_outcomes_drawn": 0,
+  "seed_intersection": [],
+  "stage_counts": {
+    "calibrate": {
+      "exact_observed": 96,
+      "planned": 102,
+      "post_exact": 96,
+      "reason": null,
+      "recorded": 102,
+      "stage": "calibrate",
+      "state": "complete",
+      "sweep_cap": 6
+    },
+    "holdout": {
+      "exact_observed": 0,
+      "planned": 240,
+      "post_exact": 0,
+      "reason": "main contains sweep-censored primary exact hits; holdout blocked",
+      "recorded": 0,
+      "stage": "holdout",
+      "state": "gate_blocked",
+      "sweep_cap": 0
+    },
+    "main": {
+      "exact_observed": 1079,
+      "planned": 1080,
+      "post_exact": 1079,
+      "reason": null,
+      "recorded": 1080,
+      "stage": "main",
+      "state": "complete",
+      "sweep_cap": 1
+    },
+    "smoke": {
+      "exact_observed": 62,
+      "planned": 62,
+      "post_exact": 62,
+      "reason": null,
+      "recorded": 62,
+      "stage": "smoke",
+      "state": "complete",
+      "sweep_cap": 0
+    }
+  },
+  "status": "mechanically checked",
+  "verified_legacy_archives": [
+    {
+      "archive": "20261102T213431Z-factorial-grid-factorial-smoke.tar.gz",
+      "sha256": "ab3135369c720d896588f2ba5f16feb4a4c80d796995a081a69877f2b7a46f77"
+    },
+    {
+      "archive": "20261102T213520Z-factorial-grid-factorial-main.tar.gz",
+      "sha256": "fb54c0845a902577de4abd60609bf876048abe0a5ab1b59b674f0d086301bc64"
+    },
+    {
+      "archive": "20261102T213945Z-factorial-grid-factorial-validation512.tar.gz",
+      "sha256": "ed7df7a71af75f8c6823fdfa0617ffb71953adeb58d3c4320d00a2582f815f31"
+    },
+    {
+      "archive": "20261103T024139Z-broadcast-grid-broadcast-smoke.tar.gz",
+      "sha256": "631fc7c6953062a6f6c4e5dad55698d9ee9fe1debbf90ffe38e272cab4900ef7"
+    },
+    {
+      "archive": "20261103T024310Z-broadcast-grid-broadcast-main.tar.gz",
+      "sha256": "826a28a27ac6e3f902e6daaf9a2749d02509078644bdb9450bf11bbae5e6bd3e"
+    },
+    {
+      "archive": "20261103T024933Z-broadcast-grid-broadcast-validation512.tar.gz",
+      "sha256": "9b6fc91fe6f65fc4267c6f0228601b2cfbc51dd5adb1fe243b1e86fd33b953b9"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "arithmetic_implementation": "separate scalar/integers implementation, same agent",
+  "histograms": {
+    "1": {
+      "bad_at_S": {
+        "0": 31,
+        "1": 1
+      },
+      "bad_at_U": {
+        "0": 32
+      },
+      "endpoint_repairs_external": {
+        "0": 32
+      },
+      "endpoint_repairs_own": {
+        "0": 32
+      },
+      "max_error_at_S": {
+        "0": 31,
+        "1": 1
+      },
+      "max_error_at_U": {
+        "0": 32
+      },
+      "post_S_occupancy": {
+        "0": 31,
+        "4": 1
+      }
+    },
+    "23": {
+      "bad_at_S": {
+        "0": 32
+      },
+      "bad_at_U": {
+        "0": 32
+      },
+      "endpoint_repairs_external": {
+        "0": 32
+      },
+      "endpoint_repairs_own": {
+        "0": 32
+      },
+      "max_error_at_S": {
+        "0": 32
+      },
+      "max_error_at_U": {
+        "0": 32
+      },
+      "post_S_occupancy": {
+        "0": 32
+      }
+    }
+  },
+  "max_absolute_identity_residual": 0,
+  "scalar_numeric_checks": 275,
+  "status": "mechanically checked"
+}

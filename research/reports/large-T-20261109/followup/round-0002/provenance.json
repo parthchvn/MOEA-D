@@ -1,0 +1,6 @@
+{
+  "task": "Implement and execute the published round-1 plan on one local CPU. Run kernel tests first. Include runnable source, per-trial receipts, plan and model hashes, a plot and uncertainty. Keep completed rows and label partial work on cutoff. This is a new study, distinct from the blocked holdout.",
+  "started_from": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T21:35:43+00:00"
+}
