@@ -1,0 +1,1 @@
+stage,cohort,n,factor,mutation,noise,init,reference,max_sweeps,role,T_baseline,T_comparator,baseline_observed,comparator_observed,baseline_planned,comparator_planned,restricted_ratio_lower,restricted_ratio_upper,restricted_ratio,restricted_ci_low,restricted_ci_high,mean_ratio,mean_ci_low,mean_ci_high,status
