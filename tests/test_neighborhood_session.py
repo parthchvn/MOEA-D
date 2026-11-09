@@ -196,9 +196,22 @@ class SessionTests(unittest.TestCase):
     def test_existing_tmux_session_reattaches_without_changing_activation(self):
         args = argparse.Namespace(publish_only=False, check=False, detach=True, agent_now=True, seconds=40)
         with patch.object(os, "chdir"), patch.object(session.shutil, "which", return_value="/fake/tmux"), \
-             patch.object(subprocess, "run", return_value=Mock(returncode=0)), \
+             patch.object(subprocess, "run", return_value=Mock(returncode=0, stdout="$3 moead-large-T-old\n$7 moead-large-T\n")), \
              patch.object(session, "output", return_value=str(session.ROOT)), \
              patch.object(session, "attach") as attach, patch.object(session, "tmux") as create:
             self.assertEqual(session.launch(args), 0)
         create.assert_not_called()
-        attach.assert_called_once_with("=" + session.SESSION, True)
+        attach.assert_called_once_with("$7", True)
+
+    def test_new_session_targets_tmux_allocated_id(self):
+        args = argparse.Namespace(publish_only=False, check=False, detach=True, agent_now=True, seconds=40)
+        with patch.object(os, "chdir"), patch.object(session, "preflight"), patch.object(session, "choose_python", return_value="/fake/python"), \
+             patch.object(session.shutil, "which", return_value=None), \
+             patch.object(session, "output", return_value="$12") as create, \
+             patch.object(session, "tmux") as commands, patch.object(session, "attach") as attach:
+            self.assertEqual(session.launch(args), 0)
+        self.assertIn("#{session_id}", create.call_args.args)
+        self.assertEqual(commands.call_args_list[0].args, ("set-option", "-t", "$12", "@moead_root", str(session.ROOT)))
+        targets = [c.args[c.args.index("-t")+1] for c in commands.call_args_list]
+        self.assertEqual(targets, ["$12", "$12:", "$12:", "$12:agent"])
+        attach.assert_called_once_with("$12", True)

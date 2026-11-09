@@ -391,20 +391,27 @@ def launch(args):
             update_status(previous["activation"], "published", message, end)
         return 0
     if shutil.which("tmux") and not args.check:
-        live = subprocess.run(["tmux", "has-session", "-t", "="+SESSION],
-                              stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
-        if live:
-            if output("tmux", "show-options", "-qv", "-t", "="+SESSION, "@moead_root") != str(ROOT):
-                raise RuntimeError("This tmux name belongs to another checkout. Attach to it directly.")
-            attach("="+SESSION, args.detach)
+        sessions = subprocess.run(["tmux", "list-sessions", "-F", "#{session_id} #{session_name}"],
+                                  capture_output=True, text=True)
+        for entry in sessions.stdout.splitlines():
+            session_id, _, name = entry.partition(" ")
+            if name != SESSION:
+                continue
+            if output("tmux", "show-options", "-qv", "-t", session_id, "@moead_root") != str(ROOT):
+                raise RuntimeError("This tmux name belongs to another checkout or an incomplete launch. "
+                                   "Inspect it with tmux list-windows -t " + session_id)
+            attach(session_id, args.detach)
             return 0
     preflight()
     interpreter = choose_python(install=not args.check)
     if args.check:
         socket = "moead-check-" + uuid.uuid4().hex[:10]
         try:
-            tmux("-L", socket, "new-session", "-d", "-s", "probe", "sleep 30")
-            tmux("-L", socket, "has-session", "-t", "=probe")
+            probe = output("tmux", "-L", socket, "new-session", "-dP", "-F", "#{session_id}",
+                           "-s", "probe", "sleep 30")
+            tmux("-L", socket, "set-option", "-t", probe, "@moead_root", str(ROOT))
+            if output("tmux", "-L", socket, "show-options", "-qv", "-t", probe, "@moead_root") != str(ROOT):
+                raise RuntimeError("tmux session-option round trip failed")
         finally:
             subprocess.run(["tmux", "-L", socket, "kill-server"], stderr=subprocess.DEVNULL)
         print("Preflight passed, including a disposable tmux socket check. No benchmark was started.")
@@ -419,19 +426,20 @@ def launch(args):
             cmd = ["caffeinate", "-i", *cmd]
         return "exec " + shlex.join(cmd)
 
-    tmux("new-session", "-d", "-s", SESSION, "-n", "clock", "-c", str(ROOT), command("clock"))
+    session_id = output("tmux", "new-session", "-dP", "-F", "#{session_id}", "-s", SESSION,
+                        "-e", "PATH=" + os.environ["PATH"], "-n", "clock", "-c", str(ROOT), command("clock"))
     try:
-        tmux("set-option", "-t", "="+SESSION, "@moead_root", str(ROOT))
+        tmux("set-option", "-t", session_id, "@moead_root", str(ROOT))
         for window in ("worker", "agent"):
             mode = "agent-now" if window == "agent" and args.agent_now else window
-            tmux("new-window", "-d", "-t", SESSION+":", "-n", window, "-c", str(ROOT), command(mode))
-        tmux("select-window", "-t", SESSION+":agent")
+            tmux("new-window", "-d", "-t", session_id+":", "-n", window, "-c", str(ROOT), command(mode))
+        tmux("select-window", "-t", session_id+":agent")
     except BaseException:
-        tmux("kill-session", "-t", "="+SESSION)
+        tmux("kill-session", "-t", session_id)
         raise
     print(f"Local run ends at {utc(end)}. Follow {LOG.relative_to(ROOT)}. "
           "Rerun the same launcher to reattach; this preserves the deadline.", flush=True)
-    attach("="+SESSION, args.detach)
+    attach(session_id, args.detach)
     return 0
 
 
