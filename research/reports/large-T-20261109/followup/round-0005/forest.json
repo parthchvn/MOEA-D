@@ -1,0 +1,152 @@
+{
+  "limitation": "Over-cap transitions validated but not expanded. This finite search is not the unbounded coupling proof.",
+  "scientific_trajectories": 0,
+  "searches": [
+    {
+      "T": 1,
+      "frontier_sizes": [
+        9,
+        19,
+        33,
+        36,
+        54,
+        76,
+        76,
+        79,
+        82
+      ],
+      "initial": [
+        2,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 4958,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 28719
+    },
+    {
+      "T": 1,
+      "frontier_sizes": [
+        3,
+        9,
+        19,
+        33,
+        51,
+        73,
+        76,
+        79,
+        82
+      ],
+      "initial": [
+        0,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 3898,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 22536
+    },
+    {
+      "T": 2,
+      "frontier_sizes": [
+        17,
+        36,
+        57,
+        57,
+        57,
+        79,
+        79,
+        79,
+        82
+      ],
+      "initial": [
+        2,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 21056,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 40950
+    },
+    {
+      "T": 2,
+      "frontier_sizes": [
+        5,
+        25,
+        54,
+        57,
+        57,
+        79,
+        79,
+        79,
+        82
+      ],
+      "initial": [
+        0,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 19500,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 38052
+    },
+    {
+      "T": 3,
+      "frontier_sizes": [
+        25,
+        72,
+        82,
+        82,
+        82,
+        82,
+        82,
+        82,
+        82
+      ],
+      "initial": [
+        2,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 42102,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 56934
+    },
+    {
+      "T": 3,
+      "frontier_sizes": [
+        7,
+        45,
+        82,
+        82,
+        82,
+        82,
+        82,
+        82,
+        82
+      ],
+      "initial": [
+        0,
+        1,
+        2
+      ],
+      "n": 2,
+      "over_cap_not_expanded": 40632,
+      "particle_cap": 2,
+      "sweeps": 3,
+      "transitions": 54873
+    }
+  ],
+  "status": "all checked transitions preserve exact tag correspondence",
+  "transitions": 242064
+}

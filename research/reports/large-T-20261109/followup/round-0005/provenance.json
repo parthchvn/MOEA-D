@@ -1,0 +1,6 @@
+{
+  "task": "Red-team the previous argument. Search small-n transitions for counterexamples, and audit each conditioning, boundary-time and simultaneous-repair step. Supply a reproducible witness or lemma.",
+  "started_from": "af60b9fee1abf7676481ae80a228414c7de65988",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T22:15:36+00:00"
+}
