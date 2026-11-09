@@ -1,0 +1,6 @@
+{
+  "task": "Independently audit the preceding experiment. Recompute the estimates and censoring directly from raw receipts. Check phase timing and whether the two experiments use disjoint seeds.",
+  "started_from": "6e7547d99dab3a795442c9ba242895f6d24d74f2",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T21:43:54+00:00"
+}
