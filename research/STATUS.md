@@ -1,6 +1,12 @@
 # Research status
 
-Last structured audit: 2026-11-03.
+## Larger neighborhoods with stored prior noise (2026-11-09)
+
+The [local campaign](LARGE_T_LOCAL.md) is ready for main measurement. Model and inference were registered before the pilot. The frozen sampler at `9710dfff482d8e76c7b2269abd9c23985bd044d0` passed 70 tests. Its clean-checkout [pilot](reports/large-T-20261109/pilot/report.md) recorded 62/62 smoke trials and 102/102 calibrations, including six intentionally fixed-duration throughput runs. Re-running this setup on another machine measures its own throughput. The n=256 primary effect and n=512 validation are unmeasured in the pilot. C17–C19 record the proven corner law, the pathwise counterexample and the preregistered open comparison. The campaign interpretation, once available, is the dated status and claim supplement for this study.
+
+At n=16 in the noiseless supplied-corner calibration, the mean costs over 12 trajectories per arm were 8,927.8 evaluations at T=1, 436.3 at T=2 and 830.2 at T=3. The model predicts the same capped mean, 672.4, for T=2 and T=3; finite samples of a geometric variable can differ substantially. All eight corner means fell within their pointwise model-predictive ranges. The six single-run timing cells quantify throughput on the recorded host only. The final setup passed all 92 tests, including mask-oracle, restart, packet integrity, statistical analysis and publication checks. Restoring the compressed pilot packet and rerunning the analyzer reproduced all nine report files byte for byte, including all four plots.
+
+Previous structured audit: 2026-11-03.
 
 ## Broadcast ablation completed and approved (2026-11-03 03:04:56 UTC)
 

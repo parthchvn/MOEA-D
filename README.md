@@ -1,5 +1,7 @@
 # MOEA/D runtime experiments on OneMinMax
 
+**Larger neighborhoods under stored prior noise.** [Launch the local Codex/tmux study](research/LARGE_T_LOCAL.md) · [Registered protocol](research/LARGER_NEIGHBORHOODS_PREREG.md) · [Pilot results and plots](research/reports/large-T-20261109/pilot/report.md).
+
 This repository studies how MOEA/D behaves on the bi-objective OneMinMax benchmark under one-bit mutation, with particular attention to neighborhood sharing and one-bit prior noise without reevaluation.
 
 The project contains legacy models and a controlled noiseless variant:

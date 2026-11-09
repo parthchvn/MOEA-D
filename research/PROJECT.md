@@ -17,6 +17,10 @@ qualification, and apparent source min/max typo are in `PAPER_COMPARISON.md`.
 
 ## Algorithms presently implemented
 
+### Larger neighborhoods with manuscript selection
+
+The [cardinality study](LARGER_NEIGHBORHOODS_PREREG.md) uses cyclic own-parent mutation, a moving observed reference point, shared prior noise and stored-label Tchebycheff replacement. The main experiments use bitwise mutation and activated bitwise prior noise. The primary event is simultaneous true exact assignment at a sweep boundary. The dedicated weight-space implementation lives in `scripts/neighborhood_sweep.cpp`.
+
 ### Noisy full-bit model (`sim.py`)
 
 - State: one bit string per subproblem plus one stored noisy scalar value per subproblem.
