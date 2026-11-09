@@ -1,0 +1,38 @@
+{
+  "arithmetic": "exact integer/Fraction",
+  "exact_signs": {
+    "10": "negative",
+    "3": "positive",
+    "4": "negative",
+    "5": "negative",
+    "6": "negative",
+    "7": "negative",
+    "8": "negative",
+    "9": "negative"
+  },
+  "full_state_checks": [
+    {
+      "T": 2,
+      "aligned_prefix_contribution": "5767036642/4183475175",
+      "baseline": "729/154",
+      "decimal": 6.143983099394339,
+      "derivative": "19131281816625938540334883513273084272756069/3113823965191547758866404739180789311052400",
+      "n": 3,
+      "states": 256
+    },
+    {
+      "T": 3,
+      "aligned_prefix_contribution": "152773347927889618/87512507339640075",
+      "baseline": "729/154",
+      "decimal": 6.366114946572123,
+      "derivative": "677471696161565423119479384361674037245029415658219371/106418388899238234951878329856486227574898850372459600",
+      "n": 3,
+      "states": 256
+    }
+  ],
+  "gap": "134097495782210256212275341579257619586067228697193592193/603684241975826904832796424110996920401015073774502691740",
+  "gap_decimal": 0.22213184717778317,
+  "scientific_trajectories": 0,
+  "scope": "The full-state cross-check is n=3 only; n=4..10 signs use the analytic reduction.",
+  "status": "mechanically checked"
+}
