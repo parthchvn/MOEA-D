@@ -53,3 +53,11 @@ python3 scripts/analyze_neighborhood_campaign.py \
 ```
 
 Use `.venv/bin/python` instead of `python3` if the launcher created that environment. The same commands work for `campaign/` with whichever stages its index records. Read the [compact raw-data index](evidence/large-T-20261109/pilot/INDEX.json) to verify stage totals and SHA-256 digests. Use the version of the analysis script identified by the index when reproducing an earlier report.
+
+## Continue researching after the first interpretation
+
+Once the campaign packet and its matching interpretation are committed, the same `--agent-now` command starts a five-hour follow-up in a separate tmux session named `moead-large-T-research`. Re-launching while that session is active reattaches with its original deadline. The original experiment has one censored main trial and its frozen holdout is blocked. The follow-up uses a new study design and seeds. The first round publishes its plan before any new measurement. Later rounds execute the plan, audit the receipts, work on the fixed-T noisy corner theorem and try to falsify the argument. Following rounds take a concrete open question from the preceding checkpoint.
+
+Each round uses a fresh noninteractive Codex process in an isolated local clone. Completed outputs are pushed to `research/reports/large-T-20261109/followup/round-NNNN/` on the same branch. `report.md` records the observations, gaps and next task. Candidate proofs require independent scrutiny. A completed turn automatically starts the next task. The supervisor stops at the deadline, on a documented exhausted agenda after the initial tasks, or on an unresolved execution, validation or publication error. A failed Codex execution receives one retry when time permits. Completed local checkpoints are republished on restart. The most recent unfinished clone, model log and drafts remain under `research/runs/larger-neighborhoods-20261109/followup/`. If a turn times out before completing its checkpoint, that round starts again on a new activation.
+
+To monitor outside tmux, use `tail -f research/runs/larger-neighborhoods-20261109/followup/supervisor.log`; each round prints the path to its detailed Codex log. To stop the follow-up, use `tmux kill-session -t moead-large-T-research`.

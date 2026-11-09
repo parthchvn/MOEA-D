@@ -21,6 +21,7 @@ BASE = ROOT / "research/runs/larger-neighborhoods-20261109"
 REPORT = Path("research/reports/large-T-20261109/campaign")
 PACKET = Path("research/evidence/large-T-20261109/campaign")
 NOTE = Path("research/reports/large-T-20261109/interpretation.md")
+FOLLOWUP = Path("research/reports/large-T-20261109/followup")
 BRANCH = "research/larger-neighborhoods-20261109"
 SESSION = "moead-large-T"
 STAGES = ("smoke", "calibrate", "main", "holdout")
@@ -35,7 +36,7 @@ def output(*args):
 
 def allowed_path(path):
     target = Path(path)
-    return target == NOTE or any(target == p or p in target.parents for p in (REPORT, PACKET))
+    return target == NOTE or any(target == p or p in target.parents for p in (REPORT, PACKET, FOLLOWUP))
 
 
 def guard_checkout():
@@ -55,7 +56,7 @@ def guard_checkout():
         if not entry:
             continue
         if "R" in entry[:2] or "C" in entry[:2] or not allowed_path(entry[3:]):
-            raise RuntimeError("The worktree contains changes outside the three evidence paths. "
+            raise RuntimeError("The worktree contains changes outside the campaign evidence paths. "
                                "Use a clean dedicated checkout; existing files were left in place.")
     return branch
 
@@ -195,14 +196,14 @@ def note_matches_packet():
     return bindings == [marker + digest]
 
 
-def publish(deadline, include_note=True):
+def publish(deadline, include_note=True, *, followup=False):
     BASE.mkdir(parents=True, exist_ok=True)
     with (BASE / ".publish.lock").open("a") as lock:
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        return publish_locked(deadline, include_note)
+        return publish_locked(deadline, include_note, followup)
 
 
-def publish_locked(deadline, include_note):
+def publish_locked(deadline, include_note, followup):
     branch = guard_checkout()
     # An unrelated local commit must never hitch a ride with an evidence push.
     branch_ref = "refs/remotes/origin/" + branch
@@ -219,10 +220,13 @@ def publish_locked(deadline, include_note):
     if include_note and (ROOT / NOTE).exists() and not has_note:
         print("The interpretation does not identify the current packet digest; publishing evidence only.", flush=True)
     targets = (REPORT, PACKET, NOTE) if has_note else (REPORT, PACKET)
+    if followup:
+        targets = (FOLLOWUP,)
     paths = [str(p) for p in targets if (ROOT / p).exists()]
     if not paths:
         raise RuntimeError("No curated output exists.")
-    checked_run(["git", "add", "--", *paths], deadline)
+    add_flags = ["--force"] if followup else []
+    checked_run(["git", "add", *add_flags, "--", *paths], deadline)
     changed = subprocess.run(["git", "diff", "--cached", "--quiet", "--", *paths], cwd=ROOT).returncode
     if changed == 1:
         checked_run(["git", "commit", "--only", "-m", "Record larger-neighborhood campaign evidence",
@@ -390,6 +394,10 @@ def launch(args):
             message += " and its digest-bound interpretation." if has_note else ". A digest-bound interpretation is pending."
             update_status(previous["activation"], "published", message, end)
         return 0
+    if not args.check and args.agent_now and note_matches_packet() and not output(
+            "git", "status", "--porcelain", "--", str(NOTE), str(PACKET), str(REPORT)):
+        import neighborhood_followup
+        return neighborhood_followup.launch(args)
     if shutil.which("tmux") and not args.check:
         sessions = subprocess.run(["tmux", "list-sessions", "-F", "#{session_id} #{session_name}"],
                                   capture_output=True, text=True)
