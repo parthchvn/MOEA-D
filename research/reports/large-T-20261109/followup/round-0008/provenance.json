@@ -1,0 +1,45 @@
+{
+  "arithmetic_scope": "Exact rational n=3,4 coefficients and finite bounds; separately labeled float64 n=3..12 evaluations. No statistical estimator or confidence interval for new calculations.",
+  "artifact_sha256": {
+    "README.md": "097e96026f0703b95402bfe1dd3bcd7ca4f8af5aef678780c8a693c130e73f53",
+    "bounds.csv": "dfd51688f4c91eb580fb446be5c0f5f530530d5516fa282674b1fee74ae75efb",
+    "bounds.py": "5f82b32ee7dd347bd841f0d01ef1925954d911194590102c9d51e9fb9f798f06",
+    "checks.json": "01453ed4ac099a6cd993c1ce6515fa991d1aab7bbc22127be6176d1a9abf446d",
+    "coefficients.csv": "4c0bbb882af6d7d36741edc096b794018d3633e1eb91ecefa6c97435aa9efdaa",
+    "comparison.json": "2bf823ccdddac53a7cfb2cb7a3fbcff09cafc35f8a95eb8390ea1adf78cb8cdb",
+    "dependency.json": "74b642217f19493755aa3c685079ca7cb5b16c78c17209eb869e225e70cd7c3e",
+    "derivation.md": "c4ee7e3e46d7d34375da95347d8c62967e13f670a577a007a2e502b762322592",
+    "gaps.csv": "eafbbe2615057d396b1020f17e100eab2c20c1ce4c96844c1338fe4f3022f97f",
+    "memory.md": "7cb8646fa78fea72c37e019de55e803e73416a4def0d74ce1981e44929856cf6",
+    "numeric.csv": "6d42daff783234359e6a2d94874d1a4b86266cd46810a659401bee08de03b9af",
+    "oracle.json": "e2dbc3319fca86059a97f6735339b57a736be7215130b6d8036a91e0e4aac13d",
+    "oracle.py": "d450c6a5f0e029ce4cacc117c8b06f12d5bcd69ff5f13213cf265f1304961f0c",
+    "reproduce.py": "93b4109c1f12743c526bae762f02f529a7dc1721f18b3cd33d9e4a7d8f6002a3",
+    "second.py": "31a6961ba0208cbd35f3d621de994c67ab0655f4ec3d43ec38a0918d24e9a85d",
+    "test_second.py": "a696145a08e0e63f56e0817d7508bb849685422df3e64a93ef2810184276d53e",
+    "verification.json": "54fe28efe57d2dab9764fb746b8efe9f44d873d819fd7677225b894728ae57b6",
+    "verify.py": "7747f3a223eeb92c86a8a7d5947ce72ab98f553d6c59bb6e871f499bf06b5515"
+  },
+  "executable": "/Users/parth/miniforge3/bin/python",
+  "first_recorded_utc": "2026-11-09T22:44:06+00:00",
+  "initial_worktree": "clean",
+  "input_revision": "caf94731fb4a364836ce01af38892891be118581",
+  "invocation_commands": [
+    "python research/reports/large-T-20261109/followup/round-0007/reproduce.py --repo . --out research/runs/round8-private/prior-replay",
+    "python -S deliverables/second.py --n 3 4 --out research/runs/round8-private/exact",
+    "python -S deliverables/second.py --float --n 3 4 5 6 7 8 9 10 11 12 --out research/runs/round8-private/numeric",
+    "python -S deliverables/oracle.py --n 3 4 --out research/runs/round8-private/oracle.json",
+    "python -S deliverables/verify.py --repo . --bundle deliverables --out research/runs/round8-private/verification",
+    "python deliverables/reproduce.py --repo . --out research/runs/round8-private/replay --reuse-prior research/runs/round8-private/prior-replay"
+  ],
+  "model": "Pinned ideal labels; supplied (2,1,2,...,n); ascending own-parent rate-1/n bit mutation; activated rate-1/n bitwise observation noise; filled T=2,3; first simultaneous correct sweep boundary; zero initialization cost.",
+  "packaged_utc": "2026-11-09T23:06:01.417709+00:00",
+  "plan_policy": "No new stochastic experiment. Earlier committed registrations and receipts were replayed; original preregistration and blocked holdout unchanged.",
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "worktree_at_packaging": [
+    " M research/CLAIMS.md",
+    " M research/STATUS.md",
+    "?? deliverables/"
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "chronology_limit": "Published receipts verify committed registration and aggregate execution timing; private trial logs are unavailable.",
+  "followup_arms": {
+    "1": {
+      "means": {
+        "S_sweeps": 10016.78125,
+        "U_sweeps": 8737.6875,
+        "U_to_S_sweeps": 1279.09375,
+        "exact_evaluations": 5139185.90625,
+        "post_S_sweeps": 0.125,
+        "post_evaluations": 5139185.90625,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 8737.6875
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 1279.09375,
+          "completed_only_quantiles": [
+            510.8,
+            985.0,
+            2484.3000000000006
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 8737.6875,
+          "completed_only_quantiles": [
+            6990.7,
+            8687.0,
+            10830.700000000003
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.125,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          8784.3,
+          9829.0,
+          11506.1
+        ],
+        "U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ],
+        "U_to_S_sweeps": [
+          510.8,
+          985.0,
+          2484.3000000000006
+        ],
+        "exact_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ]
+      },
+      "receipts": 32
+    },
+    "23": {
+      "means": {
+        "S_sweeps": 4281.8125,
+        "U_sweeps": 4275.28125,
+        "U_to_S_sweeps": 6.53125,
+        "exact_evaluations": 2197082.8125,
+        "post_S_sweeps": 0.0,
+        "post_evaluations": 2197082.8125,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 4275.28125
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 6.53125,
+          "completed_only_quantiles": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 4275.28125,
+          "completed_only_quantiles": [
+            3096.0,
+            4246.5,
+            5034.5
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.0,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          3102.0,
+          4254.0,
+          5039.5
+        ],
+        "U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ],
+        "U_to_S_sweeps": [
+          5.0,
+          6.0,
+          8.0
+        ],
+        "exact_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ]
+      },
+      "receipts": 32
+    }
+  },
+  "followup_primary": {
+    "decision": "favors_T23",
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "ratio": 2.3390952207223643
+  },
+  "followup_seed_count": 68,
+  "inherited_replay": {
+    "arithmetic_comparisons": 6914,
+    "prior_round3_outputs_byte_identical": {
+      "audit.json": true,
+      "cells.csv": true,
+      "inputs.json": true,
+      "phases.csv": true,
+      "seeds.csv": true,
+      "trials.csv": true
+    },
+    "prior_round4_outputs_byte_identical": {
+      "bounds.csv": true,
+      "dependency.json": true,
+      "kernels.csv": true,
+      "verification.json": true
+    },
+    "prior_round5_outputs_byte_identical": {
+      "certificates.csv": true,
+      "dependency.json": true,
+      "expectations.csv": true,
+      "forest.json": true,
+      "verification.json": true
+    }
+  },
+  "inputs_sha256": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "research/EXPERIMENTS.md": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+    "research/LARGER_NEIGHBORHOODS_PREREG.md": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/LITERATURE.md": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+    "research/PAPER_COMPARISON.md": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+    "research/PROJECT.md": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+    "research/reports/large-T-20261109/followup/round-0006/coefficient.py": "376cc564dd21de517227b3665ace5d7a99df7a1e752efd906a78abfa05c9cc67",
+    "research/reports/large-T-20261109/followup/round-0006/coefficients.csv": "6d408ea72317c8f65e86de3c66b5225391715e1a2e939b063d45859f4bd055e7",
+    "research/reports/large-T-20261109/followup/round-0006/comparison.json": "9eee78ef42825c42afadc6b8019d4f9d5838249e2dc23cc11f4957b5c6fa41b2",
+    "research/reports/large-T-20261109/followup/round-0006/components.csv": "b8aa57d061c4c1faa9b28cbebf4cee35823b8b163f48694944ad4971bc4de383",
+    "research/reports/large-T-20261109/followup/round-0006/dependency.json": "7b49839b40644c93324dbe43fe08fadfc17e5c36ddc79dd28323908e6e198c83",
+    "research/reports/large-T-20261109/followup/round-0006/derivation.md": "64a5d5d3a143f37369bbd2b471f835573a25c0e8cb77da40c6cba99dd0eda280",
+    "research/reports/large-T-20261109/followup/round-0006/memory.md": "9aa7138d7d4ef5c6b9a6e6c7fdee6a39857bacb859719f81489e5d07d906ea29",
+    "research/reports/large-T-20261109/followup/round-0006/reproduce.py": "0936791c108ecca4b504dfca817269f1cc178fb906ed070680ac50e780aec0f8",
+    "research/reports/large-T-20261109/followup/round-0006/scaling.png": "73d64083bf18215a9f8c099e5f26fa68cc3fbeebc196f7ba1a9b92241114548b",
+    "research/reports/large-T-20261109/followup/round-0006/verification.json": "0a3606e2741c843b6e3c391483996efd62d5a4720d0efe5cb8d96ac0a46a7e1e",
+    "research/reports/large-T-20261109/followup/round-0006/verify.py": "377da81db80be19b2baef330b650c4c9f5dc344e330d58b48369cf92b3c0f2bf",
+    "research/reports/large-T-20261109/interpretation.md": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2"
+  },
+  "method": "Complete round-7 reproduction, recursively verifying committed plans, receipts, seed separation and earlier exact certificates.",
+  "original_decision": "inconclusive; original holdout remains blocked",
+  "original_primary": {
+    "nominal_95_ci": [
+      2.0501481748098818,
+      2.674641996509441
+    ],
+    "ratio": 2.3276385562777966
+  },
+  "original_registration_commit": "88a67b4954536f3ba4ce0c27a9651e9f269bb602",
+  "original_stage_counts": {
+    "calibrate": {
+      "capped": 6,
+      "exact": 96,
+      "missing": 0,
+      "planned": 102,
+      "receipts": 102
+    },
+    "holdout": {
+      "capped": 0,
+      "exact": 0,
+      "missing": 240,
+      "planned": 240,
+      "receipts": 0
+    },
+    "main": {
+      "capped": 1,
+      "exact": 1079,
+      "missing": 0,
+      "planned": 1080,
+      "receipts": 1080
+    },
+    "smoke": {
+      "capped": 0,
+      "exact": 62,
+      "missing": 0,
+      "planned": 62,
+      "receipts": 62
+    }
+  },
+  "prior_round7_sha256": {
+    "audit.md": "77323bb17c21df48c232e87fba189864f11b464a77f447c458ab760d5e48cfe3",
+    "audit.py": "118d97dbf9b8c1c81ddcde066d9eb5bc7844e4ba9ae204904d7f80f4a6a90993",
+    "dependency.json": "64f20c24816ad07aba16cdcc3139f61e8e7e773e618a5c6ea7cca1ecee3fdf3f",
+    "edges.csv": "4151852983b9d677441f50fbeea9dc8c63315ca036b35b183729da94decacb53",
+    "exceptions.csv": "852dd78752c5f5b9c2de9c799b73a5aef0ec4a6c3ca2c6d8a083f3e41085a9f9",
+    "reproduce.py": "ad9935dfddd04bc26101d648a5e1fb424a16562b7fdafe37850ba2cd2829e75f",
+    "verification.json": "2b24acfd2cf66f9710779cbf96bbf81bf0c848314f315ec5f93d5708d42b988e"
+  },
+  "prior_seed_count": 2420,
+  "prior_vs_followup_seed_overlap": 0,
+  "registration_commit": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "round6_outputs_byte_identical": {
+    "coefficients.csv": true,
+    "comparison.json": true,
+    "components.csv": true,
+    "dependency.json": true,
+    "scaling.png": true,
+    "verification.json": true
+  },
+  "round7_outputs_byte_identical": {
+    "dependency.json": true,
+    "edges.csv": true,
+    "exceptions.csv": true,
+    "verification.json": true
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "Offline published evidence. No error-family theorem, unavailable appendix or external theorem is needed by the second-order proof.",
+  "status": "mechanically checked; no dependency repair needed"
+}
