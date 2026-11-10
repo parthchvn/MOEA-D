@@ -1,0 +1,35 @@
+{
+  "arithmetic": "exact rational; decimal displays rounded",
+  "cancellation_witnesses": 4,
+  "candidate_bound": "abs(C_n)<=10^10 n^7; not independently audited",
+  "censoring": "Not applicable to deterministic algebra; inherited empirical censoring is retained in dependency.json.",
+  "exact_cells": 8,
+  "exact_excess_identities": 996,
+  "exact_gap_sizes": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "excess_inequality_checks": 1608,
+  "excess_states": 332,
+  "full_process_remainder": "unresolved; no enlarged noise window",
+  "independent_full_population_cases": 6762,
+  "independent_rational_comparisons": 28,
+  "maximum_error_counts": {
+    "maximum_clean_errors": 4,
+    "maximum_first_errors": 3,
+    "maximum_second_errors": 2
+  },
+  "published_lower_order_comparisons": 20,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "source_files": {
+    "research/reports/large-T-20261109/followup/round-0008/oracle.py": "d450c6a5f0e029ce4cacc117c8b06f12d5bcd69ff5f13213cf265f1304961f0c",
+    "research/reports/large-T-20261109/followup/round-0008/second.py": "31a6961ba0208cbd35f3d621de994c67ab0655f4ec3d43ec38a0918d24e9a85d",
+    "research/reports/large-T-20261109/followup/round-0012/audit.py": "f8c4efd0d6e33845009c019d5a3e0055d0ee5a63d8de765beee52021f62ae09a"
+  },
+  "status": "mechanically checked; general bound remains a candidate proof",
+  "word_coefficients": 16,
+  "word_sum_checks": 2
+}
