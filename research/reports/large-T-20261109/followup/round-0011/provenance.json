@@ -1,0 +1,52 @@
+{
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research/reports/large-T-20261109/followup/round-0010/reproduce.py --repo . --out research/runs/round11-private/prior",
+    "PYTHONDONTWRITEBYTECODE=1 python -S deliverables/check.py --out research/runs/round11-private/math",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python deliverables/reproduce.py --repo . --out research/runs/round11-private/package --reuse-prior research/runs/round11-private/prior",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python deliverables/reproduce.py --repo . --out research/runs/round11-private/replay",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v",
+    "PYTHONDONTWRITEBYTECODE=1 python -S deliverables/test_check.py",
+    "PYTHONDONTWRITEBYTECODE=1 python -S research/reports/large-T-20261109/followup/round-0010/test_check.py",
+    "PYTHONPYCACHEPREFIX=research/runs/round11-private/pycache python -m py_compile sim.py large.py scripts/run_research.py deliverables/check.py deliverables/reproduce.py deliverables/test_check.py",
+    "git diff --check"
+  ],
+  "final_git_status": [
+    " M research/CLAIMS.md",
+    " M research/STATUS.md",
+    "?? deliverables/"
+  ],
+  "initial_dirty_state": false,
+  "model": "Pinned ideal extrema and labels; ascending own-parent standard-bit mutation; activated bitwise observation noise; T=2 filled cardinality; simultaneous boundary stopping. Autonomous pair and exact one-block full-population elimination.",
+  "outputs_sha256": {
+    "README.md": "f8ae15580ec9ede767da7f7850546de67d53588cd1bd4c9d7681e772ea165e77",
+    "bounds.csv": "9540bad0294235322b5121d4dc400b48e419656ebe3cb7d9c49b6965314a69ea",
+    "check.py": "1841e8001620b0c671d75f9b27116b2748f1dfd95abb5d0e4fa9f0534d006d8f",
+    "checks.json": "bcef30feb74e6cd445eeba7325e04c2e30361dd7f267211945b39a13cb63dfc2",
+    "dependency.json": "5b0a5366506172107446361db80e2f76e00ff18dffacaf72a45735197a76a15b",
+    "inequalities.csv": "56dbf799aa3ab5b4a7413c905552823f45c109ef737465d2c75f07119d5bea59",
+    "memory.md": "c3f469946b4ed97824d91027a02b5245b4fadef192bd55c8e0c2b8e1dde20864",
+    "moments.csv": "468abceb34366a7391bae6a90a7960e2b9fc51735fedbcd4f4e8a5e29ba8d55f",
+    "proof.md": "5bc5d0e43fb4183d492ca03fb4350e3132f1cc2e1275b74abba06135db72d573",
+    "reproduce.py": "46344dddd5fc33094cfb26f0cd2f61b8d469cf282c5bd03bab21617a38188bf5",
+    "schur.csv": "b2dfa837f0aed1e0bfe586da9cd0e1d208f2b4c99d566a5a62b30865e6446ab1",
+    "test_check.py": "4bf746d9d3403a3b761e98c30f40b70fe14b5c11d4e1ab08c98326bdf5fda2f5",
+    "verification.json": "d6795a7edfd2368c4707e9532cc20421d8d912d24ba840cfc28f80faa6673871"
+  },
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "python_executable": "/Users/parth/miniforge3/bin/python",
+  "registration_policy": "No new stochastic research experiment. Deterministic proof checks require no scientific seeds or new measurement plan. Prior plan-before-measurement chronology was replayed.",
+  "resources": {
+    "commit_or_push": false,
+    "cpu_workers": 1,
+    "network_used": false,
+    "paid_cost": 0,
+    "scientific_seeds": [],
+    "scientific_trajectories": 0
+  },
+  "round": 11,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "source_commit": "bad763bf1b3ad003ee26022f323f6ef0aaca3c0a",
+  "timing_receipt": "checks.json"
+}
