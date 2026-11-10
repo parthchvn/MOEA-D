@@ -37,3 +37,22 @@ Statuses: **proved**, **mechanically checked** (`checked` in older rows),
 7. The original whole-process invariant `(J)` is contradicted at initialization. The code's sweep-3 checker tests only an exploratory post-burn-in property.
 
 Update this ledger before presenting any headline theorem or empirical law.
+
+## Follow-up round 20 supplement (2026-11-10)
+
+The later IDs below follow the committed checkpoint memory supplements in
+`research/reports/large-T-20261109/followup/`; the original rows above retain
+their historical scope. The supervisor publishes this round's
+[durable supplement](../deliverables/memory.md) and [audit](../deliverables/audit.md).
+
+| ID | Claim | Status | Evidence and limitation |
+|---|---|---|---|
+| C44 | For even n>=4 in the supplied pinned filled-T=2 model, `|RORR| <= 1024 (n+1)^3 (20n)^4/q < 4e9 n^8` sweeps. | proved after independent analytic audit; finite cases mechanically checked | Round-20 proof rederives the marked premise and audits the baseline, phasewise final-turn count, both entrance cancellations and positive-kernel accounting. Initialization is the supplied corner, labels/ideal point are pinned, mutation/noise are standard bitwise, breeders are ascending own-parent, and stopping is only at fully aligned boundaries. This bounds one ordered coefficient; attempts multiply by n+1. |
+| C45 | The orphan baseline can be discarded before the middle O in RORR. | contradicted, independently reproduced | It contributes `beta H1(C)`, approximately 1.961532252469 at n=4 and 3.785419437136 at n=6. Removing it changes the sign of the exact word in both cases. Aligned interior phases remain live. |
+| C40 | The complete fourth-order supplied-corner T=3-minus-T=2 gap is polynomially bounded. | conjectured; unresolved here | Audited RROO, ORRR and now RORR bounds do not settle the remaining words, including RROR and RRRR, or a uniform higher-order remainder. Earlier positive exponential-residence counterexamples remain valid. |
+
+No empirical claim is upgraded. Published plans/receipts and seed separation
+are rechecked without new sampling. The original capped main trial,
+preregistration, 240 missing blocked holdout trials and inconclusive two-stage
+decision remain unchanged. The isolated-pair second-response candidate and
+ordinary-initialization/fixed-c claims are not assumed by this audit.

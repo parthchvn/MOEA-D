@@ -1,5 +1,31 @@
 # Research status
 
+## Follow-up round 20: RORR analytic audit (2026-11-10)
+
+**Proved within the supplied pinned model:** the round-19 candidate survives
+independent analytic review. For even n>=4 and filled T=2,
+`|RORR| <= 1024 (n+1)^3 (20n)^4/q < 4e9 n^8` sweeps, with
+`q=1-(1-d(2,0))(1-d(1,0))`. The audit rederives the marked two-R premise,
+retains the orphan baseline through O, counts the final turn at every phase,
+and keeps both entrance factors and both signed branches. It does not assume
+independent orphan/last-pair repair. See the new [audit](../deliverables/audit.md)
+and [durable supplement](../deliverables/memory.md), which the supervisor
+publishes with this checkpoint.
+
+**Mechanically checked separately:** the new circular phase recurrence and
+literal-mask tests verify the stated finite families. Exact values, grid
+coverage, dependency replay and test receipts are in the deliverables; finite
+agreement is not the all-n proof. Earlier plans and receipts remain usable.
+The original preregistration, cap, 240 missing gate-blocked holdout trials and
+inconclusive original decision are preserved. No new scientific trajectories
+or seeds are generated.
+
+**Conjectured/open in the published project:** the full fourth-order gap,
+untreated words, uniform remainder and fixed-c ordering remain unresolved.
+The next bounded question is RROR: two pre-O regular insertions can create
+a slow pair, so the newly audited uniform fast-duration bound no longer
+applies directly. The isolated-pair second-response candidate is not used.
+
 ## Larger neighborhoods with stored prior noise (2026-11-09)
 
 The [local campaign](LARGE_T_LOCAL.md) is ready for main measurement. Model and inference were registered before the pilot. The frozen sampler at `9710dfff482d8e76c7b2269abd9c23985bd044d0` passed 70 tests. Its clean-checkout [pilot](reports/large-T-20261109/pilot/report.md) recorded 62/62 smoke trials and 102/102 calibrations, including six intentionally fixed-duration throughput runs. Re-running this setup on another machine measures its own throughput. The n=256 primary effect and n=512 validation are unmeasured in the pilot. C17–C19 record the proven corner law, the pathwise counterexample and the preregistered open comparison. The campaign interpretation, once available, is the dated status and claim supplement for this study.
