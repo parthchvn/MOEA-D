@@ -61,3 +61,10 @@ Once the campaign packet and its matching interpretation are committed, the same
 Each round uses a fresh noninteractive Codex process in an isolated local clone. Completed outputs are pushed to `research/reports/large-T-20261109/followup/round-NNNN/` on the same branch. `report.md` records the observations, gaps and next task. Candidate proofs require independent scrutiny. A completed turn automatically starts the next task. The supervisor stops at the deadline, on a documented exhausted agenda after the initial tasks, or on an unresolved execution, validation or publication error. A failed Codex execution receives one retry when time permits. Completed local checkpoints are republished on restart. The most recent unfinished clone, model log and drafts remain under `research/runs/larger-neighborhoods-20261109/followup/`. If a turn times out before completing its checkpoint, that round starts again on a new activation.
 
 To monitor outside tmux, use `tail -f research/runs/larger-neighborhoods-20261109/followup/supervisor.log`; each round prints the path to its detailed Codex log. To stop the follow-up, use `tmux kill-session -t moead-large-T-research`.
+
+If Codex produced its final response but packaging failed, use the round directory printed in its log:
+`bash scripts/start_neighborhood_tmux.sh --recover-round round-0008-52118af1` (substitute your round ID).
+This rebuilds the checkpoint from the saved deliverables and final response and pushes it. It does not invoke Codex.
+Research-supplied `provenance.json` keeps its original contents. Supervisor metadata for new checkpoints is in
+`.checkpoint.json`. Repeating recovery after a successful push is idempotent. A subsequent `--agent-now`
+activation takes the next task with a fresh time budget.

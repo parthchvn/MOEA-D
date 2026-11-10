@@ -10,6 +10,7 @@ import shutil
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 import uuid
 
@@ -46,7 +47,10 @@ def next_task(root):
     if len(pending) != 1 or not pending[0]:
         raise ValueError("Latest checkpoint lacks one explicit Next task line")
     for path in rounds:
-        prior = json.loads((path/"provenance.json").read_text())
+        metadata = path/".checkpoint.json"
+        if not metadata.exists():
+            metadata = path/"provenance.json"  # Old supervisor format.
+        prior = json.loads(metadata.read_text())
         if prior["task"].strip().casefold() == pending[0].casefold():
             raise RuntimeError("Next task repeats a completed task; inspect the last research checkpoint")
     return len(rounds) + 1, pending[0]
@@ -66,6 +70,71 @@ def run_child(cmd, cwd, deadline, log=None):
             except subprocess.TimeoutExpired:
                 os.killpg(proc.pid, signal.SIGKILL)
                 proc.wait()
+
+
+def package(work, tag, task):
+    checkout = session.ROOT
+    clone = work/"worktree"
+    output = clone/"deliverables"
+    last = work/"last.md"
+    if any(p.is_symlink() for p in (work, clone, last, output)) or not output.is_dir():
+        raise ValueError("Invalid saved round workspace")
+    source_head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=clone, text=True).strip()
+    # A recovery may run on a newer launcher commit. Its research inputs
+    # and the already-published preceding rounds must match the saved clone.
+    subprocess.run(["git","merge-base","--is-ancestor",source_head,"HEAD"],cwd=checkout,check=True)
+    subprocess.run(["git","diff","--quiet",source_head,"HEAD","--",str(DEST),
+                    str(session.NOTE),str(session.PACKET),str(session.REPORT)],cwd=checkout,check=True)
+    body = last.read_text().strip()
+    if len(body) < 80 or len(re.findall(r"^Next task: \S.*$",body,re.M)) != 1:
+        raise RuntimeError(f"Invalid or empty checkpoint; full turn preserved at {work}")
+    with tempfile.TemporaryDirectory(dir=work) as staging:
+        stage = Path(staging)/"checkpoint"
+        stage.mkdir()
+        for source in sorted(output.rglob("*")):
+            if source.is_symlink() or not source.resolve().is_relative_to(output.resolve()) or output.is_symlink():
+                raise ValueError("Unexpected artifact link")
+            if source.is_dir():
+                continue
+            rel = source.relative_to(output)
+            if (not source.is_file() or source.suffix not in {".md",".py",".csv",".json",".png"}
+                or any(not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", part) for part in rel.parts)
+                or source.stat().st_size > 25_000_000 or rel.as_posix() == "report.md"):
+                raise ValueError(f"Unexpected artifact: {rel}")
+            (stage/rel).parent.mkdir(parents=True,exist_ok=True)
+            shutil.copyfile(source,stage/rel)
+        (stage/"report.md").write_text(body+"\n")
+        (stage/".checkpoint.json").write_text(json.dumps({
+            "task":task, "started_from":source_head, "work_id": work.name,
+            "packet_sha256": hashlib.sha256((checkout/session.PACKET/"INDEX.json").read_bytes()).hexdigest(),
+            "completed_utc":session.utc(time.time())},indent=2)+"\n")
+        target = checkout/DEST/tag
+        target.parent.mkdir(parents=True,exist_ok=True)
+        stage.rename(target)
+
+
+def recover(work_id, end):
+    if not re.fullmatch(r"round-[0-9]{4}-[0-9a-f]{8}", work_id):
+        raise ValueError("Specify the saved round directory name")
+    session.guard_checkout()
+    root = session.ROOT/DEST
+    tag = work_id.rsplit("-",1)[0]
+    work = session.BASE/"followup"/work_id
+    with (session.BASE/"followup.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        existing = root/tag
+        if existing.exists():
+            metadata = existing/".checkpoint.json"
+            if not metadata.exists() or json.loads(metadata.read_text()).get("work_id") != work_id:
+                raise RuntimeError(f"A different checkpoint already exists at {existing}")
+        else:
+            n, task = next_task(root)
+            if tag != f"round-{n:04d}" or not (work/"last.md").is_file():
+                raise RuntimeError("Expected the next unpublished round and its saved final response")
+            package(work, tag, task)
+        os.environ["GIT_TERMINAL_PROMPT"] = "0"
+        session.publish(end, followup=True)
+        print(f"Published saved checkpoint {DEST/tag}", flush=True)
 
 
 def supervise(end):
@@ -127,33 +196,9 @@ question remains and explain the blocker. Do substantive work now, then return f
                     print("Codex execution failed. Retrying once from the existing round files.",flush=True)
                     prompt += " This turn is a retry. Inspect your partial artifacts before continuing."
                     time.sleep(5)
-        body = last.read_text().strip()
-        if len(body) < 80 or len(re.findall(r"^Next task: \S.*$",body,re.M)) != 1:
-            raise RuntimeError(f"Invalid or empty checkpoint; full turn preserved at {work}")
-        stage = work/"checkpoint"
-        stage.mkdir()
-        for source in sorted(output.rglob("*")):
-            if source.is_symlink() or not source.resolve().is_relative_to(output.resolve()) or output.is_symlink():
-                raise ValueError("Unexpected artifact link")
-            if source.is_dir():
-                continue
-            rel = source.relative_to(output)
-            if (not source.is_file() or source.suffix not in {".md",".py",".csv",".json",".png"}
-                or any(not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", part) for part in rel.parts)
-                or source.stat().st_size > 25_000_000 or rel.as_posix() in {"report.md","provenance.json"}):
-                raise ValueError(f"Unexpected artifact: {rel}")
-            (stage/rel).parent.mkdir(parents=True,exist_ok=True)
-            shutil.copyfile(source,stage/rel)
-        (stage/"report.md").write_text(body+"\n")
-        (stage/"provenance.json").write_text(json.dumps({
-            "task":task, "started_from":subprocess.check_output(["git","rev-parse","HEAD"],cwd=checkout,text=True).strip(),
-            "packet_sha256": hashlib.sha256((checkout/session.PACKET/"INDEX.json").read_bytes()).hexdigest(),
-            "completed_utc":session.utc(time.time())},indent=2)+"\n")
-        target = checkout/DEST/tag
-        target.parent.mkdir(parents=True,exist_ok=True)
-        stage.rename(target)
+        package(work, tag, task)
         session.publish(end, followup=True)
-        print(f"Published {target.relative_to(checkout)}",flush=True)
+        print(f"Published {DEST/tag}",flush=True)
     print("Time budget reached; completed rounds are on the campaign branch.",flush=True)
 
 
@@ -168,13 +213,18 @@ def launch(args):
     session.preflight()
     existing = subprocess.run(["tmux","list-sessions","-F","#{session_id} #{session_name}"],
                               capture_output=True,text=True)
+    reuse = None
     for entry in existing.stdout.splitlines():
         ident, _, name = entry.partition(" ")
         if name == NAME:
             if session.output("tmux","show-options","-qv","-t",ident,"@moead_root") != str(session.ROOT):
                 raise RuntimeError("Follow-up tmux session belongs to another checkout")
-            attach(ident,args.detach)
-            return 0
+            panes = session.output("tmux","list-panes","-s","-t",ident,"-F","#{window_name} #{pane_dead}")
+            if "research 0" in panes.splitlines():
+                attach(ident,args.detach)
+                return 0
+            reuse = ident
+            break
     python = session.choose_python(install=True)
     end = int(time.time())+args.seconds
     cmd = [python,str(Path(__file__).resolve()),str(end)]
@@ -184,10 +234,15 @@ def launch(args):
     base.mkdir(parents=True,exist_ok=True)
     log = shlex.quote(str(base/"supervisor.log"))
     line = f"set -o pipefail; {shlex.join(cmd)} 2>&1 | tee -a {log}"
-    ident = session.output("tmux","new-session","-dP","-F","#{session_id}","-s",NAME,"-n","research",
-                           "-e","PATH="+os.environ["PATH"],"-c",str(session.ROOT),
-                           "exec bash -c "+shlex.quote(line))
-    session.tmux("set-option","-t",ident,"@moead_root",str(session.ROOT))
+    if reuse:
+        ident = reuse
+        session.tmux("new-window","-t",ident+":","-n","research","-c",str(session.ROOT),
+                     "exec bash -c "+shlex.quote(line))
+    else:
+        ident = session.output("tmux","new-session","-dP","-F","#{session_id}","-s",NAME,"-n","research",
+                               "-e","PATH="+os.environ["PATH"],"-c",str(session.ROOT),
+                               "exec bash -c "+shlex.quote(line))
+        session.tmux("set-option","-t",ident,"@moead_root",str(session.ROOT))
     print(f"Research deadline {session.utc(end)}. Log: {base/'supervisor.log'}",flush=True)
     attach(ident,args.detach)
     return 0

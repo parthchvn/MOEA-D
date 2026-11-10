@@ -45,6 +45,7 @@ class FollowupTests(unittest.TestCase):
                     tasks.append(cmd[-1])
                     Path(cmd[-2]).write_text("This synthetic checkpoint exercises completion and the queued obligation. "
                                              "See the fixture for reproducibility.\nNext task: EXHAUSTED\n")
+                    (cwd/"deliverables"/"provenance.json").write_bytes(b'{"research":"hashes"}\n')
                     (cwd/"deliverables"/"evidence.csv").write_text("n,result\n1,1\n")
                 elif "verify" not in cmd:
                     original(cmd,cwd,end,log)
@@ -59,6 +60,25 @@ class FollowupTests(unittest.TestCase):
                  patch.object(follow.session,"checked_run",side_effect=checked), \
                  patch.object(follow.signal,"signal"),patch.dict(os.environ), \
                  patch.object(follow,"TASKS",("First distinct task","Second distinct task")):
+                with patch.object(follow, "package", side_effect=ValueError("Unexpected artifact: provenance.json")):
+                    with self.assertRaisesRegex(ValueError, "Unexpected artifact"):
+                        follow.supervise(time.time()+60)
+                work, = (base/"followup").glob("round-0001-*")
+                # Earlier launchers left a partially copied folder on the Mac.
+                (work/"checkpoint").mkdir()
+                (work/"checkpoint"/"stale.csv").write_text("partial")
+                (root/"launcher-fix").write_text("transport-only revision")
+                git("add","launcher-fix")
+                git("commit","-qm","launcher fix")
+                git("update-ref","refs/remotes/origin/"+follow.session.BRANCH,"HEAD")
+                follow.recover(work.name,time.time()+60)
+                recovered = root/follow.DEST/"round-0001"
+                self.assertEqual((recovered/"provenance.json").read_bytes(), b'{"research":"hashes"}\n')
+                self.assertFalse((recovered/"stale.csv").exists())
+                self.assertEqual(len(tasks),1)
+                head = git("rev-parse","HEAD")
+                follow.recover(work.name,time.time()+60)
+                self.assertEqual(head,git("rev-parse","HEAD"))
                 follow.supervise(time.time()+60)
                 follow.supervise(time.time()+60)
                 self.assertEqual(len(tasks),2)

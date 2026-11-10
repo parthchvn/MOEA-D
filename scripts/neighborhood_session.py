@@ -374,6 +374,10 @@ def attach(target, detached):
 
 def launch(args):
     os.chdir(ROOT)
+    if getattr(args, "recover_round", None):
+        import neighborhood_followup
+        neighborhood_followup.recover(args.recover_round, time.time()+min(args.seconds,300))
+        return 0
     if args.publish_only:
         guard_checkout()
         deadline = time.time() + min(args.seconds, 300)
@@ -454,6 +458,7 @@ def launch(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     group = parser.add_mutually_exclusive_group()
+    group.add_argument("--recover-round", metavar="ROUND-DIR", help="Publish a saved final round without starting Codex")
     group.add_argument("--check", action="store_true", help="Check dependencies and Git target without sampling")
     group.add_argument("--publish-only", action="store_true", help="Commit/push already prepared evidence and interpretation")
     parser.add_argument("--agent-now", action="store_true", help="Start the interactive research agent alongside sampling; default waits for verified evidence or a failure")
