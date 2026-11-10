@@ -1,0 +1,7 @@
+{
+  "task": "Does an independent audit validate the phase-potential Schur bound and its full-population tensor extension, since these now carry the proposed real-p control beyond the divergent absolute majorant?",
+  "started_from": "a6c9f083318148977f2b11a3361fe231f058008c",
+  "work_id": "round-0012-25cbccbe",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T04:21:39+00:00"
+}

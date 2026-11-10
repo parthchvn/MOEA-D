@@ -1,0 +1,71 @@
+{
+  "arithmetic": "Python fractions and SymPy integer linear algebra; displayed decimals are rounded exact fractions",
+  "artifacts_sha256": {
+    "README.md": "346b22ffcc3cfe78f961bfdd1349261786e5a4391748afbcdbb6e513e9fc2367",
+    "audit.md": "6acb6be4057ccb342932cc970e336d00cbd44f9444f25bf8e4c513dd34fd57e4",
+    "audit.py": "f8c4efd0d6e33845009c019d5a3e0055d0ee5a63d8de765beee52021f62ae09a",
+    "checks.json": "b453fe527ec038444f78a38e28576ccfa571c440c42cb636ab08b9da7ab978ee",
+    "dependency.json": "44cf25117314e4cebcd122229e94e1a023e1e8519ac60a6744ceced8c30a6c37",
+    "memory.md": "defe0f001749d2c5461226a4ebaa5a7945f7f8cbe46a1ffd739432faa4fabbf6",
+    "moments.csv": "a0dc7d5793ed891f2b86beb2d21f59251178b327154c5a03badff0b1261ffc21",
+    "pair.csv": "6764f52143f5b158a1770b79d5c825630337897450a91b95e0c2a49c400ecfa3",
+    "phase.csv": "8961a41c9ae3201ae76e327456c0476cd228922032c27beeacd2d1ac1a1adfc5",
+    "reproduce.py": "cd5688cba7398a0dabbcf757c595629327cd7fa093a7a32eb023cb7dc594d98c",
+    "tensor.csv": "152b61f1a2861bcf151fec679900144715b09df9ff333775dd0625b78de1da9f",
+    "test_audit.py": "918aa3de4867b04f199bec9171bff06b320635a7c49e47051fd16aa9e76fd8ca",
+    "verification.json": "437f55a26194f86913dbf27e37e4b6e4bd74acf33095e6bac5ab2e24ce9bc763"
+  },
+  "budget_seconds": 15050,
+  "censoring": "Not applicable to exact algebra. Published censoring and missingness retained in dependency.json.",
+  "commands": [
+    "python research/reports/large-T-20261109/followup/round-0011/reproduce.py --repo . --out research/runs/round12-audit/prior",
+    "python deliverables/reproduce.py --repo . --out research/runs/round12-audit/replay --reuse-prior research/runs/round12-audit/prior",
+    "/Users/parth/miniforge3/bin/python -m unittest discover -s tests -v",
+    "/Users/parth/miniforge3/bin/python research/reports/large-T-20261109/followup/round-0011/test_check.py",
+    "/Users/parth/miniforge3/bin/python deliverables/test_audit.py",
+    "/Users/parth/miniforge3/bin/python -m py_compile sim.py large.py scripts/run_research.py deliverables/audit.py deliverables/test_audit.py deliverables/reproduce.py",
+    "git diff --check"
+  ],
+  "commit_created": false,
+  "completed_utc": "2026-11-10T04:19:31.996202+00:00",
+  "conditioning": "Before each proposal on the consumed-randomness history; no conditioning on acceptance or on a retained noisy label.",
+  "cpu_workers": 1,
+  "elapsed_seconds": 3255.996202,
+  "executable": "/Users/parth/miniforge3/bin/python",
+  "final_git_status": " M research/CLAIMS.md\n M research/STATUS.md\n?? deliverables/\n",
+  "git_head": "a6c9f083318148977f2b11a3361fe231f058008c",
+  "initial_git_status": "",
+  "limitations": [
+    "Full joint solve completed once; exact residual checks replace a second identical generation.",
+    "Private earlier per-trial logs remain unavailable; published receipts and aggregate chronology are verified.",
+    "No current literature search, novelty claim, enlarged full-process noise window or global Taylor remainder."
+  ],
+  "model": "Pinned ideal extrema and stored labels; own-parent ascending standard-bit mutation; activated independent bitwise observation noise; exact filled-cardinality T=2 closed pair; simultaneous true alignment at full sweep boundaries.",
+  "network_used": false,
+  "numpy": "2.4.3",
+  "paid_cost": 0,
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "protected_tracked_entries": 348,
+  "push_performed": false,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "question": "Independent audit of the phase-potential Schur bound and its full-population tensor extension",
+  "registration": "No new sampling experiment. Earlier committed registrations, receipts and seed separation replayed before the new audit.",
+  "round": 12,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "source_hashes": {
+    "audit.py": "f8c4efd0d6e33845009c019d5a3e0055d0ee5a63d8de765beee52021f62ae09a",
+    "reproduce.py": "cd5688cba7398a0dabbcf757c595629327cd7fa093a7a32eb023cb7dc594d98c",
+    "test_audit.py": "918aa3de4867b04f199bec9171bff06b320635a7c49e47051fd16aa9e76fd8ca"
+  },
+  "source_independence": "audit.py imports no prior transition or Schur solver; only compares published rational values after separate construction.",
+  "started_utc": "2026-11-10T03:25:16Z",
+  "sympy": "1.14.0",
+  "thread_limits": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

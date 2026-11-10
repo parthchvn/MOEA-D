@@ -1,0 +1,119 @@
+{
+  "commit_created": false,
+  "completion_utc": "2026-11-10T04:19:31.996202+00:00",
+  "cpu_workers": 1,
+  "deterministic_audit_seconds": 2010.0441666670085,
+  "development": {
+    "correction": "Solve the original integer-cleared system with both rewards, then verify the reduced equations exactly; no second reduced rational solve is needed.",
+    "interrupted_solve": "An initial development invocation was interrupted during the expensive rational Schur solve, after approximately 12 minutes. Its four completed CSV stages are retained only for byte comparison with the final invocation.",
+    "scientific_failures": 0,
+    "test_failures": 0
+  },
+  "full_joint_run": {
+    "completed_invocations": 1,
+    "new_full_outputs_byte_repeated": false,
+    "verification": "Exact integer residuals for the original systems; independent Fraction residuals for both Schur reward equations; full joint exit and residence checks."
+  },
+  "git_whitespace": "pass",
+  "network_used": false,
+  "new_csvs_byte_identical": {
+    "moments.csv": true,
+    "pair.csv": true,
+    "phase.csv": true,
+    "tensor.csv": true
+  },
+  "new_source_whitespace": "pass",
+  "paid_cost": 0,
+  "preservation": {
+    "all_unchanged": true,
+    "git_diff_paths": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "original_registration_and_blocked_holdout": "unchanged",
+    "protected_tracked_entries": 348,
+    "symlink_targets_checked_by_git_diff": true
+  },
+  "prior_outputs_byte_identical": {
+    "bounds.csv": true,
+    "dependency.json": true,
+    "inequalities.csv": true,
+    "moments.csv": true,
+    "schur.csv": true,
+    "verification.json": true
+  },
+  "push_performed": false,
+  "python_compilation": "pass",
+  "recursive_dependency_seconds": 64.70227479099412,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "pass",
+  "tests": [
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 21.629450708976947,
+      "name": "repository",
+      "returncode": 0,
+      "test_seconds": 9.682,
+      "tests": 95
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0011/test_check.py"
+      ],
+      "elapsed_seconds": 0.45100308299879543,
+      "name": "prior_tests",
+      "returncode": 0,
+      "test_seconds": 0.194,
+      "tests": 13
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 1.9290372919931542,
+      "name": "new_tests",
+      "returncode": 0,
+      "test_seconds": 1.516,
+      "tests": 12
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/audit.py",
+        "deliverables/test_audit.py",
+        "deliverables/reproduce.py"
+      ],
+      "elapsed_seconds": 0.15029145797598176,
+      "name": "compile",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.024506584013579413,
+      "name": "whitespace",
+      "returncode": 0
+    }
+  ],
+  "total_tests": 120,
+  "turn_elapsed_through_packaging_seconds": 3255.996202
+}
