@@ -1,0 +1,105 @@
+{
+  "all_protected_entries_unchanged": true,
+  "artifact_extensions": [
+    "md",
+    "python",
+    "csv",
+    "json"
+  ],
+  "commands": [
+    {
+      "command": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 15.053212124999845,
+      "name": "repository",
+      "returncode": 0,
+      "tests": 95
+    },
+    {
+      "command": [
+        "deliverables/test_fourth.py"
+      ],
+      "elapsed_seconds": 0.4744104170240462,
+      "name": "new",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "research/reports/large-T-20261109/followup/round-0014/test_audit.py"
+      ],
+      "elapsed_seconds": 0.4327062499942258,
+      "name": "prior",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/excess.py",
+        "deliverables/fourth.py",
+        "deliverables/pair.py",
+        "deliverables/reproduce.py",
+        "deliverables/test_fourth.py",
+        "deliverables/verify.py"
+      ],
+      "elapsed_seconds": 0.10146475001238286,
+      "name": "compile",
+      "returncode": 0,
+      "tests": null
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.0708731250197161,
+      "name": "whitespace",
+      "returncode": 0,
+      "tests": null
+    }
+  ],
+  "computation_failures": [],
+  "full_replay_elapsed_seconds": 608.3488049580192,
+  "intended_tracked_edits": [
+    "research/CLAIMS.md",
+    "research/STATUS.md"
+  ],
+  "limits": [
+    "No independent new proof reviewer",
+    "No independent n=5 fourth oracle",
+    "Full T=2 polynomial fourth bound remains unresolved"
+  ],
+  "outputs_byte_identical": {
+    "coefficients.csv": true,
+    "dependency.json": true,
+    "entrance.csv": true,
+    "excess.csv": true,
+    "excess.json": true,
+    "gaps.csv": true,
+    "mixed.csv": true,
+    "obstruction.csv": true,
+    "pair.csv": true,
+    "pair.json": true,
+    "stationary.csv": true,
+    "verification.json": true,
+    "words.csv": true
+  },
+  "protected_tracked_entries": 410,
+  "relative_links_verified": 32,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "pass",
+  "tests_passed": 119
+}

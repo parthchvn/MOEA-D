@@ -1,0 +1,48 @@
+{
+  "conclusion": "Full T=2 polynomial fourth coefficient remains unresolved; no extrapolation from finite sizes.",
+  "exact_cells": 6,
+  "exact_sizes": [
+    3,
+    4,
+    5
+  ],
+  "exact_word_sum": true,
+  "fourth_words": 16,
+  "independent_fourth_coefficients": [
+    {
+      "T": 2,
+      "exact_match": true,
+      "fourth_decimal": 7.5586800302678885,
+      "fourth_sha256": "7f5319ba5ced2be0cfd3b3354a5760c9509cd945981011339c527347f1644712",
+      "n": 3
+    },
+    {
+      "T": 3,
+      "exact_match": true,
+      "fourth_decimal": 8.576265119673286,
+      "fourth_sha256": "53f65b90172546b8ce5e74ecfb94d359c02cc442965cb116eb4f06efff5bd8a2",
+      "n": 3
+    },
+    {
+      "T": 2,
+      "exact_match": true,
+      "fourth_decimal": 13.833568380548149,
+      "fourth_sha256": "ab86d82f49a034c86cf8444c6c477e8ef43d8d89205aacd4f60f82050cd9b7d5",
+      "n": 4
+    },
+    {
+      "T": 3,
+      "exact_match": true,
+      "fourth_decimal": 12.633155088871877,
+      "fourth_sha256": "2d158d7c795e55669e6cfbb14b0b14dc071188e534f8c13cd8aa27d52f790cf4",
+      "n": 4
+    }
+  ],
+  "independent_phase_checks": 20,
+  "phase_source_sha256": "1c6e205e16da18a4c1d540bdbd9f14974d707f4a4fc08b9194a82fcaec1faf84",
+  "published_lower_order_checks": 24,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "mechanically checked",
+  "uncertainty": "No sampling intervals or censoring apply to exact algebra."
+}
