@@ -1,0 +1,102 @@
+{
+  "all_protected_unchanged": true,
+  "curated_extensions_only": true,
+  "diagnostics": [
+    "Sandbox denied optional process-list inspection; no scientific result used it."
+  ],
+  "distinct_n_state_pairs": 597,
+  "elapsed_seconds": 1464.069342,
+  "limitations": [
+    "All-n proof is a candidate pending independent analytic audit.",
+    "Independent fourth-order phase/sweep comparison is at n=4; n=6 has exact replay only.",
+    "Earlier private execution logs remain unavailable; chronology uses published receipts."
+  ],
+  "outputs_byte_identical": {
+    "centered.csv": true,
+    "dependency.json": true,
+    "entrance.csv": true,
+    "flux.csv": true,
+    "verification.json": true,
+    "words.csv": true
+  },
+  "packaging_completed_utc": "2026-11-10T07:21:50.069342+00:00",
+  "phase_cases": 3734,
+  "protected_tracked_files": 443,
+  "relative_local_markdown_links": 27,
+  "reproduction_elapsed_seconds": 612.6312226250011,
+  "reproduction_stage_seconds": {
+    "centered": 396.7257772089797,
+    "prior": 215.89865987500525
+  },
+  "scientific_or_test_failures": [],
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "state_cases": 622,
+  "status": "pass",
+  "test_count": 131,
+  "tests": [
+    {
+      "command": [
+        "python",
+        "deliverables/test_centered.py"
+      ],
+      "elapsed_seconds": 1.5238620000018273,
+      "name": "new",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0014/test_audit.py"
+      ],
+      "elapsed_seconds": 0.32159716699970886,
+      "name": "round14",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0016/test_audit.py"
+      ],
+      "elapsed_seconds": 0.149718375003431,
+      "name": "round16",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 13.195911459013587,
+      "name": "repository",
+      "returncode": 0,
+      "tests": 95
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/centered.py",
+        "deliverables/reproduce.py",
+        "deliverables/test_centered.py"
+      ],
+      "elapsed_seconds": 0.14644300000509247,
+      "name": "compile",
+      "returncode": 0
+    }
+  ],
+  "turn_budget_seconds": 2320,
+  "whitespace": "pass"
+}

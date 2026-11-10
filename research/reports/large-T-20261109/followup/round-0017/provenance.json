@@ -1,0 +1,46 @@
+{
+  "all_protected_unchanged": true,
+  "analysis": "Deterministic exact rational proof checks designed this round, not a preregistered stochastic experiment.",
+  "artifacts_sha256": {
+    "README.md": "288902da42a4ece59ae9eacca70c701c1a00a1d1c92996af0331db100ca5c2a4",
+    "centered.csv": "500d71d12fa1caca70b1470c7fd48215c844435d387bb91fb9623f76dbcda32d",
+    "centered.py": "9ca8eb1f93aa244bd0f7e4b62863b82b0ab353470e8dd06fd2dffb537dbf18c8",
+    "checks.json": "08c807000184d1c73994dce09a04b4a4fa5910d989b470e0120ce60c14bad8a3",
+    "dependency.json": "67d683405e8ed0af2c55cb6d17f5b31c2a7026f7f02d8cf6c8db1126616452f1",
+    "entrance.csv": "6d4ee259705327ef018ad7660688acd1d588c5673dc25f597eee14ccc65fcaba",
+    "flux.csv": "731b6cd01d58cd894ed079c532e83748d93529dcf999d56decf7821f9e32c71c",
+    "memory.md": "be18170eeeee79db2a9b0db4b7768a19bd877791451e271832e7f2c01e4f6e81",
+    "proof.md": "2f950867e75d7263b37d9f68d16c6f982e4b376b058579930498eaad705e3313",
+    "reproduce.py": "07e2d0262c67b9ced57ae7d5ccd6691b30763d9e9be5598c56e161211130f4e0",
+    "test_centered.py": "69337b682e4866b031a6626600783df83a7730c543051418127e051837a8f433",
+    "verification.json": "dd80a9cff2360932e591290de1cda8f724e079c18e83235641b41a0959ac3c97",
+    "words.csv": "af0f27e37c5bbf3c65107c699793b948ca7375329d6c09d6b3c09984035218e5"
+  },
+  "commands": [
+    "python deliverables/test_centered.py",
+    "python research/reports/large-T-20261109/followup/round-0014/test_audit.py",
+    "python research/reports/large-T-20261109/followup/round-0016/test_audit.py",
+    "python -m unittest discover -s tests -v",
+    "python deliverables/reproduce.py --repo . --out research/runs/round17/replay --seconds 1100",
+    "python -m py_compile sim.py large.py scripts/run_research.py deliverables/centered.py deliverables/test_centered.py deliverables/reproduce.py"
+  ],
+  "dirty_reason": "New deliverables and intended STATUS/CLAIMS notes; model/evidence sources unchanged.",
+  "elapsed_seconds": 1464.069342,
+  "execution": "serial",
+  "final_worktree_dirty": true,
+  "git_commit": "e2eb660c5561ec866f6c48c44cb35e442e2a57da",
+  "initial_worktree_dirty": false,
+  "network_used": false,
+  "numerical_threads": 1,
+  "packaging_completed_utc": "2026-11-10T07:21:50.069342+00:00",
+  "paid_cost": 0,
+  "platform": {
+    "machine": "arm64",
+    "system": "Darwin"
+  },
+  "protected_tracked_files": 443,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "started_utc": "2026-11-10T06:57:26+00:00"
+}

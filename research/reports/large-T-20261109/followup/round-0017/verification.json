@@ -1,0 +1,16 @@
+{
+  "all_n_bound": "candidate proof; independent analytic audit still required",
+  "arithmetic": "exact rational; decimals display only",
+  "centered_rows": 622,
+  "exact_identities": 3053,
+  "exact_inequalities": 7708,
+  "ns": [
+    4,
+    6
+  ],
+  "phase_rows": 3734,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "All marked/orphan values at n=4; endpoint stress values at n=6; two independent ORRR oracles at n=4 only.",
+  "status": "mechanically checked"
+}
