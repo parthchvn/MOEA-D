@@ -1,0 +1,49 @@
+{
+  "artifacts_sha256": {
+    "README.md": "12555fa9a1fc677fafd5661da4956796d56dd02c6b4a4d5eec5dc352ee2305ed",
+    "audit.md": "85ddb25fe6a9d2ac15b288c2f495f0ca851f7da096a1bdf8fa3b49aa15290e9c",
+    "audit.py": "e75495d2c9516816bb78353330f2b2571cd8454c4fbc67b75c3cc57445ddb809",
+    "checks.json": "16d234eb8e2b386371c8322e8516cf050ccd1e7895f3685ecd1c6e5739cb6c38",
+    "dependency.json": "faba18b410e918e7c533a928de2ffc91dd68b5a4ad8cf565c97ae56d5819d620",
+    "local.csv": "58e5b8d3b08ff3af9f95a9250ed8824e405ac2724e45fc34a4af3d5137749af0",
+    "memory.md": "404d64942f71f094f79ae3c33b8c4191e95cb8636b98828cdb1b9f19f22ec89c",
+    "mixed.csv": "c82d49d50deedae81b9d01e42f93494873aee1232c6373f8ba14744b10ff94eb",
+    "reproduce.py": "8bf8f925ebc05d7958170b43e33763e3a3cbc8c5abb3b4cab1342ac7e2425824",
+    "suffix.csv": "45e71e0734fac5237d8a86c24149b125b604e8f721c3f0a7a52b665a62182420",
+    "test_audit.py": "3006a9f8f8e2f003dba009e732366c1d252bd93534f9fbea60a960106ede711f",
+    "verification.json": "25ac976209af4d26bf6d7c161653f7c1bd33f6dccc820baa38acbe6d6b235af3"
+  },
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python deliverables/reproduce.py --repo . --out research/runs/round9-private/replay",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v",
+    "PYTHONDONTWRITEBYTECODE=1 python -S research/reports/large-T-20261109/followup/round-0008/test_second.py",
+    "PYTHONDONTWRITEBYTECODE=1 python -S deliverables/test_audit.py",
+    "PYTHONPYCACHEPREFIX=research/runs/round9-private/pycache python -m py_compile sim.py large.py scripts/run_research.py deliverables/audit.py deliverables/reproduce.py deliverables/test_audit.py",
+    "git diff --check"
+  ],
+  "cpu_policy": "Serial reproduction subprocesses; numerical thread limits set to one.",
+  "final_git_status": [
+    " M research/CLAIMS.md",
+    " M research/STATUS.md",
+    "?? deliverables/"
+  ],
+  "input_commit": "20916fb610306749dfa84f545fbe39d6919b2a97",
+  "input_dirty": false,
+  "input_sha256": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "research/EXPERIMENTS.md": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+    "research/LARGER_NEIGHBORHOODS_PREREG.md": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/LITERATURE.md": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+    "research/PAPER_COMPARISON.md": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+    "research/PROJECT.md": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+    "research/reports/large-T-20261109/followup/round-0008/derivation.md": "c4ee7e3e46d7d34375da95347d8c62967e13f670a577a007a2e502b762322592",
+    "research/reports/large-T-20261109/interpretation.md": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2"
+  },
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "receipt": "checks.json",
+  "sampling_plan": "No new empirical experiment; only exact deterministic checks and replay of published measurements.",
+  "scientific_seeds": [],
+  "scientific_trajectories": 0
+}

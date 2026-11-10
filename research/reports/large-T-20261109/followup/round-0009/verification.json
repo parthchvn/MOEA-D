@@ -1,0 +1,27 @@
+{
+  "arithmetic": "exact rational",
+  "counts": {
+    "local_balance": 445,
+    "mixed_forcings": 268,
+    "mixed_responses": 20,
+    "predictable_identities": 16512,
+    "regular_without_help": 268,
+    "suffix_differences": 16512,
+    "suffix_envelopes": 16512
+  },
+  "limitations": "Finite checks support the analytic audit; no statistical experiment or higher-order remainder claim.",
+  "mixed_n": [
+    4,
+    6
+  ],
+  "prior_full_second_matches": 1,
+  "prior_local_matches": 10,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "mechanically checked",
+  "suffix_n": [
+    4,
+    6,
+    8
+  ]
+}
