@@ -1,0 +1,81 @@
+{
+  "artifacts_sha256": {
+    "README.md": "854588c2104b11b01c58deacd2fe24e7cc96b46e10d67151fe06665764e83dbf",
+    "branches.csv": "4f243b989d89a0216a42c31dbad373b3387b680915a184c6febda546e1d8b1ab",
+    "checks.json": "344998021950990489e93bf5b9d3c6447b816e08d5c0006c00705e749a8abcf8",
+    "dependency.json": "ef2cf59b07a5d05917d130d4fb4b92c666ce9793d4918ace5e5cc79e0d04dcf6",
+    "entrance.csv": "f3b57f1c1a45edcffb6dc5ad60e4d859cbca218be4ee340f766b5ad494633921",
+    "joint.csv": "e7f16cc899472fab5a8c094e36ec497a8be862ff013956d64a4d9480ecedff16",
+    "memory.md": "a19efb679dddfe6bda64e258f6b71b693fdca08fc2e7eb28736a05668aa58876",
+    "proof.md": "0239ab309b0929001028d1c18c71d43bc4c18e0001b9f1583fb0aa5e46f86f2e",
+    "reproduce.py": "c40d15389071069741068b81dc9a886b3890445896fe8e954bfe2c56ec25eb2a",
+    "responses.csv": "2cfe050c86b1efa4adcb87a0dec26e399e549b96e8c4175452dc05dae546115d",
+    "rorr.py": "6d90545a85aeb4d650c62ac27f9ab3323806d7172ae6024724d3c7078913464a",
+    "shortcuts.csv": "5dd163d596d700d8f649f3072b0cf93cd55ba8a14625472b6d535161d02731ed",
+    "test_rorr.py": "45b0387a471de75f32641d09e0b319a642c5d83b1de96c30d593d4d233744675",
+    "verification.json": "c67248a36cc35f1ce91b872ddb4c119f198f5a7b03d046713b7273fba768fac3",
+    "words.csv": "5d0bc2cea20cbd4cf22ade9a7f8f72f6579c2f3c3168ebb071de3d0d4005c5b9"
+  },
+  "censoring": "No new stochastic trials; original cap and 240 missing gate-blocked holdout trials retained.",
+  "changed_tracked_files": [
+    "research/CLAIMS.md",
+    "research/STATUS.md"
+  ],
+  "core_sources_sha256": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "large.py": "cda8099014655fb67f2104c9aeb09fe103d1f9a0441ef9f9683ed73d4f54c580",
+    "research/LARGER_NEIGHBORHOODS_PREREG.md": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/reports/large-T-20261109/interpretation.md": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2",
+    "scripts/run_research.py": "420253f4a10dc448993423ae7d216d3fee0bc69ad366718359100025b86a65d7",
+    "sim.py": "1d6de5a5391a723ef34162297cb60a45c682ac05ce50d6b328506280724feba6"
+  },
+  "elapsed_seconds": 6514.987299,
+  "execution": {
+    "cost_currency": "USD",
+    "cpu_limit": 1,
+    "network_used": false,
+    "numerical_threads": 1,
+    "paid_resource_cost": 0,
+    "raw_logs": "research/runs/round19",
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "serial_scientific_jobs": true
+  },
+  "final_dirty": true,
+  "git_commit": "a43759651b7f9f259df3014b914703255ded29dc",
+  "git_commit_created": false,
+  "independence": "One agent; new ordered sweep/suffix solver checked against published direct phase solver and separate custom-reward equations. No independent new analytic reviewer is claimed.",
+  "initial_dirty": false,
+  "manifest_excludes": "This file excludes itself. The supervisor adds report.md from the final response.",
+  "measurement_design": "Deterministic exact proof checks designed in round19, not a new stochastic experiment. Earlier empirical evidence replayed from published prior-round committed registrations and receipts.",
+  "model": "Supplied C=(2,1,2,...,n), ideal extrema (0,n), pinned labels, cyclic ascending own-parent standard-bit mutation and activated bitwise observation masks of rate 1/n, shared observation, filled T=2, boundary-only true alignment stopping; even n>=4; sweep units.",
+  "packaging_completed_utc": "2026-11-10T19:27:46.987299+00:00",
+  "platform": {
+    "machine": "arm64",
+    "release": "24.5.0",
+    "system": "Darwin"
+  },
+  "preservation": {
+    "blocked_holdout": true,
+    "original_preregistration": true,
+    "protected_unchanged_count": 486,
+    "snapshot_count": 488,
+    "source_pdfs": true
+  },
+  "proof_status": {
+    "C40": "complete fourth-order gap remains conjectured",
+    "C44": "candidate all-n proof, independent analytic audit still required; finite cases mechanically checked",
+    "C45": "shortcut contradicted by exact identities"
+  },
+  "pushed": false,
+  "python": {
+    "executable": "/Users/parth/miniforge3/bin/python",
+    "version": "3.13.12"
+  },
+  "round": 19,
+  "started_utc": "2026-11-10T17:39:12+00:00",
+  "statistical_uncertainty": "Not applicable to exact rational calculations; finite checks do not establish the all-n candidate.",
+  "status": "complete",
+  "turn_budget_seconds": 11459
+}

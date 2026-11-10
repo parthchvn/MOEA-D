@@ -1,0 +1,21 @@
+{
+  "arithmetic": "exact rational; decimals are presentation only",
+  "baseline_phase_cases": 74,
+  "centered_phase_cases": 5116,
+  "identities": 2567,
+  "inequalities": 7814,
+  "joint_entrance_cases": 664,
+  "marked_phase_cases": 788,
+  "ns": [
+    4,
+    6
+  ],
+  "phase_oracle_matches": 864,
+  "prior_word_matches": 1,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "All corner/aligned origins, one regular overwrite target and child, all phases and orphan values at the listed even n. Not an all-population or all-n enumeration.",
+  "solver": "New ordered sweep/suffix solver, matched to the published round-14 direct phase solver. Independent custom forcing recurrence checks the baseline decomposition.",
+  "status": "mechanically checked",
+  "unmarked_centered_phase_cases": 148
+}
