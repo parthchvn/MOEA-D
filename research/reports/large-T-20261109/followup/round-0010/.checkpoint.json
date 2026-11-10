@@ -1,0 +1,7 @@
+{
+  "task": "Determine whether an acceptance-weighted resolvent can bound third-and-higher terms uniformly on p=o(log n/n^4), including adjacent corrupted donors, because the audited quadratic bound now leaves those terms as the obstacle to enlarging the noise window.",
+  "started_from": "bac4a56922ed5f0021ad8c391952974ba91ae014",
+  "work_id": "round-0010-d4f6858c",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T03:01:23+00:00"
+}

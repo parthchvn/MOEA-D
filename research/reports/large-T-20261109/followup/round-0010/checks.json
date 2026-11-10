@@ -1,0 +1,74 @@
+{
+  "censoring": "Not applicable to new deterministic calculations; previous capped and missing trials preserved.",
+  "compilation": {
+    "files": [
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/check.py",
+      "deliverables/reproduce.py",
+      "deliverables/test_check.py"
+    ],
+    "status": "pass"
+  },
+  "elapsed_through_packaging_seconds": 729.896282,
+  "failures": {
+    "non_scientific_issue": "Optional environment glob found no venv; the already configured NumPy/Matplotlib Python was used successfully.",
+    "scientific_or_test_failures": 0
+  },
+  "limitations": [
+    "All-n no-go application is a candidate proof awaiting independent audit.",
+    "No uniform bound for the full mixed/adjacent remainder; the full sign window is unchanged.",
+    "The no-go theorem concerns absolute insertion majorants, not every signed or resummed resolvent.",
+    "Published receipts do not verify private historical execution logs."
+  ],
+  "packaged_utc": "2026-11-10T03:00:43.896282+00:00",
+  "preservation": {
+    "all_unchanged": true,
+    "intended_tracked_edits": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "protected_tracked_files_and_symlinks": 327
+  },
+  "reproduction": {
+    "full_reproduction_seconds": 59.83325483300723,
+    "generated_outputs_byte_identical": {
+      "dependency.json": true,
+      "obstruction.csv": true,
+      "orphan.csv": true,
+      "verification.json": true
+    },
+    "initial_dependency_seconds": 59.47723266700632,
+    "new_arithmetic_seconds": 0.4501475830038544
+  },
+  "resources": {
+    "commit_or_push": false,
+    "cpu_workers": 1,
+    "network_used": false,
+    "paid_cost": 0
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "started_utc": "2026-11-10T02:48:34+00:00",
+  "status": "pass",
+  "tests": {
+    "new": {
+      "count": 12,
+      "seconds": 0.069,
+      "status": "pass"
+    },
+    "repository": {
+      "count": 95,
+      "seconds": 8.58,
+      "status": "pass"
+    },
+    "round9": {
+      "count": 14,
+      "seconds": 0.03,
+      "status": "pass"
+    }
+  },
+  "total_tests": 121,
+  "whitespace_check": "git diff --check passed"
+}

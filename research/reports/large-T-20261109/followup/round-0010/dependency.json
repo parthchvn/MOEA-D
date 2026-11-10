@@ -1,0 +1,296 @@
+{
+  "chronology_limit": "Published receipts verify committed registration and aggregate execution timing; private trial logs are unavailable.",
+  "followup_arms": {
+    "1": {
+      "means": {
+        "S_sweeps": 10016.78125,
+        "U_sweeps": 8737.6875,
+        "U_to_S_sweeps": 1279.09375,
+        "exact_evaluations": 5139185.90625,
+        "post_S_sweeps": 0.125,
+        "post_evaluations": 5139185.90625,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 8737.6875
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 1279.09375,
+          "completed_only_quantiles": [
+            510.8,
+            985.0,
+            2484.3000000000006
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 8737.6875,
+          "completed_only_quantiles": [
+            6990.7,
+            8687.0,
+            10830.700000000003
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.125,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          8784.3,
+          9829.0,
+          11506.1
+        ],
+        "U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ],
+        "U_to_S_sweeps": [
+          510.8,
+          985.0,
+          2484.3000000000006
+        ],
+        "exact_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ]
+      },
+      "receipts": 32
+    },
+    "23": {
+      "means": {
+        "S_sweeps": 4281.8125,
+        "U_sweeps": 4275.28125,
+        "U_to_S_sweeps": 6.53125,
+        "exact_evaluations": 2197082.8125,
+        "post_S_sweeps": 0.0,
+        "post_evaluations": 2197082.8125,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 4275.28125
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 6.53125,
+          "completed_only_quantiles": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 4275.28125,
+          "completed_only_quantiles": [
+            3096.0,
+            4246.5,
+            5034.5
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.0,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          3102.0,
+          4254.0,
+          5039.5
+        ],
+        "U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ],
+        "U_to_S_sweeps": [
+          5.0,
+          6.0,
+          8.0
+        ],
+        "exact_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ]
+      },
+      "receipts": 32
+    }
+  },
+  "followup_primary": {
+    "decision": "favors_T23",
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "ratio": 2.3390952207223643
+  },
+  "followup_seed_count": 68,
+  "method": "Complete round-9 replay and recursive earlier checks; exact new orphan coefficients compared with audited local.csv.",
+  "original_decision": "inconclusive; original holdout remains blocked",
+  "original_primary": {
+    "nominal_95_ci": [
+      2.0501481748098818,
+      2.674641996509441
+    ],
+    "ratio": 2.3276385562777966
+  },
+  "original_registration_commit": "88a67b4954536f3ba4ce0c27a9651e9f269bb602",
+  "original_stage_counts": {
+    "calibrate": {
+      "capped": 6,
+      "exact": 96,
+      "missing": 0,
+      "planned": 102,
+      "receipts": 102
+    },
+    "holdout": {
+      "capped": 0,
+      "exact": 0,
+      "missing": 240,
+      "planned": 240,
+      "receipts": 0
+    },
+    "main": {
+      "capped": 1,
+      "exact": 1079,
+      "missing": 0,
+      "planned": 1080,
+      "receipts": 1080
+    },
+    "smoke": {
+      "capped": 0,
+      "exact": 62,
+      "missing": 0,
+      "planned": 62,
+      "receipts": 62
+    }
+  },
+  "orphan_coefficient_matches": {
+    "10": {
+      "first": true,
+      "second": true
+    },
+    "12": {
+      "first": true,
+      "second": true
+    },
+    "4": {
+      "first": true,
+      "second": true
+    },
+    "6": {
+      "first": true,
+      "second": true
+    },
+    "8": {
+      "first": true,
+      "second": true
+    }
+  },
+  "prior_seed_count": 2420,
+  "prior_vs_followup_seed_overlap": 0,
+  "registration_commit": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "round9_outputs_byte_identical": {
+    "dependency.json": true,
+    "local.csv": true,
+    "mixed.csv": true,
+    "suffix.csv": true,
+    "verification.json": true
+  },
+  "round9_sha256": {
+    "audit.md": "85ddb25fe6a9d2ac15b288c2f495f0ca851f7da096a1bdf8fa3b49aa15290e9c",
+    "audit.py": "e75495d2c9516816bb78353330f2b2571cd8454c4fbc67b75c3cc57445ddb809",
+    "dependency.json": "faba18b410e918e7c533a928de2ffc91dd68b5a4ad8cf565c97ae56d5819d620",
+    "local.csv": "58e5b8d3b08ff3af9f95a9250ed8824e405ac2724e45fc34a4af3d5137749af0",
+    "mixed.csv": "c82d49d50deedae81b9d01e42f93494873aee1232c6373f8ba14744b10ff94eb",
+    "reproduce.py": "8bf8f925ebc05d7958170b43e33763e3a3cbc8c5abb3b4cab1342ac7e2425824",
+    "suffix.csv": "45e71e0734fac5237d8a86c24149b125b604e8f721c3f0a7a52b665a62182420",
+    "verification.json": "25ac976209af4d26bf6d7c161653f7c1bd33f6dccc820baa38acbe6d6b235af3"
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "Offline proof work. No new experiment, unavailable appendix, forest theorem, or external theorem is a premise.",
+  "status": "mechanically checked; no dependency repair needed"
+}

@@ -1,0 +1,48 @@
+{
+  "arithmetic": "exact rational",
+  "censoring": "not applicable; deterministic identities",
+  "counts": {
+    "closed_form_bounds": 127,
+    "discounted_orphan_remainders": 10,
+    "full_orphan_rows": 3,
+    "full_pair_rows": 3,
+    "kernel_entries": 199,
+    "local_pair_formulas": 4,
+    "positive_p_denominators": 16,
+    "reachable_insertions": 6,
+    "signed_resolvent_diagonals": 7
+  },
+  "reachable_pair_receipts": [
+    {
+      "Q1_corner_first": "21850/1594323",
+      "Q1_first_pair": "27874/14348907",
+      "full_diagonal": "-5343359/14348907",
+      "full_signed_resolvent_diagonal": "-2813232079/5574658626",
+      "local_diagonal": "-2071/19683",
+      "local_signed_resolvent_diagonal": "42082087/481760622",
+      "n": 3
+    },
+    {
+      "Q1_corner_first": "73804003636/11920928955078125",
+      "Q1_first_pair": "3129473649216/298023223876953125",
+      "full_diagonal": "-271032112172313799/298023223876953125",
+      "full_signed_resolvent_diagonal": "-557557342383307854104364237/8214853321914428710937500",
+      "local_diagonal": "-1823494591/30517578125",
+      "local_signed_resolvent_diagonal": "-13334351485122138859/3004289214871562500",
+      "n": 5
+    },
+    {
+      "Q1_corner_first": "2067094246004914218/7730993719707444524137094407",
+      "Q1_first_pair": "10250270431162338935520/378818692265664781682717625943",
+      "full_diagonal": "-445907926457610094200844508855/378818692265664781682717625943",
+      "full_signed_resolvent_diagonal": "-94053982185887122340933173137001077325435393842437/8343806808837654739563696102333780588937997670",
+      "local_diagonal": "-1254605160541895/558545864083284007",
+      "local_signed_resolvent_diagonal": "-12966700002233019576040880937801016037/602820148709495356100565614029973670",
+      "n": 7
+    }
+  ],
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "No-go for the positive absolute insertion majorant, not for every signed or resummed resolvent.",
+  "status": "pass"
+}
