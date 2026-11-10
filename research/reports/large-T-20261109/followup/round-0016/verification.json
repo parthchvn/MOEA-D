@@ -1,0 +1,15 @@
+{
+  "arithmetic": "exact rational",
+  "censoring": "not applicable to deterministic calculations",
+  "independent_method": "Combinatorial weight probabilities; unrestricted ordered sweep products; triangular boundary solves; explicit suffix reconstruction. No prior solver imports.",
+  "inequalities_and_identities": 31552,
+  "ordered_words": 2,
+  "orphan_fed_states": 240,
+  "phases": 3188,
+  "published_excess_exact_matches": 254,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "states": 408,
+  "stationary_times": 24,
+  "status": "mechanically checked"
+}

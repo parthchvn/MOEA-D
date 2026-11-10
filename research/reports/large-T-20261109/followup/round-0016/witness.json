@@ -1,0 +1,17 @@
+{
+  "joint": "0",
+  "n": 4,
+  "next_breeder": 4,
+  "nonorphan_completion": "3/64",
+  "orphan_repair": "1/256",
+  "product_of_marginals": "3/16384",
+  "scope": "One pending clean turn; the stopped-reward proof does not assume independence.",
+  "state": [
+    0,
+    1,
+    2,
+    0,
+    0
+  ],
+  "status": "proved finite counterexample to independent repair events"
+}
