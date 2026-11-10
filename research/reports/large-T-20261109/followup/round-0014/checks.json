@@ -1,0 +1,134 @@
+{
+  "budget_seconds": 6782,
+  "complete_reproduction_seconds": 101.27247849901323,
+  "contradicted_shortcuts": [
+    "Subtracting the unshifted boundary orphan hitting function at an interior phase gives -1/5 in the recorded n=4 witness.",
+    "Recipient-split kernels with new error transitions are not stochastic at negative noise parameters; the proof uses a sufficiently small nonnegative interval before analytic extension."
+  ],
+  "development_events": [
+    {
+      "effect": "No arithmetic change; final tests have no warning.",
+      "event": "An initial unit-test CSV handle emitted a ResourceWarning; it was closed with a context manager before final tests."
+    },
+    {
+      "effect": "All added checks and both final reproductions pass.",
+      "event": "The first audit grid was extended with 4452 response/forcing inequalities before the final serial run and complete independent replay."
+    }
+  ],
+  "elapsed_seconds": 858.117786,
+  "no_new_scientific_seeds": true,
+  "no_new_scientific_trajectories": true,
+  "outputs_byte_identical": {
+    "acceptance.csv": true,
+    "births.csv": true,
+    "dependency.json": true,
+    "phases.csv": true,
+    "verification.json": true,
+    "words.csv": true
+  },
+  "protected_changes": [],
+  "protected_tracked_files_and_resolved_symlinks": 385,
+  "reproduction_timings": [
+    {
+      "command": [
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree/research/reports/large-T-20261109/followup/round-0011/reproduce.py",
+        "--repo",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree/research/runs/round14/replay/prior"
+      ],
+      "elapsed_seconds": 42.07796270799008,
+      "name": "prior",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree/deliverables/audit.py",
+        "--repo",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0014-8fa5c44c/worktree/research/runs/round14/replay",
+        "--n",
+        "4",
+        "6",
+        "--phases",
+        "4",
+        "6"
+      ],
+      "elapsed_seconds": 59.19451579102315,
+      "name": "audit",
+      "returncode": 0
+    }
+  ],
+  "round": 14,
+  "scientific_failures": 0,
+  "status": "pass",
+  "test_counts": {
+    "new": 12,
+    "repository": 95,
+    "round13": 16,
+    "total": 123
+  },
+  "tests": [
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "name": "repository",
+      "returncode": 0,
+      "test_count": 95,
+      "timing_method": "reported by unittest; shell wall time not separately recorded",
+      "unittest_reported_seconds": 5.905
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 0.43910487499670126,
+      "name": "new",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0013/test_cubic.py"
+      ],
+      "elapsed_seconds": 1.6115678750211373,
+      "name": "round13",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/audit.py",
+        "deliverables/test_audit.py",
+        "deliverables/reproduce.py"
+      ],
+      "elapsed_seconds": 0.09313908300828189,
+      "name": "compile",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.08226500000455417,
+      "name": "whitespace",
+      "returncode": 0
+    }
+  ]
+}
