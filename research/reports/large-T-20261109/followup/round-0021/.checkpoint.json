@@ -1,0 +1,7 @@
+{
+  "task": "larger-T-structure: Move beyond isolated T=2 Taylor words. Under the EXACT frozen filled-cardinality\nneighborhood and cyclic own-parent process, study the directed donor graph and\nwhich T-dependent structural features protect repair or enable slow traps.\nCompare admissible T in {2,3,4,5,7,ceil(log(n)),ceil(sqrt(n)),n+1}, deduplicated\nand bounded by n+1. Separate even/odd conventions and boundary neighborhoods.\nRead earlier exponential-residence counterexamples BEFORE proposing an upper bound.\nTry to obtain one general structural lemma, exact counterexample family, or\nvalid reduction that explains a larger-T phenomenon. Verify small instances\nwith exact arithmetic where feasible, and label finite coverage precisely.\nDo not construct enormous full population matrices; use explicit reachable-state\ncaps or local restrictions justified mathematically. No new Monte Carlo results\nwithout a plan committed in a PREVIOUS round. A useful prospective plan may be\npublished here for the next round, with exact configuration/seed/cap/analysis\nchoices. Keep the original 240 blocked holdout observations blocked.",
+  "started_from": "c52a6071a63ed41f54b0ff2af08b1989ab3d2ccc",
+  "work_id": "round-0021-85b8067a",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-12T18:37:26+00:00"
+}

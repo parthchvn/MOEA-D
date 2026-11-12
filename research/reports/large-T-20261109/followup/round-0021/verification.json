@@ -1,0 +1,17 @@
+{
+  "literal_neighborhood_rows_n2_through64_all_T_ge2": 91518,
+  "requested_cardinality_geometry_cells": 104,
+  "literal_mask_weight_rows_n2_through7": 33,
+  "central_seed_rate_checks_n2_through32_all_T_ge3_all_parent_weights": 11408,
+  "exhaustive_seeded_boundary_cases_n2_n3": 369,
+  "exhaustive_seeded_nonzero_phase_cases_n2_n3": 1088,
+  "exhaustive_max_materialized_closure": 7,
+  "maximum_exact_seed_bound_ratio": "81/131",
+  "larger_exact_repair_cells": 48,
+  "polarized_trap_cells": 48,
+  "direct_trap_sweep_cells_n3_through7": 23,
+  "forest_formula_cells": 56,
+  "local_closure_cap": 256,
+  "sampling": "none; deterministic exact arithmetic; no seeds/censoring",
+  "scope": "All-n statements rely on proof.md, not these finite checks."
+}
