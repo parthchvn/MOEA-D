@@ -1,0 +1,122 @@
+{
+  "started_utc": "2026-11-12T19:13:09.887695+00:00",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "numerical_threads": 1,
+  "serial": true,
+  "scientific_samples": 0,
+  "commands": [
+    {
+      "argv": [
+        "CONFIGURED_PYTHON",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 17.20277991698822,
+      "output_sha256": "97c9ca85852428d83c25c2ba72d71366b6eccfb9cad8fd80b301d0b039ff11a0",
+      "tests": 95,
+      "unittest_seconds": 8.99,
+      "unittest_ok": true
+    },
+    {
+      "argv": [
+        "CONFIGURED_PYTHON",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "verify_checkpoint.py"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.10620754200499505,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "CONFIGURED_PYTHON",
+        "research/reports/large-T-20261109/followup/round-0023/verify.py",
+        "--bundle",
+        "research/reports/large-T-20261109/followup/round-0023"
+      ],
+      "returncode": 0,
+      "elapsed_seconds": 0.891674584010616,
+      "output_sha256": "48d53ba666655a9b8583591756feec2cf2ae1fb8d336965139134d84024467cc",
+      "certificate_scope": {
+        "cells": 14,
+        "phase_states": 8664,
+        "seeded_occupation_enclosures": 5928,
+        "status": "all exact residual and enclosure checks pass; no numerical solve"
+      }
+    }
+  ],
+  "protected_entries_unchanged": 602,
+  "protected_symlink_texts_not_followed": 9,
+  "head": "eb682871d3d29e7c9373159ecf9605390cd7b8e9",
+  "recovery": {
+    "inventory_entries_verified": 12,
+    "duplicate_files": [
+      "README.md",
+      "audit.md",
+      "audit.py",
+      "memory.md",
+      "reproduce.py",
+      "test_audit.py"
+    ],
+    "missing_advertised_wip_files_in_each_copy": [
+      "words.csv",
+      "baseline.csv",
+      "phases.csv",
+      "entrances.csv",
+      "branches.csv",
+      "verification.json",
+      "dependency.json",
+      "checks.json",
+      "provenance.json"
+    ],
+    "status": "hash identity only; no inherited verdict"
+  },
+  "publication_relative_links_verified": 102,
+  "published_round_reports": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "elapsed_seconds": 18.3465052919928,
+  "finished_utc": "2026-11-12T19:13:28.234068+00:00",
+  "status": "PASS",
+  "final_document_audit": {
+    "utc": "2026-11-12T19:15:01.141718+00:00",
+    "publication_relative_links": 102,
+    "markdown_tables": 5,
+    "published_rounds_indexed": 23,
+    "balanced_math_delimiters": true,
+    "control_characters_absent": true,
+    "protected_entries_unchanged": 602,
+    "no_report_md": true
+  }
+}
