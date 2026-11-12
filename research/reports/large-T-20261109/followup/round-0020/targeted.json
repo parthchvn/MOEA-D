@@ -1,0 +1,75 @@
+{
+  "first_excluded_budget4_state": [
+    3,
+    0,
+    0,
+    0,
+    4
+  ],
+  "geometry": [
+    {
+      "budget3_unique_regular_states": 433,
+      "marked_descendant_cases": 99,
+      "n": 4,
+      "second_birth_slow_pair_cases": 156,
+      "states_with_one_slow_pair": 316
+    },
+    {
+      "budget3_unique_regular_states": 7057,
+      "marked_descendant_cases": 221,
+      "n": 6,
+      "second_birth_slow_pair_cases": 582,
+      "states_with_one_slow_pair": 3846
+    },
+    {
+      "budget3_unique_regular_states": 48449,
+      "marked_descendant_cases": 391,
+      "n": 8,
+      "second_birth_slow_pair_cases": 1432,
+      "states_with_one_slow_pair": 19832
+    }
+  ],
+  "new_scope": "Support enumeration n=4,6,8 through three generic overwrites; all first marks and their clean subsets, all second overwrites. No general-population response grid.",
+  "published_manifest_counts": {
+    "18": 15,
+    "19": 15
+  },
+  "published_schemas": {
+    "branches.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 24,
+      "sha256": "4f243b989d89a0216a42c31dbad373b3387b680915a184c6febda546e1d8b1ab"
+    },
+    "entrance.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 12,
+      "sha256": "f3b57f1c1a45edcffb6dc5ad60e4d859cbca218be4ee340f766b5ad494633921"
+    },
+    "joint.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 664,
+      "sha256": "e7f16cc899472fab5a8c094e36ec497a8be862ff013956d64a4d9480ecedff16"
+    },
+    "responses.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 788,
+      "sha256": "2cfe050c86b1efa4adcb87a0dec26e399e549b96e8c4175452dc05dae546115d"
+    },
+    "shortcuts.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 2,
+      "sha256": "5dd163d596d700d8f649f3072b0cf93cd55ba8a14625472b6d535161d02731ed"
+    },
+    "words.csv": {
+      "keys_unique_and_complete": true,
+      "rows": 2,
+      "sha256": "5d0bc2cea20cbd4cf22ade9a7f8f72f6579c2f3c3168ebb071de3d0d4005c5b9"
+    }
+  },
+  "rational_entrance_or_mark_fields_checked": 1464,
+  "recovery_file_hashes_checked": 12,
+  "reused_scope": "Published n=4,6 exact outputs after manifest/schema checks; saved hashes alone do not re-certify their arithmetic.",
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "mechanically checked"
+}
