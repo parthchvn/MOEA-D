@@ -1,0 +1,47 @@
+{
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python research/reports/large-T-20261109/followup/round-0009/reproduce.py --repo . --out research/runs/round10-private/prior",
+    "PYTHONDONTWRITEBYTECODE=1 python deliverables/reproduce.py --repo . --out research/runs/round10-private/package --reuse-prior research/runs/round10-private/prior",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python deliverables/reproduce.py --repo . --out research/runs/round10-private/replay",
+    "PYTHONDONTWRITEBYTECODE=1 OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v",
+    "PYTHONDONTWRITEBYTECODE=1 python -S deliverables/test_check.py",
+    "PYTHONDONTWRITEBYTECODE=1 python -S research/reports/large-T-20261109/followup/round-0009/test_audit.py",
+    "PYTHONPYCACHEPREFIX=research/runs/round10-private/pycache python -m py_compile sim.py large.py scripts/run_research.py deliverables/check.py deliverables/reproduce.py deliverables/test_check.py",
+    "git diff --check"
+  ],
+  "cpu_workers": 1,
+  "experiment_plan": "No new sampling experiment. All new outputs are deterministic identities/counterexamples; no prior-round registration rule bypassed.",
+  "final_git_status": [
+    " M research/CLAIMS.md",
+    " M research/STATUS.md",
+    "?? deliverables/"
+  ],
+  "initial_dirty_state": false,
+  "model": "Pinned ideal reference and labels, supplied corner, ascending own-parent standard-bit mutation and activated bitwise observation noise; filled cardinality T=2,3; simultaneous boundary stopping; sweeps.",
+  "outputs_sha256": {
+    "README.md": "927489c918e366ff082888108ad56da32a23ec87d130cd5ad7488419ee808c4c",
+    "check.py": "c8038f56f7c60ac4dfc3bcf105074535616e8ab1577e89d6466267eb6863e853",
+    "checks.json": "09095fb29491850ef32e16e962f07533c5a198f7d0d1673d30a7759118d6c36d",
+    "dependency.json": "459853cf13a5f633bec5e2c0fc412c9ded53e64df552a91d9f87d6c474bd9f79",
+    "memory.md": "1ae1ac4eeb190bb0fea468d33304ad335eea4dd4cdbf8198cf4cc205cabe097a",
+    "obstruction.csv": "d612ccb7c2f7cbd8a197f54a3243331b52f169a2a4b24a47088e349252b98438",
+    "orphan.csv": "221059d7bde10234b5662a86c0682863419670572037c047eb13f4616756ea34",
+    "proof.md": "29d0c5f2e9ff67c00f8726b60900df45a2040289b16ad29982c165015583f42f",
+    "reproduce.py": "7e07e61c333e46968f00778aa75652bb69393f834f0c8464c185886c03ace76d",
+    "test_check.py": "ff6331e84ee73e752bc1c51ebfb2bede062c8e60b236e6c47ad044f47c9b9e70",
+    "verification.json": "007936706c61b4f5b6e00913c8d327589080dc99adb53846e335afaadb3d971b"
+  },
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "resources": {
+    "commit_or_push": false,
+    "cpu_workers": 1,
+    "network_used": false,
+    "paid_cost": 0
+  },
+  "round": 10,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "source_commit": "bac4a56922ed5f0021ad8c391952974ba91ae014",
+  "timing_receipt": "checks.json"
+}

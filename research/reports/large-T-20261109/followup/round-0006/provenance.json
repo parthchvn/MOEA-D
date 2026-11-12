@@ -1,0 +1,6 @@
+{
+  "task": "Derive the first-order small-noise coefficient of the T=3 minus T=2 supplied-corner completion-time gap and determine its dependence on n, because the certified n=3 slowdown breaks their noiseless equality despite identical endpoint donors.",
+  "started_from": "500acaa5efefba549b7e83b095ff9b6c8f569fb3",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T22:29:18+00:00"
+}

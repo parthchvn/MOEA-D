@@ -1,0 +1,74 @@
+{
+  "censoring": "Not applicable to deterministic rational checks. Original capped and missing data are preserved.",
+  "compilation": {
+    "files": [
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/audit.py",
+      "deliverables/reproduce.py",
+      "deliverables/test_audit.py"
+    ],
+    "status": "pass"
+  },
+  "elapsed_through_packaging_seconds": 671.525687,
+  "failures": {
+    "packaging_correction": "Preservation checker initially treated a tracked directory symlink as a regular file; corrected to hash symlink text. A private receipt inspection also preceded replay completion. Completed checks pass; no evidence or result adjustment.",
+    "scientific_or_test_failures": 0
+  },
+  "limitations": [
+    "Finite checks are distinct from the all-n analytic proof.",
+    "No uniform third-and-higher remainder on the larger polynomial noise scale.",
+    "Published receipts do not reveal private historical trial execution logs."
+  ],
+  "packaged_utc": "2026-11-10T02:47:42.525687+00:00",
+  "preservation": {
+    "all_unchanged": true,
+    "intended_tracked_edits": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "protected_tracked_files_and_symlinks": 312
+  },
+  "reproduction": {
+    "dependency_seconds": 56.34940237502451,
+    "full_reproduction_seconds": 58.07698600002914,
+    "generated_outputs_byte_identical": {
+      "dependency.json": true,
+      "local.csv": true,
+      "mixed.csv": true,
+      "suffix.csv": true,
+      "verification.json": true
+    },
+    "new_audit_seconds": 1.7275836250046268
+  },
+  "resources": {
+    "commit_or_push": false,
+    "cpu_workers": 1,
+    "network_used": false,
+    "paid_cost": 0
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "started_utc": "2026-11-10T02:36:31+00:00",
+  "status": "pass",
+  "tests": {
+    "new": {
+      "count": 14,
+      "seconds": 0.032,
+      "status": "pass"
+    },
+    "repository": {
+      "count": 95,
+      "seconds": 6.613,
+      "status": "pass"
+    },
+    "round8": {
+      "count": 12,
+      "seconds": 0.037,
+      "status": "pass"
+    }
+  },
+  "total_tests": 121,
+  "whitespace_check": "git diff --check passed"
+}

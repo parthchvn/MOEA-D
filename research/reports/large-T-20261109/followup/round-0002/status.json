@@ -1,0 +1,26 @@
+{
+  "compile_seconds": 1.2656177079770714,
+  "ended_utc": "2026-11-09T21:30:11.758675+00:00",
+  "error": null,
+  "failed_or_last_id": null,
+  "invocation_seconds": 16.61279066701536,
+  "measurement_loop_seconds": 14.472533624997595,
+  "missing_ids": [],
+  "no_resume": true,
+  "recorded": 68,
+  "stages": {
+    "main": {
+      "exact_observed": 64,
+      "planned": 64,
+      "post_observed": 64,
+      "recorded": 64
+    },
+    "smoke": {
+      "exact_observed": 4,
+      "planned": 4,
+      "post_observed": 4,
+      "recorded": 4
+    }
+  },
+  "state": "complete"
+}

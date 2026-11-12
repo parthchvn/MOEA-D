@@ -1,0 +1,105 @@
+{
+  "budget_seconds": 16473,
+  "compilation": {
+    "modules": [
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/check.py",
+      "deliverables/reproduce.py",
+      "deliverables/test_check.py"
+    ],
+    "status": "pass"
+  },
+  "dependency_replay_seconds": 60.08707212499576,
+  "elapsed_seconds_through_packaging": 1341.496082,
+  "exact_checks": {
+    "arithmetic": "exact rational",
+    "counts": {
+      "active_drift_inequalities": 1388,
+      "active_entry_inequalities": 404,
+      "direct_transient_equations": 195,
+      "kernel_entries": 190,
+      "literal_attempt_rows": 560,
+      "phase_clean_identities": 1388,
+      "schur_cells": 9,
+      "sweep_drift_inequalities": 2776,
+      "sweep_entry_inequalities": 808
+    },
+    "files": [
+      "inequalities.csv",
+      "schur.csv",
+      "moments.csv",
+      "bounds.csv"
+    ],
+    "higher_residence_bound": "Contradicted: uniform polynomial E1 R0^2 1 on single-error rows.",
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "scope": "Autonomous adjacent pairs; actual closed T=2 pairs at odd n. No full-population remainder claim.",
+    "status": "mechanically checked",
+    "tensor": {
+      "exact_tensor_match": true,
+      "full_population_entries": 1024,
+      "full_population_rows": 4,
+      "n": 3,
+      "p": "1/81"
+    }
+  },
+  "failures": {
+    "authoring_tool_syntax_errors": 2,
+    "correction": "Two tool invocations were rejected before execution while drafting files; corrected string quoting. No scientific result or published input changed.",
+    "scientific_or_test_failures": 0
+  },
+  "full_reproduction_seconds": 64.84514041699003,
+  "new_checker_seconds_in_reproduction": 4.758068291994277,
+  "new_outputs_byte_identical": {
+    "bounds.csv": true,
+    "dependency.json": true,
+    "inequalities.csv": true,
+    "moments.csv": true,
+    "schur.csv": true,
+    "verification.json": true
+  },
+  "packaged_utc": "2026-11-10T03:23:52.496082+00:00",
+  "preservation": {
+    "changed_protected_entries": [],
+    "intended_tracked_updates": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "original_preregistration_and_holdout": "unchanged",
+    "protected_tracked_entries": 341
+  },
+  "resources": {
+    "commit_or_push": false,
+    "cpu_workers": 1,
+    "network_used": false,
+    "paid_cost": 0,
+    "scientific_seeds": [],
+    "scientific_trajectories": 0
+  },
+  "started_utc": "2026-11-10T03:01:31+00:00",
+  "status": "pass",
+  "test_suites": {
+    "new": {
+      "log_sha256": "47bfd96a33634a5e76bae1a09ae802567385d41f8a09d236766be4b3367bc76e",
+      "seconds": 0.192,
+      "status": "pass",
+      "tests": 13
+    },
+    "prior": {
+      "log_sha256": "10442788a5ad118cc3d0ac47bffb63d98f543d3226f09589cb95db3d67f28e67",
+      "seconds": 0.069,
+      "status": "pass",
+      "tests": 12
+    },
+    "repo": {
+      "log_sha256": "9557133e8a289fdf3cfea65642c7ea2592121d251c30869b2cd677e09c667e04",
+      "seconds": 9.046,
+      "status": "pass",
+      "tests": 95
+    }
+  },
+  "test_total": 120,
+  "whitespace": "git diff --check passed"
+}

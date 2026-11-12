@@ -1,0 +1,7 @@
+{
+  "task": "synthesis: Write SYNTHESIS.md and HISTORY.md covering all existing published passes,\nrecovered WIP and this activation. State the strongest defensible new result with\nexact model, assumptions, parameter range and units; explain what it DOES NOT\nprove. Give a short dependency chain connecting any new lemma to a runtime claim,\nor specify the one missing obligation. Preserve every counterexample and failed\nroute. Report changes, verification commands, observed computation and remaining\nuncertainty. No new broad experiments here. Include a compact handoff for the next\nactivation. Do not claim novelty from an offline search or manufacture a theorem\nto satisfy the goal. Finish the scientific report even if the useful result is\nnegative. Point to every pass and explain incomplete or blocked items.",
+  "started_from": "eb682871d3d29e7c9373159ecf9605390cd7b8e9",
+  "work_id": "round-0024-22b82058",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-12T19:15:29+00:00"
+}

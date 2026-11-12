@@ -1,0 +1,217 @@
+{
+  "bundle_source_hashes": {
+    "audit.py": "6cf1cd0b9f227f13a56a024fda32cb386b411450ffe15872d39ee6b5d02ce9f2",
+    "receipts.py": "f5c3ecab4ffad3f488452720fb239c6ae2d4c9993a1f3ae4b6227206e7b05545",
+    "reproduce.py": "f8b83c289a1aab7f7069658cdbd75b7ba7798382ba4e156b9e52d3a03e7be396",
+    "test_audit.py": "5382f71bbb7680163453023f70f95116b8a8dc9588eb9d3f7dc7234ece279780",
+    "verify.py": "ec48b3a56f716f6195640e9cda9f0bc24b1bf66fb2e9377e8669f0e422be53c2"
+  },
+  "byte_identical_outputs": [
+    "global.csv",
+    "occupation.csv",
+    "certificates.csv",
+    "clean.csv",
+    "coefficients.csv",
+    "witnesses.json",
+    "verification.json",
+    "empirical.json"
+  ],
+  "censoring": "none in deterministic work; existing censored/missing receipts retained",
+  "certificate_verification": {
+    "cells": 14,
+    "phase_states": 8664,
+    "seeded_occupation_enclosures": 5928,
+    "status": "all exact residual and enclosure checks pass; no numerical solve"
+  },
+  "commands": [
+    {
+      "command": "PYTHON -m unittest discover -s tests -v",
+      "elapsed_seconds": 16.637694415985607,
+      "exit_code": 0,
+      "tests": 95
+    },
+    {
+      "command": "PYTHON -m unittest discover -s BUNDLE -p test_audit.py -v",
+      "elapsed_seconds": 0.06546320900088176,
+      "exit_code": 0,
+      "tests": 8
+    },
+    {
+      "command": "PYTHON -m py_compile sim.py large.py scripts/run_research.py BUNDLE/{audit,receipts,verify,test_audit,reproduce}.py",
+      "elapsed_seconds": 0.12611483299406245,
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHON BUNDLE/audit.py --repo REPO --out OUTPUT",
+      "elapsed_seconds": 6.619540332991164,
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHON BUNDLE/receipts.py --repo REPO --out OUTPUT/empirical.json",
+      "elapsed_seconds": 0.3052351250080392,
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHON BUNDLE/verify.py --bundle OUTPUT",
+      "elapsed_seconds": 0.8220259169465862,
+      "exit_code": 0
+    }
+  ],
+  "elapsed_seconds": 24.966068249952514,
+  "empirical": {
+    "blocked_holdout": 240,
+    "n512_ratio": 2.3390952207223643,
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "original_ratio": 2.3276385562777966,
+    "receipts": 1312,
+    "research_samples": 0
+  },
+  "finished_utc": "2026-11-12T19:05:40.952728+00:00",
+  "finite_caps": {
+    "command_timeout_seconds": 300,
+    "max_complete_phase_states_per_cell": 1023,
+    "max_literal_mask_n": 8,
+    "max_polynomial_degree": 2
+  },
+  "head": "f82e77cba3763e68587c0efa69df69db283d6706",
+  "input_hashes": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "research/CLAIMS.md": "6a3acfa11d8342448908de2264ad8316e52de0985430e877bb0146e141532d74",
+    "research/EXPERIMENTS.md": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/LITERATURE.md": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+    "research/PAPER_COMPARISON.md": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+    "research/PROJECT.md": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+    "research/STATUS.md": "33e0e1a5f431d5d4179bea8ebeb9c578e6628b761c7dc4f570b1c569bd08da39",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/GOAL.md": "638825170283e3ccc28aabb6d365637931cde3e1ce57e018e148cd6ae7ae2191",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/RECOVERY.json": "f18fde2e540d882093e7f32b966d2896577e5c02311e4848c16a46114378e3ca",
+    "research/reports/large-T-20261109/followup/round-0021/coefficients.csv": "aee2de1927db109ebb692bc91e70cc06f471b5a323d312466780b494b1f77296",
+    "research/reports/large-T-20261109/followup/round-0021/proof.md": "5800292397f595beeb1c08a55325509b7080e32e5331f96c5f9f9c4e9b08df73",
+    "research/reports/large-T-20261109/followup/round-0021/response.py": "6740b0a6ff3612d4d542ab560869cd36b5f93fb1935685dc3a0e0e4c10f48472",
+    "research/reports/large-T-20261109/followup/round-0021/structure.py": "23403e26616f8e159bba119a7fe39f2d6eb2cd2f7db003439018962e49ef1e73",
+    "research/reports/large-T-20261109/followup/round-0022/cells.csv": "67d57d76464bc6cfed9e80f151a08d201986bf3f3599a37e2dc7c69377cf1739",
+    "research/reports/large-T-20261109/followup/round-0022/certificates.csv": "a0e8e2304ca885e82334192e44cf444d64f65d8431617194be70635b68151a3d",
+    "research/reports/large-T-20261109/followup/round-0022/excursions.py": "1ed2966ce7ca8841fa7ab6a84e8e7a5110949c9d8e372158bcb9519e038c2788",
+    "research/reports/large-T-20261109/followup/round-0022/proof.md": "e34841bf8429909a82d57511dc2dc0b34b8a213ee7cb5b7c35bcc3cbc95691e8",
+    "scripts/neighborhood_sweep.cpp": "11bdbd26facb39b22df911d063e1718dd03a2ae8fd01a18458d1c5e8f694df10"
+  },
+  "interpreter": "/Users/parth/miniforge3/bin/python3",
+  "model": "unchanged pinned model; literal-cost independent implementation; boundary stopping",
+  "numerical_threads": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "output_hashes": {
+    "certificates.csv": "f7a16994e84cde88455e1a4d3d4ed4a832d8b08a850655ff1bcb8d23b90f44b9",
+    "clean.csv": "d3a6578460fdeb48e909b3bb90297033fbdceae04fe292a7018731c5847bb466",
+    "coefficients.csv": "da61c0a571fe13bcc4c551f6049d0cdd4dd907d16b0b043a4df41eaa69ef8bcb",
+    "empirical.json": "37b66792cd306c272fb1446c4e6f0e8b24ed01b1f588b93ab2864e375294ee2f",
+    "global.csv": "2b3bdb3978eea282511f6ab180d55e8f8698dc36273931c8a7aa8ad98cfb3225",
+    "occupation.csv": "147ed23af59b191a82de0c20c510b83e50f9a0ef8078df701ffc910e823013ad",
+    "verification.json": "444f0fce60fb51fccc22d92843c06363221db87540f8c3b76e77b34d8fa3f906",
+    "witnesses.json": "bb954731090bd65426471298b0377640136e7325565fc1bac54ae7584f4e08fe"
+  },
+  "paid_cost": 0,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "research_samples": 0,
+  "research_seeds": [],
+  "started_utc": "2026-11-12T19:05:15.986494+00:00",
+  "status_after": [
+    "?? .audit-cache/",
+    "?? deliverables/"
+  ],
+  "status_before": [
+    "?? .audit-cache/",
+    "?? deliverables/"
+  ],
+  "tracked_dirty_after": false,
+  "tracked_dirty_before": false,
+  "verification": {
+    "exact_clean_seeded_boundary_cases": 369,
+    "finite_scope": "n=2,3 all populations/all T/all phases; see grids in CSV",
+    "full_boundary_cells": 14,
+    "full_boundary_phase_states": 8664,
+    "geometry_rows": 93660,
+    "global_cells": 21,
+    "global_phase_states": 13017,
+    "independent_sweep_coefficients": 8,
+    "local_slot_checks": 38322,
+    "prepin": {
+      "final_pins": 232,
+      "nonideal_reference_witness": {
+        "T": 1,
+        "after": [
+          1,
+          2,
+          0
+        ],
+        "child": 0,
+        "hi": 1,
+        "labels": [
+          0,
+          1,
+          0
+        ],
+        "lo": 0,
+        "n": 2,
+        "observed": 2,
+        "phase": 2,
+        "weights": [
+          1,
+          2,
+          0
+        ]
+      },
+      "proposals": 31231
+    },
+    "prior_certificates": {
+      "conditioning_shortcut_counterexample": {
+        "T": 1,
+        "conditional_mean_attempts_lower": "5562413765295419160/822312000000711439",
+        "conditional_over_kappa_lower": "132798988323283305600/822312000000711439",
+        "entrance_probability": "47/46656",
+        "kappa": "191/4560",
+        "n": 3,
+        "p": "1/192",
+        "phase": 2,
+        "unique_seed": 2,
+        "weighted_mean_attempts_lower": "953774651113755/139968000000121096",
+        "weights": [
+          3,
+          3,
+          2,
+          0
+        ]
+      },
+      "larger_T_conditioning_counterexample": {
+        "T": 3,
+        "conditional_mean_attempts_lower": "9332092934834713920/6578496000003821147",
+        "conditional_over_kappa_lower": "41882433091538196072960/1256492736000729839077",
+        "entrance_probability": "47/46656",
+        "kappa": "191/4488",
+        "n": 3,
+        "p": "1/192",
+        "phase": 1,
+        "unique_seed": 1,
+        "weighted_mean_attempts_lower": "200019138692445/139968000000081301",
+        "weights": [
+          3,
+          1,
+          0,
+          0
+        ]
+      },
+      "prior_cells": 14,
+      "prior_rational_residuals": 2736
+    },
+    "research_samples": 0,
+    "seeded_interval_checks": 5928,
+    "vulnerable_checks": 3456
+  }
+}

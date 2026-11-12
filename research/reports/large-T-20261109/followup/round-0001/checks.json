@@ -1,0 +1,31 @@
+{
+  "additional_compilation_and_preservation_seconds": 0.4882094170025084,
+  "git_head": "4f0d9533e1e6fa30e2da9eae14cb75956762f2b5",
+  "last_validation_utc": "2026-11-09 21:25:58 UTC",
+  "network_or_paid_resources_used": false,
+  "new_scientific_outcomes": 0,
+  "numpy": "2.4.3",
+  "original_tracked_files_verified_unchanged": 52,
+  "prior_packet_verification": "6 legacy archives plus 2 pilot and 4 campaign stages; audit.json",
+  "py_compile": "passed for required baseline modules and every delivered Python file",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "relative_links_checked_at_publication_destination": 10,
+  "research_checkout_head_unchanged": true,
+  "research_repository_commit_or_push_performed": false,
+  "round_start_utc": "2026-11-09 21:18:46 UTC",
+  "status": "mechanically checked",
+  "test_inputs": "Existing suite fixtures and newly constructed deterministic rows only; no prospective engine calls",
+  "tests": {
+    "baseline-tests": {
+      "result": "passed",
+      "seconds": 8.209,
+      "tests": 95
+    },
+    "plan-tests": {
+      "result": "passed",
+      "seconds": 0.346,
+      "tests": 14
+    }
+  },
+  "validation_scope": "one-agent local offline audit; no independent adversarial review"
+}

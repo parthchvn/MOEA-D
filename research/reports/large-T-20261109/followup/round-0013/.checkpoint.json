@@ -1,0 +1,7 @@
+{
+  "task": "Does the supplied-corner cubic coefficient for the T=3 minus T=2 runtime gap remain polynomial after signed cancellation, since the audited first-moment bound does not control higher residence moments?",
+  "started_from": "d81237ad3fa24d70815a9b2bf17a13d0c87300e2",
+  "work_id": "round-0013-ce7ee92f",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T05:42:54+00:00"
+}

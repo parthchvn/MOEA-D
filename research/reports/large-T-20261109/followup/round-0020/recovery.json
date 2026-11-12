@@ -1,0 +1,147 @@
+{
+  "checked_utc": "2026-11-12T18:14:04.190185+00:00",
+  "copies_identical": true,
+  "missing_wip_outputs": [
+    "words.csv",
+    "baseline.csv",
+    "phases.csv",
+    "entrances.csv",
+    "branches.csv",
+    "verification.json",
+    "dependency.json",
+    "checks.json",
+    "provenance.json"
+  ],
+  "published_manifest_checks": {
+    "18": {
+      "README.md": true,
+      "audit.md": true,
+      "audit.py": true,
+      "budget.csv": true,
+      "checks.json": true,
+      "dependency.json": true,
+      "entrance.csv": true,
+      "flux.csv": true,
+      "inequalities.csv": true,
+      "memory.md": true,
+      "reproduce.py": true,
+      "responses.csv": true,
+      "test_audit.py": true,
+      "verification.json": true,
+      "words.csv": true
+    },
+    "19": {
+      "README.md": true,
+      "branches.csv": true,
+      "checks.json": true,
+      "dependency.json": true,
+      "entrance.csv": true,
+      "joint.csv": true,
+      "memory.md": true,
+      "proof.md": true,
+      "reproduce.py": true,
+      "responses.csv": true,
+      "rorr.py": true,
+      "shortcuts.csv": true,
+      "test_rorr.py": true,
+      "verification.json": true,
+      "words.csv": true
+    }
+  },
+  "published_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "recovery_files": [
+    {
+      "actual": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230",
+      "bytes": 5652,
+      "expected": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/README.md"
+    },
+    {
+      "actual": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5",
+      "bytes": 17830,
+      "expected": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/audit.md"
+    },
+    {
+      "actual": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a",
+      "bytes": 14747,
+      "expected": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/audit.py"
+    },
+    {
+      "actual": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f",
+      "bytes": 3725,
+      "expected": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/memory.md"
+    },
+    {
+      "actual": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26",
+      "bytes": 5935,
+      "expected": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/reproduce.py"
+    },
+    {
+      "actual": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7",
+      "bytes": 7946,
+      "expected": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-github-wip/test_audit.py"
+    },
+    {
+      "actual": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230",
+      "bytes": 5652,
+      "expected": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/README.md"
+    },
+    {
+      "actual": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5",
+      "bytes": 17830,
+      "expected": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/audit.md"
+    },
+    {
+      "actual": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a",
+      "bytes": 14747,
+      "expected": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/audit.py"
+    },
+    {
+      "actual": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f",
+      "bytes": 3725,
+      "expected": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/memory.md"
+    },
+    {
+      "actual": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26",
+      "bytes": 5935,
+      "expected": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/reproduce.py"
+    },
+    {
+      "actual": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7",
+      "bytes": 7946,
+      "expected": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7",
+      "path": "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/recovery/round-0020-cb372b60/test_audit.py"
+    }
+  ],
+  "status": "mechanically checked hashes only; WIP conclusions not inherited"
+}

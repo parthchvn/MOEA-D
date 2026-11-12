@@ -1,0 +1,118 @@
+{
+  "arithmetic": "Exact Fraction. Rounded displays; canonical str(Fraction) SHA-256 fingerprints for exact comparisons.",
+  "artifacts_sha256": {
+    "README.md": "173a9792218164bd64ac50e1741cc8bc29b3ffa21196a8426a4e13d428ca9f1b",
+    "audit.md": "02ead555e3257619eb63a9a51ea2227f5d4d6dbb8ffec8cbf32dd104c866b306",
+    "audit.py": "33c23f06680d79b89243661fb34b1a15b8c313f0b4692d07c03e638d2af34cfd",
+    "checks.json": "fdb684d7c3fd680ffabd99124a2954b95a7ef219157a14af40135f604b12ed3e",
+    "dependency.json": "2a24b98b2cf58932c2a48c545cbd997b3eb368240ed5b9bd19046b842c419b0a",
+    "memory.md": "345396296d5349972f0f59cc9250036d2a293625272e6ab95cc15e368b02bd76",
+    "reproduce.py": "db1802bba5f5572d28f83231165f8215be461e53623dcb9ee3de90e543ce666a",
+    "rewards.csv": "7083ed3c1a9e8c87b59d19ca381c64fb1743f5f279ca034553e92a0e7176ebf5",
+    "stationary.csv": "d8c4b7c69611a681a9104c3a2702962c0b1acedf281bb8ec4bb82d08a6a11254",
+    "test_audit.py": "c3f4d0b7538021cdadfedad205645962f81264338c6f497980b5729f5ff920ac",
+    "verification.json": "10aff898eef9ce143e00ad50675ae31f9c4c0cc2db57a2ab76a0c90407c948be",
+    "witness.json": "290f428f8c2134a1bf3aea2a9f263c9594fb78742188d944ca5c1ade3d41f3ff",
+    "words.csv": "ae94c55ce59b472cfafa88f3f436d91e288b3a8a21d444dd7d79d79d9e79c386"
+  },
+  "budget_seconds": 3774,
+  "commands": [
+    [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    [
+      "python",
+      "deliverables/test_audit.py"
+    ],
+    [
+      "python",
+      "research/reports/large-T-20261109/followup/round-0014/test_audit.py"
+    ],
+    [
+      "python",
+      "research/reports/large-T-20261109/followup/round-0015/test_fourth.py"
+    ],
+    [
+      "python",
+      "-m",
+      "py_compile",
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/audit.py",
+      "deliverables/reproduce.py",
+      "deliverables/test_audit.py"
+    ],
+    [
+      "python",
+      "deliverables/reproduce.py",
+      "--repo",
+      ".",
+      "--out",
+      "research/runs/round16/final",
+      "--seconds",
+      "900"
+    ]
+  ],
+  "commit_created": false,
+  "completed_utc": "2026-11-10T06:56:40.716188+00:00",
+  "conditioning": "Consumed-randomness history; pre-proposal or stopping-time conditioning, never conditioning on acceptance or stored-value survival.",
+  "elapsed_seconds": 1408.716188,
+  "executable": "/Users/parth/miniforge3/bin/python",
+  "final_git_status": " M research/CLAIMS.md\n M research/STATUS.md\n?? deliverables/\n",
+  "final_replay_elapsed_seconds": 219.18731479201233,
+  "git_head": "126b0692902fca4ad12cec499a2de17f0c0fefc3",
+  "initial_git_status": "",
+  "limitations": [
+    "One ordered word only; RRRR and thirteen other mixed fourth words remain unbounded here.",
+    "The round-15 isolated-pair second response remains a candidate and is not a premise.",
+    "No uniform higher remainder, enlarged noise window, fixed-positive-c ordering or ordinary-initialization theorem.",
+    "Private old trial logs unavailable; chronology verified only from published evidence.",
+    "Offline audit; no current-literature search or novelty claim."
+  ],
+  "model": "Even n>=4; supplied corner (2,1,2,...,n), ideal extrema, pinned labels, ascending own-parent standard-bit mutation, activated bitwise observation noise, filled cardinality T=2, simultaneous alignment at full sweep boundaries, zero initialization cost.",
+  "network_used": false,
+  "numerical_threads": 1,
+  "paid_cost": 0,
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "push_performed": false,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "question": "Independently audit the phase-aware RROO bound, especially the orphan-fed last pair.",
+  "registration": "Deterministic proof audit only. Earlier registrations and receipts replayed. No new scientific experiment or seed; original cap and blocked holdout unchanged.",
+  "replay_timings": [
+    {
+      "elapsed_seconds": 104.62932812498184,
+      "name": "prior",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 19.920850416994654,
+      "name": "excess",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 94.62524429199402,
+      "name": "audit",
+      "returncode": 0
+    }
+  ],
+  "requested_cpu_budget": 1,
+  "round": 16,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "serial_algebra_and_tests": true,
+  "source_hashes": {
+    "audit.py": "33c23f06680d79b89243661fb34b1a15b8c313f0b4692d07c03e638d2af34cfd",
+    "reproduce.py": "db1802bba5f5572d28f83231165f8215be461e53623dcb9ee3de90e543ce666a",
+    "test_audit.py": "c3f4d0b7538021cdadfedad205645962f81264338c6f497980b5729f5ff920ac"
+  },
+  "started_utc": "2026-11-10T06:33:12+00:00",
+  "status": "Proved within the supplied pinned model; full fourth gap remains conjectured/unresolved here.",
+  "units": "Full-population sweeps; ordered fourth-order Taylor response, not four-event trajectory probability."
+}

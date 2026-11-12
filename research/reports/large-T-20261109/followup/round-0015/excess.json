@@ -1,0 +1,12 @@
+{
+  "mixed_words": 2,
+  "phase_checks": 1734,
+  "phase_states": 254,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "RROO only; correct orphan after two R insertions, including last-pair feedback",
+  "stationary_identities": 36,
+  "stationary_times": 18,
+  "status": "mechanically checked; all-n mixed bound remains a candidate proof",
+  "stopped_reward_checks": 1950
+}

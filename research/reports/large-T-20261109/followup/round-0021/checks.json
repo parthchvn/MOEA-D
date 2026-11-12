@@ -1,0 +1,124 @@
+{
+  "status": "passed",
+  "utc": "2026-11-12T18:36:10.409038+00:00",
+  "elapsed_seconds": 19.20099250000203,
+  "python": "3.13.12",
+  "git_commit": "c52a6071a63ed41f54b0ff2af08b1989ab3d2ccc",
+  "initial_git_status": [
+    "?? deliverables/"
+  ],
+  "commands": [
+    {
+      "program": "python3",
+      "args": [
+        "BUNDLE/test_structure.py"
+      ],
+      "elapsed_seconds": 0.27522137499181554,
+      "exit_code": 0,
+      "tests": 10
+    },
+    {
+      "program": "python3",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 15.762134459044319,
+      "exit_code": 0,
+      "tests": 95
+    },
+    {
+      "program": "python3",
+      "args": [
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "BUNDLE/structure.py",
+        "BUNDLE/response.py",
+        "BUNDLE/test_structure.py",
+        "BUNDLE/reproduce.py"
+      ],
+      "elapsed_seconds": 0.10599800001364201,
+      "exit_code": 0,
+      "tests": null
+    },
+    {
+      "program": "python3",
+      "args": [
+        "BUNDLE/structure.py",
+        "--out",
+        "OUTPUT"
+      ],
+      "elapsed_seconds": 2.1646479159826413,
+      "exit_code": 0,
+      "tests": null
+    },
+    {
+      "program": "python3",
+      "args": [
+        "BUNDLE/response.py",
+        "--out",
+        "OUTPUT"
+      ],
+      "elapsed_seconds": 0.6266877920133993,
+      "exit_code": 0,
+      "tests": null
+    }
+  ],
+  "protected_tracked_files": 543,
+  "protected_files_unchanged": true,
+  "protected_hashset_sha256": "341919911946b7b6b4399ddbfbf9beef5b619ab11c71d2d639b5da6c1796f336",
+  "prior_exact_coefficients_matched": 3,
+  "byte_identical_outputs": 6,
+  "output_sha256": {
+    "geometry.csv": "8037dfc446d6a2ed74380a7053ad113284353ebae39c8aa4bedcc29cbf53205a",
+    "repair.csv": "f845ba4033e618e2b4369c2e5c76cc207a55cb86506f8a420a43238dc83e95d2",
+    "traps.csv": "8d8c274c2fc889da3310d8b9a5426c54ab1852970238f40bd16ae84a57bd6171",
+    "forest.csv": "d3fefe455af38cb0d2937f16572c572ca866aa5d25ff8be41d0d52a7c8e462a4",
+    "verification.json": "6a5ce2bc78cb45b1fdafa504571e6d2f920c0830b44738a5516b9f909edef384",
+    "coefficients.csv": "aee2de1927db109ebb692bc91e70cc06f471b5a323d312466780b494b1f77296"
+  },
+  "relevant_source_sha256": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "research/PROJECT.md": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+    "research/CLAIMS.md": "6a3acfa11d8342448908de2264ad8316e52de0985430e877bb0146e141532d74",
+    "research/STATUS.md": "33e0e1a5f431d5d4179bea8ebeb9c578e6628b761c7dc4f570b1c569bd08da39",
+    "research/EXPERIMENTS.md": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+    "research/PAPER_COMPARISON.md": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/LITERATURE.md": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+    "scripts/neighborhood_sweep.cpp": "11bdbd26facb39b22df911d063e1718dd03a2ae8fd01a18458d1c5e8f694df10",
+    "research/reports/large-T-20261109/followup/round-0005/audit.md": "8545328efa3705abd57fa06f2d3031fc8a6efe300b897b3374bbf677c48fde9e",
+    "research/reports/large-T-20261109/followup/round-0010/proof.md": "29d0c5f2e9ff67c00f8726b60900df45a2040289b16ad29982c165015583f42f",
+    "research/reports/large-T-20261109/followup/round-0012/audit.md": "6acb6be4057ccb342932cc970e336d00cbd44f9444f25bf8e4c513dd34fd57e4",
+    "research/reports/large-T-20261109/followup/round-0015/proof.md": "6b6418edbe32a10282c88356b867c0b2737655c857e1a72f889199d4c4663e6f",
+    "research/reports/large-T-20261109/followup/round-0020/audit.md": "e11c9e178373cbf27a8ee1811878fc55099d6de43cfe79c8debe2812aa4a6d1e",
+    "research/reports/large-T-20261109/followup/round-0008/coefficients.csv": "4c0bbb882af6d7d36741edc096b794018d3633e1eb91ecefa6c97435aa9efdaa",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/GOAL.md": "638825170283e3ccc28aabb6d365637931cde3e1ce57e018e148cd6ae7ae2191",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/RECOVERY.json": "f18fde2e540d882093e7f32b966d2896577e5c02311e4848c16a46114378e3ca"
+  },
+  "model_config": {
+    "neighborhood": "frozen filled cardinality",
+    "parent": "cyclic own-parent",
+    "mutation": "standard bit 1/n",
+    "reference": "supplied ideal",
+    "labels": "pinned target",
+    "noise": "p=0 for clean results; activated bitwise for response and entrance",
+    "stopping": "simultaneous true alignment at full sweep boundaries",
+    "closure_cap": 256,
+    "phase_state_cap": 1024,
+    "logarithm": "natural",
+    "seeds": [],
+    "sampling": "none",
+    "censoring": "not applicable; finite exact computations"
+  },
+  "paid_cost": 0,
+  "parallel_agents": 0,
+  "holdout": "240 original observations remain blocked; not sampled"
+}

@@ -1,0 +1,180 @@
+{
+  "commands": {
+    "audit-tests": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 0.19262695900397375,
+      "exit_code": 0,
+      "tests": 16,
+      "unittest_seconds": 0.048
+    },
+    "compile": {
+      "command": [
+        "python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py"
+      ],
+      "elapsed_seconds": 0.04708412499167025,
+      "exit_code": 0
+    },
+    "dependency": {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0001/audit.py",
+        "--out",
+        "research/runs/round3-private/dependency.json"
+      ],
+      "elapsed_seconds": 0.3877058750076685,
+      "exit_code": 0
+    },
+    "independent-recheck": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/audit.py",
+        "--repo",
+        ".",
+        "--out",
+        "research/runs/round3-private/recheck"
+      ],
+      "elapsed_seconds": 0.8614094580116216,
+      "exit_code": 0
+    },
+    "plan": {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0001/plan.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.04081554099684581,
+      "exit_code": 0
+    },
+    "registered-tests": {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0001/test_plan.py"
+      ],
+      "elapsed_seconds": 0.46232508300454356,
+      "exit_code": 0,
+      "tests": 14,
+      "unittest_seconds": 0.321
+    },
+    "replay": {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0002/reproduce.py",
+        "--out",
+        "research/runs/round3-private/replay"
+      ],
+      "elapsed_seconds": 11.264066208008444,
+      "exit_code": 0
+    },
+    "repository": {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 19.601948833005736,
+      "exit_code": 0,
+      "tests": 95,
+      "unittest_seconds": 8.463
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.05049387499457225,
+      "exit_code": 0
+    },
+    "wrapper-tests": {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0002/test_run.py"
+      ],
+      "elapsed_seconds": 0.559639832994435,
+      "exit_code": 0,
+      "tests": 15,
+      "unittest_seconds": 0.408
+    }
+  },
+  "commit_or_push_performed": false,
+  "completed_utc": "2026-11-09T21:43:24.439608+00:00",
+  "dependency_reproduced_exactly": true,
+  "elapsed_seconds_since_first_clock": 453.439608,
+  "failures": [
+    {
+      "detail": "Initial fixture lacked factor; four tests errored before statistics were evaluated. Added factor; all 16 pass. No published evidence/model repair.",
+      "kind": "new synthetic fixture omission"
+    },
+    {
+      "detail": "A local link check ran before checks.json existed. Wrote checks.json first and verified links afterward; no scientific output changed.",
+      "kind": "audit packaging order"
+    }
+  ],
+  "files": {
+    "README.md": "6c61f04ecd0a9b23622fbce940b08c1654b502db66164af2d6958de735a0b196",
+    "audit.json": "c03e59b5034e18a22a677c62e3a97df590b5f5fbd07d2633b47add177dfbae81",
+    "audit.py": "82ae046c95d13d5517398177fd3890322364da8c7f0109f848bc363a291f0ef2",
+    "cells.csv": "962155c79afc3fa01e95589cbaaf2a1d6ea91a42dbafe1c6bac6bce015c9642b",
+    "inputs.json": "1c1a7ad489073dd9a7aed99bcef068cbf4556885bfd1f00b3c6f43b8e149e781",
+    "memory.md": "e515e97059258e73fd80de13ce71ae9949c43f465df6696d789254c40b775989",
+    "phases.csv": "ee3e73d6843c0df76f1b7772eeecf1ce4d6ba0b519dac423a1068124f24f27ce",
+    "seeds.csv": "ab874fb9b54bfbe452fe5b0cae659401d49c5ef30a19f07ef952b088bc5ba49f",
+    "test_audit.py": "c639d0e68017bc7c0f19f9cda05f8647d037ff702b84d7d5a000ca787d7c1ab6",
+    "trials.csv": "5a768cea02ab2f5fd8af547ee86883cbedcaa2367ca6f28c2e9e3815ae7c4ab7"
+  },
+  "head": "6e7547d99dab3a795442c9ba242895f6d24d74f2",
+  "independent_outputs_byte_identical": {
+    "audit.json": true,
+    "cells.csv": true,
+    "inputs.json": true,
+    "phases.csv": true,
+    "seeds.csv": true,
+    "trials.csv": true
+  },
+  "network_used": false,
+  "new_python_compilation": "passed; bytecode kept in private scratch",
+  "new_scientific_outcomes": 0,
+  "numpy": "2.4.3",
+  "one_cpu_thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "paid_resources_used": false,
+  "preservation": {
+    "all_other_tracked_bytes_unchanged": true,
+    "changed": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "head_unchanged": true,
+    "original_preregistration_and_holdout_unchanged": true,
+    "tracked_files_checked": 211
+  },
+  "prior_outputs_byte_identical": {
+    "arithmetic.json": true,
+    "cells.csv": true,
+    "phases.csv": true,
+    "results.png": true,
+    "summary.json": true,
+    "trials.csv": true
+  },
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "started_utc": "2026-11-09T21:35:51+00:00",
+  "status": "mechanically checked",
+  "turn_ceiling_seconds": 16946
+}

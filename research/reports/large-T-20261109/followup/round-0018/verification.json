@@ -1,0 +1,20 @@
+{
+  "algebra_inequalities": 17280,
+  "arithmetic": "exact rational; decimal fields are presentation only",
+  "identities": 75006,
+  "independence": "New raw uncentered Bellman implementation; no earlier solver imported",
+  "inequalities": 98896,
+  "ns": [
+    4,
+    6
+  ],
+  "phase_cases": 31052,
+  "prior_centered_matches": 622,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "All n=4 populations of overwrite budget <=2; n=6 all bad-pair and marked values, all orphan values and phases; abstract support and acceptance inequalities on additional finite n.",
+  "state_cases": 4956,
+  "status": "mechanically checked",
+  "support_edges": 134517,
+  "support_patterns": 13771
+}

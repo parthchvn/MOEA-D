@@ -1,0 +1,722 @@
+{
+  "blocked_holdout_mean_bounds": [
+    513,
+    19669446
+  ],
+  "blocked_holdout_ratio_bounds": [
+    2.608105993427573e-05,
+    38342
+  ],
+  "comparison_checks": 6914,
+  "dependency_repair_needed": false,
+  "exceptions": {
+    "post_S_positive": [
+      {
+        "S": 11204,
+        "T": 1,
+        "U": 6951,
+        "bad_at_S": 1,
+        "exact_sweep": 11208,
+        "id": "4e8a2113cf235be3cc1b",
+        "max_error_at_S": 1,
+        "post_sweep": 11208,
+        "rep": 20
+      }
+    ],
+    "post_exact_gap_positive": []
+  },
+  "followup_arms": {
+    "1": {
+      "events": {
+        "S": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "U": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "archive_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "exact_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "front_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "post_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        }
+      },
+      "mean_intervals": {
+        "S_sweeps": [
+          9552.37421875,
+          10501.8453125
+        ],
+        "U_sweeps": [
+          8229.3640625,
+          9259.7359375
+        ],
+        "U_to_S_sweeps": [
+          1007.4046875,
+          1601.225
+        ],
+        "exact_evaluations": [
+          4900990.78828125,
+          5388055.8328125
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.375
+        ],
+        "post_evaluations": [
+          4900990.78828125,
+          5388055.8328125
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          8229.3640625,
+          9259.7359375
+        ]
+      },
+      "means": {
+        "S_sweeps": 10016.78125,
+        "U_sweeps": 8737.6875,
+        "U_to_S_sweeps": 1279.09375,
+        "exact_evaluations": 5139185.90625,
+        "post_S_sweeps": 0.125,
+        "post_evaluations": 5139185.90625,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 8737.6875
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 1279.09375,
+          "completed_only_quantiles": [
+            510.8,
+            985.0,
+            2484.3000000000006
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 8737.6875,
+          "completed_only_quantiles": [
+            6990.7,
+            8687.0,
+            10830.700000000003
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.125,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          8784.3,
+          9829.0,
+          11506.1
+        ],
+        "U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ],
+        "U_to_S_sweeps": [
+          510.8,
+          985.0,
+          2484.3000000000006
+        ],
+        "exact_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ]
+      },
+      "receipts": 32,
+      "work": {
+        "attempts": 164437533,
+        "comparisons": 164437533,
+        "endpoint_repairs_external": 0,
+        "endpoint_repairs_own": 0,
+        "external_changes": 0,
+        "external_replacements": 0,
+        "wall_seconds": 7.683143372909399
+      }
+    },
+    "23": {
+      "events": {
+        "S": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "U": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "archive_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "exact_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "front_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "post_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        }
+      },
+      "mean_intervals": {
+        "S_sweeps": [
+          3902.934375,
+          4754.70390625
+        ],
+        "U_sweeps": [
+          3896.73359375,
+          4748.299999999999
+        ],
+        "U_to_S_sweeps": [
+          6.125,
+          6.96875
+        ],
+        "exact_evaluations": [
+          2002718.334375,
+          2439676.10390625
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          2002718.334375,
+          2439676.10390625
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3896.73359375,
+          4748.299999999999
+        ]
+      },
+      "means": {
+        "S_sweeps": 4281.8125,
+        "U_sweeps": 4275.28125,
+        "U_to_S_sweeps": 6.53125,
+        "exact_evaluations": 2197082.8125,
+        "post_S_sweeps": 0.0,
+        "post_evaluations": 2197082.8125,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 4275.28125
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 6.53125,
+          "completed_only_quantiles": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 4275.28125,
+          "completed_only_quantiles": [
+            3096.0,
+            4246.5,
+            5034.5
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.0,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          3102.0,
+          4254.0,
+          5039.5
+        ],
+        "U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ],
+        "U_to_S_sweeps": [
+          5.0,
+          6.0,
+          8.0
+        ],
+        "exact_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ]
+      },
+      "receipts": 32,
+      "work": {
+        "attempts": 70290234,
+        "comparisons": 1616675382,
+        "endpoint_repairs_external": 0,
+        "endpoint_repairs_own": 0,
+        "external_changes": 14415540,
+        "external_replacements": 67946563,
+        "wall_seconds": 6.11845212301705
+      }
+    }
+  },
+  "followup_differences": {
+    "S_sweeps": {
+      "estimate": 5734.96875,
+      "nominal_pointwise_95": [
+        5083.16796875,
+        6356.1296875
+      ]
+    },
+    "U_sweeps": {
+      "estimate": 4462.40625,
+      "nominal_pointwise_95": [
+        3787.05390625,
+        5106.4609375
+      ]
+    },
+    "U_to_S_sweeps": {
+      "estimate": 1272.5625,
+      "nominal_pointwise_95": [
+        1001.1765625,
+        1594.5679687499999
+      ]
+    },
+    "exact_evaluations": {
+      "estimate": 2942103.09375,
+      "nominal_pointwise_95": [
+        2607666.77109375,
+        3260761.0593749997
+      ]
+    },
+    "post_S_sweeps": {
+      "estimate": 0.125,
+      "nominal_pointwise_95": [
+        0.0,
+        0.375
+      ]
+    },
+    "post_evaluations": {
+      "estimate": 2942103.09375,
+      "nominal_pointwise_95": [
+        2607666.77109375,
+        3260761.0593749997
+      ]
+    },
+    "post_exact_gap_sweeps": {
+      "estimate": 0.0,
+      "nominal_pointwise_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "pre_U_sweeps": {
+      "estimate": 4462.40625,
+      "nominal_pointwise_95": [
+        3787.05390625,
+        5106.4609375
+      ]
+    }
+  },
+  "followup_primary": {
+    "decision": "favors_T23",
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "ratio": 2.3390952207223643
+  },
+  "limitations": [
+    "Distinct seeds do not prove independent PRNG streams.",
+    "Terminal receipts permit arithmetic/event-order audit, not reconstruction of every transition or unreported execution.",
+    "No new sampling, literature search, asymptotic claim or candidate proof.",
+    "Bootstrap intervals are approximate pointwise; no guarantee against rare tails."
+  ],
+  "max_absolute_numeric_discrepancy": 2.2737367544323206e-13,
+  "model_sha256": "246cad3ef58d87ed25f981faf893eb33a85c9c1b3e30796d5873d20d9ac57691",
+  "new_scientific_outcomes": 0,
+  "original_blocking_receipt": {
+    "S": null,
+    "T": 1,
+    "U": 469,
+    "exact_sweep": null,
+    "factor": 1,
+    "id": "67178d8d2471ba15457b",
+    "max_sweeps": 3206,
+    "n": 64,
+    "post_sweep": null,
+    "seed": 10112010688641361696
+  },
+  "original_decision": "inconclusive; original holdout remains blocked",
+  "original_primary": {
+    "nominal_95_ci": [
+      2.0501481748098818,
+      2.674641996509441
+    ],
+    "ratio": 2.3276385562777966
+  },
+  "original_primary_phase_means": {
+    "1": {
+      "U_to_S_sweeps": 773.7083333333334,
+      "post_S_sweeps": 0.0,
+      "post_exact_gap_sweeps": 0.0,
+      "pre_U_sweeps": 3761.0833333333335
+    },
+    "16": {
+      "U_to_S_sweeps": 5.583333333333333,
+      "post_S_sweeps": 0.0,
+      "post_exact_gap_sweeps": 0.0,
+      "pre_U_sweeps": 1942.0833333333333
+    }
+  },
+  "original_registration_commit": "88a67b4954536f3ba4ce0c27a9651e9f269bb602",
+  "original_registration_commit_utc": "2026-11-09T15:24:32-05:00",
+  "original_stage_counts": {
+    "calibrate": {
+      "capped": 6,
+      "exact": 96,
+      "missing": 0,
+      "planned": 102,
+      "receipts": 102
+    },
+    "holdout": {
+      "capped": 0,
+      "exact": 0,
+      "missing": 240,
+      "planned": 240,
+      "receipts": 0
+    },
+    "main": {
+      "capped": 1,
+      "exact": 1079,
+      "missing": 0,
+      "planned": 1080,
+      "receipts": 1080
+    },
+    "smoke": {
+      "capped": 0,
+      "exact": 62,
+      "missing": 0,
+      "planned": 62,
+      "receipts": 62
+    }
+  },
+  "phase_identity_max_residual": 0,
+  "plan_sha256": "f64686335a457d16eb0f26a94eef9a8bd94e75e76aec3eeb6524f50d1e48441f",
+  "published_timing": {
+    "compile_seconds": 1.2656177079770714,
+    "engine_seconds_all": 14.22448953796993,
+    "engine_seconds_main": 13.801595495926449,
+    "explanation": "START is recorded before imports/registration; started_utc is recorded after those checks. Per-trial timestamps/private invocation log are not published in round 2.",
+    "invocation_seconds": 16.61279066701536,
+    "loop_seconds": 14.472533624997595,
+    "manifest_started_utc": "2026-11-09T21:29:55.393665+00:00",
+    "manifest_to_status_seconds": 16.36501,
+    "registration_commit_utc": "2026-11-09T16:26:18-05:00",
+    "status_ended_utc": "2026-11-09T21:30:11.758675+00:00",
+    "utc_vs_monotonic_start_offset_seconds": 0.24778066701535906
+  },
+  "registration_commit": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "seed_audit": {
+    "campaign_toolchain": {
+      "compiler": "arm64-apple-darwin20.0.0-clang++",
+      "flags": [
+        "-std=c++17",
+        "-O3"
+      ],
+      "machine": "arm64",
+      "python": "3.13.12",
+      "stdlib": {
+        "_LIBCPP_VERSION": "200100"
+      },
+      "system": "Darwin",
+      "version": "clang version 20.1.8"
+    },
+    "new_unique": 68,
+    "pairs": [
+      {
+        "group_a": "followup_all",
+        "group_b": "original_all",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 68,
+        "seeds_b": 1484
+      },
+      {
+        "group_a": "followup_main",
+        "group_b": "original_main",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 64,
+        "seeds_b": 1080
+      },
+      {
+        "group_a": "followup_all",
+        "group_b": "blocked_holdout",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 68,
+        "seeds_b": 240
+      },
+      {
+        "group_a": "followup_all",
+        "group_b": "all_prior_published",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 68,
+        "seeds_b": 2420
+      },
+      {
+        "group_a": "followup_smoke",
+        "group_b": "followup_main",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 4,
+        "seeds_b": 64
+      },
+      {
+        "group_a": "followup_T1",
+        "group_b": "followup_T23",
+        "intersection": 0,
+        "intersection_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "seeds_a": 34,
+        "seeds_b": 34
+      },
+      {
+        "group_a": "original_pilot",
+        "group_b": "original_campaign",
+        "intersection": 164,
+        "intersection_sha256": "01fa66a29bf933a24e67eb3ae2fb532396454011b966acdc9674ff6ef5e51bc8",
+        "seeds_a": 164,
+        "seeds_b": 1484
+      }
+    ],
+    "pilot_overlap_scope": "164 reused smoke/calibration seeds only; excluded from both primary effects. Different toolchains do not establish independent streams.",
+    "pilot_toolchain": {
+      "compiler": "c++",
+      "flags": [
+        "-std=c++17",
+        "-O3"
+      ],
+      "machine": "x86_64",
+      "python": "3.12.14",
+      "stdlib": {
+        "_GLIBCXX_RELEASE": "14",
+        "__GLIBCXX__": "20250315"
+      },
+      "system": "Linux",
+      "version": "c++ (Debian 14.2.0-19) 14.2.0"
+    },
+    "prior_unique": 2420
+  },
+  "status": "mechanically checked; empirical interpretation remains finite"
+}

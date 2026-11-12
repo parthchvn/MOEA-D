@@ -1,0 +1,94 @@
+{
+  "analytic_bound_rows": 8,
+  "arithmetic": "fractions.Fraction; exact equalities and inequalities",
+  "coupling_cases": 263169,
+  "donor_corruption_state": [
+    2,
+    0,
+    2,
+    3
+  ],
+  "kernel_comparisons": 6628,
+  "neighborhood_cells": 2142,
+  "pinned_kernels": 202,
+  "random_draws": 0,
+  "reinfection_path": [
+    [
+      2,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      2,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    [
+      1,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  ],
+  "renewal_cases": 24,
+  "rows": 1366,
+  "scientific_trajectories": 0,
+  "scope": "Finite checks do not establish the infinite-particle construction or its asymptotics.",
+  "status": "pass"
+}

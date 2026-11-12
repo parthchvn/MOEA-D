@@ -1,0 +1,108 @@
+{
+  "commands": [
+    "/Users/parth/miniforge3/bin/python3 check.py --repo REPO --out SCRATCH",
+    "/Users/parth/miniforge3/bin/python3 test_recovered.py",
+    "/Users/parth/miniforge3/bin/python3 -m unittest discover -s tests -v",
+    "/Users/parth/miniforge3/bin/python3 -m py_compile sim.py large.py scripts/run_research.py audit.py check.py test_recovered.py reproduce.py",
+    "/Users/parth/miniforge3/bin/python3 audit.py --repo REPO --out SCRATCH --ns 4"
+  ],
+  "commands_note": "Paths are normalized to the bundle/repository; exact top-level invocation was the supplied Python with reproduce.py --repo . --out research/runs/round20-final-check --seconds 600.",
+  "copied_output_sha256": {
+    "baseline.csv": "00980940e687664eb4a7cf723ffec684c22c0daef28cbb16b12783e8326a62ba",
+    "branches.csv": "52ece76fa07d564fe71a71649bbc307f3d916c8ef49c66bd9e73a1ade304c9e3",
+    "entrances.csv": "68919b12e7fb4988fa91b061f6333d6965b7bce5d4241f26d8771d1eca126e7c",
+    "phases.csv": "dc3ecb0251e6f91dc104d01f9c02bb8b353a9b8f8365c21cc9b18fb3b6fbdd6f",
+    "targeted.json": "25eb2a00ad7600033eb610469a3cae53c9e3f033ece7c6ad3187917e0080acb6",
+    "verification.json": "1d7edfb65f3bd65b7227b882245cdaf7751422e4d641edc1fe14231020f83a73",
+    "words.csv": "7e073279a5938d73689c294dbba3643dc8047f80368f5ad4e68de6a907ed8e11"
+  },
+  "copy_checks": {
+    "baseline.csv": true,
+    "branches.csv": true,
+    "entrances.csv": true,
+    "phases.csv": true,
+    "targeted.json": true,
+    "verification.json": true,
+    "words.csv": true
+  },
+  "effective_exact_scope": {
+    "baseline_matches": 5,
+    "baseline_phases": 25,
+    "equalities": 460,
+    "inequalities": 1738,
+    "joint_entrance_cases": 160,
+    "marked_cases": 200,
+    "marked_phases": 1000,
+    "n6": "Published result reused after hash/schema verification, not fresh exact coverage.",
+    "ns": [
+      4
+    ],
+    "positive_kernel_cases": 10,
+    "word_matches": 1
+  },
+  "elapsed_seconds": 22.986733999976423,
+  "initial_attempt": {
+    "command": "/Users/parth/miniforge3/bin/python3 audit.py --repo REPO --out BUNDLE --ns 4 6",
+    "completed_output_files": 0,
+    "elapsed_note": "Exact start/end duration not instrumented for this preliminary invocation; it is included in total wall time. No output from it is certified.",
+    "elapsed_seconds": null,
+    "exit_code": 130,
+    "reason": "Bound redundant n=6 exact recomputation; reuse hash/schema-verified published result. n=4 completed internally but had no saved output; final n=4 run is separately completed.",
+    "status": "intentionally interrupted"
+  },
+  "nonfatal_environment_notes": [
+    "Process inspection via ps was denied; no escalation attempted.",
+    "Fontconfig reported no writable default cache directories; Matplotlib used the scratch MPLCONFIGDIR and the repository tests passed."
+  ],
+  "numerical_threads": 1,
+  "outputs_byte_identical": {
+    "targeted.json": true
+  },
+  "preliminary_tests": {
+    "count": 17,
+    "note": "Repeated in final wrapper for a durable receipt; not additional scientific samples.",
+    "reported_unittest_seconds": 0.536,
+    "status": "pass"
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "Only this bounded grid and tests. Earlier full grids and empirical bootstraps are not recursively replayed.",
+  "stages": [
+    {
+      "elapsed_seconds": 0.296391166979447,
+      "log_sha256": "be9b50ef8d06cc23a3ffc5c4cd1142bee66ba370198d845549195fb6fcc33dd5",
+      "returncode": 0,
+      "stage": "recovery-and-support",
+      "tests": 0
+    },
+    {
+      "elapsed_seconds": 0.7839231669786386,
+      "log_sha256": "9a132c046b9cf99969eac4f9dfea6fd3cbb43f2b532f2196dca0c9f254d2745c",
+      "returncode": 0,
+      "stage": "recovered-tests",
+      "tests": 17
+    },
+    {
+      "elapsed_seconds": 17.905694041983224,
+      "log_sha256": "fa146c1523abb5a54994f105e94bef09bb27c39b229f2381264d0a80cb5bf7b7",
+      "returncode": 0,
+      "stage": "repository-tests",
+      "tests": 95
+    },
+    {
+      "elapsed_seconds": 0.12950562499463558,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "returncode": 0,
+      "stage": "compile",
+      "tests": 0
+    },
+    {
+      "elapsed_seconds": 3.870106416987255,
+      "log_sha256": "5ee23dae69421e269d28aab3b855a49a9751e993b65ef7ba4f32c59988f583c8",
+      "returncode": 0,
+      "stage": "exact",
+      "tests": 0
+    }
+  ],
+  "status": "pass"
+}

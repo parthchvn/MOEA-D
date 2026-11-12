@@ -1,0 +1,32 @@
+{
+  "arithmetic": "exact rational",
+  "counts": {
+    "active_drift_inequalities": 1388,
+    "active_entry_inequalities": 404,
+    "direct_transient_equations": 195,
+    "kernel_entries": 190,
+    "literal_attempt_rows": 560,
+    "phase_clean_identities": 1388,
+    "schur_cells": 9,
+    "sweep_drift_inequalities": 2776,
+    "sweep_entry_inequalities": 808
+  },
+  "files": [
+    "inequalities.csv",
+    "schur.csv",
+    "moments.csv",
+    "bounds.csv"
+  ],
+  "higher_residence_bound": "Contradicted: uniform polynomial E1 R0^2 1 on single-error rows.",
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "Autonomous adjacent pairs; actual closed T=2 pairs at odd n. No full-population remainder claim.",
+  "status": "mechanically checked",
+  "tensor": {
+    "exact_tensor_match": true,
+    "full_population_entries": 1024,
+    "full_population_rows": 4,
+    "n": 3,
+    "p": "1/81"
+  }
+}

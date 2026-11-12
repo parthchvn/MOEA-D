@@ -1,0 +1,78 @@
+[
+  {
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 5652,
+        "sha256": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230"
+      },
+      {
+        "path": "audit.md",
+        "bytes": 17830,
+        "sha256": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5"
+      },
+      {
+        "path": "audit.py",
+        "bytes": 14747,
+        "sha256": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a"
+      },
+      {
+        "path": "memory.md",
+        "bytes": 3725,
+        "sha256": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f"
+      },
+      {
+        "path": "reproduce.py",
+        "bytes": 5935,
+        "sha256": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26"
+      },
+      {
+        "path": "test_audit.py",
+        "bytes": 7946,
+        "sha256": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7"
+      }
+    ],
+    "excluded": [],
+    "bytes": 55835,
+    "source": "wip/round-0020-cb372b60@fed5b553f350217abed400b76ac72b0a098dc20e",
+    "status": "PRESERVED_WIP_NOT_A_NEW_VERDICT"
+  },
+  {
+    "files": [
+      {
+        "path": "README.md",
+        "bytes": 5652,
+        "sha256": "d1caada92ef56d25c86f598f0be8faf9fb9421be398cc04c49e790e01e02e230"
+      },
+      {
+        "path": "audit.md",
+        "bytes": 17830,
+        "sha256": "c3ce9fdd4fda6dfcdb643b98c13c62858ae669e5c1684aa803c361fd5a3467b5"
+      },
+      {
+        "path": "audit.py",
+        "bytes": 14747,
+        "sha256": "2f2e5f84d5b6c69f9043bf23ab1f8a3396ee826b4f96e5aad0debbadef78e36a"
+      },
+      {
+        "path": "memory.md",
+        "bytes": 3725,
+        "sha256": "34886223ed75e65b4294f01919d251a86714de6a977e9131eb71e7e79f69ff2f"
+      },
+      {
+        "path": "reproduce.py",
+        "bytes": 5935,
+        "sha256": "031561cab5c8f95fb69111d8152121c23eb87c48e63426a807ef0565ec37cf26"
+      },
+      {
+        "path": "test_audit.py",
+        "bytes": 7946,
+        "sha256": "0ef9dd3136662a02d94baefe3853d9f8241e5cd6c30b9d3dbe14214bee23eed7"
+      }
+    ],
+    "excluded": [],
+    "bytes": 55835,
+    "source": "round-0020-cb372b60",
+    "status": "PRESERVED_LOCAL_WIP"
+  }
+]

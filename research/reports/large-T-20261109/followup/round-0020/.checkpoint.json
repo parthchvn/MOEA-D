@@ -1,0 +1,7 @@
+{
+  "task": "recover-and-audit: Recover the interrupted round-20 audit, not round 18. Rounds 18 and 19\nare already published. Read the recovery inventory, preserved round-20 artifacts\nand all relevant preceding claims. Determine whether the RORR baseline and both\nentrance factors are rigorously justified. Reuse finished exact results after\nhash/schema verification; run targeted independent checks, NOT recursive replay\nof every earlier grid. Treat the WIP's 'proved' labels as claims to audit, not\naccepted verdicts. Record missing inputs, contradictions and scope restrictions.\nAlso produce HISTORY.md indexing every published round's main observation and\nstatus, including negative results. Cite the original reports rather than\ncopying every previous artifact. The next research lane is larger T.",
+  "started_from": "0f5bc8b3b946606810a6075a411f4bcc2cf77103",
+  "work_id": "round-0020-22ec37da",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-12T18:23:45+00:00"
+}

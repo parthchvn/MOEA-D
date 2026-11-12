@@ -1,0 +1,7 @@
+{
+  "task": "Determine whether the fourth-order supplied-corner coefficient remains polynomial after signed cancellation, because the audited two-entry estimate controls M\u00b2 but not the next M\u00b3 residence factor.",
+  "started_from": "a5c267386829703f348d3fd831426babf93028ad",
+  "work_id": "round-0015-22fc76e1",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T06:33:02+00:00"
+}

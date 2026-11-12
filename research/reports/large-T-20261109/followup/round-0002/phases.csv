@@ -1,0 +1,5 @@
+metric,T1_mean,T23_mean,difference,difference_ci_low,difference_ci_high
+pre_U_sweeps,8737.6875,4275.28125,4462.40625,3787.05390625,5106.4609375
+U_to_S_sweeps,1279.09375,6.53125,1272.5625,1001.1765625,1594.5679687499999
+post_S_sweeps,0.125,0.0,0.125,0.0,0.375
+post_exact_gap_sweeps,0.0,0.0,0.0,0.0,0.0

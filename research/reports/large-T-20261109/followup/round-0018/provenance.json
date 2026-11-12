@@ -1,0 +1,83 @@
+{
+  "artifacts_sha256": {
+    "README.md": "b92a4d7e6eaed51c3bf629785ccb67602bcdfda5d4108315296547a78e15336a",
+    "audit.md": "476c8a27fa26f4905f016c377f284973aa00ecc1e6b1df5e3ddd014050100317",
+    "audit.py": "8f04a5870aef0177e5db3e63454d18c2f34fd812d13f8cef93542b8ba15e35b3",
+    "budget.csv": "395b0cbf1e54fb264bc0bc1eb2f69794f3bfe3e108c1c3bc1ee160f80a869bd2",
+    "checks.json": "162af01b685760f1e4bb1883971eb6481c00bb41c3c395d8916a29dee34861c6",
+    "dependency.json": "83d4e5cd0e0f84dab322884d237a40eea9f2cd5c8d824803a89f60e11008059c",
+    "entrance.csv": "0023bd384f7e0601a690e303fbc831040717fe48e3c03d49c6123ca32191ec27",
+    "flux.csv": "ea30f3f54ab42e9f66455aad44e720593793bce217adce959b1af9f2e4d92bbd",
+    "inequalities.csv": "7b51681b13affeef557a013cf51ca757e1d68d3a5314458142e7488b4fe6960d",
+    "memory.md": "89c01eceaa774e1a0a3f681f10347e9414424cf1f6395a0fe71bf8981758a1dc",
+    "reproduce.py": "62a417fefadbf667fda597b8b1976518f61d396ccb75ae2903e4b16ada468aab",
+    "responses.csv": "a0c4fc549544c531261726db37ffec4354ec2c950f56c256cd7cdffc960b22be",
+    "test_audit.py": "89d59a397e3b488cc23c688fea3e14934ce72b6954e133a3de49cfc9295e0fbc",
+    "verification.json": "c2116aecb1030bab260c5cefd6202aa5c5a66bbb977fcb3cf97dd7c6079ea008",
+    "words.csv": "6bd62838d246989448e517634f1c916e78e2e31970d92cbab6fcd21717c341ea"
+  },
+  "censoring": "No new stochastic trials; original capped main result and missing blocked holdout retained.",
+  "changed_tracked_files": [
+    "research/CLAIMS.md",
+    "research/STATUS.md"
+  ],
+  "core_sources_sha256": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "large.py": "cda8099014655fb67f2104c9aeb09fe103d1f9a0441ef9f9683ed73d4f54c580",
+    "research/LARGER_NEIGHBORHOODS_PREREG.md": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/reports/large-T-20261109/interpretation.md": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2",
+    "scripts/run_research.py": "420253f4a10dc448993423ae7d216d3fee0bc69ad366718359100025b86a65d7",
+    "sim.py": "1d6de5a5391a723ef34162297cb60a45c682ac05ce50d6b328506280724feba6"
+  },
+  "elapsed_seconds": 6466.632317,
+  "execution": {
+    "cost_currency": "USD",
+    "cpu_limit": 1,
+    "network_used": false,
+    "numerical_threads": 1,
+    "paid_resource_cost": 0,
+    "raw_logs": "research/runs/round18",
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "serial": true
+  },
+  "final_dirty": true,
+  "git_commit": "0167bdb3a8ae5c1f7d00f4a011b8bd6cd36314e9",
+  "git_commit_created": false,
+  "independence": "Later analytic audit plus raw uncentered Bellman implementation importing no prior solver. One root agent; no concurrent independent-agent claim.",
+  "initial_dirty": false,
+  "manifest_excludes": "This provenance file excludes itself. Supervisor-generated report.md is added after this turn.",
+  "measurement_design": "Deterministic exact proof checks designed in round 18; no new stochastic experiment. Earlier empirical outputs replayed from their published committed registrations and receipts.",
+  "model": "Supplied C=(2,1,2,...,n), ideal extrema (0,n), pinned labels b_k=k, ascending cyclic own-parent standard-bit mutation and activated bitwise observation masks of rate 1/n, shared observation, filled T=2, true alignment checked at phase-zero boundaries; even n>=4; sweep units.",
+  "new_curated_directory": "deliverables",
+  "packaging_completed_utc": "2026-11-10T17:38:24.632317+00:00",
+  "platform": {
+    "machine": "arm64",
+    "release": "24.5.0",
+    "system": "Darwin"
+  },
+  "preservation": {
+    "blocked_holdout": true,
+    "original_preregistration": true,
+    "protected_unchanged_count": 459,
+    "snapshot_count": 461,
+    "source_pdfs": true
+  },
+  "proof_status": {
+    "C40": "full fourth-order polynomial gap remains conjectured",
+    "C42": "proved within the stated model after analytic audit; separately mechanically checked",
+    "C43": "uncompensated shortcut contradicted"
+  },
+  "pushed": false,
+  "python": {
+    "executable": "/Users/parth/miniforge3/bin/python",
+    "implementation": "CPython",
+    "version": "3.13.12"
+  },
+  "round": 18,
+  "started_utc": "2026-11-10T15:50:38+00:00",
+  "statistical_uncertainty": "Not applicable to the new exact rational calculations; finite coverage does not establish the all-n proof.",
+  "status": "complete",
+  "turn_budget_seconds": 17972
+}

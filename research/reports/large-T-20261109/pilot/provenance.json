@@ -1,0 +1,27 @@
+{
+  "analysis_version": 1,
+  "analyzer_sha256": "99c8a33fadb559ed041c17d3af76c70bb0069f7fffec8b6b1d214d01525cca5b",
+  "bootstrap_draws": 10000,
+  "matplotlib": "3.10.8",
+  "numpy": "2.3.5",
+  "sources": [
+    {
+      "manifest_sha256": "96b9a6c56ecb6f0b766e4a97581e4b428541393728cd8d6fef699687e1429f12",
+      "model_sha256": "eed5ab1f417dac948a33dc04224f47a5d6a0ed844aa74def4809ab712f665054",
+      "plan_sha256": "e43a4f61466a8439985770bf770783b7b6938f4fc5dc6576f3564663236e14bb",
+      "planned": 62,
+      "receipts": 62,
+      "receipts_sha256": "894cc431755fcd6854e3a9f010b139021910db545a70588eff67d9fc216df194",
+      "stage": "smoke"
+    },
+    {
+      "manifest_sha256": "d1755a65d1a152ba6b8afaed5857a8ab1feb8d039af27c4a5eb1e62a374a8526",
+      "model_sha256": "eed5ab1f417dac948a33dc04224f47a5d6a0ed844aa74def4809ab712f665054",
+      "plan_sha256": "b7ff154cd71104fb2af10b6e4cca19e8fa65c1ae4917013bcdc0f29efbf59986",
+      "planned": 102,
+      "receipts": 102,
+      "receipts_sha256": "84231f565de1695c107d353fea1c95268fb544856997c2417dc218625cad9bbd",
+      "stage": "calibrate"
+    }
+  ]
+}

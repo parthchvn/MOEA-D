@@ -1,0 +1,18 @@
+{
+  "analytic_formula_cells": 93,
+  "certified_cells": 14,
+  "certified_phase_states_total": 2736,
+  "endpoint_composed_mutation_identities": 50,
+  "exact_supersolution_cases": 10800,
+  "full_communication_seed_hazards_including_large_p": 1044,
+  "fullpin_entrances_n2_n3": 232,
+  "independent_fraction_gaussian_values_n2": 144,
+  "last_correct_entrance_cases": 2304,
+  "literal_mask_rows_n2_through7": 33,
+  "local_drift_cases_n2_through12": 24816,
+  "maximum_phase_states_per_cell": 324,
+  "noisy_trap_formula_cells": 36,
+  "phase_identities_n2_through32_all_T": 629424,
+  "prepin_label_reference_proposals_n2_n3": 31231,
+  "sampling": "none; deterministic enumeration and exact certificates"
+}

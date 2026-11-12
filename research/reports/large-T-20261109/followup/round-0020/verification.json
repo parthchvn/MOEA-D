@@ -1,0 +1,22 @@
+{
+  "arithmetic": "exact fractions; float fields display only",
+  "counts": {
+    "baseline_phases": 25,
+    "equalities": 460,
+    "inequalities": 1738,
+    "joint_entrance_cases": 160,
+    "marked_cases": 200,
+    "marked_phases": 1000,
+    "positive_kernel_cases": 10,
+    "published_baseline_matches": 5,
+    "published_word_matches": 1
+  },
+  "independent_method": "New direct circular first-change recurrence; no earlier solver imports. Published hashes are comparison targets only.",
+  "ns": [
+    4
+  ],
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "Every phase, regular target and orphan value from corner/aligned origins; every child at n=4, children {0,k,n} at n=6. Additional states are computed recursively, not claimed as exhaustive checks.",
+  "status": "mechanically checked"
+}

@@ -1,0 +1,598 @@
+{
+  "arms": {
+    "1": {
+      "diagnostics_observed_receipts_only": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 1279.09375,
+          "completed_only_quantiles": [
+            510.8,
+            985.0,
+            2484.3000000000006
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 8737.6875,
+          "completed_only_quantiles": [
+            6990.7,
+            8687.0,
+            10830.700000000003
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "bad_at_S": {
+          "denominator": 32,
+          "mean": 0.03125,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "bad_at_U": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "cumulative_work_to_post_or_cap": {
+          "attempts": 164437533,
+          "comparisons": 164437533,
+          "endpoint_repairs_external": 0,
+          "endpoint_repairs_own": 0,
+          "external_changes": 0,
+          "external_replacements": 0,
+          "wall_seconds": 7.683143372909399
+        },
+        "max_error_at_S": {
+          "denominator": 32,
+          "mean": 0.03125,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "max_error_at_U": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.125,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "events": {
+        "S": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "U": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "archive_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "exact_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "front_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "post_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        }
+      },
+      "exact_restricted_mean_identification_bounds": [
+        5139185.90625,
+        5139185.90625
+      ],
+      "missing": 0,
+      "planned": 32,
+      "receipts": 32,
+      "restricted_mean_pointwise_95": {
+        "S_sweeps": [
+          9552.37421875,
+          10501.8453125
+        ],
+        "U_sweeps": [
+          8229.3640625,
+          9259.7359375
+        ],
+        "U_to_S_sweeps": [
+          1007.4046875,
+          1601.225
+        ],
+        "exact_evaluations": [
+          4900990.78828125,
+          5388055.8328125
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.375
+        ],
+        "post_evaluations": [
+          4900990.78828125,
+          5388055.8328125
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          8229.3640625,
+          9259.7359375
+        ]
+      },
+      "restricted_means": {
+        "S_sweeps": 10016.78125,
+        "U_sweeps": 8737.6875,
+        "U_to_S_sweeps": 1279.09375,
+        "exact_evaluations": 5139185.90625,
+        "post_S_sweeps": 0.125,
+        "post_evaluations": 5139185.90625,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 8737.6875
+      },
+      "restricted_quantiles_10_50_90": {
+        "S_sweeps": [
+          8784.3,
+          9829.0,
+          11506.1
+        ],
+        "U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ],
+        "U_to_S_sweeps": [
+          510.8,
+          985.0,
+          2484.3000000000006
+        ],
+        "exact_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ]
+      }
+    },
+    "23": {
+      "diagnostics_observed_receipts_only": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 6.53125,
+          "completed_only_quantiles": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 4275.28125,
+          "completed_only_quantiles": [
+            3096.0,
+            4246.5,
+            5034.5
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "bad_at_S": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "bad_at_U": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "cumulative_work_to_post_or_cap": {
+          "attempts": 70290234,
+          "comparisons": 1616675382,
+          "endpoint_repairs_external": 0,
+          "endpoint_repairs_own": 0,
+          "external_changes": 14415540,
+          "external_replacements": 67946563,
+          "wall_seconds": 6.11845212301705
+        },
+        "max_error_at_S": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "max_error_at_U": {
+          "denominator": 32,
+          "mean": 0.0,
+          "quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.0,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "events": {
+        "S": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "U": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "archive_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "exact_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "front_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        },
+        "post_sweep": {
+          "capped": 0,
+          "completion_fraction_bounds": [
+            1.0,
+            1.0
+          ],
+          "completion_wilson_95": [
+            0.8928208017449293,
+            1.0
+          ],
+          "missing": 0,
+          "observed": 32
+        }
+      },
+      "exact_restricted_mean_identification_bounds": [
+        2197082.8125,
+        2197082.8125
+      ],
+      "missing": 0,
+      "planned": 32,
+      "receipts": 32,
+      "restricted_mean_pointwise_95": {
+        "S_sweeps": [
+          3902.934375,
+          4754.70390625
+        ],
+        "U_sweeps": [
+          3896.73359375,
+          4748.299999999999
+        ],
+        "U_to_S_sweeps": [
+          6.125,
+          6.96875
+        ],
+        "exact_evaluations": [
+          2002718.334375,
+          2439676.10390625
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          2002718.334375,
+          2439676.10390625
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3896.73359375,
+          4748.299999999999
+        ]
+      },
+      "restricted_means": {
+        "S_sweeps": 4281.8125,
+        "U_sweeps": 4275.28125,
+        "U_to_S_sweeps": 6.53125,
+        "exact_evaluations": 2197082.8125,
+        "post_S_sweeps": 0.0,
+        "post_evaluations": 2197082.8125,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 4275.28125
+      },
+      "restricted_quantiles_10_50_90": {
+        "S_sweeps": [
+          3102.0,
+          4254.0,
+          5039.5
+        ],
+        "U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ],
+        "U_to_S_sweeps": [
+          5.0,
+          6.0,
+          8.0
+        ],
+        "exact_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ]
+      }
+    }
+  },
+  "diagnostic_differences_T1_minus_T23": {
+    "S_sweeps": {
+      "estimate": 5734.96875,
+      "nominal_pointwise_95": [
+        5083.16796875,
+        6356.1296875
+      ]
+    },
+    "U_sweeps": {
+      "estimate": 4462.40625,
+      "nominal_pointwise_95": [
+        3787.05390625,
+        5106.4609375
+      ]
+    },
+    "U_to_S_sweeps": {
+      "estimate": 1272.5625,
+      "nominal_pointwise_95": [
+        1001.1765625,
+        1594.5679687499999
+      ]
+    },
+    "exact_evaluations": {
+      "estimate": 2942103.09375,
+      "nominal_pointwise_95": [
+        2607666.77109375,
+        3260761.0593749997
+      ]
+    },
+    "post_S_sweeps": {
+      "estimate": 0.125,
+      "nominal_pointwise_95": [
+        0.0,
+        0.375
+      ]
+    },
+    "post_evaluations": {
+      "estimate": 2942103.09375,
+      "nominal_pointwise_95": [
+        2607666.77109375,
+        3260761.0593749997
+      ]
+    },
+    "post_exact_gap_sweeps": {
+      "estimate": 0.0,
+      "nominal_pointwise_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "pre_U_sweeps": {
+      "estimate": 4462.40625,
+      "nominal_pointwise_95": [
+        3787.05390625,
+        5106.4609375
+      ]
+    }
+  },
+  "estimand": "fixed-horizon restricted means",
+  "primary": {
+    "decision": "favors_T23",
+    "identification_bounds": [
+      2.3390952207223643,
+      2.3390952207223643
+    ],
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "ratio": 2.3390952207223643
+  },
+  "study": "large-T-512-low-noise-prospective-20261109-r1-v1"
+}

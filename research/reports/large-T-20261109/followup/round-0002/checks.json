@@ -1,0 +1,230 @@
+{
+  "arithmetic": {
+    "arithmetic_implementation": "separate scalar/integers implementation, same agent",
+    "histograms": {
+      "1": {
+        "bad_at_S": {
+          "0": 31,
+          "1": 1
+        },
+        "bad_at_U": {
+          "0": 32
+        },
+        "endpoint_repairs_external": {
+          "0": 32
+        },
+        "endpoint_repairs_own": {
+          "0": 32
+        },
+        "max_error_at_S": {
+          "0": 31,
+          "1": 1
+        },
+        "max_error_at_U": {
+          "0": 32
+        },
+        "post_S_occupancy": {
+          "0": 31,
+          "4": 1
+        }
+      },
+      "23": {
+        "bad_at_S": {
+          "0": 32
+        },
+        "bad_at_U": {
+          "0": 32
+        },
+        "endpoint_repairs_external": {
+          "0": 32
+        },
+        "endpoint_repairs_own": {
+          "0": 32
+        },
+        "max_error_at_S": {
+          "0": 32
+        },
+        "max_error_at_U": {
+          "0": 32
+        },
+        "post_S_occupancy": {
+          "0": 32
+        }
+      }
+    },
+    "max_absolute_identity_residual": 0,
+    "scalar_numeric_checks": 275,
+    "status": "mechanically checked"
+  },
+  "commit_or_push_performed": false,
+  "elapsed_turn_seconds": 520.212453,
+  "git_head": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "initial_packaging": {
+    "analysis_and_plot_seconds": 0.8465764590073377,
+    "arithmetic_checks": 275,
+    "receipt_count": 68
+  },
+  "invocation": {
+    "compile_seconds": 1.2656177079770714,
+    "ended_utc": "2026-11-09T21:30:11.758675+00:00",
+    "engine_seconds_all": 14.22448953796993,
+    "engine_seconds_main": 13.801595495926449,
+    "error": null,
+    "event_counts": {
+      "invocation_start": 1,
+      "invocation_stop": 1,
+      "trial_receipt": 68,
+      "trial_start": 68
+    },
+    "failed_or_last_id": null,
+    "invocation_seconds": 16.61279066701536,
+    "max_workers": 1,
+    "measurement_loop_seconds": 14.472533624997595,
+    "missing_ids": [],
+    "no_resume": true,
+    "recorded": 68,
+    "stages": {
+      "main": {
+        "exact_observed": 64,
+        "planned": 64,
+        "post_observed": 64,
+        "recorded": 64
+      },
+      "smoke": {
+        "exact_observed": 4,
+        "planned": 4,
+        "post_observed": 4,
+        "recorded": 4
+      }
+    },
+    "state": "complete",
+    "trial_order_matches_registration": true
+  },
+  "model_sha256": "246cad3ef58d87ed25f981faf893eb33a85c9c1b3e30796d5873d20d9ac57691",
+  "network_used": false,
+  "next_question": "Prospectively compare T=3 with T=23 at n=512 to test whether pre-S evaluation savings can be retained with fewer logical comparisons.",
+  "paid_resources_used": false,
+  "partial_work": false,
+  "plan_sha256": "f64686335a457d16eb0f26a94eef9a8bd94e75e76aec3eeb6524f50d1e48441f",
+  "plot_visually_inspected": true,
+  "post_work_py_compile": "passed: required baseline modules and all 5 delivered Python files",
+  "registration_commit": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "replay": {
+    "analysis_and_plot_seconds": 0.835969333013054,
+    "arithmetic_checks": 275,
+    "byte_identical": {
+      "arithmetic.json": true,
+      "cells.csv": true,
+      "phases.csv": true,
+      "results.png": true,
+      "summary.json": true,
+      "trials.csv": true
+    },
+    "exact_engine_source": "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0002-1e73287c/worktree/research/runs/round2-replay/run/source/scripts/neighborhood_sweep.cpp",
+    "new_scientific_outcomes": 0,
+    "receipt_count": 68
+  },
+  "round_start_utc": "2026-11-09T21:26:26+00:00",
+  "sampling_failures": 0,
+  "source_preservation": {
+    "all_frozen_live_and_archived_sources_unchanged": true,
+    "head_unchanged": true,
+    "original_preregistration_and_holdout_unchanged": true,
+    "prior_dependency_audit_byte_equivalent_json": true,
+    "tracked_files_changed": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ]
+  },
+  "status": "mechanically checked",
+  "tests": {
+    "audit": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0001/audit.py",
+        "--out",
+        "research/runs/round2-private/audit.json"
+      ],
+      "elapsed_seconds": 0.44323699999949895,
+      "exit_code": 0
+    },
+    "baseline-tests": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 19.53958891701768,
+      "exit_code": 0,
+      "tests": 95,
+      "unittest_seconds": 8.708
+    },
+    "compile": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py"
+      ],
+      "elapsed_seconds": 0.049073333997512236,
+      "exit_code": 0
+    },
+    "kernel-tests": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_neighborhood_kernel.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "run_first": true,
+      "tests": 9,
+      "unittest_seconds": 2.935
+    },
+    "plan": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0001/plan.py",
+        "--check"
+      ],
+      "elapsed_seconds": 0.0412098340166267,
+      "exit_code": 0
+    },
+    "plan-tests": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0001/test_plan.py"
+      ],
+      "elapsed_seconds": 0.43508049999945797,
+      "exit_code": 0,
+      "tests": 14,
+      "unittest_seconds": 0.315
+    },
+    "wrapper-tests": {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/test_run.py"
+      ],
+      "elapsed_seconds": 0.7296217920084018,
+      "exit_code": 0,
+      "synthetic_only": true,
+      "tests": 15,
+      "unittest_seconds": 0.524,
+      "wrapper_sha256": "312768aab2cf892759e1182e3711953c60bd1b1368d3110299a597ebafc10cdb"
+    }
+  },
+  "turn_ceiling_seconds": 17512,
+  "validation_scope": "Single agent; separate scalar arithmetic implementation is not independent adversarial review.",
+  "validation_utc": "2026-11-09T21:35:06.212453+00:00"
+}

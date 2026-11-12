@@ -1,0 +1,170 @@
+{
+  "initial_worktree": "clean",
+  "input_commit": "c32c843877d3f17a27a7aedd4656046f9ca8cd19",
+  "inputs": [
+    {
+      "path": "AGENTS.md",
+      "sha256_at_start": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+      "sha256_now": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+      "unchanged": true
+    },
+    {
+      "path": "research/PROJECT.md",
+      "sha256_at_start": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+      "sha256_now": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+      "unchanged": true
+    },
+    {
+      "path": "research/CLAIMS.md",
+      "sha256_at_start": "6a3acfa11d8342448908de2264ad8316e52de0985430e877bb0146e141532d74",
+      "sha256_now": "5008ccfe7c563231cb681380723c50c70b5a549a046f1f82eaf88e1c1a6a28c9",
+      "unchanged": false
+    },
+    {
+      "path": "research/STATUS.md",
+      "sha256_at_start": "33e0e1a5f431d5d4179bea8ebeb9c578e6628b761c7dc4f570b1c569bd08da39",
+      "sha256_now": "13ac7900da154386525d6e59fc6193e80d6974691c1d41178a5ea63df10870d8",
+      "unchanged": false
+    },
+    {
+      "path": "research/EXPERIMENTS.md",
+      "sha256_at_start": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+      "sha256_now": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+      "unchanged": true
+    },
+    {
+      "path": "research/LITERATURE.md",
+      "sha256_at_start": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+      "sha256_now": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+      "unchanged": true
+    },
+    {
+      "path": "research/PAPER_COMPARISON.md",
+      "sha256_at_start": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+      "sha256_now": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+      "unchanged": true
+    },
+    {
+      "path": "research/LARGE_T_THEORY.md",
+      "sha256_at_start": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+      "sha256_now": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+      "unchanged": true
+    },
+    {
+      "path": "research/LARGER_NEIGHBORHOODS_PREREG.md",
+      "sha256_at_start": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+      "sha256_now": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/interpretation.md",
+      "sha256_at_start": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2",
+      "sha256_now": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2",
+      "unchanged": true
+    },
+    {
+      "path": "scripts/neighborhood_sweep.cpp",
+      "sha256_at_start": "11bdbd26facb39b22df911d063e1718dd03a2ae8fd01a18458d1c5e8f694df10",
+      "sha256_now": "11bdbd26facb39b22df911d063e1718dd03a2ae8fd01a18458d1c5e8f694df10",
+      "unchanged": true
+    },
+    {
+      "path": "research/evidence/large-T-20261109/campaign/INDEX.json",
+      "sha256_at_start": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+      "sha256_now": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0001/report.md",
+      "sha256_at_start": "c8247e06e22443f321ba71066263fd89a712484a9a99d7ab5c757ffc84bbe1ff",
+      "sha256_now": "c8247e06e22443f321ba71066263fd89a712484a9a99d7ab5c757ffc84bbe1ff",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0001/preregistration.md",
+      "sha256_at_start": "0dbec1260fec5b762b70f8f524e611eb16e91d5c8e77af67214d2254c7c85587",
+      "sha256_now": "0dbec1260fec5b762b70f8f524e611eb16e91d5c8e77af67214d2254c7c85587",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0001/plan.json",
+      "sha256_at_start": "79bc45393803eeb1d34dafa3f3a2fd0877f5af00f83cabbb30240877e1e308a5",
+      "sha256_now": "79bc45393803eeb1d34dafa3f3a2fd0877f5af00f83cabbb30240877e1e308a5",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0002/report.md",
+      "sha256_at_start": "9f29a4df501aa6db1ba65eb0b404438f7b591063c9428099e75916a8b5831e18",
+      "sha256_now": "9f29a4df501aa6db1ba65eb0b404438f7b591063c9428099e75916a8b5831e18",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0002/manifest.json",
+      "sha256_at_start": "9dc51271b752a010aafd0d3d9a129c116d574526d28ee5614ef176f79891b2f6",
+      "sha256_now": "9dc51271b752a010aafd0d3d9a129c116d574526d28ee5614ef176f79891b2f6",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0002/checksums.json",
+      "sha256_at_start": "79478c50de241085827fd10dd891decf6a3b62ea6d288e0839fd0ab126d39236",
+      "sha256_now": "79478c50de241085827fd10dd891decf6a3b62ea6d288e0839fd0ab126d39236",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0003/report.md",
+      "sha256_at_start": "84b169f99078c85f4cf9ead0a5af7b4bddce08dab00fed68ddbb00f747119e9a",
+      "sha256_now": "84b169f99078c85f4cf9ead0a5af7b4bddce08dab00fed68ddbb00f747119e9a",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0003/audit.py",
+      "sha256_at_start": "82ae046c95d13d5517398177fd3890322364da8c7f0109f848bc363a291f0ef2",
+      "sha256_now": "82ae046c95d13d5517398177fd3890322364da8c7f0109f848bc363a291f0ef2",
+      "unchanged": true
+    },
+    {
+      "path": "research/reports/large-T-20261109/followup/round-0003/inputs.json",
+      "sha256_at_start": "1c1a7ad489073dd9a7aed99bcef068cbf4556885bfd1f00b3c6f43b8e149e781",
+      "sha256_now": "1c1a7ad489073dd9a7aed99bcef068cbf4556885bfd1f00b3c6f43b8e149e781",
+      "unchanged": true
+    },
+    {
+      "path": "moead-drift-paper.pdf",
+      "sha256_at_start": "86c981b73e5e0ef801246e6ad7fb7375fd1c30c9fb81f95b7e6f2b17b048c996",
+      "sha256_now": "86c981b73e5e0ef801246e6ad7fb7375fd1c30c9fb81f95b7e6f2b17b048c996",
+      "unchanged": true
+    },
+    {
+      "path": "paper/moead-drift-paper.pdf",
+      "sha256_at_start": "86c981b73e5e0ef801246e6ad7fb7375fd1c30c9fb81f95b7e6f2b17b048c996",
+      "sha256_now": "86c981b73e5e0ef801246e6ad7fb7375fd1c30c9fb81f95b7e6f2b17b048c996",
+      "unchanged": true
+    },
+    {
+      "path": "moead_drift_v2.pdf",
+      "sha256_at_start": "dbab203c6e9b14a337a8b94111bd39f61c5d55d60f156716ff464ec7e8742168",
+      "sha256_now": "dbab203c6e9b14a337a8b94111bd39f61c5d55d60f156716ff464ec7e8742168",
+      "unchanged": true
+    }
+  ],
+  "literature_scope": "Offline supplied literature map only. No search, updated-open-status assertion, or novelty claim.",
+  "manuscript_review": {
+    "T3_revised_appendix_available": false,
+    "author": "not stated in local draft",
+    "dependency_policy": "All used local repair inequalities rederived; no transfer of an unavailable fixed-c/T=3 theorem.",
+    "extraction": "pypdfium2 text extraction; page 11 rendered and inspected",
+    "matching_root_and_paper_pdf": true,
+    "pages": 20,
+    "reviewed_loci": [
+      "Section 4, Lemma 5, pp. 7-8",
+      "Section 6, Lemma 9, p. 11",
+      "Section 8, p. 17; Appendix A, pp. 18-20"
+    ],
+    "title": "Drift Analysis of MOEA/D under Prior Noise without Re-evaluation",
+    "year": "not stated in local draft"
+  },
+  "offline": true,
+  "one_cpu": true,
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]"
+}

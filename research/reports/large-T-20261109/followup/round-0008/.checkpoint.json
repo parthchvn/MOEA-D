@@ -1,0 +1,7 @@
+{
+  "task": "Derive and bound the second-order coefficient in the T=3 minus T=2 corner-time expansion, because the audited negative first-order term still lacks a uniform noise window.",
+  "started_from": "caf94731fb4a364836ce01af38892891be118581",
+  "work_id": "round-0008-52118af1",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T02:35:53+00:00"
+}

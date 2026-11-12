@@ -1,0 +1,14 @@
+{
+  "arithmetic": "exact rational",
+  "double_phase_states": 4032,
+  "exact_checks": 16030,
+  "local_time_unit": "attempts, two per pair sweep",
+  "obstruction_witnesses": 6,
+  "pairs": 42,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "scope": "isolated closed pair only; no inference about the full fourth coefficient",
+  "single_phase_states": 1120,
+  "status": "mechanically checked",
+  "supplied_entrance_witnesses": 5
+}

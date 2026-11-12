@@ -1,0 +1,309 @@
+{
+  "arithmetic_comparisons": 6914,
+  "chronology_limit": "Published receipts verify committed registration and aggregate execution timing; private trial logs are unavailable.",
+  "followup_arms": {
+    "1": {
+      "means": {
+        "S_sweeps": 10016.78125,
+        "U_sweeps": 8737.6875,
+        "U_to_S_sweeps": 1279.09375,
+        "exact_evaluations": 5139185.90625,
+        "post_S_sweeps": 0.125,
+        "post_evaluations": 5139185.90625,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 8737.6875
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 1279.09375,
+          "completed_only_quantiles": [
+            510.8,
+            985.0,
+            2484.3000000000006
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 8737.6875,
+          "completed_only_quantiles": [
+            6990.7,
+            8687.0,
+            10830.700000000003
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.125,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          8784.3,
+          9829.0,
+          11506.1
+        ],
+        "U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ],
+        "U_to_S_sweeps": [
+          510.8,
+          985.0,
+          2484.3000000000006
+        ],
+        "exact_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          4506858.9,
+          5042790.0,
+          5903142.3
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          6990.7,
+          8687.0,
+          10830.700000000003
+        ]
+      },
+      "receipts": 32
+    },
+    "23": {
+      "means": {
+        "S_sweeps": 4281.8125,
+        "U_sweeps": 4275.28125,
+        "U_to_S_sweeps": 6.53125,
+        "exact_evaluations": 2197082.8125,
+        "post_S_sweeps": 0.0,
+        "post_evaluations": 2197082.8125,
+        "post_exact_gap_sweeps": 0.0,
+        "pre_U_sweeps": 4275.28125
+      },
+      "missing": 0,
+      "phases": {
+        "S_minus_U": {
+          "completed": 32,
+          "completed_only_mean": 6.53125,
+          "completed_only_quantiles": [
+            5.0,
+            6.0,
+            8.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "U": {
+          "completed": 32,
+          "completed_only_mean": 4275.28125,
+          "completed_only_quantiles": [
+            3096.0,
+            4246.5,
+            5034.5
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        },
+        "post_minus_S": {
+          "completed": 32,
+          "completed_only_mean": 0.0,
+          "completed_only_quantiles": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "entered": 32,
+          "not_entered": 0,
+          "right_censored_after_entry": 0,
+          "selection_conditioned": true
+        }
+      },
+      "planned": 32,
+      "quantiles": {
+        "S_sweeps": [
+          3102.0,
+          4254.0,
+          5039.5
+        ],
+        "U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ],
+        "U_to_S_sweeps": [
+          5.0,
+          6.0,
+          8.0
+        ],
+        "exact_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_S_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "post_evaluations": [
+          1591839.0,
+          2182815.0,
+          2585776.5
+        ],
+        "post_exact_gap_sweeps": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "pre_U_sweeps": [
+          3096.0,
+          4246.5,
+          5034.5
+        ]
+      },
+      "receipts": 32
+    }
+  },
+  "followup_primary": {
+    "decision": "favors_T23",
+    "nominal_95_ci": [
+      2.0853866835146455,
+      2.5964682010315485
+    ],
+    "ratio": 2.3390952207223643
+  },
+  "followup_seed_count": 68,
+  "inputs_sha256": {
+    "research/LARGER_NEIGHBORHOODS_PREREG.md": "f2d89072ac93ed1a7f0c933edea9d787c418b5c224815070a97e404ffd5c4e75",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/reports/large-T-20261109/followup/round-0005/audit.md": "8545328efa3705abd57fa06f2d3031fc8a6efe300b897b3374bbf677c48fde9e",
+    "research/reports/large-T-20261109/followup/round-0005/audit.py": "0ee977d2adc17975b90904fbc7134d3ab09a909d0882d5456339ba6d5c1eba75",
+    "research/reports/large-T-20261109/followup/round-0005/reproduce.py": "a55ea854ec657a9f456e08a229ea3421ce671213bb1f39844b9f6800de354844",
+    "research/reports/large-T-20261109/followup/round-0005/verification.json": "9af7d246a0b8bff20c236518d18fc9b2cbded8ef9a73abcd8325358fafdbbada",
+    "research/reports/large-T-20261109/followup/round-0005/verify.py": "151237d0c92b1c0f2ad773a0303f75229c75a1afb2a6e872ee512be48c180027",
+    "research/reports/large-T-20261109/interpretation.md": "d96ac191aa0880494184a625d335f868ff749562af46ce2c6dea8fed0478daa2"
+  },
+  "method": "Replayed round-5 reproduction, including rounds 4 and 3, original receipts and committed round-1 registration.",
+  "original_decision": "inconclusive; original holdout remains blocked",
+  "original_primary": {
+    "nominal_95_ci": [
+      2.0501481748098818,
+      2.674641996509441
+    ],
+    "ratio": 2.3276385562777966
+  },
+  "original_registration_commit": "88a67b4954536f3ba4ce0c27a9651e9f269bb602",
+  "original_stage_counts": {
+    "calibrate": {
+      "capped": 6,
+      "exact": 96,
+      "missing": 0,
+      "planned": 102,
+      "receipts": 102
+    },
+    "holdout": {
+      "capped": 0,
+      "exact": 0,
+      "missing": 240,
+      "planned": 240,
+      "receipts": 0
+    },
+    "main": {
+      "capped": 1,
+      "exact": 1079,
+      "missing": 0,
+      "planned": 1080,
+      "receipts": 1080
+    },
+    "smoke": {
+      "capped": 0,
+      "exact": 62,
+      "missing": 0,
+      "planned": 62,
+      "receipts": 62
+    }
+  },
+  "prior_round3_outputs_byte_identical": {
+    "audit.json": true,
+    "cells.csv": true,
+    "inputs.json": true,
+    "phases.csv": true,
+    "seeds.csv": true,
+    "trials.csv": true
+  },
+  "prior_round4_outputs_byte_identical": {
+    "bounds.csv": true,
+    "dependency.json": true,
+    "kernels.csv": true,
+    "verification.json": true
+  },
+  "prior_round5_outputs_byte_identical": {
+    "certificates.csv": true,
+    "dependency.json": true,
+    "expectations.csv": true,
+    "forest.json": true,
+    "verification.json": true
+  },
+  "prior_seed_count": 2420,
+  "prior_vs_followup_seed_overlap": 0,
+  "registration_commit": "a5449deed0c45f4ff0538fe49d0fa6285a77b809",
+  "round5_slowdown": {
+    "T_large": 3,
+    "T_small": 2,
+    "donor_sets": {
+      "2": [
+        0,
+        1
+      ],
+      "3": [
+        0,
+        1
+      ]
+    },
+    "gap_mid": 0.001168662645090162,
+    "larger_minus_smaller_sweeps_lower": "700499456628940436238000988522438859418434126050492416/599402924886052774514516875728485611354530445808545946447",
+    "larger_minus_smaller_sweeps_upper": "89664020314187827635661384639284068046500019312821010432/76723574384243300309269189445809791448848949892362400337335",
+    "n": 3,
+    "p": "1/192",
+    "status": "contradicted universal nonincreasing expected supplied-corner time in T; deterministic certified intervals"
+  },
+  "scientific_seeds": [],
+  "scientific_trajectories_generated": 0,
+  "scope": "Offline published evidence only. No unavailable manuscript appendix or new theorem transfer is used.",
+  "status": "mechanically checked; no dependency repair needed"
+}

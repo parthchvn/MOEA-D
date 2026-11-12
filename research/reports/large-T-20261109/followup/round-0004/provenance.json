@@ -1,0 +1,6 @@
+{
+  "task": "Attempt the fixed-T noisy corner theorem. Start from the T=3 and T=1 hypotheses and the observed reinfection path. Bound time donor 1 spends at an incorrect weight. State exact gaps.",
+  "started_from": "c32c843877d3f17a27a7aedd4656046f9ca8cd19",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-09T22:01:35+00:00"
+}

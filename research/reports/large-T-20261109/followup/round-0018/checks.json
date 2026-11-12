@@ -1,0 +1,234 @@
+{
+  "additional_published_comparisons": {
+    "fields_per_entrance_row": 3,
+    "independent_entrance_rows": 24,
+    "independent_flux_matches": 4,
+    "status": "pass"
+  },
+  "all_protected_unchanged": true,
+  "blocked_holdout_unchanged": true,
+  "compilation": {
+    "command": [
+      "python",
+      "-m",
+      "py_compile",
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/audit.py",
+      "deliverables/test_audit.py",
+      "deliverables/reproduce.py"
+    ],
+    "elapsed_seconds": 0.29069970798445866,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "name": "compile",
+    "returncode": 0
+  },
+  "curated_extensions_only": true,
+  "diagnostics": [
+    "Optional process-list inspection was denied by the sandbox; no scientific result used it."
+  ],
+  "earlier_dependency_replay": {
+    "elapsed_seconds": 953.0289546250133,
+    "numerical_threads": 1,
+    "outputs_byte_identical": {
+      "centered.csv": true,
+      "dependency.json": true,
+      "entrance.csv": true,
+      "flux.csv": true,
+      "verification.json": true,
+      "words.csv": true
+    },
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "status": "pass",
+    "timings": [
+      {
+        "command": [
+          "research/reports/large-T-20261109/followup/round-0016/reproduce.py",
+          "--repo",
+          ".",
+          "--out",
+          "research/runs/round18/prior/prior",
+          "--seconds",
+          "2400"
+        ],
+        "elapsed_seconds": 341.8777669579722,
+        "name": "prior",
+        "returncode": 0
+      },
+      {
+        "command": [
+          "research/reports/large-T-20261109/followup/round-0017/centered.py",
+          "--repo",
+          ".",
+          "--out",
+          "research/runs/round18/prior/data"
+        ],
+        "elapsed_seconds": 611.1418235420133,
+        "name": "centered",
+        "returncode": 0
+      }
+    ]
+  },
+  "elapsed_seconds": 6466.632317,
+  "final_compilation": {
+    "command": [
+      "python",
+      "-m",
+      "py_compile",
+      "sim.py",
+      "large.py",
+      "scripts/run_research.py",
+      "deliverables/audit.py",
+      "deliverables/test_audit.py",
+      "deliverables/reproduce.py"
+    ],
+    "elapsed_seconds": 0.07535266596823931,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "returncode": 0
+  },
+  "finite_checks": {
+    "algebra_inequalities": 17280,
+    "arithmetic": "exact rational; decimal fields are presentation only",
+    "identities": 75006,
+    "independence": "New raw uncentered Bellman implementation; no earlier solver imported",
+    "inequalities": 98896,
+    "ns": [
+      4,
+      6
+    ],
+    "phase_cases": 31052,
+    "prior_centered_matches": 622,
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "scope": "All n=4 populations of overwrite budget <=2; n=6 all bad-pair and marked values, all orphan values and phases; abstract support and acceptance inequalities on additional finite n.",
+    "state_cases": 4956,
+    "status": "mechanically checked",
+    "support_edges": 134517,
+    "support_patterns": 13771
+  },
+  "full_reproduction": {
+    "elapsed_seconds": 3092.524106541008,
+    "numerical_threads": 1,
+    "outputs_byte_identical": {
+      "budget.csv": true,
+      "dependency.json": true,
+      "entrance.csv": true,
+      "flux.csv": true,
+      "inequalities.csv": true,
+      "responses.csv": true,
+      "verification.json": true,
+      "words.csv": true
+    },
+    "scientific_seeds": [],
+    "scientific_trajectories": 0,
+    "status": "pass",
+    "timings": [
+      {
+        "command": [
+          "research/reports/large-T-20261109/followup/round-0017/reproduce.py",
+          "--repo",
+          ".",
+          "--out",
+          "research/runs/round18/replay/prior",
+          "--seconds",
+          "7200"
+        ],
+        "elapsed_seconds": 973.1829478330328,
+        "name": "prior",
+        "returncode": 0
+      },
+      {
+        "command": [
+          "deliverables/audit.py",
+          "--repo",
+          ".",
+          "--out",
+          "research/runs/round18/replay/data"
+        ],
+        "elapsed_seconds": 2119.315533292014,
+        "name": "audit",
+        "returncode": 0
+      }
+    ]
+  },
+  "head_unchanged": true,
+  "independent_audit_execution": {
+    "command": [
+      "python",
+      "deliverables/audit.py",
+      "--repo",
+      ".",
+      "--out",
+      "research/runs/round18/data"
+    ],
+    "elapsed_seconds": 2119.9101725000073,
+    "log_sha256": "5e3653c16a91329cb7a65a5480a98eb88fc5272cf1531e05e1805eb32cf1eae2",
+    "name": "audit",
+    "returncode": 0
+  },
+  "initial_tracked_snapshot_files": 461,
+  "limitations": [
+    "The all-n conclusion rests on the analytic audit, not finite checks.",
+    "The n=6 finite grid is not an all-population enumeration.",
+    "No complete fourth-order gap or uniform remainder is certified.",
+    "Earlier private execution logs are unavailable; chronology uses published receipts."
+  ],
+  "missing_local_links": [],
+  "original_registration_unchanged": true,
+  "packaging_completed_utc": "2026-11-10T17:38:24.632317+00:00",
+  "permitted_changed_tracked_files": [
+    "research/CLAIMS.md",
+    "research/STATUS.md"
+  ],
+  "protected_tracked_files": 459,
+  "relative_local_markdown_links": 33,
+  "scientific_or_test_failures": [],
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "pass",
+  "test_count": 124,
+  "tests": [
+    {
+      "command": [
+        "python",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 2.9335729999584146,
+      "log_sha256": "53639f874dee9fe025da0a5a1063492afabcb6f1f44f5b813f68ec130f5258de",
+      "name": "new-tests",
+      "returncode": 0,
+      "tests": 17
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0017/test_centered.py"
+      ],
+      "elapsed_seconds": 2.5168859160039574,
+      "log_sha256": "d7c0fa6a6059e6f65b1fa5278a350acf1428c12a2150151457fe3a92aef15527",
+      "name": "prior-tests",
+      "returncode": 0,
+      "tests": 12
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 24.362685792031698,
+      "log_sha256": "60bb1b0c63407b102f67867e987895b79a0c2bd7dce496ec2f11e163429b717f",
+      "name": "repository-tests",
+      "returncode": 0,
+      "tests": 95
+    }
+  ],
+  "turn_budget_seconds": 17972,
+  "whitespace": "pass"
+}

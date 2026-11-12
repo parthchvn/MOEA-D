@@ -1,0 +1,188 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 14.401207749993773,
+      "name": "repository",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 0.20729333299095742,
+      "name": "new",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0014/test_audit.py"
+      ],
+      "elapsed_seconds": 0.44624162500258535,
+      "name": "round14",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python",
+        "research/reports/large-T-20261109/followup/round-0015/test_fourth.py"
+      ],
+      "elapsed_seconds": 0.5011874999909196,
+      "name": "round15",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/audit.py",
+        "deliverables/reproduce.py",
+        "deliverables/test_audit.py"
+      ],
+      "elapsed_seconds": 0.1460897910001222,
+      "name": "compile",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "python",
+        "deliverables/reproduce.py",
+        "--repo",
+        ".",
+        "--out",
+        "research/runs/round16/final",
+        "--seconds",
+        "900"
+      ],
+      "elapsed_seconds": 219.32910358300433,
+      "name": "replay",
+      "returncode": 0
+    }
+  ],
+  "compilation": "pass",
+  "failures": [],
+  "generated_outputs_byte_identical": {
+    "dependency.json": true,
+    "rewards.csv": true,
+    "stationary.csv": true,
+    "verification.json": true,
+    "witness.json": true,
+    "words.csv": true
+  },
+  "preservation_scope": "Every initially tracked readable file except the authorized STATUS.md and CLAIMS.md edits; includes original preregistration, study source, packets and all earlier checkpoints.",
+  "protected_files_changed": [],
+  "protected_tracked_files": 427,
+  "raw_logs": "Private research/runs/round16; not part of deliverables",
+  "relative_links": [
+    {
+      "file": "README.md",
+      "target": "audit.md"
+    },
+    {
+      "file": "README.md",
+      "target": "witness.json"
+    },
+    {
+      "file": "README.md",
+      "target": "audit.md"
+    },
+    {
+      "file": "README.md",
+      "target": "audit.py"
+    },
+    {
+      "file": "README.md",
+      "target": "test_audit.py"
+    },
+    {
+      "file": "README.md",
+      "target": "rewards.csv"
+    },
+    {
+      "file": "README.md",
+      "target": "stationary.csv"
+    },
+    {
+      "file": "README.md",
+      "target": "words.csv"
+    },
+    {
+      "file": "README.md",
+      "target": "witness.json"
+    },
+    {
+      "file": "README.md",
+      "target": "verification.json"
+    },
+    {
+      "file": "README.md",
+      "target": "dependency.json"
+    },
+    {
+      "file": "README.md",
+      "target": "reproduce.py"
+    },
+    {
+      "file": "README.md",
+      "target": "checks.json"
+    },
+    {
+      "file": "README.md",
+      "target": "provenance.json"
+    },
+    {
+      "file": "README.md",
+      "target": "memory.md"
+    },
+    {
+      "file": "README.md",
+      "target": "dependency.json"
+    },
+    {
+      "file": "audit.md",
+      "target": "witness.json"
+    },
+    {
+      "file": "audit.md",
+      "target": "audit.py"
+    },
+    {
+      "file": "audit.md",
+      "target": "test_audit.py"
+    },
+    {
+      "file": "audit.md",
+      "target": "verification.json"
+    },
+    {
+      "file": "memory.md",
+      "target": "audit.md"
+    }
+  ],
+  "relative_links_checked": 21,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "pass",
+  "tests": {
+    "new": 12,
+    "repository": 95,
+    "round14": 12,
+    "round15": 12
+  },
+  "total_tests": 131,
+  "whitespace": "pass"
+}

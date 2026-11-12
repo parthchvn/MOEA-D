@@ -1,0 +1,89 @@
+{
+  "round": 21,
+  "started_utc": "2026-11-12T18:23:56+00:00",
+  "checkpoint_utc": "2026-11-12T18:37:03.533272+00:00",
+  "elapsed_work_seconds": 787.533272,
+  "git_commit": "c52a6071a63ed41f54b0ff2af08b1989ab3d2ccc",
+  "initial_tracked_dirty": false,
+  "final_git_status": [
+    "?? deliverables/"
+  ],
+  "artifact_inventory": {
+    "PROGRESS.md": {
+      "bytes": 4451,
+      "sha256": "56d8f6ca41421a5e429d52a3552119ea3d1a2277530850cd54d7eed840d7c871"
+    },
+    "README.md": {
+      "bytes": 5767,
+      "sha256": "dcbb50f17816ab8e6dcad5a931fecae73fcdd55c8a734aa0a346182b135b9337"
+    },
+    "audit.md": {
+      "bytes": 5025,
+      "sha256": "abac75d6ee0bf16c7a7448fa5ac4b94d94ab5336512cfbeacdc6c3121652a623"
+    },
+    "checks.json": {
+      "bytes": 5060,
+      "sha256": "76897d2d376b9569ebeba99f8a13f695e76a29d1983f2f12fa9d6a728361a6c3"
+    },
+    "coefficients.csv": {
+      "bytes": 1481,
+      "sha256": "aee2de1927db109ebb692bc91e70cc06f471b5a323d312466780b494b1f77296"
+    },
+    "forest.csv": {
+      "bytes": 6279,
+      "sha256": "d3fefe455af38cb0d2937f16572c572ca866aa5d25ff8be41d0d52a7c8e462a4"
+    },
+    "geometry.csv": {
+      "bytes": 22297,
+      "sha256": "8037dfc446d6a2ed74380a7053ad113284353ebae39c8aa4bedcc29cbf53205a"
+    },
+    "memory.md": {
+      "bytes": 4006,
+      "sha256": "ffb4a91cd1ce42c1478a8dd5025ffddd9078e70901aaea3ceee4b99f9fb2193b"
+    },
+    "proof.md": {
+      "bytes": 17380,
+      "sha256": "5800292397f595beeb1c08a55325509b7080e32e5331f96c5f9f9c4e9b08df73"
+    },
+    "repair.csv": {
+      "bytes": 31344,
+      "sha256": "f845ba4033e618e2b4369c2e5c76cc207a55cb86506f8a420a43238dc83e95d2"
+    },
+    "reproduce.py": {
+      "bytes": 6238,
+      "sha256": "0217957b6b1aebb5d7b86f935c2b2bf2153826449d02f696e23f0307b0e0b85c"
+    },
+    "response.py": {
+      "bytes": 4112,
+      "sha256": "6740b0a6ff3612d4d542ab560869cd36b5f93fb1935685dc3a0e0e4c10f48472"
+    },
+    "structure.py": {
+      "bytes": 14887,
+      "sha256": "23403e26616f8e159bba119a7fe39f2d6eb2cd2f7db003439018962e49ef1e73"
+    },
+    "test_structure.py": {
+      "bytes": 4229,
+      "sha256": "ceaefc564e7e9d3e4999831b4ed5108df1bceff6038c4ec3c79e88488dd914b0"
+    },
+    "traps.csv": {
+      "bytes": 117596,
+      "sha256": "8d8c274c2fc889da3310d8b9a5426c54ab1852970238f40bd16ae84a57bd6171"
+    },
+    "verification.json": {
+      "bytes": 746,
+      "sha256": "6a5ce2bc78cb45b1fdafa504571e6d2f920c0830b44738a5516b9f909edef384"
+    }
+  },
+  "relative_links_checked": 21,
+  "config_sha256": "83c3d2edcace32cf05ab0acd69077518655c169aa472a634c895f7e7d5cc1a90",
+  "source_hashes_receipt": "checks.json",
+  "paid_cost": 0,
+  "new_scientific_trials": 0,
+  "new_research_seeds": 0,
+  "blocked_original_holdout": 240,
+  "parallel_agents": 0,
+  "independent_review": "none; explicit sole-writer adversarial self-audit",
+  "novelty": "UNVERIFIED; no external search",
+  "development_failure": "Initial deterministic run hit integer string limit; complete rerun passed after setting explicit 200000-digit ceiling.",
+  "remaining_jobs": 0
+}

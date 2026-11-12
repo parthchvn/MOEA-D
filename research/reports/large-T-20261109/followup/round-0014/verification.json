@@ -1,0 +1,19 @@
+{
+  "acceptance_inequalities": 19166,
+  "annihilation_identities": 8856,
+  "arithmetic": "exact rational",
+  "bad_birth_histories": 16376,
+  "boundary_excess_identities": 1368,
+  "censoring": "not applicable to deterministic algebra",
+  "independent_solver": "full-population phase-cycle affine equations; no prior imports",
+  "local_phase_identities": 8856,
+  "mixed_words": 12,
+  "ordered_words": 16,
+  "phase_excess_bound_checks": 11808,
+  "phase_states": 456,
+  "response_inequalities": 4452,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "status": "mechanically checked",
+  "two_birth_histories": 238166
+}

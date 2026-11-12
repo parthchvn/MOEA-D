@@ -1,0 +1,113 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4425,
+      "path": "PROGRESS.md",
+      "sha256": "ae78d68eefd9318b7bbcbb6830fc78c11b2a48a8a25172323cacbe9243c57872"
+    },
+    {
+      "bytes": 8337,
+      "path": "README.md",
+      "sha256": "6116f8eac1ccdd96da8b657ed7916ed2d262f4d8407e7fe982b4a93b2de92652"
+    },
+    {
+      "bytes": 5687,
+      "path": "audit.md",
+      "sha256": "52fdcbc5b00abfc4bf16ed42bb1b0318ad993e613afdf77d882b06bdbb9702b8"
+    },
+    {
+      "bytes": 5574,
+      "path": "bounds.csv",
+      "sha256": "fdb4037ae37fd84d33620f279254bfeffeced9d3c941a8d34a728fd56ef5ae7a"
+    },
+    {
+      "bytes": 2297,
+      "path": "cells.csv",
+      "sha256": "67d57d76464bc6cfed9e80f151a08d201986bf3f3599a37e2dc7c69377cf1739"
+    },
+    {
+      "bytes": 134082,
+      "path": "certificates.csv",
+      "sha256": "a0e8e2304ca885e82334192e44cf444d64f65d8431617194be70635b68151a3d"
+    },
+    {
+      "bytes": 5986,
+      "path": "checks.json",
+      "sha256": "576180b8e58070ef14f47f46e0934b88c4dc04e9c7f99b0c88e1685669d73b61"
+    },
+    {
+      "bytes": 17661,
+      "path": "excursions.py",
+      "sha256": "1ed2966ce7ca8841fa7ab6a84e8e7a5110949c9d8e372158bcb9519e038c2788"
+    },
+    {
+      "bytes": 4193,
+      "path": "memory.md",
+      "sha256": "a6fbf5539b7dccd1f5b486cf1d5def8a01b65db47d9f819353b12061ea99b433"
+    },
+    {
+      "bytes": 16259,
+      "path": "proof.md",
+      "sha256": "e34841bf8429909a82d57511dc2dc0b34b8a213ee7cb5b7c35bcc3cbc95691e8"
+    },
+    {
+      "bytes": 6651,
+      "path": "reproduce.py",
+      "sha256": "36b94edec1b1dc23306f5e7372d4b26913a3db2e5bb2e3db6eefdbc070b30f30"
+    },
+    {
+      "bytes": 4696,
+      "path": "test_excursions.py",
+      "sha256": "208045ce008982e371c6fbed4cd83595e02847c2b0e700a5b6ae42ef0b2c2773"
+    },
+    {
+      "bytes": 85081,
+      "path": "traps.csv",
+      "sha256": "c0e7ee9c734048836aee90247f8dc399dcb893eeeaf3950de313652e5008bd44"
+    },
+    {
+      "bytes": 697,
+      "path": "verification.json",
+      "sha256": "32faa0102ee5a35539b906034abcaeacda62cf24a7cbef33b7a085c69c172ecb"
+    },
+    {
+      "bytes": 3062,
+      "path": "verify.py",
+      "sha256": "e48d93b2000e04bb5535d6084801ca6cbd32becc65e04fa95c22aefae7cd0b20"
+    },
+    {
+      "bytes": 444,
+      "path": "witness.json",
+      "sha256": "1cf3d97e0c8f35faa705bc90800c62a455b97b3693b18f403f99b7b869673119"
+    }
+  ],
+  "censoring": "not applicable to deterministic exact calculations",
+  "checkpoint_utc": "2026-11-12T18:53:39.392157+00:00",
+  "commits": false,
+  "delegation": false,
+  "elapsed_work_seconds": 966.392157,
+  "environment": {
+    "numerical_threads": 1,
+    "numpy": "2.4.3",
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]"
+  },
+  "git_head": "b8a5d338540517716cb31d04feb5fa9b64217103",
+  "hard_deadline_utc": "2026-11-12T20:22:28+00:00",
+  "inventory_excludes_self": true,
+  "monte_carlo_plan": "none in previous round; no study executed",
+  "novelty": "UNVERIFIED; no current external literature search",
+  "original_holdout": "240 blocked observations untouched",
+  "packaging_correction": "Initial link validation preceded creation of provenance.json; corrected ordering. No scientific outputs changed.",
+  "paid_cost": 0,
+  "pushes": false,
+  "research_samples": 0,
+  "research_seeds": [],
+  "review": "sole-writer analytic proof and adversarial self-audit; no independent-agent verdict",
+  "round": 22,
+  "started_utc": "2026-11-12T18:37:33+00:00",
+  "status": "completed bounded theorem/counterexample checkpoint; total-runtime seeded occupation gap retained",
+  "strongest_falsifier": "exact allowed phase state with Phi-K_D Phi<1, or a probability-weighted entrance exceeding J",
+  "taylor_calculations": 0,
+  "tracked_sources_unchanged": true
+}

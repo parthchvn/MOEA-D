@@ -1,0 +1,7 @@
+{
+  "task": "Independently audit the even-n orphan mixed-insertion bound, because it carries the new candidate |B_n|\u22641536n^5 estimate needed before enlarging the noise window.",
+  "started_from": "20916fb610306749dfa84f545fbe39d6919b2a97",
+  "work_id": "round-0009-0047ff6f",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-10T02:48:26+00:00"
+}

@@ -1,0 +1,105 @@
+{
+  "arithmetic": "Exact Fraction; rounded CSV displays, exact canonical rational SHA-256 fingerprints.",
+  "artifacts_sha256": {
+    "README.md": "c2756400465b95a448feb1dea2f78a4a53baf0dfc42324119ec9028a284d554e",
+    "checks.json": "99b942da55e22c46423c772a1664dbf2d8a67b4451d468bcf7c29fd0110b1581",
+    "coefficients.csv": "38a4443fcc6e824a1d04d94490d20d4b07926d8bff7b3f0420baea986ae84346",
+    "dependency.json": "8ba28fad999636dd03da80cd38853a6849218d43514ac845dd04d3628c556e24",
+    "entrance.csv": "7f2c53c78c2e5d88e929f884e78b2c8cd4a3eaed858534fefead92528e56049d",
+    "excess.csv": "ac53294966630fbc57abdbd62150e46e1d4fe68a1b5bb6226df238d8b2cf28a8",
+    "excess.json": "f23b8aea6f43e97d215f35750b557b53fe0b106edfc751574016c99bad28affb",
+    "excess.py": "9d4cad34a851d435c556b20b00b1186827dbbdb09dad352bf614c12cf8b367c5",
+    "fourth.py": "0bb0cd5f888b13c8402e278c07dfffe5fa99c348a63ed32c405e5e312f0114e0",
+    "gaps.csv": "27948755f4591d1ae05356d7409efe92de425b38f5cd445a1c9e5bdacf5b5367",
+    "memory.md": "a6b29be2da10580fef9117ee61520ede9f41a8061b175c1d41012bff53c51d5f",
+    "mixed.csv": "458b726a90d3fb5495db23054f1a07d4ee22b288ef78fe637c97099304b7f2da",
+    "obstruction.csv": "aa29c46ff2a96f52f032224360977b6b8e0fce1e0e4cc3df1b8c44e0f73958b4",
+    "pair.csv": "00ee0e7b3248a449a2b418ae26a607de24a04faee254c147605847a0cdacd25d",
+    "pair.json": "385839a57b2f64c1ca786997f360b04f1c8117b1e24a0e087f5ed9d1789fbbb6",
+    "pair.py": "238d6cad6bfa2d4dcc00db827f34da44ec13d5d7b3e212eff6d63ff311fdaab3",
+    "proof.md": "6b6418edbe32a10282c88356b867c0b2737655c857e1a72f889199d4c4663e6f",
+    "reproduce.py": "d3e98b9ffd8319facdf1e94173b658c68145cdc3b70659a74ec7017073477260",
+    "stationary.csv": "cd32ac603e314df794dabc642e9e8871d331b930a3c7df288bb83e1e9c20633c",
+    "test_fourth.py": "c52953de496d06e30249d3a085681a28c2a252469dc8a11d4c770643566b919d",
+    "verification.json": "073930b213ebf1d1a9668a89be72d18aaf36daed691c98790346b64e0a377243",
+    "verify.py": "4286c01e13ef51e6a70e3c49b432e594597d55828dab8f1704c64b0326dd94dd",
+    "words.csv": "e9e905eb28717425e1b17bef5168d9409b5a37542ce973771bee5068a80d2288"
+  },
+  "budget_seconds": 5880,
+  "commands": [
+    "python deliverables/reproduce.py --repo . --out research/runs/round15/replay --seconds 3000",
+    "-m unittest discover -s tests -v",
+    "deliverables/test_fourth.py",
+    "research/reports/large-T-20261109/followup/round-0014/test_audit.py",
+    "-m py_compile sim.py large.py scripts/run_research.py deliverables/excess.py deliverables/fourth.py deliverables/pair.py deliverables/reproduce.py deliverables/test_fourth.py deliverables/verify.py",
+    "git diff --check"
+  ],
+  "commit_created": false,
+  "completed_utc": "2026-11-10T06:32:34.224997+00:00",
+  "conditioning": "Natural consumed-randomness filtration; bounds condition before proposals or at stated clean stopping times, never on acceptance.",
+  "elapsed_seconds": 2070.224997,
+  "executable": "/Users/parth/miniforge3/bin/python",
+  "final_git_status": " M research/CLAIMS.md\n M research/STATUS.md\n?? deliverables/\n",
+  "git_head": "a5c267386829703f348d3fd831426babf93028ad",
+  "initial_git_status": "",
+  "limitations": [
+    "The two new all-n estimates are candidate proofs, not independently audited.",
+    "The isolated-pair estimate does not freeze or eliminate the rest of the full population.",
+    "RRRR and thirteen other mixed fourth words remain unbounded here.",
+    "No uniform higher remainder, enlarged noise window, fixed-c ordering or ordinary-initialization result.",
+    "The n=5 fourth coefficient was replayed but lacks an independent fourth-order oracle.",
+    "Private earlier trial logs are unavailable; chronology relies on published evidence.",
+    "Offline work; no current-literature search or novelty assertion."
+  ],
+  "model": "Supplied corner (2,1,2,...,n), ideal extrema, pinned labels, ascending own-parent standard-bit mutation, activated bitwise observation noise, filled T=2/3 cardinality, simultaneous alignment at full sweep boundaries, zero initialization cost.",
+  "network_used": false,
+  "numerical_threads": 1,
+  "paid_cost": 0,
+  "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+  "push_performed": false,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "question": "Does the supplied-corner fourth coefficient remain polynomial after signed cancellation?",
+  "registration": "No new stochastic experiment; earlier committed plans, receipts and seed separation replayed; original cap and blocked holdout preserved.",
+  "replay_timings": [
+    {
+      "elapsed_seconds": 101.1018790829985,
+      "name": "prior",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 464.42536733398447,
+      "name": "fourth",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 19.90098350000335,
+      "name": "verify",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 2.826143000012962,
+      "name": "pair",
+      "returncode": 0
+    },
+    {
+      "elapsed_seconds": 20.086838624993106,
+      "name": "excess",
+      "returncode": 0
+    }
+  ],
+  "requested_cpu_budget": 1,
+  "round": 15,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "serial_algebra_and_tests": true,
+  "source_hashes": {
+    "excess.py": "9d4cad34a851d435c556b20b00b1186827dbbdb09dad352bf614c12cf8b367c5",
+    "fourth.py": "0bb0cd5f888b13c8402e278c07dfffe5fa99c348a63ed32c405e5e312f0114e0",
+    "pair.py": "238d6cad6bfa2d4dcc00db827f34da44ec13d5d7b3e212eff6d63ff311fdaab3",
+    "reproduce.py": "d3e98b9ffd8319facdf1e94173b658c68145cdc3b70659a74ec7017073477260",
+    "test_fourth.py": "c52953de496d06e30249d3a085681a28c2a252469dc8a11d4c770643566b919d",
+    "verify.py": "4286c01e13ef51e6a70e3c49b432e594597d55828dab8f1704c64b0326dd94dd"
+  },
+  "started_utc": "2026-11-10T05:58:04+00:00",
+  "status": "Unresolved for the full gap; proved T=3 arm and positive-majorant obstruction; candidate isolated-pair and RROO bounds."
+}

@@ -1,0 +1,171 @@
+{
+  "artifact_type_check": "pass: only curated markdown/python/csv/json files",
+  "commit_or_push": false,
+  "cpu_policy": "No agents or parallel grids. Python arithmetic is single-threaded; successful reproduction and test commands run serially with numerical thread limits of one. An interrupted large-grid process required a second interrupt during cleanup.",
+  "elapsed_seconds_through_packaging": 1315.417709,
+  "failures_and_corrections": [
+    "The float64 grid n=16,17,24,25,32,33 was interrupted for computational cost; no result files were produced or used. The retained grid is n=3..12.",
+    "An initial full-population oracle attempt was interrupted while evaluating an unnecessary full vector of the final response. The final implementation still solves h0 and h1 on every population, then computes only the required corner products exactly. This reduces the completed n=3,4 oracle to about 20 seconds.",
+    "An overly large rational expression in the display-only window table exceeded the default CSV reader field limit. Window outputs now use the largest dyadic lower bound, checked against the exact formula; the proof and coefficients did not change.",
+    "Host process-list commands were unavailable. The bounded computations were interrupted through their execution sessions."
+  ],
+  "first_recorded_utc": "2026-11-09T22:44:06+00:00",
+  "network_access": false,
+  "new_outputs_byte_identical": {
+    "bounds.csv": true,
+    "coefficients.csv": true,
+    "comparison.json": true,
+    "dependency.json": true,
+    "gaps.csv": true,
+    "numeric.csv": true,
+    "oracle.json": true,
+    "verification.json": true
+  },
+  "new_sampling_censoring": "not applicable: deterministic exact/float64 calculations only",
+  "packaged_utc": "2026-11-09T23:06:01.417709+00:00",
+  "preservation": {
+    "all_other_tracked_files_unchanged": true,
+    "intended_modified": [
+      "research/CLAIMS.md",
+      "research/STATUS.md"
+    ],
+    "tracked_files_checked": 284,
+    "unchanged": 282
+  },
+  "prior_private_log_limit": "Published receipts establish registration, values and aggregate timing; unavailable historical private logs cannot prove absence of unreported invocations.",
+  "prior_replay": "Full round-7 recursion completed before new arithmetic; required bytes revalidated by the round-8 replay.",
+  "relative_artifact_links_checked": 20,
+  "scientific_seeds": [],
+  "scientific_trajectories": 0,
+  "spend_usd": 0,
+  "status": "pass",
+  "successful_new_reproduction": [
+    {
+      "command": [
+        "-S",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/deliverables/second.py",
+        "--n",
+        "3",
+        "4",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/research/runs/round8-private/replay"
+      ],
+      "elapsed_seconds": 0.20146908299648203
+    },
+    {
+      "command": [
+        "-S",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/deliverables/second.py",
+        "--float",
+        "--n",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/research/runs/round8-private/replay/numeric"
+      ],
+      "elapsed_seconds": 9.263194917002693
+    },
+    {
+      "command": [
+        "-S",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/deliverables/oracle.py",
+        "--n",
+        "3",
+        "4",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/research/runs/round8-private/replay/oracle.json"
+      ],
+      "elapsed_seconds": 20.4621530000004
+    },
+    {
+      "command": [
+        "-S",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/deliverables/verify.py",
+        "--repo",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree",
+        "--bundle",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/research/runs/round8-private/replay",
+        "--out",
+        "/Users/parth/MOEA-D-large-T/research/runs/larger-neighborhoods-20261109/followup/round-0008-52118af1/worktree/research/runs/round8-private/replay"
+      ],
+      "elapsed_seconds": 0.39096916699782014
+    }
+  ],
+  "tests": [
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-S",
+        "deliverables/test_second.py"
+      ],
+      "elapsed_seconds": 0.32341049998649396,
+      "name": "new-tests",
+      "returncode": 0,
+      "test_count": 12
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-S",
+        "research/reports/large-T-20261109/followup/round-0007/test_audit.py"
+      ],
+      "elapsed_seconds": 0.39019291699514724,
+      "name": "prior-audit-tests",
+      "returncode": 0,
+      "test_count": 15
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0006/test_coefficient.py"
+      ],
+      "elapsed_seconds": 0.8633220829942729,
+      "name": "prior-coefficient-tests",
+      "returncode": 0,
+      "test_count": 12
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 21.221856708987616,
+      "name": "repository-tests",
+      "returncode": 0,
+      "test_count": 95
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/reproduce.py",
+        "deliverables/second.py",
+        "deliverables/oracle.py",
+        "deliverables/verify.py",
+        "deliverables/test_second.py",
+        "deliverables/bounds.py"
+      ],
+      "elapsed_seconds": 0.21055558300577104,
+      "name": "compile",
+      "returncode": 0
+    }
+  ],
+  "total_tests": 134
+}

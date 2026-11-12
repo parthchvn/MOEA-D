@@ -1,0 +1,101 @@
+{
+  "budget_seconds": 11657,
+  "compact_replay_seconds": 15.159294042008696,
+  "development_events": [
+    {
+      "effect": "No published result changed; final reproducer executes serially.",
+      "event": "An early word-check invocation overlapped the full oracle and was interrupted with exit 130. No outputs from it were retained; the final word/excess run started after the oracle finished."
+    },
+    {
+      "effect": "The readers now explicitly allow large exact fields; arithmetic was unaffected.",
+      "event": "A display-only CSV read exceeded the default 131072-character field limit on the n=6 exact fraction."
+    }
+  ],
+  "elapsed_seconds": 4825.91485,
+  "no_new_scientific_seeds": true,
+  "no_new_scientific_trajectories": true,
+  "outputs_byte_identical": {
+    "cancellation.csv": true,
+    "coefficients.csv": true,
+    "dependency.json": true,
+    "excess.csv": true,
+    "gaps.csv": true,
+    "oracle.json": true,
+    "verification.json": true,
+    "words.csv": true
+  },
+  "protected_changes": [],
+  "protected_tracked_files_and_resolved_symlinks": 364,
+  "replay_mode": "Completed computations reused; all compact artifacts revalidated and regenerated, not a second full algebra run.",
+  "scientific_failures": 0,
+  "status": "pass",
+  "test_counts": {
+    "new": 16,
+    "repository": 95,
+    "round12": 12,
+    "total": 123
+  },
+  "tests": [
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "elapsed_seconds": 15.796641292021377,
+      "name": "repository",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "deliverables/test_cubic.py"
+      ],
+      "elapsed_seconds": 1.8535522920137737,
+      "name": "new",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "research/reports/large-T-20261109/followup/round-0012/test_audit.py"
+      ],
+      "elapsed_seconds": 1.3679729159921408,
+      "name": "round12",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "/Users/parth/miniforge3/bin/python",
+        "-m",
+        "py_compile",
+        "sim.py",
+        "large.py",
+        "scripts/run_research.py",
+        "deliverables/cubic.py",
+        "deliverables/curate.py",
+        "deliverables/oracle.py",
+        "deliverables/reproduce.py",
+        "deliverables/test_cubic.py",
+        "deliverables/words.py"
+      ],
+      "elapsed_seconds": 0.10690970800351351,
+      "name": "compile",
+      "returncode": 0
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "elapsed_seconds": 0.08184950001304969,
+      "name": "whitespace",
+      "returncode": 0
+    }
+  ]
+}

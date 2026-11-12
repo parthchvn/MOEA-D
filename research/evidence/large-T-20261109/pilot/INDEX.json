@@ -1,0 +1,30 @@
+{
+  "analysis_sha256": "99c8a33fadb559ed041c17d3af76c70bb0069f7fffec8b6b1d214d01525cca5b",
+  "format": 1,
+  "stages": [
+    {
+      "bytes": 27101,
+      "file": "smoke-b19da21744cc0a02.tar.gz",
+      "missing": 0,
+      "model_sha256": "eed5ab1f417dac948a33dc04224f47a5d6a0ed844aa74def4809ab712f665054",
+      "plan_sha256": "e43a4f61466a8439985770bf770783b7b6938f4fc5dc6576f3564663236e14bb",
+      "planned": 62,
+      "recorded": 62,
+      "sha256": "b19da21744cc0a02d6487d317507b04b3172018aa35be32cb6fd684068e15aa8",
+      "stage": "smoke",
+      "status": "complete"
+    },
+    {
+      "bytes": 32679,
+      "file": "calibrate-533eb5aa2e46ec79.tar.gz",
+      "missing": 0,
+      "model_sha256": "eed5ab1f417dac948a33dc04224f47a5d6a0ed844aa74def4809ab712f665054",
+      "plan_sha256": "b7ff154cd71104fb2af10b6e4cca19e8fa65c1ae4917013bcdc0f29efbf59986",
+      "planned": 102,
+      "recorded": 102,
+      "sha256": "533eb5aa2e46ec7973651d45862208f520bd6d9af92b6014bdfa7a7d8ea55023",
+      "stage": "calibrate",
+      "status": "complete"
+    }
+  ]
+}

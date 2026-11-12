@@ -1,0 +1,59 @@
+{
+  "round": 24,
+  "input_head": "eb682871d3d29e7c9373159ecf9605390cd7b8e9",
+  "started_utc": "2026-11-12T19:06:51+00:00",
+  "checkpoint_utc": "2026-11-12T19:15:01.141718+00:00",
+  "elapsed_work_seconds": 490.141718,
+  "verification_wrapper_seconds": 18.3465052919928,
+  "status": "completed synthesis; square-root-T noisy seeded work remains open",
+  "artifacts_excluding_this_inventory": [
+    {
+      "path": "HISTORY.md",
+      "bytes": 23165,
+      "sha256": "f93376a6ce88db01a97c02ac9adab8914cf5a607f1d94ee7f3b7a2f3a88b79fb"
+    },
+    {
+      "path": "PROGRESS.md",
+      "bytes": 4543,
+      "sha256": "ee6d29c332ac4fb114d1ab5890d81880397c395aa908e1099ea21d46565cdae6"
+    },
+    {
+      "path": "SYNTHESIS.md",
+      "bytes": 20696,
+      "sha256": "5188981986499d66e94f5480bba7d37df25d08936efa6191e0a838fa64bcd8d0"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 2969,
+      "sha256": "c195b0ca52989d980f74a75482992982d9183a889e861d18251bb0001b0003c5"
+    },
+    {
+      "path": "memory.md",
+      "bytes": 5581,
+      "sha256": "76e07c598848fc0b64c1a0f156be0e343f4a2b0baf7264c0a4326cda7052c5fc"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 133456,
+      "sha256": "b15448eabad3e4da84afa7e18de9d2f2761822dcde8f60963690f246b93acb39"
+    },
+    {
+      "path": "verify_checkpoint.py",
+      "bytes": 6215,
+      "sha256": "9f8c400ce59fc910a8b579cdb1b59fc3a0d1e2e7fa3f10ff7022f7f17e3c07bb"
+    }
+  ],
+  "protected_entries_unchanged": 602,
+  "new_scientific_samples": 0,
+  "new_scientific_seeds": [],
+  "paid_cost": 0,
+  "numerical_threads": 1,
+  "delegation": false,
+  "committed": false,
+  "pushed": false,
+  "novelty": "UNVERIFIED; no current external search",
+  "publication_location": "research/reports/large-T-20261109/followup/round-0024",
+  "source_snapshot": "sources.json",
+  "verification_receipt": "checks.json",
+  "interpreter": "/Users/parth/miniforge3/bin/python3"
+}
