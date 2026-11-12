@@ -1,0 +1,134 @@
+{
+  "artifacts": [
+    {
+      "bytes": 4757,
+      "path": "PROGRESS.md",
+      "sha256": "aaedabbec550b145b0d4ee9de1fe641109a17a3c0e889b1f3197046ed32bef83"
+    },
+    {
+      "bytes": 7601,
+      "path": "README.md",
+      "sha256": "52831794050c064c2b656ae29f4ed36630e28f47a4ce58924fb2d84e214f5512"
+    },
+    {
+      "bytes": 15810,
+      "path": "audit.md",
+      "sha256": "45f16adf2e430797c730104b928798dbdd83e2ef56d3db1baea3102f0c2d5c1a"
+    },
+    {
+      "bytes": 21184,
+      "path": "audit.py",
+      "sha256": "6cf1cd0b9f227f13a56a024fda32cb386b411450ffe15872d39ee6b5d02ce9f2"
+    },
+    {
+      "bytes": 869889,
+      "path": "certificates.csv",
+      "sha256": "f7a16994e84cde88455e1a4d3d4ed4a832d8b08a850655ff1bcb8d23b90f44b9"
+    },
+    {
+      "bytes": 8588,
+      "path": "checks.json",
+      "sha256": "5ba05a69f32ba177cb2468be5e90e1f4ca8df9733797e0fd95af099c678d335d"
+    },
+    {
+      "bytes": 22192,
+      "path": "clean.csv",
+      "sha256": "d3a6578460fdeb48e909b3bb90297033fbdceae04fe292a7018731c5847bb466"
+    },
+    {
+      "bytes": 1323,
+      "path": "coefficients.csv",
+      "sha256": "da61c0a571fe13bcc4c551f6049d0cdd4dd907d16b0b043a4df41eaa69ef8bcb"
+    },
+    {
+      "bytes": 15478,
+      "path": "empirical.json",
+      "sha256": "37b66792cd306c272fb1446c4e6f0e8b24ed01b1f588b93ab2864e375294ee2f"
+    },
+    {
+      "bytes": 577,
+      "path": "global.csv",
+      "sha256": "2b3bdb3978eea282511f6ab180d55e8f8698dc36273931c8a7aa8ad98cfb3225"
+    },
+    {
+      "bytes": 6106,
+      "path": "memory.md",
+      "sha256": "5fabff2fb7e13deb1b923d340c8b4b3874e1f1f7d5939fcee6253822c29dd8a1"
+    },
+    {
+      "bytes": 7381,
+      "path": "occupation.csv",
+      "sha256": "147ed23af59b191a82de0c20c510b83e50f9a0ef8078df701ffc910e823013ad"
+    },
+    {
+      "bytes": 10322,
+      "path": "receipts.py",
+      "sha256": "f5c3ecab4ffad3f488452720fb239c6ae2d4c9993a1f3ae4b6227206e7b05545"
+    },
+    {
+      "bytes": 6836,
+      "path": "reproduce.py",
+      "sha256": "f8b83c289a1aab7f7069658cdbd75b7ba7798382ba4e156b9e52d3a03e7be396"
+    },
+    {
+      "bytes": 1919,
+      "path": "test_audit.py",
+      "sha256": "5382f71bbb7680163453023f70f95116b8a8dc9588eb9d3f7dc7234ece279780"
+    },
+    {
+      "bytes": 1972,
+      "path": "verification.json",
+      "sha256": "444f0fce60fb51fccc22d92843c06363221db87540f8c3b76e77b34d8fa3f906"
+    },
+    {
+      "bytes": 2659,
+      "path": "verify.py",
+      "sha256": "ec48b3a56f716f6195640e9cda9f0bc24b1bf66fb2e9377e8669f0e422be53c2"
+    },
+    {
+      "bytes": 1037,
+      "path": "witnesses.json",
+      "sha256": "bb954731090bd65426471298b0377640136e7325565fc1bac54ae7584f4e08fe"
+    }
+  ],
+  "bootstrap": "analysis-only registered resampling of existing receipts",
+  "byte_identical_outputs": [
+    "global.csv",
+    "occupation.csv",
+    "certificates.csv",
+    "clean.csv",
+    "coefficients.csv",
+    "witnesses.json",
+    "verification.json",
+    "empirical.json"
+  ],
+  "checkpoint_utc": "2026-11-12T19:06:27.636825+00:00",
+  "commits": false,
+  "delegation": false,
+  "elapsed_work_seconds": 743.636825,
+  "environment": {
+    "interpreter": "/Users/parth/miniforge3/bin/python3",
+    "numerical_threads": 1,
+    "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+    "python": "3.13.12"
+  },
+  "final_replay_seconds": 24.966068249952514,
+  "git_head": "f82e77cba3763e68587c0efa69df69db283d6706",
+  "hard_deadline_utc": "2026-11-12T20:08:58+00:00",
+  "inventory_excludes_self": true,
+  "novelty": "UNVERIFIED; no current external literature search or external theorem transfer",
+  "original_holdout": "240 missing, gate-blocked observations untouched",
+  "paid_cost": 0,
+  "preserved_failure": "Conditional entrance mean cannot be bounded by the probability-weighted charge; exact larger-T witness retained.",
+  "pushes": false,
+  "remaining_gap": "noisy seeded progress; no growing-T total runtime, uniform remainder, fixed-c ordering or ordinary-initialization transfer",
+  "research_samples": 0,
+  "research_seeds": [],
+  "review": "sole-writer fresh-context same-model-family adversarial audit; provisional assurance, not formal proof certification",
+  "round": 23,
+  "started_utc": "2026-11-12T18:54:04+00:00",
+  "status": "precise round-21/22 claims retained; no total-runtime upgrade; independent global-potential proof and finite checks",
+  "strongest_falsifier": "An admissible state violating W-E[W_next] >= 1{C=0}-J*1{vulnerable}; none found in the declared finite scope.",
+  "tests": 103,
+  "tracked_sources_unchanged": true
+}

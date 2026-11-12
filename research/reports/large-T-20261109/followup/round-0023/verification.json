@@ -1,0 +1,82 @@
+{
+  "exact_clean_seeded_boundary_cases": 369,
+  "finite_scope": "n=2,3 all populations/all T/all phases; see grids in CSV",
+  "full_boundary_cells": 14,
+  "full_boundary_phase_states": 8664,
+  "geometry_rows": 93660,
+  "global_cells": 21,
+  "global_phase_states": 13017,
+  "independent_sweep_coefficients": 8,
+  "local_slot_checks": 38322,
+  "prepin": {
+    "final_pins": 232,
+    "nonideal_reference_witness": {
+      "T": 1,
+      "after": [
+        1,
+        2,
+        0
+      ],
+      "child": 0,
+      "hi": 1,
+      "labels": [
+        0,
+        1,
+        0
+      ],
+      "lo": 0,
+      "n": 2,
+      "observed": 2,
+      "phase": 2,
+      "weights": [
+        1,
+        2,
+        0
+      ]
+    },
+    "proposals": 31231
+  },
+  "prior_certificates": {
+    "conditioning_shortcut_counterexample": {
+      "T": 1,
+      "conditional_mean_attempts_lower": "5562413765295419160/822312000000711439",
+      "conditional_over_kappa_lower": "132798988323283305600/822312000000711439",
+      "entrance_probability": "47/46656",
+      "kappa": "191/4560",
+      "n": 3,
+      "p": "1/192",
+      "phase": 2,
+      "unique_seed": 2,
+      "weighted_mean_attempts_lower": "953774651113755/139968000000121096",
+      "weights": [
+        3,
+        3,
+        2,
+        0
+      ]
+    },
+    "larger_T_conditioning_counterexample": {
+      "T": 3,
+      "conditional_mean_attempts_lower": "9332092934834713920/6578496000003821147",
+      "conditional_over_kappa_lower": "41882433091538196072960/1256492736000729839077",
+      "entrance_probability": "47/46656",
+      "kappa": "191/4488",
+      "n": 3,
+      "p": "1/192",
+      "phase": 1,
+      "unique_seed": 1,
+      "weighted_mean_attempts_lower": "200019138692445/139968000000081301",
+      "weights": [
+        3,
+        1,
+        0,
+        0
+      ]
+    },
+    "prior_cells": 14,
+    "prior_rational_residuals": 2736
+  },
+  "research_samples": 0,
+  "seeded_interval_checks": 5928,
+  "vulnerable_checks": 3456
+}

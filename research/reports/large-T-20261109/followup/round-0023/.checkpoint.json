@@ -1,0 +1,7 @@
+{
+  "task": "adversarial-audit: Independently attack the new claims using their precise hypotheses, proofs,\ncode and receipts. Do not trust the previous agent's verdict or reviewer score.\nCheck every conditioning step, negative/unchanged branch, boundary phase,\nacceptance factor, dependence assumption and constant uniformity. Try explicit\nsmall-n counterexamples and an independent implementation where affordable.\nVerify empirical estimands and censored observations from receipts if present.\nDowngrade unsupported claims explicitly; retain both the original attempt and\ncounterexample or correction. Mathematical derivation, finite mechanical checks,\nand empirical evidence are separate categories. Same-family independent-context\nreview is provisional assurance, not formal proof certification.",
+  "started_from": "f82e77cba3763e68587c0efa69df69db283d6706",
+  "work_id": "round-0023-935cdb2d",
+  "packet_sha256": "05b8dab6a35c8b7de1e2087d2f798a41d6c85b4ea2b79d663b0ca173266c4b71",
+  "completed_utc": "2026-11-12T19:06:42+00:00"
+}
