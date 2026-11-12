@@ -1,0 +1,122 @@
+{
+  "bundle_source_hashes": {
+    "excursions.py": "1ed2966ce7ca8841fa7ab6a84e8e7a5110949c9d8e372158bcb9519e038c2788",
+    "reproduce.py": "36b94edec1b1dc23306f5e7372d4b26913a3db2e5bb2e3db6eefdbc070b30f30",
+    "test_excursions.py": "208045ce008982e371c6fbed4cd83595e02847c2b0e700a5b6ae42ef0b2c2773",
+    "verify.py": "e48d93b2000e04bb5535d6084801ca6cbd32becc65e04fa95c22aefae7cd0b20"
+  },
+  "byte_identical_outputs": [
+    "bounds.csv",
+    "cells.csv",
+    "certificates.csv",
+    "traps.csv",
+    "verification.json",
+    "witness.json"
+  ],
+  "censoring": "not applicable: no Monte Carlo; all finite enumerations complete",
+  "commands": [
+    {
+      "command": "PYTHON -m unittest discover -s tests -v",
+      "elapsed_seconds": 15.94559937500162,
+      "exit_code": 0,
+      "tests": 95
+    },
+    {
+      "command": "PYTHON -m unittest discover -s BUNDLE -p test_excursions.py -v",
+      "elapsed_seconds": 0.13187012495473027,
+      "exit_code": 0,
+      "tests": 11
+    },
+    {
+      "command": "PYTHON -m py_compile sim.py large.py scripts/run_research.py BUNDLE/{excursions,verify,test_excursions,reproduce}.py",
+      "elapsed_seconds": 0.11975358298514038,
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHON BUNDLE/excursions.py --out OUTPUT",
+      "elapsed_seconds": 9.861655417014845,
+      "exit_code": 0
+    },
+    {
+      "command": "PYTHON BUNDLE/verify.py --bundle OUTPUT",
+      "elapsed_seconds": 0.24576845904812217,
+      "exit_code": 0
+    }
+  ],
+  "elapsed_seconds": 26.790073709038552,
+  "finished_utc": "2026-11-12T18:52:42.297559+00:00",
+  "head": "b8a5d338540517716cb31d04feb5fa9b64217103",
+  "interpreter": "/Users/parth/miniforge3/bin/python3",
+  "limits": {
+    "command_wall_seconds": 300,
+    "exact_gaussian_states": 24,
+    "max_phase_states": 324
+  },
+  "literal_verifier": {
+    "cells": 14,
+    "literal_mask_scalarization_residuals": 2736,
+    "status": "all rational residual bounds match; no NumPy used"
+  },
+  "model": "unchanged cyclic own-parent, filled T, shared activated bitwise noise; pinned excursion stopping is analytical only",
+  "numerical_threads": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "output_hashes": {
+    "bounds.csv": "fdb4037ae37fd84d33620f279254bfeffeced9d3c941a8d34a728fd56ef5ae7a",
+    "cells.csv": "67d57d76464bc6cfed9e80f151a08d201986bf3f3599a37e2dc7c69377cf1739",
+    "certificates.csv": "a0e8e2304ca885e82334192e44cf444d64f65d8431617194be70635b68151a3d",
+    "traps.csv": "c0e7ee9c734048836aee90247f8dc399dcb893eeeaf3950de313652e5008bd44",
+    "verification.json": "32faa0102ee5a35539b906034abcaeacda62cf24a7cbef33b7a085c69c172ecb",
+    "witness.json": "1cf3d97e0c8f35faa705bc90800c62a455b97b3693b18f403f99b7b869673119"
+  },
+  "paid_cost": 0,
+  "porcelain_unchanged": true,
+  "protected_inputs": 17,
+  "python": "3.13.12 | packaged by conda-forge | (main, Feb  5 2026, 06:11:05) [Clang 19.1.7 ]",
+  "research_samples": 0,
+  "research_seeds": [],
+  "source_hashes": {
+    "AGENTS.md": "395a1271e55646f8142f3bc3d089f00d0ee00b702d8746bf7be4ee87196271ef",
+    "research/CLAIMS.md": "6a3acfa11d8342448908de2264ad8316e52de0985430e877bb0146e141532d74",
+    "research/EXPERIMENTS.md": "d9bc6985af6fba5143830cb196fcc7f4bc4d52b97b11e364c8a4b6bfc26fa322",
+    "research/LARGE_T_THEORY.md": "cada0c529b8f008723160951668cef1a1e2f51ccc07289c395353940c9f9802c",
+    "research/LITERATURE.md": "821744b8a175d6cfc9de1a34e804ace0e2a9cdbbee6c2fef467674eca24e8f78",
+    "research/PAPER_COMPARISON.md": "cd6c185eb765ebd173aa2d8f1575a16686c4d6bee504c440e225c14e0355fab6",
+    "research/PROJECT.md": "048c697a7b6470c1ce86956e19b9c366f9b983c2dbafe8577abd8fca3ddc71ce",
+    "research/STATUS.md": "33e0e1a5f431d5d4179bea8ebeb9c578e6628b761c7dc4f570b1c569bd08da39",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/GOAL.md": "638825170283e3ccc28aabb6d365637931cde3e1ce57e018e148cd6ae7ae2191",
+    "research/reports/large-T-20261109/followup/activation-20261112T181239Z-84cbf5/RECOVERY.json": "f18fde2e540d882093e7f32b966d2896577e5c02311e4848c16a46114378e3ca",
+    "research/reports/large-T-20261109/followup/round-0004/proof.md": "e9efbb22a1240929ae9b5bb4a56a7278786e4c3b1a1faf5eab0afe1c005f70cb",
+    "research/reports/large-T-20261109/followup/round-0005/audit.md": "8545328efa3705abd57fa06f2d3031fc8a6efe300b897b3374bbf677c48fde9e",
+    "research/reports/large-T-20261109/followup/round-0012/audit.md": "6acb6be4057ccb342932cc970e336d00cbd44f9444f25bf8e4c513dd34fd57e4",
+    "research/reports/large-T-20261109/followup/round-0020/HISTORY.md": "06ab0e14d92ba7b4168e0f00a7620f56aa6b89394026e4f41e445b12de25686b",
+    "research/reports/large-T-20261109/followup/round-0021/proof.md": "5800292397f595beeb1c08a55325509b7080e32e5331f96c5f9f9c4e9b08df73",
+    "research/reports/large-T-20261109/followup/round-0021/structure.py": "23403e26616f8e159bba119a7fe39f2d6eb2cd2f7db003439018962e49ef1e73",
+    "scripts/neighborhood_sweep.cpp": "11bdbd26facb39b22df911d063e1718dd03a2ae8fd01a18458d1c5e8f694df10"
+  },
+  "started_utc": "2026-11-12T18:52:15.507298+00:00",
+  "tracked_dirty_after": false,
+  "tracked_dirty_before": false,
+  "verification": {
+    "analytic_formula_cells": 93,
+    "certified_cells": 14,
+    "certified_phase_states_total": 2736,
+    "endpoint_composed_mutation_identities": 50,
+    "exact_supersolution_cases": 10800,
+    "full_communication_seed_hazards_including_large_p": 1044,
+    "fullpin_entrances_n2_n3": 232,
+    "independent_fraction_gaussian_values_n2": 144,
+    "last_correct_entrance_cases": 2304,
+    "literal_mask_rows_n2_through7": 33,
+    "local_drift_cases_n2_through12": 24816,
+    "maximum_phase_states_per_cell": 324,
+    "noisy_trap_formula_cells": 36,
+    "phase_identities_n2_through32_all_T": 629424,
+    "prepin_label_reference_proposals_n2_n3": 31231,
+    "sampling": "none; deterministic enumeration and exact certificates"
+  }
+}
